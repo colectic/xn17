@@ -282,10 +282,10 @@
 // -----------------------------------------------------------------------------
 .bloc-banner {
   .block__content { margin: 7.5px 15px; }
-  &.voluntariat { @include bloc-banner('lorem', 150px); }
-  &.festevoluntaria { @include bloc-banner('lorem', 150px); }
-  &.assessorament { @include bloc-banner('lorem', 150px); }
-  &.tajudem { @include bloc-banner('lorem', 150px); }
+  &.voluntariat { @include bloc-banner('banner_voluntariat', 150px); }
+  &.festevoluntaria { @include bloc-banner('banner_feste', 150px); }
+  &.assessorament { @include bloc-banner('banner_assessorament', 150px); }
+  &.tajudem { @include bloc-banner('banner_tajudem', 150px); }
 }
 
 // -----------------------------------------------------------------------------
