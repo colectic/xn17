@@ -1,0 +1,467 @@
+// Styles for Nodes
+// -----------------------------------------------------------------------------
+.page-node {
+  #content { padding-bottom: 50px; }
+}
+.field-name-simple-share-icons {
+  margin: 30px 0;
+  a { margin-right: 5px; }
+}
+
+@media (max-width: $screen-md-min) {
+  #main { margin-top: 0px; }
+  .region-content-header { margin-bottom: 40px; }
+}
+
+.tipus_contingut {
+  @include header_title;
+  font-size: 2.1em;
+}
+
+//------------------------------------------------------------------------------
+//Esdeveniment, Finançament, Bilioteca
+//------------------------------------------------------------------------------
+.agenda, .financament, .node-type-doc-biblioteca {
+  @include node-comparteix;
+  @include node-tags;
+  .page-header{
+    display: none;
+  }
+  h1, .xn17-standard-header {
+    font-size: 2.5em;
+    font-family: 'Fira Sans SemiBold';
+  }
+  h1 { margin-bottom: 20px; }
+  .xn17-standard-header {
+    .date-display-single { &::after { content: " >  "; }}
+    .field-name-ciutat {
+      color: $xn17-vermell;
+      padding-left: 10px;
+    }
+    .field-name-ciutat, .field-name-field-date-event {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      float: left;
+      width: auto;
+    }
+  }
+  .field-name-field-agenda-imatge img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .field-name-field-resum { font-weight: bold; }
+  .field-name-body, .field-name-adreca { margin-bottom: 20px; }
+  .field-name-data-esdevendiment, .field-name-hora-esdeveniment,
+  .field-name-field-organizer, .field-name-adreca, .field-name-field-convocant,
+  .field-name-field-finfull-data-publicacio, .field-name-field-date,
+  .field-name-field-date, .field-name-field-finfull-ambit, .field-name-field-finfull-tipus,
+  .field-name-field-finfull-ambit-geo, .field-name-field-finfull-bases,
+  .field-name-data-esdeveniment, .field-name-taxonomy-vocabulary-5, .field-name-field-doc-lloc-publi,
+  .field-name-field-doc-data-publi, .field-name-field-doc-editorial, .field-name-field-doc-idioma,
+  .field-name-field-doc-tematica, .field-name-field-doc-tipologia {
+    p { margin: 0; }
+    padding: 5px 0;
+  }
+  .field-name-field-finfull-bases, .field-name-field-finfull-ambit {
+    .field-items { padding-left: 40px; }
+    .field-item { display: list-item; }
+  }
+  .field-name-body {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $font-size-large;
+      font-weight: 600;
+    }
+  }
+  .field-name-field-doc-sinopsi {
+    padding-bottom: 20px;
+  }
+  &.financament {
+    .field-name-body {
+      border-top: solid 1px $gray;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+  }
+  &.financament, &.node-type-doc-biblioteca {
+    .field-name-addtoany {
+      border-top: solid 1px $gray;
+      padding-top: 20px;
+    }
+  }
+  .field-name-print-icon, .field-name-print-pdf {
+    &.field-name-print-icon::before { content: url('../images/icon/icon-print.svg'); }
+    &.field-name-print-pdf::before { content: url('../images/icon/icon-print-pdf.svg'); }
+    font-weight: bold;
+    .field-items {
+      display: inline-block;
+      height: 35px;
+      position: absolute;
+      padding: 8px 8px;
+    }
+    p { margin: 0px; }
+  }
+  .field-name-portada-document-biblioteca {
+    .wrapper {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+    }
+    .wrapper:after {
+      padding-top: 123.92%;
+      display: block;
+      content: '';
+    }
+    .main {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: $gray-light;
+      color: white;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        position: absolute;
+        max-width: 80%;
+        height: auto;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        box-shadow: 3px 3px 10px $gray-dark;
+      }
+    }
+  }
+  .field-name-field-doc-descarrega, .field-name-field-doc-font {
+    background: $xn17-vermell url("../images/icon/icon-search-gray.svg") no-repeat left 15px center;
+    padding: 10px 0 10px 60px;
+    margin: 10px 0;
+    .file-icon, .file-size { display: none; }
+    a {
+      color: white;
+      font-weight: 600;
+    }
+  }
+  .field-name-field-doc-descarrega {
+    background: $xn17-vermell url("../images/icon/icon-download-white.svg") no-repeat left 15px center;
+  }
+  .field-name-field-doc-font {
+    background: $xn17-vermell url("../images/icon/icon-download-link-white.svg") no-repeat left 15px center;
+  }
+}
+
+//------------------------------------------------------------------------------
+//Notícia, Recurs i opinio
+//------------------------------------------------------------------------------
+.node-type-noticia-general, .node-type-recurs-general, .node-type-opinio{
+  @include node-comparteix;
+  @include node-tags;
+  .page-header{
+    display: none;
+  }
+  h1 {
+    font-size: 2.5em;
+    font-family: 'Fira Sans SemiBold';
+    margin-top: 50px;
+  }
+  .views-slideshow-cycle-main-frame,
+  .views_slideshow_cycle_slide,
+  .views_slideshow_cycle_slide img {
+    width: 100%;
+    height: auto;
+  }
+  &.recurs .views-slideshow-cycle-main-frame { margin-bottom: 50px; }
+  .views_slideshow_cycle_slide { border-top: solid 2px $xn17-vermell; }
+  &.recurs .views_slideshow_cycle_slide { margin-top: 50px; }
+  .views-field-field-peu-de-foto, .views-field-field-imatges-1 {
+    font-size: $font-size-small;
+    color: $gray-medium;
+  }
+  .views-field-field-imatges-1 { margin-top: 5px; }
+  .views-field-field-peu-de-foto {
+    padding-bottom: 5px;
+    border-bottom: solid 2px $xn17-vermell;
+  }
+  .field-name-field-resum {
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: $font-size-large;
+  }
+  .field-name-body { h1, h2, h3, h4 { font-size: $font-size-base !important; }}
+  .field-name-field-ambit-noticia {
+    @include flag;
+    top: 0;
+    a { color: white; }
+    z-index: 15;
+  }
+  .field-name-field-autor-noticies .field-label,
+  .field-name-field-autor .field-label { font-weight: normal; }
+  .field-name-field-usuari-autor .field-item::before { font-weight: normal; content: 'Entitat redactora: '}
+  .field-name-simple-share-icons-copia- { margin-top: 10px; }
+  .field-name-seccions-recurs-index{
+    font-size: $font-size-small;
+    background-color: $gray-light;
+    padding: 20px;
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px
+    }
+    .views-row {
+      margin-left: 30px;
+      margin-bottom: 5px
+    }
+    @media (min-width: $screen-md-min) {
+      float: left;
+      left: -80 px;
+      position: relative;
+      width: 280px;
+      left: -130px;
+      margin: 20px;
+    }
+  }
+  .field-name-autor-opinio{
+    z-index: 10;
+    font-size: $font-size-small;
+    background-color: $gray-light;
+    padding: 20px;
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px
+    }
+    .views-row {
+      margin-bottom: 5px;
+      .fitxa-autor{
+        .foto-autor{
+          width: 100px;
+          height: 100px;
+          display: inline-block;
+          margin-right: 10px;
+          img{
+            width: 100px;
+            height:auto;
+            float: left;
+            margin-right: 10px;
+          }
+        }
+        .dades-autor{
+          width: 120px;
+          display: inline-block;
+          h2{
+            font-family: "Fira Sans SemiBold";
+            text-transform: uppercase;
+            font-size:1em;
+            margin-bottom: 0px;
+            a{
+              color: $xn17-vermell !important;
+            }
+          }
+          .twitter{
+            font-family: "Fira Sans SemiBold";
+            font-size: 0.85em;
+            color: $gray-dark;
+          }
+        }
+        .mes-articles{
+          font-family: "Fira Sans Bold";
+          color: $gray-medium;
+          p{
+            margin-bottom: 0px;
+          }
+          a{
+            color: $gray-medium;
+          }
+        }
+        p{
+          clear: both;
+          padding-top: 10px;
+        }
+      }
+    }
+    @media (min-width: $screen-md-min) {
+      float: left;
+      left: -80 px;
+      position: relative;
+      width: 280px;
+      left: -130px;
+      margin: 20px;
+    }
+
+  }
+  .field-name-seccions-recurs {
+    @media (min-width: $screen-md-min) {
+      .views-row-1 {
+        left: -120px;
+        padding-left: 120px;
+        position: relative;
+        width: 715px;
+        @media (min-width: $screen-lg-min) { width: 650px; }
+      }
+    }
+  }
+  .field-name-body{
+    @media (min-width: $screen-md-min) {
+      .field-item{
+        left: -120px;
+        padding-left: 120px;
+        position: relative;
+        width: 715px;
+        @media (min-width: $screen-lg-min) { width: 650px; }
+      }
+    }
+  }
+  .views-field-field-subtitols h2 {
+    font-size: $font-size-large;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  .xn17-standard-column1 {
+    @media (max-width: $screen-md-min) {
+      h1, .field-name-simple-share-icons, .field-name-post-date,
+      .field-name-field-autor-noticies, { display: none; }
+    }
+  }
+  .xn17-standard-column2 {
+    @media (min-width: $screen-md-min) {
+      h1, .field-name-simple-share-icons-copia-, .field-name-post-date-copia-,
+      .field-name-entitat-redactora-copia-, .field-name-autor-copia- { display: none; }
+    }
+    @media (max-width: $screen-md-min) {
+      h1 { margin-top: 30px; margin-bottom: 20px; }
+    }
+  }
+  .node-type-opinio, .field-name-field-resum {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border-top: solid 2px $xn17-vermell;
+    border-bottom: solid 2px $xn17-vermell;
+  }
+}
+//------------------------------------------------------------------------------
+//Autor
+//------------------------------------------------------------------------------
+.node-type-autor-a{
+  .page-header{
+    display:none;
+  }
+  .node-autor-a{
+    margin-top: 40px;
+    .view-display-id-block_2{
+      .views-row{
+        margin-top: 0px;
+      }
+    }
+    .view-display-id-block_3, .view-display-id-block_5{
+      .views-row-first{
+        .cont_titular_entradeta{
+          h4{
+            padding-top: 30px;
+          }
+        }
+      }
+    }
+    .view-header{
+      border-top: solid 3px #BE1622;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top:20px;
+    }
+    .fitxa-autor{
+      @include aspect-ratio(825 340);
+      background-color: $gray-light;
+      margin-bottom: 15px;
+      .imatge-destacada-opinio{
+        width: 33%;
+        float: left;
+        padding-right: 15px;
+        margin-bottom:-30px;
+        @media screen and (max-width:$screen-xs-min){
+          width: 100% !important;
+          padding-right: 0px;
+          margin-bottom: 15px;
+        }
+        img{
+          width: 100%;
+          height: inherit;
+        }
+      }
+      .presentacio{
+        float: left;
+        h4{
+          font-family: 'Fira Sans SemiBold';
+          padding-top: 25px;
+          color: $xn17-vermell;
+          margin-bottom: 0px;
+        }
+        @media screen and (max-width:$screen-xs-min){
+          float: none;
+          position: absolute;
+          bottom: 0px;
+          width:100%;
+          color: #FFF;
+          padding-left: 10px;
+          padding-bottom: 10px;
+          padding-right: 30px;
+          h4{
+            font-family: 'Fira Sans SemiBold';
+            padding-top: 0px;
+            color: $xn17-vermell;
+            margin-bottom: 0px;
+          }
+        }
+        @media screen and (min-width:$screen-sm-min){
+          width: 50%;
+          padding-left: 15px;
+        }
+        @media screen and (min-width:$screen-md-min){
+          width: 33%;
+          padding-left: 15px;
+        }
+        @media screen and (min-width:$screen-lg){
+          width: 33%;
+          padding-left: 15px;
+        }
+        .twitter{
+          a{
+            font-family: 'Fira Sans SemiBold';
+            font-size: 1.3em;
+            @media screen and (max-width:$screen-xs-min){
+              color: #FFF;
+            }
+          }
+        }
+        p{
+          margin-top: 10px;
+        }
+      }
+      .pie{
+        width: 100%;
+        display: inline-block;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Fira Sans SemiBold';
+        margin-top: 30px;
+        @media screen and (max-width:$screen-xs-max){
+          display:none;
+        }
+      }
+    }
+    .field-name-articles-autor-a{
+      display: inline-block;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// Butlletins
+//------------------------------------------------------------------------------
+.node-type-butlleti-actualitat,
+.node-type-butlleti-financament {
+  table, tbody, tr.body, tr.body td { border: 0px !important; }
+  tr.body td { padding-top: 3px !important; }
+}

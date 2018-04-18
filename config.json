@@ -1,0 +1,37 @@
+{
+  "name": "xn17",
+  "description": "A theme based on Radix.",
+  "browserSyncProxy" : "xarxanet.local",
+  "bowerDir": "./bower_components",
+  "css": {
+    "file" : "xn17.style.scss",
+    "src": [
+      "scss/**/*.scss"
+    ],
+    "dest": "assets/css",
+    "includePaths": [
+      "./bower_components/bootstrap-sass/assets/stylesheets",
+      "./bower_components/font-awesome/scss"
+    ]
+  },
+  "js": {
+    "file" : "xn17.script.js",
+    "src": [
+      "assets/js/**/*.js"
+    ],
+    "dest": "assets/js"
+  },
+  "images": {
+    "src": [
+      "assets/images/**/*"
+    ],
+    "dest": "assets/images/"
+  },
+  "fonts": {
+    "src": [
+      "./bower_components/font-awesome/fonts/**.*",
+      "./bower_components/firasans-googlefont/*.ttf"
+    ],
+    "dest": "./assets/fonts/"
+  }
+}

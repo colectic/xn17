@@ -1,0 +1,433 @@
+// Styles for panels and panes.
+// -----------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+//Destacats
+//------------------------------------------------------------------------------
+.destacat_2x2{
+  @include caixa_modul;
+}
+
+//------------------------------------------------------------------------------
+//Lina superior vermella, flag i infinite scroll
+.regio{
+  @include linia-vermella;
+}
+.regio, .page-opinio{
+  @include load-more;
+}
+
+.titol-regio{
+  @include flag;
+}
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+//ocultem el titol de la vista
+.pane-xn17-noticia-destacada-principal-panel-pane-1, .pane-xn17-recursos-destacats-portada-panel-pane-2, .pane-xn17-recursos-destacats-portada-panel-pane-1{
+  .pane-title{
+    display: none;
+  }
+}
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+//Opinio 2x1
+.pane-bundle-xn17-opinio-destacada-portada, .view-xn17-relacionats{
+  .titol-modul{
+    @include titol-modul;
+  }
+  .pdng_mdl{
+    margin-bottom: 30px;
+  }
+  .opinio-relacionada{
+    margin-top: -10px;
+  }
+  .pie{
+    background-color: #BE1622;
+    padding: 5px 0 5px 5%;
+    margin-top:-60px;
+    a{
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Fira Sans SemiBold';
+    }
+  }
+
+  //-----contenidor per al titular i l'entradeta del Destacat------
+  .cont_titular_entradeta{
+    h4{
+      font-family: 'Fira Sans SemiBold';
+    }
+    img{
+      @media screen and (max-width:$screen-xs-min){
+        width:110px;
+      }
+      @media screen and (min-width:$screen-sm-min){
+        width:130px;
+      }
+      @media screen and (min-width:$screen-md-min){
+        width:73px;
+      }
+      @media screen and (min-width:$screen-lg){
+        width:105px;
+      }
+      float:right;
+      clear:both;
+      margin: 0px -20px 0px 0px ;
+      border-radius: 50%;
+    }
+    .rightimage:before {
+      content: '' ;
+      display:block;
+      float: right;
+      @media screen and (max-width:$screen-xs){
+        height:70px;
+      }
+      @media screen and (min-width:$screen-sm-min){
+        height:100px;
+      }
+      @media screen and (min-width:$screen-md-min){
+        height:40px;
+      }
+      @media screen and (min-width:$screen-lg){
+        height:60px;
+      }
+    }
+    @include padding-dreta(277 40);
+    padding-bottom: 50px;
+    padding-left:5%;
+    margin: 0 auto ;
+    p{
+      @media screen and (max-width:$screen-xs){
+        font-size:0.90em;
+      }
+      @media screen and (min-width:$screen-sm-min){
+        font-size:1.15em;
+      }
+      @media screen and (min-width:$screen-md-min){
+        font-size:0.65em;
+      }
+      @media screen and (min-width:$screen-lg){
+        font-size:0.85em;
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Opinio destacada 2x2
+.pane-bundle-xn17-opinio-destacada-portada-2x2{
+  width: 100%;
+  .opinio-destacada-2x2{
+    padding-left: 15px;
+    margin-right: 15px;
+  }
+  h2, .pane-title{
+    display:none;
+  }
+  .imatge-destacada-opinio{
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+    margin-bottom:-30px;
+    img{
+      width: 100%;
+    }
+  }
+
+  //contenidor per al titular i l'entradeta del Destacat
+  .titular-entradeta{
+    width:50%;
+    float:left;
+    padding-left:15px;
+    h4{
+      padding-top:20px;
+      font-family: 'Fira Sans SemiBold';
+    }
+    .data{
+      color:$gray-medium;
+      font-size:0.85em;
+    }
+    p{
+      color:#2f3031;
+    }
+  }
+  .pie{
+    float: left;
+    position: relative;
+    top: 5px;
+    padding: 5px 30px 5px 5%;
+    width: 100%;
+    background-color: #BE1622;
+    a{
+      left: 0px;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Fira Sans SemiBold';
+    }
+  }
+  background-color: $gray-light;
+}
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+/* -------- Ranking de notícies --------- */
+//------------------------------------------------------------------------------
+.pane-ranking-noticies {
+  h2{
+    border-top: solid 8px #C6C6C6;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left:20px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: #ededed;
+    margin-left:0px;
+    font-family: Fira Sans SemiBold;
+    color: $xn17-vermell;
+    font-size:24px;
+  }
+  .ui-tabs-nav {
+    position:absolute;
+    top:-45px;
+    right:10px;
+    li {
+      padding-bottom: 0px !important;
+    }
+    li a {
+       padding: 20px 0px 8px 8px;
+       font-size:0.8em;
+       font-family:Fira Sans SemiBold;
+       color:#878787;
+    }
+    li.ui-tabs-selected a {
+      color:#4A4A49;
+    }
+  }
+  .ui-corner-all{
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+  }
+  .ui-widget-header{
+    border:0px;
+    background: transparent;
+  }
+  .ui-widget-content{
+    border:0px;
+  }
+  .ui-corner-top{
+    background:transparent;
+    border:0px;
+  }
+  .ui-tabs{
+    padding:0px;
+  }
+  #mini-panel-ranking_noticies{
+    border-bottom: solid 8px #C6C6C6;
+    border-radius: 0px;
+  }
+  #tabs-ranking_noticies-middle-1,
+  #tabs-ranking_noticies-middle-2 {
+    padding: 15px 0px 15px 0;
+      @media (min-width: $screen-sm-max) {
+        height:257px;
+      }
+    ol {
+      font-family: Fira Sans;
+      font-size: 0.8em;
+      padding-left: 15px;
+      padding-right: 15px;
+      @media (min-width: $screen-xs-max) {
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+      }
+      li {
+        width: 100%;
+        margin:0px;
+        list-style: none;
+        border-bottom: 1px #C6C6C6 solid;
+        -webkit-column-break-inside: avoid; /* Chrome, Safari */
+        page-break-inside: avoid;           /* Theoretically FF 20+ */
+        break-inside: avoid-column;         /* IE 11 */
+        display:table;                      /* Actually FF 20+ */
+        padding-bottom: 5px;
+        padding-top: 5px;
+        line-height:1.7 normalem;
+      }
+      li a {
+        color: #4A4A49;
+      }
+    }
+  }
+  .ui-corner-top{
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+  }
+  margin-bottom:30px;
+}
+
+.pane-seccions-especials{
+  h2{
+    border-top: solid 8px #C6C6C6;
+    padding-bottom: 15px;
+    padding-bottom: 15px;
+    @media (max-width: $screen-sm-max){
+      border-bottom: solid 3px #C6C6C6;
+      padding-bottom: 5px;
+    }
+    padding-top: 10px;
+    padding-left:15px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: #ededed;
+    margin-left:0px;
+    font-family: Fira Sans SemiBold;
+    color: $xn17-vermell;
+    font-size:24px;
+  }
+  .view-seccions-especials{
+    padding-left:15px;
+    background-color: #ededed;
+    border-bottom: solid 8px #C6C6C6;
+    margin-bottom: 30px;
+    padding-top:5px;
+    @media (max-width: $screen-md-max){
+      font-size:0.9em;
+      margin-bottom: 7px;
+    }
+    @media (max-width: $screen-sm-max){
+      font-size:0.8em;
+      margin-bottom: 7px;
+    }
+    @media (max-width: $screen-xs-max){
+      .view-header{
+        margin-bottom: 30px;
+      }
+      .view-content{
+        margin-top: 30px;
+        margin-bottom: 15px;
+        padding-right: 0px;
+        margin-right: 0px;
+      }
+      font-size:0.8em;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// Subportal noticies
+//------------------------------------------------------------------------------
+.panels-flexible-subportal_noticies {
+  .row { padding: 0 15px; }
+  .panels-flexible-region-inside { padding: 0px; }
+  .field-name-field-agenda-imatge img {
+    width: 100%;
+    height: auto;
+  }
+  .panels-flexible-row-subportal_noticies-main-row-inside::before {
+    border-top: solid 3px $xn17-vermell;
+    content: "";
+    display: block;
+    width: calc(100% - 30px);
+    margin-left: 15px;
+  }
+  /*.panels-flexible-row-subportal_noticies-main-row .panels-flexible-region {
+    width: 50%;
+  }*/
+  .panels-flexible-row-subportal_noticies-main-row {
+    padding: 0px;
+  }
+  .panels-flexible-region-subportal_noticies-center {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    color: white;
+    font-weight: 400;
+    .node-noticia-general { padding-right: 0px; }
+    .group-titular-entradeta, {
+      position: absolute;
+      z-index: 10;
+      top: 20%;
+      left: 10%;
+      width: 65%;
+      height: 90%;
+      padding-bottom: 50px;
+      .field-name-title h4 {
+        font-family: Fira Sans SemiBold;
+        font-size: 2.15em;
+        a { color: white; }
+      }
+      .field-name-field-resum {
+        font-weight: normal;
+        font-size: $font-size-base;
+        @media (max-width: $screen-sm-min){ display: none; }
+      }
+    }
+    .field-name-field-agenda-imatge:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% - 30px);
+        height: 100%;
+        background-image: linear-gradient(rgba(129, 129, 129, 0.45), rgba(129, 129, 129, 0.45));
+        z-index: 10;
+        top: 0;
+    }
+    .field-name-field-ambit-noticia {
+      @include flag;
+      top: 0;
+      a { color: white; }
+      z-index: 15;
+    }
+  }
+  .panels-flexible-region-subportal_noticies-destacada_principal {
+    .node-noticia-general {
+      @include caixa_modul;
+      padding-top: 0px;
+      @include aspect-ratio(255 321);
+      margin-bottom: 15px;
+      img{
+          width:100%;
+          height:auto;
+      }
+      .group-titular-entradeta h3 { display: none; }
+      .field-name-title {
+        @include aspect-ratio(255 123);
+        padding-left: 10px;
+        padding-top:20px;
+        padding-right:10px;
+        h4 {
+          margin: 0px;
+          a {
+            font-family: Fira Sans SemiBold;
+            color:$gray-dark;
+          }
+        }
+      }
+      .field-name-field-ambit-noticia {
+        background: none;
+        position: relative;
+        font-family: Fira Sans SemiBold;
+        font-weight: normal;
+        &::after { content: none; }
+        span {
+          padding-left: 10px;
+          text-transform: uppercase;
+        }
+        span::before {
+          content: "NOTÍCIA > ";
+          color: $gray-dark;
+        }
+        a { color:$xn17-vermell; }
+      }
+    }
+    .field-name-field-resum { display: none; }
+  }
+}

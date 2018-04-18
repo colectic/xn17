@@ -1,0 +1,49 @@
+// Styles for Menus and Navs
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Main menu
+// -----------------------------------------------------------------------------
+#main-menu {
+  display: none;
+  .top-menu-region {
+    position: relative;
+    height: 60px;
+  }
+  #contact-form, #close-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    a { font-weight: bold; font-size: 18px; }
+  }
+  #close-button { right: 15px; }
+  a.depth-1 { font-weight: 600; font-size: 28px; }
+  .menu-link.depth-1 { padding: 8px 0px; border-bottom: solid 7px $gray; }
+  a.depth-2 { font-weight: 600; font-size: 18px; }
+  .menu-item.depth-2 { padding: 8px 10px; border-bottom: solid 1px $gray; }
+
+  .menu-link-notícies, .menu-link-recursos {
+    @media (min-width: $screen-md-max) {
+      .menu-link.depth-2 { width: 25%; display: inline-block; }
+      .submenu.depth-3 { width: 75%; display: inline-block; }
+      .menu-item.depth-3 {
+        display: inline-block;
+        a::after { content : ' /'; }
+        &.last a::after { content : ''; }
+      }
+    }
+    @media (max-width: $screen-md-max) {
+      a.depth-2.closed::after { content: url('../images/icon/icon-show-small.svg'); float: right; pointer-events: none; cursor: default;}
+      a.depth-2.opened::after { content: url('../images/icon/icon-hide-small.svg'); float: right; pointer-events: none; cursor: default;}
+      .menu-link-totes, .menu-link-tots {
+        a.depth-2::after { content: none;}
+      }
+      .submenu.depth-3 { display: none; }
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    a.depth-1.closed::after { content: url('../images/icon/icon-show-big.svg'); float: right; pointer-events: none; cursor: default;}
+    a.depth-1.opened::after { content: url('../images/icon/icon-hide-big.svg'); float: right; pointer-events: none; cursor: default;}
+    .submenu.depth-2 { display: none; }
+  }
+}

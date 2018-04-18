@@ -1,0 +1,586 @@
+// Styles for blocks.
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Menu
+// -----------------------------------------------------------------------------
+.block.menu {
+  @include block_menu;
+}
+
+// -----------------------------------------------------------------------------
+// Filtre
+// -----------------------------------------------------------------------------
+.block.filtre {
+  position: relative;
+  .content {
+    .help-block { display: none; }
+    background: rgba(237, 237, 237, .6);
+    @include vertical-align-middle;
+    input, select { @include input-field; }
+    @media (max-width: $screen-md-max) {
+      width: 334px;
+      position: relative;
+      left: calc(50% - 167px);
+      input, select { width: 150px;}
+      #edit-field-date-event-value-wrapper { padding-right: 0px; }
+    }
+    @media (min-width: $screen-md-max) {
+      width: 590px;
+      position: relative;
+      left: calc(50% - 295px);
+      input, select { width: 180px; }
+      #edit-city-wrapper { padding-right: 0px; }
+    }
+    input[type="submit"] {
+      padding: 0px; margin: 0px;
+      font-family: Fira Sans SemiBold;
+      background-color: $gray-medium;
+    }
+    form {
+      clear: both;
+      padding: 10px;
+      input { padding-right: 40px; }
+      #edit-combine-wrapper input { background: white url('../images/icon/icon-search-gray.svg') no-repeat right 15px center ; }
+    }
+  }
+  &.filtre-agenda {
+    @include header_image('agenda');
+    .content {
+      .form-type-date-popup, .date-popup-init, .form-control, .views-submit-button { margin: 0px; }
+      .views-submit-button {
+        float: right;
+        padding-right: 0px;
+        @media (min-width: $screen-md-max) { padding-top: 15px; }
+      }
+      #edit-field-event-type-value-wrapper { display: none; }
+      #type-selectors, #type-arrows {
+        float: left;
+        width: 100%;
+        .type-selector, .type-arrow {
+          width: 33.3333%;
+          float: left;
+          text-align: center;
+        }
+        .type-selector {
+          font-family: Fira Sans SemiBold;
+          background-color: white;
+          padding: 12px 0;
+          a { color: $gray-medium;}
+          &.active {
+            background-color: $xn17-vermell;
+            a { color: white; }
+          }
+        }
+      }
+      #type-arrows { height: 0px; }
+      .type-arrow {
+        img { display: none; }
+        &.active img { display: inline; }
+        margin-top: -6px;
+      }
+      form {
+        #edit-field-date-event-value-wrapper input { background: white url('../images/icon/icon-calendar-gray.svg') no-repeat right 15px center ;}
+        #edit-city-wrapper input {background: white url('../images/icon/icon-map-gray.svg') no-repeat right 15px center ; }
+      }
+      #publish-link {
+        color: $xn17-vermell;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        display: block;
+        @media (min-width: $screen-md-max) { margin-top: -35px; }
+      }
+    }
+  }
+  &.filtre-financament {
+    @include header_image('financament');
+    .content {
+      @media (max-width: $screen-md-max) {
+        #edit-field-finfull-ambit-value-wrapper, .views-submit-button { padding-right: 0px; }
+        #edit-combine-wrapper {
+          label { display: none; }
+          padding-top: 10px;
+        }
+      }
+      @media (min-width: $screen-md-max) {
+        #edit-combine-wrapper { padding-right: 0px; padding-top: 12px;}
+      }
+      .views-submit-button {
+        float: right;
+        padding-right: 0px;
+        input { background-color: $xn17-vermell; }
+      }
+    }
+  }
+  &.filtre-biblioteca {
+    @include header_image('biblioteca');
+    z-index: 1;
+    .content {
+      background: rgba(198, 198, 198, 0.8);
+      &.advanced { transform: translateY(-21.5%); }
+    }
+    #sortby-selectors, #sortby-arrows {
+      float: left;
+      width: 100%;
+      .sortby-selector, .sortby-arrow {
+        width: 50%;
+        float: left;
+        text-align: center;
+      }
+      .sortby-selector {
+        font-family: Fira Sans SemiBold;
+        background-color: white;
+        padding: 12px 0;
+        a { color: $gray-medium;}
+        &.active {
+          background-color: $xn17-vermell;
+          a { color: white; }
+        }
+      }
+    }
+    #sortby-arrows { height: 0px; }
+    .sortby-arrow {
+      img { display: none; }
+      &.active img { display: inline; }
+      margin-top: -6px;
+    }
+    form {
+      position: relative;
+      z-index: 3;
+      .views-exposed-widget {
+        width: 50%;
+        input, select { width: 100%; }
+      }
+      #cerca-avancada {
+        float: left;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        text-align: center;
+        color: $gray-dark;
+        cursor: pointer;
+        &::after {
+          position: absolute;
+          left: 50%;
+          padding-top: 15px;
+        }
+        &.showicon::after { content: url('../images/icon/icon-show-small.svg'); }
+        &.hideicon::after { content: url('../images/icon/icon-hide-small.svg'); }
+      }
+      #edit-combine-wrapper {
+        padding-right: 0px;
+        width: 100%;
+      }
+      #edit-field-doc-tipologia-tid-wrapper, #edit-field-doc-tematica-tid-wrapper,
+      #edit-field-doc-data-publi-value-wrapper, #edit-field-doc-editorial-tid-wrapper,
+      .views-submit-button, .views-widget-sort-by {
+        display: none;
+      }
+      #edit-field-doc-tipologia-tid-wrapper, #edit-field-doc-tematica-tid-wrapper {
+        padding-top: 30px;
+      }
+      #edit-field-doc-tipologia-tid-wrapper, #edit-field-doc-editorial-tid-wrapper {
+        padding-right: 0px;
+      }
+      .views-submit-button {
+        float: right;
+        padding-right: 0px;
+        input { background-color: $xn17-vermell; }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Bloc header recursos
+// -----------------------------------------------------------------------------
+.bloc-header-recursos {
+  @include header_image('recurs_economics');
+  .page-recursos & { @include header_image('recurs_assessorat');}
+  .page-recursos-projectes & { @include header_image('recurs_projectes');}
+  .page-recursos-juridics & { @include header_image('recurs_juridics');}
+  .page-recursos-informatics & { @include header_image('recurs_informatics');}
+  .page-recursos-formatius & { @include header_image('recurs_formacio');}
+  .page-recursos-economics & { @include header_image('recurs_economics');}
+  height: 180px !important;
+}
+
+// -----------------------------------------------------------------------------
+// Bloc header especials
+// -----------------------------------------------------------------------------
+.bloc-header-especials {
+  .page-especials & { @include header_image('monografics');}
+  .page-node-81691 & { @include header_image('mon_cabecera_pnav');}
+  .page-node-78394 & { @include header_image('monografics');}
+  .page-node-86632 & { @include header_image('mono_cabecera_transparencia');}
+  .page-node-86631 & { @include header_image('mono_cabecera_impost');}
+  .page-node-78410 & { @include header_image('mono_cabecera_educacio');}
+  .page-node-78409 & { @include header_image('mono_cabecera_comerciojusto');}
+  .page-node-78397 & { @include header_image('mon_cabecera_pnav');}
+  .page-node-78396 & { @include header_image('mono_cabecera_avaluacio');}
+  .page-node-78395 & { @include header_image('mono_cabecera_participacio');}
+  .page-node-78393 & { @include header_image('mono_cabecera_captacio-fons');}
+  height: 180px !important;
+}
+
+// -----------------------------------------------------------------------------
+// Blocs recursos
+// -----------------------------------------------------------------------------
+.bloc-recursos {
+  &.projectes { @include bloc-banner('recurs_projectes'); }
+  &.juridics { @include bloc-banner('recurs_juridics'); }
+  &.informatics { @include bloc-banner('recurs_informatics'); }
+  &.economics { @include bloc-banner('recurs_economics'); }
+  &.formacio { @include bloc-banner('recurs_formacio'); }
+  &.generals { @include bloc-banner('recurs_assessorat'); }
+  .sub-seccions,.entradeta-recurs{
+    display:none;
+  }
+}
+
+.bloc-recursos-portada {
+  &.projectes { @include bloc-banner-portada('recurs_home_projectes'); }
+  &.juridics { @include bloc-banner-portada('recurs_home_juridics'); }
+  &.informatics { @include bloc-banner-portada('recurs_home_informatics'); }
+  &.economics { @include bloc-banner-portada('recurs_home_economics'); }
+  &.formacio { @include bloc-banner-portada('recurs_home_formacio'); }
+  &.generals { @include bloc-banner-portada('recurs_home_assessorat'); }
+
+  h4{
+    width:40%;
+  }
+  @media (max-width: $screen-sm-max){
+    h4{
+      width: 100%;
+    }
+  }
+  .sub-seccions{
+    position: absolute;
+    right: 0px;
+    width: 40%;
+    top: 40px;
+  }
+  .subtitol-recurs, .rteright{
+    display: none;
+  }
+  .entradeta-recurs{
+    width: 60%;
+  }
+  @media (max-width: $screen-sm-max){
+    .sub-seccions,.entradeta-recurs{
+      display:none;
+    }
+    .subtitol-recurs, .rteright{
+      display: inherit;
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Blocs banner
+// -----------------------------------------------------------------------------
+.bloc-banner {
+  .block__content { margin: 7.5px 15px; }
+  &.voluntariat { @include bloc-banner('lorem', 150px); }
+  &.festevoluntaria { @include bloc-banner('lorem', 150px); }
+  &.assessorament { @include bloc-banner('lorem', 150px); }
+  &.tajudem { @include bloc-banner('lorem', 150px); }
+}
+
+// -----------------------------------------------------------------------------
+// Blocs main footer
+// -----------------------------------------------------------------------------
+#main-footer {
+  padding-top: 50px;
+  .main-footer-title {
+    text-align: center;
+    margin-bottom: 15px;
+    background: $gray-light url("../images/elements/slim_line.svg") repeat-x center;
+    h4 {
+      font-weight: 600;
+      color: $gray-medium;
+          display: inline-block;
+          width: auto;
+          background-color: $gray-light;
+          padding: 0 15px;
+    }
+  }
+  .segueixnos {
+    margin-bottom: 50px;
+    .social {
+      display: inline-block;
+      width: auto;
+      padding-top: 5px;
+      margin-right: 25px;
+      margin-bottom: 10px;
+      &.facebook {
+        background: url('../images/icon/icon-fb.svg') no-repeat left;
+        padding-left: 18px;
+      }
+      &.twitter {
+        background: url('../images/icon/icon-tw.svg') no-repeat left;
+        padding-left: 27px;
+      }
+      &.instagram {
+        background: url('../images/icon/icon-ig.svg') no-repeat left;
+        padding-left: 30px;
+      }
+      &.youtube {
+        background: url('../images/icon/icon-yt.svg') no-repeat left;
+        padding-left: 30px;
+      }
+      &.rss {
+        background: url('../images/icon/icon-rss.svg') no-repeat left;
+        padding-left: 28px;
+      }
+      &.newsletter {
+        background: url('../images/icon/icon-mail.svg') no-repeat left;
+        padding-left: 30px;
+      }
+    }
+  }
+  .promotors {
+    margin-top: 50px;
+    clear: both;
+    float:left;
+    .logo-title {
+      margin: 0 15px;
+      border-top: solid 1px $gray-dark;
+      padding: 10px 0;
+    }
+  }
+  .unprojectede {
+    margin-top: 50px;
+    clear: both;
+    float:left;
+    width: 100%;
+    .main-footer-title {
+      text-align: left;
+    }
+    .logo-title {
+      margin: 0 15px;
+      border-top: solid 1px $gray-dark;
+      padding: 10px 0;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// Bloc footer per opinio
+//------------------------------------------------------------------------------
+#content-footer{
+  background-color: #fff;
+  padding-bottom: 50px;
+  .block__title{
+    display: none;
+  }
+  .block--últimes-opinions, .block--articles-relacionats{
+    display: inline-block;
+  }
+  .view-xn17-opinio{
+    .view-header{
+      border-top: solid 3px #BE1622;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .views-row h4{
+      padding-top:35px;
+    }
+  }
+  .view-xn17-relacionats{
+    .view-header{
+      border-top: solid 3px #BE1622;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .opinio-relacionada{
+      h4{
+        padding-top: 30px;
+      }
+      p{
+        font-size: 1em !important;
+      }
+      .rightimage:before {
+        content: '' ;
+        display:block;
+        float: right;
+        position: relative;
+        @include padding-top(220 220);
+        @media screen and (max-width:$screen-xs){
+          height:70px;
+        }
+        @media screen and (min-width:$screen-sm-min){
+          height:100px;
+        }
+        @media screen and (min-width:$screen-md-min){
+          height:40px;
+        }
+        @media screen and (min-width:$screen-lg){
+          height:60px;
+        }
+      }
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Bloc +xarxanet
+// -----------------------------------------------------------------------------
+.block--xarxanet{
+  h2{
+    border-top: solid 8px #C6C6C6;
+    padding-bottom: 15px;
+    @media (max-width: $screen-sm-max){
+      border-bottom: solid 3px #C6C6C6;
+      padding-bottom: 5px;
+    }
+    padding-top: 10px;
+    padding-left:15px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: #ededed;
+    margin-left:0px;
+    font-family: Fira Sans SemiBold;
+    color: $xn17-vermell;
+    font-size:24px;
+  }
+  .content{
+    height:80px;
+    padding-left:15px;
+    background-color: #ededed;
+    border-bottom: solid 8px #C6C6C6;
+    padding-top:5px;
+    margin-bottom:30px;
+    vertical-align: text-bottom;
+    @media (max-width: $screen-md-max){
+      font-size:0.9em;
+      a{
+        font-size:1em;
+      }
+      div{
+        padding-right: 0px;
+      }
+    }
+  }
+  .btn{
+    background-color:white;
+    font-family: 'Fira Sans SemiBold';
+    color:#878787;
+    margin-top:20px;
+    border-radius: 0px;
+  }
+  .publica{
+    padding-left:30px;
+    font-size:0.8em;
+    text-transform: uppercase;
+    background: $xn17-vermell url('../images/elements/publica_blanc.svg') no-repeat 7px 7px;
+    font-family: 'Fira Sans SemiBold';
+    color:#FFF !important;
+    margin-top:20px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+}
+
+.block--voluntariat{
+  h2{
+    border-top: solid 8px #C6C6C6;
+    @media (max-width: $screen-sm-max){
+      border-bottom: solid 3px #C6C6C6;
+      padding-bottom: 5px;
+    }
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left:15px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: #ededed;
+    margin-left:0px;
+    font-family: Fira Sans SemiBold;
+    color: $xn17-vermell;
+    font-size:24px;
+  }
+  .content{
+    min-height:80px;
+    padding-left:15px;
+    background-color: #ededed;
+    border-bottom: solid 8px #C6C6C6;
+    padding-top:5px;
+    margin-bottom:30px;
+    vertical-align: text-bottom;
+    @media (max-width: $screen-sm-max){
+      font-size:0.9em;
+      a{
+        font-size:1em;
+      }
+    }
+    div{
+      margin-bottom:5px;
+    }
+  }
+  .btn{
+    background-color:white;
+    font-family: 'Fira Sans SemiBold';
+    color:#878787;
+    margin-top:20px;
+    border-radius: 0px;
+  }
+}
+
+.block--cursos{
+  h2{
+    border-top: solid 8px #C6C6C6;
+    @media (max-width: $screen-sm-max){
+      border-bottom: solid 3px #C6C6C6;
+      padding-bottom: 5px;
+    }
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left:15px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: #ededed;
+    margin-left:0px;
+    font-family: Fira Sans SemiBold;
+    color: $xn17-vermell;
+    font-size:24px;
+  }
+  .content{
+    min-height:80px;
+    padding-left:15px;
+    background-color: #ededed;
+    border-bottom: solid 8px #C6C6C6;
+    padding-top:5px;
+    margin-bottom:30px;
+    vertical-align: text-bottom;
+    @media (max-width: $screen-sm-max){
+      font-size:0.9em;
+      a{
+        font-size:1em;
+      }
+    }
+    div{
+      margin-bottom:5px;
+    }
+  }
+  .btn{
+    background-color:white;
+    font-family: 'Fira Sans SemiBold';
+    color:#878787;
+    margin-top:20px;
+    border-radius: 0px;
+  }
+  .publica{
+    padding-left:30px;
+    font-size:0.8em;
+    text-transform: uppercase;
+    background: $xn17-vermell url('../images/elements/publica_blanc.svg') no-repeat 7px 7px;
+    font-family: 'Fira Sans SemiBold';
+    color:#FFF !important;
+    margin-top:20px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+}

@@ -1,0 +1,64 @@
+// Typography
+// -----------------------------------------------------------------------------
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/FiraSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Sans SemiBold';
+  src: url('../fonts/FiraSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Sans Bold';
+  src: url('../fonts/FiraSans-Bold.ttf') format('truetype');
+}
+
+//------------------------------------------------------------------------------
+//Modificacions de font-size per cada breakpoint----------------------
+//------------------------------------------------------------------------------
+/* xs < 768 */
+@media screen and (max-width: $screen-xs) {
+  h3 {
+      font-size: 1.75em;
+  }
+  .titular, .cont_titular_entradeta{
+    h4{
+        font-size: 1.5em;
+    }
+  }
+}
+/* sm */
+@media screen and (min-width: $screen-sm) {
+  h3 {
+      font-size: 3em;
+  }
+  .titular, .cont_titular_entradeta{
+    h4{
+      font-size: 2em;
+    }
+  }
+}
+/* md */
+@media screen and (min-width: $screen-md) {
+  h3 {
+      font-size: 1.75em;
+  }
+  .titular, .cont_titular_entradeta{
+    h4{
+      font-size: 1.25em;
+    }
+  }
+}
+/* lg */
+@media screen and (min-width: $screen-lg) {
+  h3 {
+      font-size: 2.15em;
+  }
+  .titular, .cont_titular_entradeta{
+    h4{
+      font-size: 1.42em;
+    }
+  }
+}

@@ -1,0 +1,325 @@
+// Page Layout
+// -----------------------------------------------------------------------------
+// Header
+// -----------------------------------------------------------------------------
+header {
+  &#first-header {
+    background-color: $gray-darker;
+    border-bottom: solid 1px white;
+    color: white !important;
+    a { color: white !important; }
+    font-size : 13px;
+    @media (max-width: $screen-md-min) {font-size: 11px;}
+    .header-region {
+      position: relative;
+      height: 50px;
+      @media (max-width: $screen-md-min) { height: 40px; }
+      &.first {
+        @media (max-width: $screen-md-min) { border-bottom: solid 3px $gray-dark; }
+      }
+    }
+    #site-slogan, #secondary-menu {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    #secondary-menu {
+      right: 0;
+      @media (max-width: $screen-xs-min) { left: 0px; }
+      &.navbar-nav li {
+        float: left;
+        @media (min-width: $screen-md-min) { margin-left: 18px; }
+        @media (max-width: $screen-md-min) { a { padding-right: 5px;}}
+      }
+      .leaf a { &:hover, &:focus { background-color: transparent; }}
+      .menu-link-segueix-nos, .menu-link-publica, .menu-link-butlletí, .menu-link-publica, .menu-link-panell, .menu-link-surt {
+        a {
+          @media (min-width: $screen-md-min) { padding-left: 25px; }
+          @media (max-width: $screen-md-min) {
+            font-size: 0px;
+            padding-right: 18px !important;
+            padding-left: 18px;
+          }
+        }
+      }
+      .menu-link-segueix-nos {
+        background: url('../images/icon/icon-share-white.svg') no-repeat left 10px;
+        @media (max-width: $screen-md-min) { margin-left: 10px; }
+      }
+      .menu-link-publica, .menu-link-panell { background: url('../images/icon/icon-publish-white.svg') no-repeat left 10px; }
+      .menu-link-surt { background: url('../images/icon/icon-logout-white.svg') no-repeat left 10px; }
+      .menu-link-butlletí { background: url('../images/icon/icon-newsletter-white.svg') no-repeat left 10px; }
+      #search-icon{ margin: 10px 10px 10px 0px; }
+    }
+  }
+  &#second-header {
+    background-color: $gray-dark;
+    .search-form { margin-bottom: 0px; }
+    .header-region {
+      position: relative;
+      height: 70px;
+      @media (max-width: $screen-md-min) { height: 60px; }
+    }
+    #site-logo, #search-form {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    #search-form {
+      form { padding-top: 0px; padding-bottom: 0px; box-shadow: none; }
+      @media (min-width: $screen-md-min) { right: 8px; }
+      @media (max-width: $screen-md-min) {
+        left: 8px;
+        top: 40%;
+        width: 100%;
+        form { width: 100%; }
+      }
+    }
+  }
+  &#third-header, &#third-header-clone {
+    background-color: $gray-dark;
+    border-top: solid 3px $gray-darker;
+    height: 50px;
+    .social-icons, .main-selector, .menu-icon {
+      float: right;
+      height: 46px;
+    }
+    .menu-icon {
+      padding-top: 12px;
+      padding-left: 25px;
+      @media (max-width: $screen-md-min) { padding-left: 20px; }
+      @media (max-width: $screen-sm-min) { padding-left: 15px; }
+      border-left: solid 3px $gray-darker;
+    }
+    .main-news a, .main-resources a{
+      color: $gray-medium;
+      font-weight: 600;
+      font-size: 22px;
+    }
+    .main-selector {
+      padding: 8px 20px 0px 20px;
+      border-left: solid 3px $gray-darker;
+      @media (max-width: $screen-md-min) { &#main-news { border-left: none}}
+      @media (max-width: $screen-md-min) { padding: 5px 18px 0px 18px; }
+      @media (max-width: $screen-sm-min) { padding: 5px 10px 0px 10px; }
+    }
+    .social-icons {
+      padding-top: 7px;
+      padding-right: 10px;
+      a { margin: 0px 8px; }
+    }
+    .sticky-logo {
+      height: 30px;
+      float: left;
+      margin-top: 6px;
+    }
+  }
+  &#third-header-clone {
+    display: none;
+    top: 0px;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Main Wrapper
+// -----------------------------------------------------------------------------
+#main {
+  margin-top: 45px;
+  @media (max-width: $screen-md-max) { margin-top: 30px; }
+  #content { background-color: white; }
+}
+
+// -----------------------------------------------------------------------------
+// Main Wrapper per la portada, necessari per separar les seccions noticies
+// i recursos
+// =========================
+// NOTA  la class "page-xn17-portada" nomes serveix per a la instalació
+// en local ja que a producció el machine name de la pagina es "page-inici"
+// =========================
+// -----------------------------------------------------------------------------
+.page-xn17-portada, .page-inici {
+  #main {
+    margin-top: 45px;
+    @media (max-width: $screen-md-max) { margin-top: 30px; }
+    #content {
+      background-color: transparent;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .panels-flexible-row-57-main-row, .panels-flexible-row-57-2{
+      background-color: white;
+    }
+    .panels-flexible-row-57-1, .panels-flexible-row-57-3{
+      background-color: white;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .panels-flexible-row-57-1, .panels-flexible-row-57-3{
+      margin-bottom:90px;
+    }
+    .pane-menu{
+      @include block_menu;
+      padding: 15px 15px 15px 30px !important;
+      background-color: white;
+      margin-bottom: 50px;
+      margin-right: -12px;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Footer
+// -----------------------------------------------------------------------------
+footer {
+  background-color: $gray-dark;
+  margin: 0px;
+  color: white;
+  a { color: white; }
+  p { margin: 0px; }
+  .footer-region {
+    position: relative;
+    height : 60px;
+    @media (min-width: $screen-lg-min) { height: 70px; }
+    @media (max-width: $screen-md-min) { &.second { height: 20px; }}
+
+    #footer-logo, #footer-links, #social-icons {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    #social-icons {
+      @media (min-width: $screen-lg-min) { right: 15px; }
+      a { margin: 0px 2px; }
+    }
+    #footer-links {
+      @media (min-width: $screen-lg-min) {
+        right: 0px;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Content
+// -----------------------------------------------------------------------------
+.region-content {
+  .noticia & { @media (min-width: $screen-lg-min) { padding-top: 50px; }}
+}
+
+// -----------------------------------------------------------------------------
+// Sidebar
+// -----------------------------------------------------------------------------
+.region-content-sidebar {
+  @media (min-width: $screen-lg-min) { padding-top: 40px; }
+  .page-biblioteca &,
+  .page-recursos & { @media (min-width: $screen-lg-min) { padding-top: 70px; }}
+  .agenda & { @media (min-width: $screen-lg-min) { padding-top: 90px; }}
+}
+
+// -----------------------------------------------------------------------------
+// Panell de Control
+// -----------------------------------------------------------------------------
+.page-panell-entitat{
+  .panels-flexible-row-42-2{
+    margin-top: 15px;
+  }
+  .panels-flexible-region-42-publica{
+    @include blocs-panell-entitat;
+    #noticia{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/noticies.svg');
+    }
+    #acte{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/actes.svg');
+    }
+    #recurs{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/recursos.svg');
+    }
+  }
+  .panels-flexible-region-42-dades_de_l_entitat{
+    @include blocs-panell-entitat;
+    #mostra{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/mostra.svg');
+    }
+    #edita{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/edita.svg');
+    }
+    #document{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/transparencia.svg');
+    }
+  }
+  .panels-flexible-region-42-ajuda{
+    @include blocs-panell-entitat;
+    #intranet{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/intranet.svg');
+    }
+    #otrs{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/otrs.svg');
+    }
+    #analytics{
+      list-style-image: url('/sites/all/themes/xn17/assets/images/icon/analytics.svg');
+    }
+  }
+  #edit-date-filter-min-wrapper,#edit-date-filter-max-wrapper{
+    display: inline-block !important;
+    .form-type-date-popup{
+      display: inline-flex !important;
+      label{
+        margin-right:5px;
+      }
+    }
+  }
+  .view-content{
+    th{
+      background-color: $gray-dark;
+      color: #fff;
+      a{
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+    th.active{
+        background-color: $gray-dark;
+        color: #fff;
+    }
+  }
+}
+
+.page-faq {
+  #banner_xn img {
+    width: 100%;
+    height: auto;
+  }
+  .page-header {
+    background-color: white;
+    padding: 40px 30px 20px 30px;
+    margin: 0px -15px;
+    h1 {
+      color: $xn17-vermell;
+      font-size: 2.5em;
+      font-family: 'Fira Sans SemiBold';
+      text-transform: capitalize;
+      padding-bottom: 10px;
+    }
+  }
+  .region-content-header {
+    margin: 0 -15px;
+    overflow: hidden;
+  }
+  .panels-flexible-column-inside {
+    padding: 30px 15px;
+  }
+  .panel-group {
+    .panel, .panel-body {
+      border: none !important;
+      border-radius: 0px;
+    }
+    .panel-heading {
+      background-color: $gray-light;
+      a { font-family: 'Fira Sans SemiBold'; }
+    }
+  }
+}

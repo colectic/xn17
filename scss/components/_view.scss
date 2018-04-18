@@ -1,0 +1,1184 @@
+// Styles for Views
+// -----------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Moduls de portada
+//------------------------------------------------------------------------------
+.destacat_2x2{
+  h3{
+    font:{
+      family: Fira Sans SemiBold;
+      width:600;
+    }
+    a{
+      color:#FFFFFF;
+    }
+    margin:0;
+  }
+  //----------------------------------------------------------------------------
+  //contenidor per al background-repeat:no-repeat; titular i l'entradeta del Destacat
+  .cont_titular_entradeta{
+    position:absolute;
+    top:20%;
+    left:7%;
+    @include padding-dreta(584 150);
+    padding-bottom: 50px;
+    @media screen and (min-width: $screen-xs) {
+      left:10%;
+    }
+    p{
+      padding-top:20px;
+    }
+  }
+  //----------------------------------------------------------------------------
+  color:#FFFFFF;
+  margin-bottom:25px;
+  @include aspect-ratio(690 409);
+}
+
+.float-r{
+  @include float-r;
+}
+
+.float-l{
+  @include float-l;
+}
+
+.modul_2x1{
+  @include caixa_modul;
+  padding-top: 0px;
+  @include aspect-ratio(255 321);
+  img{
+      width:100%;//------------------------------------------------------------------------------
+
+      height:auto;
+  }
+  .titular{
+    h4{
+      font:{
+        family: 'Fira Sans SemiBold';
+      }
+      a{
+        color:$gray-dark;
+      }
+      margin:0px;
+    }
+    @include aspect-ratio(255 123);
+    padding-left: 10px;
+    padding-top:20px;
+    padding-right:10px;
+  }
+  .tipo-noticia{
+    @include tipo-noticia-recurs;
+    .field-content, a{
+      color:$xn17-vermell;
+    }
+  }
+
+  .tipo-recurs{
+    @include tipo-noticia-recurs;
+    .tipo-recurs-Informàtic a{
+      color:$xn17-informatic !important;
+    }
+    .tipo-recurs-Projectes a{
+      color:$xn17-projectes !important;
+    }
+    .tipo-recurs-Jurídics a{
+      color:$xn17-juridic !important;
+    }
+    .tipo-recurs-Econòmic a{
+      color:$xn17-juridic !important;
+    }
+    .tipo-recurs-Formatius a{
+      color:$xn17-juridic !important;
+    }
+  }
+
+  margin-bottom:30px;
+}
+
+.modul_1x1{
+  @include caixa_modul;
+  padding-top: 0px;
+  @include aspect-ratio(255 156);
+  .titular{
+    h4{
+      font:{
+        family: Fira Sans SemiBold;
+      }
+      a{
+        color:$gray-dark;
+      }
+      margin:0px;
+    }
+    @include aspect-ratio(255 108);
+    padding-left: 10px;
+    padding-top:20px;
+    padding-right:10px;
+  }
+  .tipo-noticia{
+    text-transform: uppercase;
+    font-family: Fira Sans Bold;
+    .field-content, a{
+      display:inline-block;
+      color:$xn17-vermell;
+    }
+    padding-left:10px;
+  }
+  margin-bottom:30px;
+}
+
+//------------------------------------------------------------------------------
+// Monografic portada
+//------------------------------------------------------------------------------
+
+.pane-xn17-monografics-portada{
+  border-top:solid 3px $xn17-vermell;
+  margin-left: 30px;
+  margin-right: 15px;
+  margin-bottom: 90px;
+  height:481px;
+  @media (max-width: $screen-md-max){
+    height:432px;
+  }
+  @media (max-width: $screen-sm-max){
+    height:481px;
+  }
+  @media (max-width: $screen-xs-max){
+    height:276px;
+  }
+  .pane-content, .view-xn17-monografics-portada, .view-content, .skin-default{
+    height:100%;
+  }
+  .skin-default{
+    background-color: $gray-light;
+    @media (max-width: $screen-md-max){
+      margin-right: 5px;
+    }
+    @media (max-width: $screen-sm-max){
+      margin-right: 7px;
+    }
+    @media (max-width: $screen-xs){
+      margin-right: 9px;
+    }
+  }
+  .pane-title{
+    display:none;
+  }
+  .imatge{
+    padding-right:0px;
+    margin-right:0px;
+    height: 478px;
+    width: 840px;
+    @media (max-width: $screen-md-max){
+      height:429px;
+      width: 690px;
+    }
+    @media (max-width: $screen-sm-max){
+      height:478px;
+      width: 705px;
+    }
+    @media (max-width: $screen-xs-max){
+      height:273px;
+      position: relative;
+      width: 100%;
+    }
+    overflow: hidden;
+  }
+  .modul-monografic-portada{
+    height:481px;
+    padding:30px;
+    background-size: 840px !important;
+    position: relative;
+    z-index: -1;
+    @media (max-width: $screen-md-max){
+        background-size: 690px !important;
+    }
+    @media (max-width: $screen-md-max){
+        background-size: auto 478px !important;
+    }
+    @media (max-width: $screen-xs-max){
+      height: 273px;
+      width: 100% !important;
+      background-size:cover !important;
+      background-position: 0% 100% !important;
+    }
+    .cont_titular_entradeta{
+      h2{
+        position: relative;
+        z-index: 100;
+        text-transform: uppercase;
+        font-family: Fira Sans SemiBold;
+        font-size:1.3em;
+        padding-top:15px;
+        padding-left:20px;
+        background: url('/sites/all/themes/xn17/assets/images/elements/fletxa_xn_blanc.svg') no-repeat 0% 91%;
+        background-size:14px 14px;
+      }
+      h3{
+        font:{
+          family: Fira Sans SemiBold;
+          width:600;
+        }
+        a{
+          color:#FFFFFF;
+        }
+        margin:0;
+      }.pane-content, .view-xn17-monografics-portada, .view-content, .skin-default{
+    height:100%;
+  }
+      @include padding-dreta(481 250);
+      @media (max-width: $screen-md-max){
+        @include padding-dreta(432 200);
+      }
+      @media (max-width: $screen-sm-max){
+        @include padding-dreta(636 150);
+      }
+      @media (max-width: $screen-xs-max){
+        height:273px;
+        @include padding-dreta(276 0);
+        h2{
+          font-size:1.2em;
+        }
+        h3{
+          font-size:1.5em;
+        }
+      }
+      .resum{
+        padding-top:15px;
+        font-size:1.1em;
+        a{
+          color:#fff;
+          text-decoration:underline;
+        }
+      }
+    }
+    color:#FFFFFF;
+  }
+  .views-slideshow-controls-bottom{
+    position: relative;
+    #widget_pager_bottom_xn17_monografics_portada-default{
+      margin-bottom: 15px;
+    }
+    background-color: $gray-light;
+    height: 100%;
+    float:right;
+    margin-right:3px;
+    padding-left:30px;
+    padding-right:15px;
+    .titol-paginador{
+      text-transform: uppercase;
+      font-family: Fira Sans SemiBold;
+      font-size:1.3em;
+      padding-top:60px;
+      color: #4A4A49;
+      padding-left: 0px;
+    }
+    .paginador{
+      padding-left:0px;
+      position:absolute;
+      bottom: 0px;
+      @media (max-width: $screen-sm-max){
+        position: inherit;
+        float:right;
+      }
+    }
+    @media (max-width: $screen-md-max){
+      float: right;
+      margin-right:5px;
+    }
+    @media (max-width: $screen-sm-max){
+      height:155px;
+      margin-right: 0px;
+      .titol-paginador{
+        font-size:1.2em;
+        padding-top:15px;
+      }
+      .paginador{
+        padding-top: 10px;
+      }
+    }
+    .views_slideshow_pager_field_item{
+      font-size: 0.9em;
+      @media (max-width: $screen-md-max){
+        font-size: 0.8em;
+      }
+      padding-left:13px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      backgpagerround: url('/sites/all/themes/xn17/assets/images/elements/fletxa_xn.svg') no-repeat 0 11px;
+      background-size:8px 8px;
+      border-bottom: solid 1px #fff;
+      padding-right: 25px;
+    }
+    .views-row-last{
+      border-bottom: 0px;
+    }
+    .active{
+      font-family: Fira Sans SemiBold;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// Agenda
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// Finançament
+//------------------------------------------------------------------------------
+.agenda, .financament {
+  @include load-more;
+  .view-header { @include view-header; }
+  .views-row { padding: 15px; }
+  .views-field-field-agenda-imatge {
+    img { width: 100%; height: auto; }
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+  }
+  .views-field-nothing {
+    float: left;
+    width: 50%;
+    h4 { font-family: Fira Sans SemiBold; }
+    .content-breadcrumb{
+      a { font-family: Fira Sans SemiBold; }
+      #link-tipus { color: $xn17-vermell; }
+    }
+    .data-lloc {
+      color: $xn17-vermell;
+      bottom: 30px;
+      position: absolute;
+    }
+    @media (min-width: $screen-xs-max) { padding-top: 15px; padding-left: 15px;}
+    @media (max-width: $screen-xs-max) {
+      h4 { font-size: 1.2em; margin-top: 0px; }
+      .content-breadcrumb {
+        @include flag;
+        left: 15px;
+        a { color: white; font-family: Fira Sans; }
+        #first-link { display: none; }
+        #link-tipus { color: white; }
+      }
+      .resum { display: none; }
+      .data-lloc { bottom: 15px; }
+    }
+  }
+  @media (min-width: $screen-xs-max) {
+    .views-field-nothing, .views-field-field-agenda-imatge { border-top: solid 1px $gray; }
+  }
+}
+
+//------------------------------------------------------------------------------
+// Biblioteca
+//------------------------------------------------------------------------------
+.biblioteca {
+  @include load-more;
+  .view-header { @include view-header; padding-left: 0px; }
+  .views-row { padding: 15px 0; }
+  .views-field-field-doc-imatge {
+    .wrapper {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+    }
+    .wrapper:after {
+      padding-top: 123.92%;
+      display: block;
+      content: '';
+    }
+    .main {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: $gray-light;
+      color: white;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        position: absolute;
+        max-width: 80%;
+        height: auto;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        box-shadow: 3px 3px 10px $gray-dark;
+      }
+    }
+  }
+  .views-field-nothing {
+    h4 { font-family: Fira Sans SemiBold; }
+  row   .sinopsi { padding: 15px 0; }
+    .autoria {
+      color: $gray-medium;
+      a { color: $gray-medium; }
+    }
+    @media (min-width: $screen-xs-max) {
+      .titol { padding-top: 15px; }
+    }
+    @media (max-width: $screen-xs-max) {
+      .sinopsi, .autoria { display: none; }
+      .field-content { padding-left: 0px; }
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// Recursos
+//------------------------------------------------------------------------------
+.page-recursos {
+  .view-header {
+    @include view-header;
+    p { padding-bottom: 15px; }
+  }
+  @include load-more;
+  .resource-flag {
+    text-transform: uppercase;
+    margin-top: 10px;
+    border-top: solid 2px $xn17-vermell;
+    margin-bottom: -15px;
+    span { @include flag; }
+  }
+}
+
+//------------------------------------------------------------------------------
+// Notícies
+//------------------------------------------------------------------------------
+.page-noticies {
+  @include load-more;
+}
+
+//------------------------------------------------------------------------------
+// Modul Biblioteca de la portada
+//------------------------------------------------------------------------------
+.pane-xn17-recull-documents{
+  display: inline-block;
+  padding-left:15px;
+  padding-right:15px;
+  .views-field-title{
+    margin-left:-15px;
+    margin-right:-15px;
+    border-bottom: solid 3px #C6C6C6;
+  }
+  h2{
+    padding-left:15px;
+    color:#BE1622;
+    font-family: Fira Sans SemiBold;
+  }
+  .bkgd-gris{
+    border-top: solid 8px #C6C6C6;
+    background-color: #f1f0ed;
+    padding-bottom:30px;
+    border-bottom: solid 8px #C6C6C6;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .document-biblioteca{
+    cursor:pointer;
+    width:237px;
+    margin-left:15px;
+    margin-right:15px;
+    margin-top: 30px;
+    position:relative;
+    float:left;
+    .imatge{
+      box-shadow: 5px 5px 10px 2px #666;
+    }
+    a{
+      font-family: Fira Sans;
+      color: #fff;
+    }
+    .sinopsi{
+      background: url('/sites/all/themes/xn17/assets/images/elements/mes_blanc.svg') $xn17-vermell no-repeat 50% 90%;
+      padding:15px;
+      width:100%;
+      height:100%;
+      position:absolute;
+      display:none;
+      top:0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+// Modul Destacats de la portada
+//------------------------------------------------------------------------------
+.pane-destacats{
+  .view-header {
+    border-top: solid 8px #C6C6C6;
+    background-color: #ededed;
+    padding-bottom: 10px;
+    text-align:center;
+    h2{
+      font-family: Fira Sans SemiBold;
+      color: $xn17-vermell;
+    }
+  }
+  .views-slideshow-cycle-main-frame div{
+    h3{
+      font:{
+        family: Fira Sans SemiBold;
+        width:600;
+      }
+      a{
+        color:#FFFFFF;
+      }
+      margin:0;
+    }
+    //----------------------------------------------------------------------------
+    //contenidor per al titular i l'entradeta del Destacat
+    .cont_titular_entradeta{
+      position:absolute;
+      top:20%;
+      left:7%;
+      @include padding-dreta(690 305);
+      padding-bottom: 50px;
+      @media screen and (min-width: $screen-xs) {
+        left:10%;
+      }
+      p{
+        padding-top:20px;
+      }
+    }
+    @include aspect-ratio(690 305);
+    margin-top:-10px;
+  }
+}
+
+//------------------------------------------------------------------------------
+// Modul Agenda de la portada
+//------------------------------------------------------------------------------
+.pane-xn17-agenda-portada{
+  h2{
+    border-top: solid 8px #C6C6C6;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left:20px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: #ededed;
+    margin-left:0px;
+    font-family: Fira Sans SemiBold;
+    color: $xn17-vermell;
+    font-size:24px;
+  }
+
+  #botonera-capcalera{
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    .boto-capcelera{
+      background: url('/sites/all/themes/xn17/assets/images/elements/publica_blanc.svg') $xn17-vermell no-repeat 15%;
+      padding-left:50px;
+      padding-right:20px;
+      padding-top:4px;
+      padding-bottom:3px;
+      a{
+        color:#fff;
+        fopane-xn17-financamentnt-family:Fira Sans;
+        text-transform: uppercase;
+        font-size:0.9em;
+      }
+    }position:absolute;
+    .anar-agenda{
+      padding-top:5px;
+      padding-right:10px;
+      padding-left:5px;
+      font-family: Fira Sans SemiBold;
+      a{
+        color:#878787;
+      }
+    }
+
+  }pane-xn17-financament
+  .view-content{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .view-footer{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 0px;
+    li a{
+      font-size: 1em;
+    }
+  }
+
+  .pane-content{
+    @media (min-width: $screen-xs-max) {
+      min-height:265px;
+    }
+    border-bottom: solid 8px #C6C6C6;
+  }
+
+  .calendar-calendar{
+    width: 100%;
+    padding:0px;
+    .mini{
+      border:solid 2px #ededed;
+      thead tr th{
+        border:0px;
+        background-color:#ededed;
+        font-size:.7em;
+        padding-top: 5px;
+        padding-bottom:5px;
+      }
+      .mon, .tue, .wed, .thu, .fri, .sat, .sun{
+        border:0px !important;
+        text-align:center;
+        a{
+          text-decoration:none;
+        }
+      }
+      .today{
+        background-color:#ededed !important;
+      }
+    }
+  }
+
+  .view-id-xn17_agenda_portada .view-display-id-block_2{
+    li{
+      list-style: none;
+      border-bottom: solid 1px #C6C6C6;
+      font-size: 0.9em;
+      font-family: Fira Sans;
+    }
+  }
+  margin-bottom:30px;
+}
+
+//------------------------------------------------------------------------------
+// Modul Finançaments de la portada
+//------------------------------------------------------------------------------
+.pane-xn17-financament{
+  h2{
+    border-top: solid 8px #C6C6C6;
+    border-bottom: solid 3px #C6C6C6;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left:20px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: #ededed;
+    margin-left:0px;
+    font-family: Fira Sans SemiBold;
+    color: $xn17-vermell;
+    font-size:24px;
+  }
+  .view-content{
+    height:246px;
+    //margin-bottom: 30px;
+    padding-right: 0px;
+    @media (max-width: $screen-sm-max) {
+      border-bottom: solid 8px #C6C6C6;
+    }
+  }
+  ul {
+    font-family: Fira Sans;
+    @media (min-width: $screen-sm-max) {
+      -moz-column-count: 2;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 20px;
+      column-count: 2;
+      column-gap: 20px;
+    }
+    li {
+      width: 100%;
+      margin:0px;
+      list-style: none;
+      border-bottom: 1px #C6C6C6 solid;
+      -webkit-column-break-inside: avoid; /* Chrome, Safari */
+      page-break-inside: avoid;           /* Theoretically FF 20+ */
+      break-inside: avoid-column;         /* IE 11 */
+      display:table;                      /* Actually FF 20+ */
+      padding-bottom: 5px;
+      padding-top: 5px;
+      line-height:1.7 normalem;
+    }
+    li a {
+      color: #4A4A49;
+    }
+  }
+  .views-row{
+    padding: 5px 0px 5px 0;
+    border-bottom: 1px #C6C6C6 solid;
+    font-size:0.8em;
+  }
+  .views-field-field-date{
+    color:$xn17-vermell;
+  }
+  @media (max-width: $screen-md-min) {
+    .views-row-5, .views-row-6, .views-row-7{
+      display: none;
+    }
+  }
+
+  #button{
+    float:right;
+    padding-left: 20px;
+    padding-right: 0px;
+    @media (min-width: $screen-md-min) {
+      margin-top: 25px;
+    }
+    border-bottom: 0px;
+    @media (min-width: $screen-md-min) {
+      .more-link{
+        background-color:#ededed;
+        font-family: Fira Sans SemiBold;
+        text-align: center !important;
+        padding:10px 10px;
+        a{
+          color:#4A4A49;
+        }
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      .more-link{
+        font-family: Fira Sans SemiBold;
+        text-align: right !important;
+        padding:10px 10px;
+        a{
+          color:#4A4A49;
+        }
+      }
+    }
+  }
+  font-family: Fira Sans;
+}
+
+//------------------------------------------------------------------------------
+// Opinio destacada 2x2
+.view-id-xn17-opinio-destacada{
+  margin-top: 30px;
+  width: 100%;
+  .view-header{
+    border-top: solid 3px $xn17-vermell;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .destacat_2x2{
+    margin-bottom: 0px;
+  }
+  .opinio-destacada-2x2{
+    padding-left: 15px;
+    margin-right: 15px;
+  }
+  h2, .pane-title{
+    display:none;
+  }
+  .imatge-destacada-opinio{
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+    margin-bottom:-30px;
+    img{
+      width: 100%;
+    }
+  }
+
+  //contenidor per al titular i l'entradeta del Destacat
+  .titular-entradeta{
+    width:50%;
+    float:left;
+    padding-left:15px;
+    h4{
+      padding-top:20px;
+      font-family: 'Fira Sans SemiBold';
+    }
+    .data{
+      color:$gray-medium;
+      font-size:0.85em;
+    }
+    p{
+      color:#2f3031;
+    }
+  }
+  .pie{
+    float: left;
+    position: relative;
+    top: 15px;
+    padding: 5px 30px 5px 5%;
+    width: 100%;
+    background-color: #BE1622;
+    a{
+      left: 0px;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Fira Sans SemiBold';
+    }
+  }
+}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//Opinio 2x1
+.view-id-xn17-opinio-secundaries, .view-id-xn17_autor{
+  .views-row{
+    margin-top: -10px;
+  }
+  .pie{
+    background-color: $xn17-vermell;
+    padding: 5px 0 5px 10px;
+    margin-top:-50px;
+    margin-bottom: 30px;
+    a{
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Fira Sans SemiBold';
+    }
+  }
+
+  //-----contenidor per al titular i l'entradeta del Destacat------
+  .cont_titular_entradeta{
+    h4{
+      font-family: 'Fira Sans SemiBold';
+      padding-top: 25px;
+    }
+    img{
+      @media screen and (max-width:$screen-xs-min){
+        width:110px;
+      }
+      @media screen and (min-width:$screen-sm-min){
+        width:130px;
+      }
+      @media screen and (min-width:$screen-md-min){
+        width:73px;
+      }
+      @media screen and (min-width:$screen-lg){
+        width:105px;
+      }
+      float:right;
+      clear:both;
+      margin: 0px -20px 0px 0px ;
+      border-radius: 50%;
+    }
+    .rightimage:before {
+      content: '' ;
+      display:block;
+      float: right;
+      position: relative;
+      @include padding-top(220 210);
+      @media screen and (max-width:$screen-xs){
+        height:70px;
+      }
+      @media screen and (min-width:$screen-sm-min){
+        height:100px;
+      }
+      @media screen and (min-width:$screen-md-min){
+        height:40px;
+      }
+      @media screen and (min-width:$screen-lg){
+        height:60px;
+      }
+    }
+    @include padding-dreta(277 40);
+    padding-bottom: 50px;
+    padding-left:5%;
+    margdisplay:block;in: 0 auto ;
+    p{
+      @media screen and (max-width:$screen-xs){
+        font-size:0.90em;
+      }
+      @media screen and (min-width:$screen-sm-min){
+        font-size:1.15em;
+      }
+      @media screen and (min-width:$screen-md-min){
+        font-size:0.85em;
+      }
+      @media screen and (min-width:$screen-lg){
+        font-size:1em;
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//Opinio autors 1x1
+.view-id-xn17-opinio-autors{
+  .view-header{
+    border-top: solid 3px $xn17-vermell;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  img{
+    width: 156px;
+    height: auto;
+    float: right;
+  }
+  .autor{
+    width: 99px;
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 45px;
+    padding-left: 10px;
+    a{
+      font-family: 'Fira Sans SemiBold';
+      text-transform: uppercase;
+      color: $xn17-vermell;
+      font-size: 0.85em !important;
+    }
+    .twitter{
+      font-family: 'Fira Sans SemiBold';
+      color: $gray-dark;
+      font-size: 0.85em;
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//Especials
+.page-especials{
+  .views-row{
+    margin-top: 30px;
+    border-top:solid 2px $gray-light;
+    border-bottom:solid 2px $gray-light;
+    padding-left: 0px;
+    padding-right: 0px;
+    .image{
+      @media screen and (max-width:$screen-xs-max){
+        margin-right: 0px !important;
+      }
+      img{
+        width:100%;
+        height: auto;
+      }
+    }
+    .text{
+      padding-left: 0px;
+      padding-right: 0px;
+      color: #4A4A49;
+      font-family: 'Fira Sans';
+      h3{
+        @media screen and (max-width:$screen-xs-max){
+          margin-top: 15px;
+          line-height:0.5em;
+        }
+        a{
+          font-family: 'Fira Sans SemiBold';
+          font-size: 0.6em;
+          @media screen and (min-width:$screen-xs-min){
+            font-size:0.5em;
+          }
+          @media screen and (min-width:$screen-sm-min){
+            font-size:0.4em;
+          }
+          @media screen and (min-width:$screen-md-min){
+            font-size:0.7em;
+          }
+          @media screen and (min-width:$screen-lg-min){
+            font-size:0.8em;
+          }
+          color: #4A4A49;
+        }
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------------
+// Etiquetes
+//------------------------------------------------------------------------------
+.page-etiquetes {
+  @include load-more;
+  .page-header {
+    background-color: white;
+    padding: 40px 30px 20px 30px;
+    margin: 0px -15px;
+    h1 {
+      color: $xn17-vermell;
+      font-size: 2.5em;
+      font-family: 'Fira Sans SemiBold';
+      text-transform: capitalize;
+      padding-bottom: 10px;
+    }
+  }
+  #content {
+    -webkit-box-shadow: inset 0 10px 10px -6px $gray-medium;
+    -moz-box-shadow: inset 0 10px 10px -6px $gray-medium;
+    box-shadow: inset 0 10px 10px -6px $gray-medium;
+    padding-top: 20px;
+  }
+}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//Monografic seccións especials
+.pane-xn17-especial-un-contingut{
+  .pane-title{
+    @include flag;
+    margin-left: 15px;
+  }
+  height: 100%;
+}
+.view-id-xn17-especial-un-contingut-destacat{
+  border-top:solid 3px $xn17-vermell;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-top: 60px;
+  background-color: $gray-light;
+  height:481px;
+  @media (max-width: $screen-md-max){
+    height:432px;
+  }
+  @media (max-width: $screen-sm-max){
+    height:481px;
+  }
+  @media (max-width: $screen-xs-max){
+    height:276px;
+  }
+  position: relative;
+  .destacat-principal{
+    padding-left: 30px;
+    height:478px;
+    @media (max-width: $screen-md-max){
+      height:429px;
+    }
+    @media (max-width: $screen-sm-max){
+      height:478px;
+    }
+    @media (max-width: $screen-xs-max){
+      height:273px;
+    }
+  }
+  .cont_titular_entradeta{
+    overflow-x: hidden;
+    h2{
+      position: relative;
+      z-index: 100;
+      text-transform: uppercase;
+      font-family: Fira Sans SemiBold;
+      font-size:1.3em;
+      padding-top:60px;
+      padding-left:20px;
+      background: url('/sites/all/themes/xn17/assets/images/elements/fletxa_xn_blanc.svg') no-repeat 0% 62px;
+      background-size:14px 14px;
+      margin-top: 0px;
+      color: #FFF;
+    }
+    h3{
+      font:{
+        family: Fira Sans SemiBold;
+        width:600;
+      }
+      a{
+        color:#FFFFFF;
+      }
+      margin:0;
+    }
+    @include padding-dreta(481 150);
+    @media (max-width: $screen-md-max){
+      @include padding-dreta(432 200);
+    }
+    @media (max-width: $screen-sm-max){
+      @include padding-dreta(636 150);
+    }
+    @media (max-width: $screen-xs-max){
+      height:273px;
+      @include padding-dreta(276 0);
+      h2{
+        font-size:1.2em;
+      }
+      h3{
+        font-size:1.5em;
+      }
+    }
+    .resum{
+      padding-top:15px;
+      font-size:1.4em;
+      color:#fff;
+    }
+  }
+  .altres-continguts{
+    padding-top: 60px;
+    position: relative;
+    height:478px;
+    @media (max-width: $screen-md-max){
+      height:429px;
+    }
+    @media (max-width: $screen-sm-max){
+      height:478px;
+    }
+    @media (max-width: $screen-xs-max){
+      height:273px;
+    }
+    .titol-more{
+      text-transform: uppercase;
+      font-family: Fira Sans SemiBold;
+      font-size:1.3em;
+      color: #4A4A49;
+      padding-left: 0px;
+    }
+    .cont-relacionats{
+      padding-left:0px;
+      position:absolute;
+      bottompane-xn17-tags-especial-panel-pane-1: 0px;
+      padding-right: 15px;
+      @media (max-width: $screen-sm-max){
+        position: inherit;
+        float:right;
+      }
+      ul{
+        list-style-image: url('/sites/all/themes/xn17/assets/images/elements/fletxa_xn_list.svg');
+        padding-bottom: 10px;
+        li{
+          border-bottom: solid 1px #fff;
+          padding-bottom: 5px !important;
+          padding-top: 5px !important;
+          a:hover{
+            font-family: 'Fira Sans SemiBold'
+          }
+        }
+      }
+    }
+  }
+}
+
+.view-id-xn17-especial-un-contingut-secundari{
+  border-top:solid 3px $xn17-vermell;
+  margin-left: 15px;
+  height:354px;
+  .destacat_2x2{
+    margin-bottom: 0px;
+  }
+  .pdng-mdl{
+    margin-left: -15px;
+    margin-right: 15px;
+    padding-right: 0px;
+  }
+
+  .cont_titular_entradeta{
+    position: inherit !important;
+    padding-left:30px;
+    padding-right: 30px;
+    h3{
+      padding-top:30px;
+    }
+  }
+}
+
+.pane-xn17-tags-especial-panel-pane-1{
+  .pane-title{
+    display: none;
+  }
+}
+
+.view-id-xn17_tags_especial{
+  border-top:solid 3px $xn17-vermell;
+  position: relative;
+  margin-left: 15px;
+  .espaiblanc{
+    height: 3px;
+    margin-top: -3px;
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    right: 0px;
+  }
+}
