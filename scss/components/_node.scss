@@ -347,6 +347,7 @@
 //Autor
 //------------------------------------------------------------------------------
 .node-type-autor-a{
+  @include load-more;
   .page-header{
     display:none;
   }
