@@ -349,6 +349,7 @@
     a { text-transform: uppercase; }
     .field-item::before {
       content: 'NOTICIA > ';
+      padding-left: 10px;
     }
   }
 }
