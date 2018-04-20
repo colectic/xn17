@@ -346,10 +346,10 @@
 
 .node-noticia-general.node-teaser {
   .field-name-field-ambit-noticia {
-    a {
-      text-transform: uppercase;
+    a { text-transform: uppercase; }
+    .field-item::before {
+      content: 'NOTICIA > ';
     }
-    a::before { content: 'NOTICIA > '; }
   }
 }
 
