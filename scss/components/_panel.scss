@@ -324,8 +324,8 @@
 //------------------------------------------------------------------------------
 // Subportal noticies
 //------------------------------------------------------------------------------
+.page-noticies .title { display: none; }
 .panels-flexible-subportal_noticies {
-  .title { display: none; }
   .row { padding: 0 15px; }
   .panels-flexible-region-inside { padding: 0px; }
   .field-name-field-agenda-imatge img {
@@ -385,7 +385,7 @@
       @include flag;
       top: 0;
       a { color: white; }
-      z-index: 11;
+      z-index: 10;
     }
   }
   .panels-flexible-region-subportal_noticies-destacada_principal {
