@@ -340,9 +340,9 @@
     margin-bottom: 20px;
     border-top: solid 2px $xn17-vermell;
     border-bottom: solid 2px $xn17-vermell;
-  }
-  .node-type-opinio .field-name-field-resum {
-    margin-top: 50px;
+    .node-type-opinio & {
+      margin-top: 50px;
+    }
   }
 }
 
