@@ -343,6 +343,16 @@
     border-bottom: solid 2px $xn17-vermell;
   }
 }
+
+.node-type-noticia-general.node-teaser {
+  .field-name-field-ambit-noticia {
+    a {
+      text-transform: uppercase;
+    }
+    a::before { content: 'NOTICIA > '; }
+  }
+}
+
 //------------------------------------------------------------------------------
 //Autor
 //------------------------------------------------------------------------------
