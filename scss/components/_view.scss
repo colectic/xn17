@@ -985,7 +985,7 @@
 //------------------------------------------------------------------------------
 // Etiquetes
 //------------------------------------------------------------------------------
-.page-etiquetes {
+.page-etiquetes, .page-etiquetes-new {
   @include load-more;
   .page-header {
     background-color: white;
