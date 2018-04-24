@@ -453,6 +453,24 @@
 }
 
 //------------------------------------------------------------------------------
+// Vídeos
+//------------------------------------------------------------------------------
+.view-xn17-videos {
+  .view-header {
+    @include view-header;
+    p { padding-bottom: 15px; }
+  }
+  @include load-more;
+  .resource-flag {
+    text-transform: uppercase;
+    margin-top: 10px;
+    border-top: solid 2px $xn17-vermell;
+    margin-bottom: -15px;
+    span { @include flag; }
+  }
+}
+
+//------------------------------------------------------------------------------
 // Modul Biblioteca de la portada
 //------------------------------------------------------------------------------
 .pane-xn17-recull-documents{
