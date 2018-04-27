@@ -585,3 +585,23 @@
     padding-bottom: 7px;
   }
 }
+
+//------------------------------------------------------------------------------
+// Bloc vídeo
+//------------------------------------------------------------------------------
+.view-xn17-videos.view-display-id-block {
+  .modul_video { position: relative; }
+  .info {
+    position: absolute;
+    top: 0;
+    background-color: $xn17-vermell;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+    a {
+      color: white;
+      font-weight: 600;
+    }
+    .tipo-noticia a { text-transform: uppercase; }
+  }
+}
