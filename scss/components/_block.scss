@@ -592,16 +592,23 @@
 .view-xn17-videos.view-display-id-block {
   .modul_video { position: relative; }
   .content-info {
+    display: none;
     position: absolute;
     top: 0;
     background-color: $xn17-vermell;
     color: white;
     font-weight: 600;
     padding: 15px;
+    width: 50%;
     a {
       color: white;
       font-weight: 600;
     }
     .tipo-noticia a { text-transform: uppercase; }
+    .slick-active { display: block; }
+  }
+  .slick-arrow {
+    &.slick-prev::before { content: url('../images/icon/icon-arrow-left.svg');}
+    &.slick-next::before { content: url('../images/icon/icon-arrow-right.svg');}
   }
 }
