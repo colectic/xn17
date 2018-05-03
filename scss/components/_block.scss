@@ -590,6 +590,7 @@
 // Bloc vídeo
 //------------------------------------------------------------------------------
 .view-xn17-videos.view-display-id-block {
+  padding-right: 30px;
   .modul_video { position: relative; }
   .content-info {
     display: none;
@@ -605,7 +606,7 @@
       font-weight: 600;
     }
     .tipo-noticia a { text-transform: uppercase; }
-    .slick-active { display: block; }
+    .slick-active & { display: block; }
   }
   .slick-arrow {
     &.slick-prev::before { content: url('../images/icon/icon-arrow-left.svg');}
