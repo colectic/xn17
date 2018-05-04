@@ -60,8 +60,8 @@
   print "<div class='titol-regio'>" . check_plain($view->get_title()) . "</div>";
   print '<div class="modul-monografic-portada" style="background: linear-gradient(rgba(129, 129, 129, 0.4), rgba(129, 129, 129, 0.4)), url(' . $rawImatge . ');">';
     print '<div class="cont_titular_entradeta">';
-      print '<h2>'.$fields['title']->content.'</h2>';
-      print '<h3>'.$fields['title_1']->content.'</h3>';
+      print '<div class="titular_content"><h2>'.$fields['title']->content.'</h2>';
+      print '<h3>'.$fields['title_1']->content.'</h3></div>';
       print '<div class="hidden-xs resum" style="z-index:0;">' . $fields['field_resum']->content . '</div>';
     print '</div>';
   print '</div>';

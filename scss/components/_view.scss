@@ -204,6 +204,9 @@
       background-position: 0% 100% !important;
     }
     .cont_titular_entradeta{
+      .content {
+        padding: 0 15px;
+      }
       h2{
         position: relative;
         z-index: 100;
@@ -224,9 +227,10 @@
           color:#FFFFFF;
         }
         margin:0;
-      }.pane-content, .view-xn17-monografics-portada, .view-content, .skin-default{
-    height:100%;
-  }
+      }
+      .pane-content, .view-xn17-monografics-portada, .view-content, .skin-default{
+        height:100%;
+      }
       @include padding-dreta(481 250);
       @media (max-width: $screen-md-max){
         @include padding-dreta(432 200);
