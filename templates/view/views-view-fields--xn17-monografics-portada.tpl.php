@@ -58,7 +58,7 @@
 
   $view = views_get_current_view();
   print "<div class='titol-regio'>" . check_plain($view->get_title()) . "</div>";
-  print '<div class="modul-monografic-portada" style="background: linear-gradient(rgba(129, 129, 129, 0.4), rgba(129, 129, 129, 0.4)), url(' . $rawImatge . ');">';
+  print '<div class="modul-monografic-portada" style="background-image: url(' . $rawImatge . ');">';
     print '<div class="cont_titular_entradeta">';
       print '<div class="titular_content"><h2>'.$fields['title']->content.'</h2>';
       print '<h3>'.$fields['title_1']->content.'</h3></div>';
