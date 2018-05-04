@@ -532,8 +532,7 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 				</a> -->
 			</td><td style="padding-left:50px;">
 				<p>
-					<a href="http://www.suport.org" style="color:white;  font-weight:normal">Suport Associatiu Centre d'Estudis</a><br />
-					<a href="http://www.esplai.org" style="color:white;  font-weight:normal">Fundació Catalana de l'Esplai</a><br />
+					<a href="https://fundesplai.org" style="color:white;  font-weight:normal">Fundació Catalana de l'Esplai</a><br />
 					<a href="http://www.peretarres.org" style="color:white;  font-weight:normal">Fundació Pere Tarrés</a><br />
 					<a href="http://www.ateneus.cat" style="color:white;  font-weight:normal">Federació d'Ateneus de Catalunya</a><br />
 					<a href="http://www.xvac.cat" style="color:white;  font-weight:normal">Xarxa de Voluntariat Ambiental de Catalunya</a><br />
@@ -542,10 +541,10 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 			</td><td style="padding-left:15px">
 				<p>
 					<a href="http://colectic.coop" style="color:white;  font-weight:normal">Colectic</a><br />
-					<a href="http://www.ravalnet.org" style="color:white;  font-weight:normal">Associació ciutadana Ravalnet</a><br />
 					<a href="http://www.federacio.net/ca" style="color:white;  font-weight:normal">Federació Catalana del Voluntariat Social</a><br />
 					<a href="http://magno.uab.es/fas" style="color:white;  font-weight:normal">Fundació Autònoma Solidària</a><br />
 					<a href="http://www.escoltesiguies.cat" style="color:white;  font-weight:normal">Minyons Escoltes i Guies de Catalunya (MEG)</a><br />
+					<a href="http://www.tothomweb.com" style="color:white;  font-weight:normal">TOTHOMweb</a><br />
 				</p>
 			</td></tr>
 		</table>
