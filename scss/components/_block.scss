@@ -606,10 +606,12 @@
       font-weight: 600;
     }
     .tipo-noticia a { text-transform: uppercase; }
-    .slick-active & { display: block; }
   }
   .slick-arrow {
     &.slick-prev::before { content: url('../images/icon/icon-arrow-left.svg');}
     &.slick-next::before { content: url('../images/icon/icon-arrow-right.svg');}
+    &.slick-prev { padding-left: 15px; }
+    &.slick-next { padding-right: 65px; }
   }
+  .slick-active .content-info { display: block; }
 }
