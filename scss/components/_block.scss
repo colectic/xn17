@@ -590,6 +590,7 @@
 // Bloc vídeo
 //------------------------------------------------------------------------------
 .pane-xn17-videos {
+  padding-right: 30px;
   h2{
     border-top: solid 8px #C6C6C6;
     padding-bottom: 15px;
@@ -604,7 +605,6 @@
     font-size:24px;
   }
   .view-xn17-videos.view-display-id-block {
-    padding-right: 30px;
     .modul_video { position: relative; }
     .content-info {
       display: none;
@@ -628,5 +628,6 @@
       &.slick-next { padding-right: 65px; }
     }
     .slick-active .content-info { display: block; }
+    .slick-track { padding-top: 0px; }
   }
 }
