@@ -170,13 +170,20 @@
   }
   .views-slideshow-cycle-main-frame,
   .views_slideshow_cycle_slide,
-  .views_slideshow_cycle_slide img {
+  .views_slideshow_cycle_slide img,
+  .field-name-field-agenda-imatge img {
     width: 100%;
     height: auto;
   }
   &.recurs .views-slideshow-cycle-main-frame { margin-bottom: 50px; }
-  .views_slideshow_cycle_slide { border-top: solid 2px $xn17-vermell; }
-  &.recurs .views_slideshow_cycle_slide { margin-top: 50px; }
+  .views_slideshow_cycle_slide,
+  .field-name-field-agenda-imatge {
+    border-top: solid 2px $xn17-vermell;
+  }
+  &.recurs .views_slideshow_cycle_slide,
+  .field-name-field-agenda-imatge {
+    margin-top: 50px;
+  }
   .views-field-field-peu-de-foto, .views-field-field-imatges-1 {
     font-size: $font-size-small;
     color: $gray-medium;
