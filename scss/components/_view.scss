@@ -934,13 +934,17 @@
     width: 60%;
     height: auto;
     float: right;
-    img { width: 100%; }
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   .autor{
     width: 40%;
     position: absolute;
     bottom: 35px;
     padding: 0 10px;
+    p { padding-right: 10px; }
     a{
       font-family: 'Fira Sans SemiBold';
       text-transform: uppercase;
@@ -953,7 +957,6 @@
       background-color: $gray-dark;
       padding: 3px;
       color: white;
-      margin-top: 5px;
       display: inline-block;
     }
   }
