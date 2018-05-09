@@ -938,15 +938,15 @@
   .autor{
     width: 99px;
     position: absolute;
-    bottom: 0px;
-    padding: 0 10px 45px 10px;
+    bottom: 35px;
+    padding: 0 10px;
     a{
       font-family: 'Fira Sans SemiBold';
       text-transform: uppercase;
       color: $xn17-vermell;
       font-size: 0.85em !important;
     }
-    .twitter{
+    .twitter p {
       font-family: 'Fira Sans SemiBold';
       font-size: 0.85em;
       background-color: $gray-dark;
