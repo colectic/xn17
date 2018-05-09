@@ -930,13 +930,14 @@
     margin-left: 15px;
     margin-right: 15px;
   }
-  img{
-    width: 156px;
+  .foto {
+    width: 60%;
     height: auto;
     float: right;
+    img { width: 100%; }
   }
   .autor{
-    width: 99px;
+    width: 40%;
     position: absolute;
     bottom: 35px;
     padding: 0 10px;
