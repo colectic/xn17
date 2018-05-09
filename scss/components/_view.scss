@@ -939,8 +939,7 @@
     width: 99px;
     position: absolute;
     bottom: 0px;
-    padding-bottom: 45px;
-    padding-left: 10px;
+    padding: 0 10px 45px 10px;
     a{
       font-family: 'Fira Sans SemiBold';
       text-transform: uppercase;
@@ -949,8 +948,12 @@
     }
     .twitter{
       font-family: 'Fira Sans SemiBold';
-      color: $gray-dark;
       font-size: 0.85em;
+      background-color: $gray-dark;
+      padding: 3px;
+      color: white;
+      margin-top: 5px;
+      display: inline-block;
     }
   }
 }
