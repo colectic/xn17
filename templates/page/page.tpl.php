@@ -26,6 +26,7 @@
         <a href="/noticies">notícies</a>
       </div>
       <div class="social-icons hidden-xs hidden-sm">
+        <a href="https://t.me/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tl-circle.svg" alt="telegram icon"/></a>
         <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
         <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
         <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
@@ -87,6 +88,7 @@
         <a href="/noticies">notícies</a>
       </div>
       <div class="social-icons hidden-xs hidden-sm">
+        <a href="https://t.me/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tl-circle.svg" alt="telegram icon"/></a>
         <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
         <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
         <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
@@ -176,6 +178,7 @@
     </div>
     <div class="footer-region col-lg-2 col-md-7 col-sm-12 col-xs-12 third">
       <div id="social-icons">
+        <a href="https://t.me/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tl-circle.svg" alt="telegram icon"/></a>
         <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
         <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
         <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
