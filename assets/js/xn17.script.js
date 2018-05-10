@@ -1,14 +1,14 @@
 /**
- * @file
- * Custom scripts for theme.
- */
+* @file
+* Custom scripts for theme.
+*/
 
 /**
- * La variable obert, és uina variable global epr tal que a la portada s'oculti
- * els llistat de recursoso en una primera instancia
- */
- var mesRecursosObert = false;
- var mesNoticiesObert = false;
+* La variable obert, Ã©s uina variable global epr tal que a la portada s'oculti
+* els llistat de recursoso en una primera instancia
+*/
+var mesRecursosObert = false;
+var mesNoticiesObert = false;
 /*
 */
 
@@ -21,11 +21,32 @@
       // -----------------------------------------------------------------------
       // Scrolling
       // -----------------------------------------------------------------------
-      $(window).scroll(function() {
+      if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var frnTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top; }
+      if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var frnBot = frnTop + $('.pane-menu-menu-xn17-menu-noticies').outerHeight(true); }
+      if($('.panels-flexible-row-57-1')[0]){ var panHei = $('.panels-flexible-row-57-1').outerHeight(true); }
+
+      $(window).scroll(function(){
         var aTop = $('#third-header').offset().top;
+        if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var nTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top - $(window).scrollTop(); }
+        if($('.pane-menu-menu-xn17-menu-noticies')[0]){	var rTop = $('.pane-menu-menu-xn17-menu-recursos').offset().top - $(window).scrollTop(); }
+
         if ($(this).scrollTop() >= aTop) {
           $('#third-header-clone').show();
           $('.block-menu').addClass('sticky');
+          if($('.pane-menu-menu-xn17-menu-noticies')[0]) {
+            if (nTop < $('#third-header-clone').height()) {
+              $('.pane-menu-menu-xn17-menu-noticies').addClass('sticky');
+            }
+            if ($('.pane-menu-menu-xn17-menu-noticies').hasClass('sticky') && ($(window).scrollTop() < frnTop)) {
+              $('.pane-menu-menu-xn17-menu-noticies').removeClass('sticky');
+            }
+            if (rTop < $('#third-header-clone').height()) {
+              $('.pane-menu-menu-xn17-menu-recursos').addClass('sticky');
+            }
+            if ($('.pane-menu-menu-xn17-menu-recursos').hasClass('sticky') && (($(window).scrollTop()) < panHei)) {
+              $('.pane-menu-menu-xn17-menu-recursos').removeClass('sticky');
+            }
+          }
         }
         if ($(this).scrollTop() < aTop) {
           $('#third-header-clone').hide();
@@ -59,9 +80,9 @@
             $(this).children().toggleClass("closed");
           });
         }
-      // -----------------------------------------------------------------------
-      // Main menu
-      // -----------------------------------------------------------------------
+        // -----------------------------------------------------------------------
+        // Main menu
+        // -----------------------------------------------------------------------
         if ($(window).width() < 768) {
           $(".block-menu").children('h4').click( function(){
             $(this).next(".block__content").slideToggle("slow");
@@ -69,9 +90,9 @@
             $(this).parent(".block-menu").toggleClass("closed");
           });
         }
-      // -----------------------------------------------------------------------
-      // Filtre Bilbioteca
-      // -----------------------------------------------------------------------
+        // -----------------------------------------------------------------------
+        // Filtre Bilbioteca
+        // -----------------------------------------------------------------------
         $("#views-exposed-form-xn17-biblioteca-page #cerca-avancada").click( function(){
           $(this).toggleClass("showicon");
           $(this).toggleClass("hideicon");
