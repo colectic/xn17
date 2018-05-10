@@ -592,8 +592,6 @@
     font-size:24px;
   }
 
-  li { padding: 5px 0 !important; }
-
   #botonera-capcalera{
     position: absolute;
     top: 8px;
@@ -621,7 +619,7 @@
       }
     }
 
-  }pane-xn17-financament
+  }
   .view-content{
     padding-top: 15px;
     padding-bottom: 15px;
@@ -631,8 +629,9 @@
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 0px;
-    li a{
-      font-size: 1em;
+    li {
+      padding: 5px 0 !important;
+      a { font-size: 1em; }
     }
   }
 
@@ -644,6 +643,7 @@
   }
 
   .calendar-calendar{
+    margin-top: 15px;
     width: 100%;
     padding:0px;
     .mini{
