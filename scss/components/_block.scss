@@ -345,8 +345,9 @@
     margin-top: 50px;
     clear: both;
     float:left;
+    .logo { height: 160px; }
     .logo-title {
-      margin: 0 15px;
+      margin: 5px 15px 0 15px;
       border-top: solid 1px $gray-dark;
       padding: 10px 0;
     }

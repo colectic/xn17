@@ -14,7 +14,7 @@
   <div class="container">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="sticky-logo hidden-xs">
-        <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/>
+	<a href="/"><img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/></a>
       </div>
       <div class="menu-icon">
         <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="menu icon"/>

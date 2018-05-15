@@ -620,14 +620,9 @@
     }
 
   }
-  .view-content{
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
 
   .view-footer{
     padding-top: 15px;
-    padding-bottom: 15px;
     padding-right: 0px;
     li {
       padding: 5px 0 !important;
@@ -958,8 +953,8 @@
       font-size: 0.85em;
       background-color: $gray-dark;
       padding: 3px;
-      color: white;
       display: inline-block;
+      a {color: white; }
     }
   }
 }
