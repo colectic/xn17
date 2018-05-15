@@ -52,7 +52,6 @@
 		print '<div class="destacat_2x2" style="background: linear-gradient(rgba(129, 129, 129, 0.45), rgba(129, 129, 129, 0.45)),url(' . strip_tags($rawImatge) . '); background-size:cover;">';
 			print '<div class="cont_titular_entradeta">';
 				print '<h3>'.$fields['title']->content.'</h3>';
-				print '<div class="hidden-xs">' . $fields['field_resum']->content . '</div>';
 			print '</div>';
 		print '</div>';
 	?>
