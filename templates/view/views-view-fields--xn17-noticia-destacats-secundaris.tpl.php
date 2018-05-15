@@ -54,17 +54,20 @@
 			print '<div class="titular">';
 				print '<h4>'. $fields['title']->content .'</h4>';
 				$type = $fields['type']->raw;
-				if (($type == 'recurs_general') && (isset($fields['field_ambit_recurs']))){
-					$type = 'Recurs';
-					$ambit = strip_tags($fields['field_ambit_recurs']->content);
-				}
-				if (($type == 'noticia_general') && (isset($fields['field_ambit_noticia']))){
+				if ($type == 'noticia_general'){
 					$type = 'Notícies';
-					$ambit = strip_tags($fields['field_ambit_noticia']->content);
+					$tipus = strip_tags($fields['field_ambit_noticia']->content);
+					$tipus = "<a href='{$tipus}'>{$tipus}</a>";
 				}
+				if ($type == 'event'){
+					$type = 'Agenda';
+					$tipus = strip_tags($fields['field_event_type']->content);
+					$tipus = "<a href='{$tipus}'>{$tipus}</a>";
+				}
+
 			print '</div>';
 			print '<div class="tipo-noticia">';
-				print $type . ' > ' . $fields['field_ambit_noticia']->content;
+				print $type . ' > ' . $tipus;
 			print '</div>';
 		print '</div>';
 	?>
