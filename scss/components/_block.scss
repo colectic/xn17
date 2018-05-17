@@ -82,6 +82,7 @@
       form {
         #edit-field-date-event-value-wrapper input { background: white url('../images/icon/icon-calendar-gray.svg') no-repeat right 15px center ;}
         #edit-city-wrapper input {background: white url('../images/icon/icon-map-gray.svg') no-repeat right 15px center ; }
+	.form-item-field-date-event-value-value-time { display: none; }
       }
       #publish-link {
         color: $xn17-vermell;
@@ -237,6 +238,7 @@
   .sub-seccions,.entradeta-recurs{
     display:none;
   }
+  margin: 0px !important;
 }
 
 .bloc-recursos-portada {
@@ -372,6 +374,7 @@
 // Bloc footer per opinio
 //------------------------------------------------------------------------------
 #content-footer{
+  .front & { display: none; }
   background-color: #fff;
   padding-bottom: 50px;
   .block__title{

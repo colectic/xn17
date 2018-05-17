@@ -57,12 +57,12 @@
 				if ($type == 'noticia_general'){
 					$type = 'Notícies';
 					$tipus = strip_tags($fields['field_ambit_noticia']->content);
-					$tipus = "<a href='{$tipus}'>{$tipus}</a>";
+					$tipus = "<a href='/noticies/{$tipus}'>{$tipus}</a>";
 				}
 				if ($type == 'event'){
 					$type = 'Agenda';
 					$tipus = strip_tags($fields['field_event_type']->content);
-					$tipus = "<a href='{$tipus}'>{$tipus}</a>";
+					$tipus = "<a href='/agenda?field_event_type_value={$tipus}'>{$tipus}</a>";
 				}
 
 			print '</div>';

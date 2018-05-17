@@ -199,6 +199,7 @@
     .field-label { display: none; }
   }
   .field-name-body { h1, h2, h3, h4 { font-size: $font-size-base !important; }}
+  .field-name-ambit-noticia,
   .field-name-field-ambit-noticia {
     @include flag;
     top: 0;
@@ -354,10 +355,10 @@
 }
 
 .node-noticia-general.node-teaser {
-  .field-name-field-ambit-noticia {
+  .field-name-ambit-noticia {
     a { text-transform: uppercase; }
     .field-item::before {
-      content: 'NOTICIA > ';
+      content: 'NOTÍCIES > ';
       padding-left: 10px;
     }
   }

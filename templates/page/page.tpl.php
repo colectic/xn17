@@ -164,7 +164,9 @@
   <div class="container">
     <div class="footer-region col-lg-6 col-md-12 col-sm-12 col-xs-12 first">
       <div id="footer-logo">
-        <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/>
+	<a href="/">
+ 	      <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/>
+	</a>
       </div>
     </div>
     <div class="footer-region col-lg-4 col-md-5 col-sm-12 col-xs-12 second">

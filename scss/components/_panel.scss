@@ -361,6 +361,8 @@
       height: 90%;
       padding-bottom: 50px;
       .field-name-title h4 {
+	padding: 15px;
+    	background-color: rgba(0,0,0,0.7);
         font-family: Fira Sans SemiBold;
         font-size: 2.15em;
         a { color: white; }
@@ -372,7 +374,7 @@
       }
     }
     .field-name-field-agenda-imatge:before {
-        content: "";
+     /*   content: "";
         display: block;
         position: absolute;
         width: calc(100% - 30px);
@@ -380,8 +382,9 @@
         background-image: linear-gradient(rgba(129, 129, 129, 0.45), rgba(129, 129, 129, 0.45));
         z-index: 10;
         top: 0;
+     */
     }
-    .field-name-field-ambit-noticia {
+    .field-name-ambit-noticia {
       @include flag;
       top: 0;
       a { color: white; }
@@ -412,7 +415,7 @@
           }
         }
       }
-      .field-name-field-ambit-noticia {
+      .field-name-ambit-noticia {
         background: none;
         position: relative;
         font-family: Fira Sans SemiBold;

@@ -60,7 +60,8 @@
 				}
 			print '</div>';
 			print '<div class="tipo-recurs">';
-				print $type . ' > <span class="tipo-recurs-' . $ambit . '">' . $fields['field_ambit_recurs']->content . '</span>';
+				//print $type . ' > <span class="tipo-recurs-' . $ambit . '">' . $fields['field_ambit_recurs']->content . '</span>';
+				print $type . ' > <span>' . $fields['field_ambit_recurs']->content . '</span>';
 			print '</div>';
 		print '</div>';
 	?>
