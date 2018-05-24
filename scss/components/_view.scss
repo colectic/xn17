@@ -831,6 +831,8 @@
     padding: 5px 30px 5px 5%;
     width: 100%;
     background-color: #BE1622;
+    height: 30px;
+    padding-top: 8px;
     a{
       left: 0px;
       color: #fff;
@@ -851,6 +853,8 @@
     padding: 5px 0 5px 10px;
     margin-top:-50px;
     margin-bottom: 30px;
+    height: 30px;
+    padding-top: 8px;
     a{
       color: #fff;
       text-transform: uppercase;
@@ -1036,6 +1040,9 @@
     padding-top: 20px;
   }
 }
+.view-xn17-etiquetes {
+  @include load-more;
+}
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 //Monografic seccións especials
@@ -1051,7 +1058,7 @@
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 30px;
-  margin-top: 60px;
+  margin-top: 0px;
   background-color: $gray-light;
   height:481px;
   @media (max-width: $screen-md-max){
@@ -1079,15 +1086,20 @@
   }
   .cont_titular_entradeta{
     overflow-x: hidden;
+    .content {
+      padding: 0 15px 15px; 
+      background-color: rgba(0,0,0,0.7);
+      margin-top: 50px;
+    }
     h2{
       position: relative;
       z-index: 100;
       text-transform: uppercase;
       font-family: Fira Sans SemiBold;
       font-size:1.3em;
-      padding-top:60px;
+      padding-top:30px;
       padding-left:20px;
-      background: url('/sites/all/themes/xn17/assets/images/elements/fletxa_xn_blanc.svg') no-repeat 0% 62px;
+      background: url('/sites/all/themes/xn17/assets/images/elements/fletxa_xn_blanc.svg') no-repeat 0% 30px;
       background-size:14px 14px;
       margin-top: 0px;
       color: #FFF;
@@ -1144,6 +1156,8 @@
       font-size:1.3em;
       color: #4A4A49;
       padding-left: 0px;
+      display: block;
+      margin-bottom: 15px;
     }
     .cont-relacionats{
       padding-left:0px;

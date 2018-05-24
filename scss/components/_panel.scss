@@ -324,7 +324,7 @@
 //------------------------------------------------------------------------------
 // Subportal noticies
 //------------------------------------------------------------------------------
-.page-noticies .title { display: none; }
+.page-noticies .page-header { display: none; }
 .panels-flexible-subportal_noticies {
   .row { padding: 0 15px; }
   .panels-flexible-region-inside { padding: 0px; }
@@ -434,4 +434,17 @@
     }
     .field-name-field-resum { display: none; }
   }
+}
+
+//------------------------------------------------------------------------------
+// Especials
+//------------------------------------------------------------------------------
+.seccio-especial {
+  @include load-more;
+  .page-header { display: none; }
+  .bloc-header-image::after {
+    background: none;
+    z-index: 0;
+  }
+  .view-footer { @include view-header; }
 }

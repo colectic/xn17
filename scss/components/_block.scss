@@ -292,6 +292,62 @@
 }
 
 // -----------------------------------------------------------------------------
+// Blocs laterals
+// -----------------------------------------------------------------------------
+.bloc--lateral {
+  margin: 10px 0;
+  padding: 0px;
+  h4 {
+    border-top: solid 8px $gray;
+    border-bottom: solid 3px $gray;
+    padding: 10px 15px;
+    margin: 0 0 10px 0;
+    color: $xn17-vermell;
+    font-size: 24px;
+    font-family: Fira Sans SemiBold;
+  } 
+  p { padding: 0 15px; }
+  a {
+    font-weight: 600;
+    color: $gray-medium;
+  }
+  background-color: $gray-light;
+  border-bottom: solid 8px $gray;
+}
+
+// -----------------------------------------------------------------------------
+// Blocs finançaments lateral
+// -----------------------------------------------------------------------------
+.bloc--lateral.bloc--financament {
+  ul { list-style-type: none; }
+  li { 
+    margin: 0px; 
+    padding: 0px;
+    div { margin: 5px 15px;
+    }
+    .views-field-field-date {
+      border-bottom: solid 1px $gray; 
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      color: $xn17-vermell;
+    }
+    .views-field-title a {
+      font-weight: normal;
+      color: $text-color;
+    }
+  }
+  .more-link {
+    margin: 15px 15px 10px;
+    a {
+      color: $text-color;
+      font-weight: 600;     
+    }
+  }
+}
+
+
+
+// -----------------------------------------------------------------------------
 // Blocs main footer
 // -----------------------------------------------------------------------------
 #main-footer {

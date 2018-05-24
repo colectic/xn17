@@ -15,4 +15,6 @@
  * - $items: An array of items for this day.
  */
 ?>
-<div class="<?php print $granularity ?> <?php print $class; ?>"> <?php print !empty($selected) ? "<a href='{$date}'>{$day}</a>" : $day; ?> </div>
+<?php $date_formatted=date('d/m/Y',strtotime($date));?>
+
+<div class="<?php print $granularity ?> <?php print $class; ?>"> <?php print !empty($selected) ? "<a href='/agenda?field_date_event_value[value][date]={$date_formatted}'>{$day}</a>" : $day.'-'; ?> </div>

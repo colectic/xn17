@@ -28,6 +28,21 @@ function xn17_preprocess_page(&$variables) {
 }
 
 /**
+ * Implements theme_preprocess_html(&$variables).
+ */
+function xn17_preprocess_html(&$variables) {
+  if ($node = menu_get_object()) {
+    // Add special-panel class
+    if ($node->type == "panel") {
+      $special = field_get_items('node', $node, 'field_secci_especial');
+      if ($special[0]['value'] == "si") {
+        $variables['classes_array'][] = 'seccio-especial';
+      }
+    }
+  }
+}
+
+/**
  * Implements theme_menu_link().
  */
 function xn17_menu_link__main($variables) {

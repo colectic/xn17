@@ -44,7 +44,7 @@
  * @ingroup themeable
  */
 ?>
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> col-lg-6 col-md-6 col-sm-6 col-xs-12 pdng_mdl row"<?php print $attributes; ?>>
+<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
