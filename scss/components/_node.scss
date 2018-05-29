@@ -13,11 +13,10 @@
   background-color: white;
   margin: 0 -15px;
   padding: 15px 0px;
-  ul { margin: 0; } 
+  ul { margin: 0; }
 }
 .page-node {
   #content { padding-bottom: 50px; }
-  .field-name-body { padding: 30px; }
   .webform-client-form { padding: 30px; }
 }
 .field-name-simple-share-icons {
@@ -33,6 +32,13 @@
 .tipus_contingut {
   @include header_title;
   font-size: 2.1em;
+}
+
+//------------------------------------------------------------------------------
+//Pàgina
+//------------------------------------------------------------------------------
+.node-page {
+  .field-name-body { padding: 30px; }
 }
 
 //------------------------------------------------------------------------------
