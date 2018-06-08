@@ -144,13 +144,20 @@ var mesNoticiesObert = false;
         $("#form_monografics").change(function(){
 	  window.location.href = '/node/'+$("#form_monografics").val();
         });
-	// -----------------------------------------------------------------------
+        // -----------------------------------------------------------------------
         // comentaris
         // -----------------------------------------------------------------------
-	$("#comments-header").click( function(){
+	     $("#comments-header").click( function(){
           $("#comments-body").slideToggle("slow");
           $("#comments").toggleClass('closed');
         });
+        // -----------------------------------------------------------------------
+        // FAQ
+        // -----------------------------------------------------------------------
+        var url = document.location.toString();
+        if ( url.match('/faq/#') ) {
+            $('#'+url.split('#')[1]).addClass('in');
+        }
       });
     }
   };
