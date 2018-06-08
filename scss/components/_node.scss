@@ -56,7 +56,11 @@
   }
   h1 { margin-bottom: 20px; }
   .xn17-standard-header {
-    .date-display-single { &::after { content: " >  "; }}
+    .date-display-single, .date-display-range { &::after { content: " >  "; }}
+    .date-display-range { 
+      .date-display-start::before { content: "De "; }
+      .date-display-start, .date-display-end { text-transform: lowercase; }
+    }
     .field-name-ciutat {
       color: $xn17-vermell;
       padding-left: 10px;
@@ -124,6 +128,7 @@
     }
     p { margin: 0px; }
   }
+  .field-name-print-icon { margin-top: 30px; }
   .field-name-portada-document-biblioteca {
     .wrapper {
       width: 100%;
@@ -227,7 +232,7 @@
     @include flag;
     top: 0;
     a { color: white; }
-    z-index: 15;
+    z-index: 14;
   }
   .field-name-field-autor-noticies .field-label,
   .field-name-field-autor .field-label { font-weight: normal; }
@@ -291,11 +296,11 @@
               color: $xn17-vermell !important;
             }
           }
-          .twitter{
-            font-family: "Fira Sans SemiBold";
+          .twitter { 
+	    font-family: "Fira Sans SemiBold";
             font-size: 0.85em;
             color: $gray-dark;
-          }
+	  }
         }
         .mes-articles{
           font-family: "Fira Sans Bold";

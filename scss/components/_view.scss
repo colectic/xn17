@@ -955,13 +955,9 @@
       color: $xn17-vermell;
       font-size: 0.85em !important;
     }
-    .twitter p {
-      font-family: 'Fira Sans SemiBold';
-      font-size: 0.85em;
-      background-color: $gray-dark;
-      padding: 3px;
+    .twitter img {
+      height: 25px;
       display: inline-block;
-      a {color: white; }
     }
   }
 }
