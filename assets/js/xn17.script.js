@@ -1,14 +1,14 @@
 /**
- * @file
- * Custom scripts for theme.
- */
+* @file
+* Custom scripts for theme.
+*/
 
 /**
- * La variable obert, és uina variable global epr tal que a la portada s'oculti
- * els llistat de recursoso en una primera instancia
- */
- var mesRecursosObert = false;
- var mesNoticiesObert = false;
+* La variable obert, Ã©s uina variable global epr tal que a la portada s'oculti
+* els llistat de recursoso en una primera instancia
+*/
+var mesRecursosObert = false;
+var mesNoticiesObert = false;
 /*
 */
 
@@ -21,11 +21,33 @@
       // -----------------------------------------------------------------------
       // Scrolling
       // -----------------------------------------------------------------------
-      $(window).scroll(function() {
+      if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var frnTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top; }
+      if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var frnBot = frnTop + $('.pane-menu-menu-xn17-menu-noticies').outerHeight(true); }
+      if($('.panels-flexible-row-76-1')[0]){ var panHei = $('.panels-flexible-row-76-1').outerHeight(true)+600; }
+
+      $(window).scroll(function(){
         var aTop = $('#third-header').offset().top;
+        if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var nTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top - $(window).scrollTop(); }
+        if($('.pane-menu-menu-xn17-menu-noticies')[0]){	var rTop = $('.pane-menu-menu-xn17-menu-recursos').offset().top - $(window).scrollTop(); }
+	console.log($(window).scrollTop()+' '+panHei);
+
         if ($(this).scrollTop() >= aTop) {
           $('#third-header-clone').show();
           $('.block-menu').addClass('sticky');
+          if($('.pane-menu-menu-xn17-menu-noticies')[0]) {
+            if (nTop < $('#third-header-clone').height()) {
+              $('.pane-menu-menu-xn17-menu-noticies').addClass('sticky');
+            }
+            if ($('.pane-menu-menu-xn17-menu-noticies').hasClass('sticky') && ($(window).scrollTop() < frnTop)) {
+              $('.pane-menu-menu-xn17-menu-noticies').removeClass('sticky');
+            }
+            if (rTop < $('#third-header-clone').height()) {
+              $('.pane-menu-menu-xn17-menu-recursos').addClass('sticky');
+            }
+            if ($('.pane-menu-menu-xn17-menu-recursos').hasClass('sticky') && (($(window).scrollTop()) < panHei)) {
+              $('.pane-menu-menu-xn17-menu-recursos').removeClass('sticky');
+            }
+          }
         }
         if ($(this).scrollTop() < aTop) {
           $('#third-header-clone').hide();
@@ -38,6 +60,7 @@
       // -----------------------------------------------------------------------
       $(document).ready(function() {
         $(".menu-icon").click(function(){
+	  window.scrollTo(0,0);
           $("#main-menu").slideToggle("slow", function(){
             $("#main-wrapper").fadeToggle();
           });
@@ -47,11 +70,13 @@
             $("#main-wrapper").fadeToggle();
           });
         });
-        $(".menu-link.depth-2").click(function(){
-          $(this).next(".submenu.depth-3").slideToggle("slow");
-          $(this).children().toggleClass("opened");
-          $(this).children().toggleClass("closed");
-        });
+	if ($(window).width() < 768) {
+          $(".menu-link.depth-2").click(function(){
+            $(this).next(".submenu.depth-3").slideToggle("slow");
+            $(this).children().toggleClass("opened");
+            $(this).children().toggleClass("closed");
+          });
+	}
         if ($(window).width() < 768) {
           $(".menu-link.depth-1").click(function(){
             $(this).next(".submenu.depth-2").slideToggle("slow");
@@ -59,9 +84,9 @@
             $(this).children().toggleClass("closed");
           });
         }
-      // -----------------------------------------------------------------------
-      // Main menu
-      // -----------------------------------------------------------------------
+        // -----------------------------------------------------------------------
+        // Main menu
+        // -----------------------------------------------------------------------
         if ($(window).width() < 768) {
           $(".block-menu").children('h4').click( function(){
             $(this).next(".block__content").slideToggle("slow");
@@ -69,9 +94,9 @@
             $(this).parent(".block-menu").toggleClass("closed");
           });
         }
-      // -----------------------------------------------------------------------
-      // Filtre Bilbioteca
-      // -----------------------------------------------------------------------
+        // -----------------------------------------------------------------------
+        // Filtre Bilbioteca
+        // -----------------------------------------------------------------------
         $("#views-exposed-form-xn17-biblioteca-page #cerca-avancada").click( function(){
           $(this).toggleClass("showicon");
           $(this).toggleClass("hideicon");
@@ -114,12 +139,25 @@
           });
         };
         // -----------------------------------------------------------------------
+        // select d'especials
+        // -----------------------------------------------------------------------
+        $("#form_monografics").change(function(){
+	  window.location.href = '/node/'+$("#form_monografics").val();
+        });
+        // -----------------------------------------------------------------------
         // comentaris
         // -----------------------------------------------------------------------
-        $("#comments-header").click( function(){
+	     $("#comments-header").click( function(){
           $("#comments-body").slideToggle("slow");
           $("#comments").toggleClass('closed');
         });
+        // -----------------------------------------------------------------------
+        // FAQ
+        // -----------------------------------------------------------------------
+        var url = document.location.toString();
+        if ( url.match('/faq/#') ) {
+            $('#'+url.split('#')[1]).addClass('in');
+        }
       });
     }
   };

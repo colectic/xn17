@@ -6,6 +6,8 @@
 //------------------------------------------------------------------------------
 .destacat_2x2{
   h3{
+    padding: 15px;
+    background-color: rgba(0,0,0,0.7);
     font:{
       family: Fira Sans SemiBold;
       width:600;
@@ -24,7 +26,7 @@
     @include padding-dreta(584 150);
     padding-bottom: 50px;
     @media screen and (min-width: $screen-xs) {
-      left:10%;
+      left:8%;
     }
     p{
       padding-top:20px;
@@ -77,6 +79,7 @@
 
   .tipo-recurs{
     @include tipo-noticia-recurs;
+    a { color:$xn17-vermell; }
     .tipo-recurs-Informàtic a{
       color:$xn17-informatic !important;
     }
@@ -136,7 +139,7 @@
   border-top:solid 3px $xn17-vermell;
   margin-left: 30px;
   margin-right: 15px;
-  margin-bottom: 90px;
+  margin-bottom: 30px;
   height:481px;
   @media (max-width: $screen-md-max){
     height:432px;
@@ -619,18 +622,14 @@
       }
     }
 
-  }pane-xn17-financament
-  .view-content{
-    padding-top: 15px;
-    padding-bottom: 15px;
   }
 
   .view-footer{
     padding-top: 15px;
-    padding-bottom: 15px;
     padding-right: 0px;
-    li a{
-      font-size: 1em;
+    li {
+      padding: 5px 0 !important;
+      a { font-size: 1em; }
     }
   }
 
@@ -642,6 +641,7 @@
   }
 
   .calendar-calendar{
+    margin-top: 15px;
     width: 100%;
     padding:0px;
     .mini{
@@ -831,6 +831,8 @@
     padding: 5px 30px 5px 5%;
     width: 100%;
     background-color: #BE1622;
+    height: 30px;
+    padding-top: 8px;
     a{
       left: 0px;
       color: #fff;
@@ -851,6 +853,8 @@
     padding: 5px 0 5px 10px;
     margin-top:-50px;
     margin-bottom: 30px;
+    height: 30px;
+    padding-top: 8px;
     a{
       color: #fff;
       text-transform: uppercase;
@@ -930,27 +934,30 @@
     margin-left: 15px;
     margin-right: 15px;
   }
-  img{
-    width: 156px;
+  .foto {
+    width: 60%;
     height: auto;
     float: right;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   .autor{
-    width: 99px;
+    width: 40%;
     position: absolute;
-    bottom: 0px;
-    padding-bottom: 45px;
-    padding-left: 10px;
+    bottom: 35px;
+    padding: 0 10px;
+    p { padding-right: 10px; }
     a{
       font-family: 'Fira Sans SemiBold';
       text-transform: uppercase;
       color: $xn17-vermell;
       font-size: 0.85em !important;
     }
-    .twitter{
-      font-family: 'Fira Sans SemiBold';
-      color: $gray-dark;
-      font-size: 0.85em;
+    .twitter img {
+      height: 25px;
+      display: inline-block;
     }
   }
 }
@@ -1029,6 +1036,9 @@
     padding-top: 20px;
   }
 }
+.view-xn17-etiquetes {
+  @include load-more;
+}
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 //Monografic seccións especials
@@ -1044,7 +1054,7 @@
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 30px;
-  margin-top: 60px;
+  margin-top: 0px;
   background-color: $gray-light;
   height:481px;
   @media (max-width: $screen-md-max){
@@ -1072,15 +1082,20 @@
   }
   .cont_titular_entradeta{
     overflow-x: hidden;
+    .content {
+      padding: 0 15px 15px; 
+      background-color: rgba(0,0,0,0.7);
+      margin-top: 50px;
+    }
     h2{
       position: relative;
       z-index: 100;
       text-transform: uppercase;
       font-family: Fira Sans SemiBold;
       font-size:1.3em;
-      padding-top:60px;
+      padding-top:30px;
       padding-left:20px;
-      background: url('/sites/all/themes/xn17/assets/images/elements/fletxa_xn_blanc.svg') no-repeat 0% 62px;
+      background: url('/sites/all/themes/xn17/assets/images/elements/fletxa_xn_blanc.svg') no-repeat 0% 30px;
       background-size:14px 14px;
       margin-top: 0px;
       color: #FFF;
@@ -1137,6 +1152,8 @@
       font-size:1.3em;
       color: #4A4A49;
       padding-left: 0px;
+      display: block;
+      margin-bottom: 15px;
     }
     .cont-relacionats{
       padding-left:0px;
@@ -1226,12 +1243,23 @@
 	.info img {
    		position: relative;
    		height: 50%;
-		  width: 20%;
+		width: 20%;
   		transform: translate(0, 50%);
 	   	z-index: 10;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
 	}
 }
 .lightbox2-alt-layout, .lightbox2-alt-layout-data {
 	#bottomNav { margin-bottom: auto !important; height: auto !important; }
 	#bottomNavClose { margin-top: auto !important; }
+}
+
+//------------------------------------------------------------------------------
+// AUTORES I AUTORS
+//------------------------------------------------------------------------------
+.view-id-xn17-opinio-autors {
+  margin-top: 30px;
+  width: 100%;
 }

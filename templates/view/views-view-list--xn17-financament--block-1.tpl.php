@@ -19,7 +19,7 @@
     <?php endforeach; ?>
       <li id="button" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="more-link">
-          <a href="/financaments">Veure tot</a>
+          <a href="/financament">Veure tot</a>
         </div>
       </li>
   <?php print $list_type_suffix; ?>

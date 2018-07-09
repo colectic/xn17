@@ -14,7 +14,7 @@
   <div class="container">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="sticky-logo hidden-xs">
-        <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/>
+	<a href="/"><img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/></a>
       </div>
       <div class="menu-icon">
         <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="menu icon"/>
@@ -29,7 +29,7 @@
         <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
         <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
         <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
-        <a href="/segueix-nos"><img src="/sites/all/themes/xn17/assets/images/icon/icon-share-circle.svg" alt="share icon"/></a>
+        <a href="https://t.me/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tl-circle.svg" alt="telegram icon"/></a>
       </div>
     </div>
   </div>
@@ -90,7 +90,7 @@
         <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
         <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
         <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
-        <a href="/segueix-nos"><img src="/sites/all/themes/xn17/assets/images/icon/icon-share-circle.svg" alt="share icon"/></a>
+        <a href="https://t.me/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tl-circle.svg" alt="telegram icon"/></a>
       </div>
     </div>
   </div>
@@ -164,7 +164,9 @@
   <div class="container">
     <div class="footer-region col-lg-6 col-md-12 col-sm-12 col-xs-12 first">
       <div id="footer-logo">
-        <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/>
+	<a href="/">
+ 	      <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/>
+	</a>
       </div>
     </div>
     <div class="footer-region col-lg-4 col-md-5 col-sm-12 col-xs-12 second">
@@ -179,7 +181,7 @@
         <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
         <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
         <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
-        <a href="/segueix-nos"><img src="/sites/all/themes/xn17/assets/images/icon/icon-share-circle.svg" alt="share icon"/></a>
+        <a href="https://t.me/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tl-circle.svg" alt="telegram icon"/></a>
       </div>
     </div>
   </div>

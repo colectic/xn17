@@ -1,7 +1,23 @@
 // Styles for Nodes
 // -----------------------------------------------------------------------------
+.page-header {
+    background-color: white;
+    padding: 40px 30px 20px 30px;
+    margin: 0px -15px;
+  .title {
+    font-weight: 600;
+    color: $xn17-vermell;
+  }
+}
+.tabs {
+  background-color: white;
+  margin: 0 -15px;
+  padding: 15px 0px;
+  ul { margin: 0; }
+}
 .page-node {
   #content { padding-bottom: 50px; }
+  .webform-client-form { padding: 30px; }
 }
 .field-name-simple-share-icons {
   margin: 30px 0;
@@ -19,6 +35,13 @@
 }
 
 //------------------------------------------------------------------------------
+//Pàgina
+//------------------------------------------------------------------------------
+.node-page {
+  .field-name-body { padding: 30px; }
+}
+
+//------------------------------------------------------------------------------
 //Esdeveniment, Finançament, Bilioteca
 //------------------------------------------------------------------------------
 .agenda, .financament, .node-type-doc-biblioteca {
@@ -33,7 +56,11 @@
   }
   h1 { margin-bottom: 20px; }
   .xn17-standard-header {
-    .date-display-single { &::after { content: " >  "; }}
+    .date-display-single, .date-display-range { &::after { content: " >  "; }}
+    .date-display-range { 
+      .date-display-start::before { content: "De "; }
+      .date-display-start, .date-display-end { text-transform: lowercase; }
+    }
     .field-name-ciutat {
       color: $xn17-vermell;
       padding-left: 10px;
@@ -101,6 +128,7 @@
     }
     p { margin: 0px; }
   }
+  .field-name-print-icon { margin-top: 30px; }
   .field-name-portada-document-biblioteca {
     .wrapper {
       width: 100%;
@@ -170,13 +198,20 @@
   }
   .views-slideshow-cycle-main-frame,
   .views_slideshow_cycle_slide,
-  .views_slideshow_cycle_slide img {
+  .views_slideshow_cycle_slide img,
+  .field-name-field-agenda-imatge img {
     width: 100%;
     height: auto;
   }
   &.recurs .views-slideshow-cycle-main-frame { margin-bottom: 50px; }
-  .views_slideshow_cycle_slide { border-top: solid 2px $xn17-vermell; }
-  &.recurs .views_slideshow_cycle_slide { margin-top: 50px; }
+  .views_slideshow_cycle_slide,
+  .field-name-field-agenda-imatge {
+    border-top: solid 2px $xn17-vermell;
+  }
+  &.recurs .views_slideshow_cycle_slide,
+  .field-name-field-agenda-imatge {
+    margin-top: 50px;
+  }
   .views-field-field-peu-de-foto, .views-field-field-imatges-1 {
     font-size: $font-size-small;
     color: $gray-medium;
@@ -192,11 +227,12 @@
     .field-label { display: none; }
   }
   .field-name-body { h1, h2, h3, h4 { font-size: $font-size-base !important; }}
+  .field-name-ambit-noticia,
   .field-name-field-ambit-noticia {
     @include flag;
     top: 0;
     a { color: white; }
-    z-index: 15;
+    z-index: 14;
   }
   .field-name-field-autor-noticies .field-label,
   .field-name-field-autor .field-label { font-weight: normal; }
@@ -260,11 +296,11 @@
               color: $xn17-vermell !important;
             }
           }
-          .twitter{
-            font-family: "Fira Sans SemiBold";
+          .twitter { 
+	    font-family: "Fira Sans SemiBold";
             font-size: 0.85em;
             color: $gray-dark;
-          }
+	  }
         }
         .mes-articles{
           font-family: "Fira Sans Bold";
@@ -344,13 +380,18 @@
       margin-top: 50px;
     }
   }
+  .anchor-sec {
+    display: block;
+    position: relative;
+    top: -170px;
+  }
 }
 
 .node-noticia-general.node-teaser {
-  .field-name-field-ambit-noticia {
+  .field-name-ambit-noticia {
     a { text-transform: uppercase; }
     .field-item::before {
-      content: 'NOTICIA > ';
+      content: 'NOTÍCIES > ';
       padding-left: 10px;
     }
   }

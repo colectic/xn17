@@ -82,6 +82,7 @@
       form {
         #edit-field-date-event-value-wrapper input { background: white url('../images/icon/icon-calendar-gray.svg') no-repeat right 15px center ;}
         #edit-city-wrapper input {background: white url('../images/icon/icon-map-gray.svg') no-repeat right 15px center ; }
+	.form-item-field-date-event-value-value-time { display: none; }
       }
       #publish-link {
         color: $xn17-vermell;
@@ -237,6 +238,7 @@
   .sub-seccions,.entradeta-recurs{
     display:none;
   }
+  margin: 0px !important;
 }
 
 .bloc-recursos-portada {
@@ -282,12 +284,72 @@
 // Blocs banner
 // -----------------------------------------------------------------------------
 .bloc-banner {
-  .block__content { margin: 7.5px 15px; }
   &.voluntariat { @include bloc-banner('banner_voluntariat', 150px); }
   &.festevoluntaria { @include bloc-banner('banner_feste', 150px); }
   &.assessorament { @include bloc-banner('banner_assessorament', 150px); }
   &.tajudem { @include bloc-banner('banner_tajudem', 150px); }
+  .block__content { margin: 7.5px 15px; }  
+  h4 {
+    padding: 15px;
+    background-color: rgba(0,0,0,0.7);
+  }
 }
+
+// -----------------------------------------------------------------------------
+// Blocs laterals
+// -----------------------------------------------------------------------------
+.bloc--lateral {
+  margin: 10px 0;
+  padding: 0px;
+  h4 {
+    border-top: solid 8px $gray;
+    border-bottom: solid 3px $gray;
+    padding: 10px 15px;
+    margin: 0 0 10px 0;
+    color: $xn17-vermell;
+    font-size: 24px;
+    font-family: Fira Sans SemiBold;
+  } 
+  p { padding: 0 15px; }
+  a {
+    font-weight: 600;
+    color: $gray-medium;
+  }
+  background-color: $gray-light;
+  border-bottom: solid 8px $gray;
+}
+
+// -----------------------------------------------------------------------------
+// Blocs finançaments lateral
+// -----------------------------------------------------------------------------
+.bloc--lateral.bloc--financament {
+  ul { list-style-type: none; }
+  li { 
+    margin: 0px; 
+    padding: 0px;
+    div { margin: 5px 15px;
+    }
+    .views-field-field-date {
+      border-bottom: solid 1px $gray; 
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      color: $xn17-vermell;
+    }
+    .views-field-title a {
+      font-weight: normal;
+      color: $text-color;
+    }
+  }
+  .more-link {
+    margin: 15px 15px 10px;
+    a {
+      color: $text-color;
+      font-weight: 600;     
+    }
+  }
+}
+
+
 
 // -----------------------------------------------------------------------------
 // Blocs main footer
@@ -335,8 +397,8 @@
         background: url('../images/icon/icon-rss.svg') no-repeat left;
         padding-left: 28px;
       }
-      &.newsletter {
-        background: url('../images/icon/icon-mail.svg') no-repeat left;
+      &.telegram {
+        background: url('../images/icon/icon-tl.svg') no-repeat left;
         padding-left: 30px;
       }
     }
@@ -345,8 +407,9 @@
     margin-top: 50px;
     clear: both;
     float:left;
+    .logo { height: 160px; }
     .logo-title {
-      margin: 0 15px;
+      margin: 5px 15px 0 15px;
       border-top: solid 1px $gray-dark;
       padding: 10px 0;
     }
@@ -371,6 +434,7 @@
 // Bloc footer per opinio
 //------------------------------------------------------------------------------
 #content-footer{
+  .front & { display: none; }
   background-color: #fff;
   padding-bottom: 50px;
   .block__title{
@@ -630,4 +694,19 @@
     .slick-active .content-info { display: block; }
     .slick-track { padding-top: 0px; }
   }
+}
+
+//------------------------------------------------------------------------------
+// Bloc amb imatge
+//------------------------------------------------------------------------------
+.block-image {
+  padding: 0 !important;
+  margin: 10px 0 !important;
+}
+
+//------------------------------------------------------------------------------
+// Selecció d'especials
+//------------------------------------------------------------------------------
+#form_monografics {
+  margin-bottom: 30px; 
 }

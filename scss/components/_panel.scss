@@ -6,6 +6,18 @@
 //------------------------------------------------------------------------------
 .destacat_2x2{
   @include caixa_modul;
+  @media screen and (max-width:$screen-xs-min){
+    font-size: 3em;
+  }
+  @media screen and (min-width:$screen-sm-min){
+    font-size: 3em;
+  }
+  @media screen and (min-width:$screen-md-min){
+    font-size: 1em;
+  }
+  @media screen and (min-width:$screen-lg){
+    font-size: 1em;
+  }
 }
 
 //------------------------------------------------------------------------------
@@ -324,7 +336,7 @@
 //------------------------------------------------------------------------------
 // Subportal noticies
 //------------------------------------------------------------------------------
-.page-noticies .title { display: none; }
+.page-noticies .page-header { display: none; }
 .panels-flexible-subportal_noticies {
   .row { padding: 0 15px; }
   .panels-flexible-region-inside { padding: 0px; }
@@ -361,6 +373,8 @@
       height: 90%;
       padding-bottom: 50px;
       .field-name-title h4 {
+	padding: 15px;
+    	background-color: rgba(0,0,0,0.7);
         font-family: Fira Sans SemiBold;
         font-size: 2.15em;
         a { color: white; }
@@ -372,7 +386,7 @@
       }
     }
     .field-name-field-agenda-imatge:before {
-        content: "";
+     /*   content: "";
         display: block;
         position: absolute;
         width: calc(100% - 30px);
@@ -380,8 +394,9 @@
         background-image: linear-gradient(rgba(129, 129, 129, 0.45), rgba(129, 129, 129, 0.45));
         z-index: 10;
         top: 0;
+     */
     }
-    .field-name-field-ambit-noticia {
+    .field-name-ambit-noticia {
       @include flag;
       top: 0;
       a { color: white; }
@@ -412,7 +427,7 @@
           }
         }
       }
-      .field-name-field-ambit-noticia {
+      .field-name-ambit-noticia {
         background: none;
         position: relative;
         font-family: Fira Sans SemiBold;
@@ -431,4 +446,17 @@
     }
     .field-name-field-resum { display: none; }
   }
+}
+
+//------------------------------------------------------------------------------
+// Especials
+//------------------------------------------------------------------------------
+.seccio-especial {
+  @include load-more;
+  .page-header { display: none; }
+  .bloc-header-image::after {
+    background: none;
+    z-index: 0;
+  }
+  .view-footer { @include view-header; }
 }
