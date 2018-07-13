@@ -100,7 +100,7 @@
     <div class="top-menu-region col-xs-10 first">
       <div id="contact-form">
         <!--TODO-->
-        <a href="#" title="formulari de contacte">Formulari de contacte</a>
+        <a href="/contacte" title="formulari de contacte">Formulari de contacte</a>
       </div>
     </div>
     <div class="top-menu-region col-xs-2 second">
