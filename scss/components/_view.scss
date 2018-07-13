@@ -193,7 +193,7 @@
     padding:30px;
     background-size: 840px !important;
     position: relative;
-    z-index: -1;
+    z-index: 0;
     @media (max-width: $screen-md-max){
         background-size: 690px !important;
     }
