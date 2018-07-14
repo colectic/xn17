@@ -155,8 +155,9 @@ var mesNoticiesObert = false;
         // FAQ
         // -----------------------------------------------------------------------
         var url = document.location.toString();
-        if ( url.match('/faq/#') ) {
-            $('#'+url.split('#')[1]).addClass('in');
+	if ( url.match('/faq/#-') ) {
+           $('#qui-gestiona').removeClass('in');
+            $('#'+url.split('#-')[1]).addClass('in');
         }
       });
     }
