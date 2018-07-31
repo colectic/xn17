@@ -155,10 +155,57 @@ var mesNoticiesObert = false;
         // FAQ
         // -----------------------------------------------------------------------
         var url = document.location.toString();
-        if ( url.match('/faq/#') ) {
-            $('#'+url.split('#')[1]).addClass('in');
+        if ( url.match('/faq/#-') ) {
+	    $('#qui-gestiona').removeClass('in');
+            $('#'+url.split('#-')[1]).addClass('in');
         }
+	// Making Youtube videos responsive
+	$('iframe[src^="https://www.youtube"]').attr('width', '100%');
+	// Override of Search Form placeholder
+	$('#search-form #edit-keys').attr('placeholder', 'Cerca');
       });
     }
   };
 })(jQuery, Drupal, this, this.document);
+
+
+
+
+
+/**
+ * Initializes a toggler for the sub-homes menu
+ */
+
+(function($) {
+	$(function() {
+		if ($('.menu.menu-noticies').length > 0) {
+			if (!!$.cookie('menu-noticies')) {
+				if ($.cookie('menu-noticies') == 'expanded') {
+					$('.pane-block.pane-menu-menu-xn17-menu-noticies .pane-content').slideDown();
+					$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('expanded');
+				}
+				else if ($.cookie('menu-noticies') == 'collapsed') {
+					$('.pane-block.pane-menu-menu-xn17-menu-noticies .pane-content').slideUp();
+					$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('collapsed');
+				}
+			}
+			else {
+				$.cookie('menu-noticies', 'expanded');
+				$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('expanded');
+			}
+
+			$('.pane-block.pane-menu-menu-xn17-menu-noticies h4').click(function(e) {
+				e.preventDefault();
+				$(this).siblings('.pane-content').slideToggle('fast');
+				$(this).parent().toggleClass('expanded');
+				$(this).parent().toggleClass('collapsed');
+				if ($(this).parent().hasClass('expanded')) {
+					$.cookie('menu-noticies', 'expanded');
+				}
+				else if ($(this).parent().hasClass('collapsed')) {
+					$.cookie('menu-noticies', 'collapsed');
+				}
+			});
+		}
+	});
+})(jQuery);
