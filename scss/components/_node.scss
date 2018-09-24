@@ -521,3 +521,43 @@
   table, tbody, tr.body, tr.body td { border: 0px !important; }
   tr.body td { padding-top: 3px !important; }
 }
+
+
+//------------------------------------------------------------------------------
+//Entitats
+//------------------------------------------------------------------------------
+body.page-entitat {
+  .views-field-field-logotip {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .views-row {
+    margin-bottom: 40px;
+  }
+  .views-field {
+    margin-bottom: 10px;
+  }
+  .views-field.views-field-field-missio-valors {
+    margin-bottom: 30px;
+  }
+  #news-block {
+    display: inline-block;
+    width: 100%;
+    background: white url("../images/elements/line.svg") repeat-x center;
+    margin-top: 20px;
+    text-align: center;
+  }
+  #news-block a {
+    display: inline-block;
+    background: white url("../images/elements/mes.svg") no-repeat center top;
+    padding-top: 25px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #social-block a {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+}
