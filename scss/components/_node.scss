@@ -527,12 +527,15 @@
 //Entitats
 //------------------------------------------------------------------------------
 body.page-entitat {
-  .views-field-field-logotip {
+  .views-field-field-logotip, .view-mapa-de-l-entitat {
     margin-top: 20px;
     text-align: center;
   }
   .views-row {
     margin-bottom: 40px;
+  }
+  .view-dades-de-l-entitat-2 .views-row {
+    margin-bottom: 10px;
   }
   .views-field {
     margin-bottom: 10px;
@@ -540,14 +543,22 @@ body.page-entitat {
   .views-field.views-field-field-missio-valors {
     margin-bottom: 30px;
   }
-  #news-block {
+  #news-block, #events-block {
     display: inline-block;
-    width: 100%;
+    width: 44%;
     background: white url("../images/elements/line.svg") repeat-x center;
     margin-top: 20px;
     text-align: center;
+    float: left;
+    margin-bottom: 40px;
+    margin-left: 3%;
+    margin-right: 3%;
   }
-  #news-block a {
+  .view-dades-de-l-entitat-iii-, #social-block, 
+  .pane-dades-de-l-entitat-2-panel-pane-2 {
+    clear: both;
+  }
+  #news-block a, #events-block a {
     display: inline-block;
     background: white url("../images/elements/mes.svg") no-repeat center top;
     padding-top: 25px;
@@ -560,4 +571,46 @@ body.page-entitat {
     margin-right: 10px;
   }
 
+}
+
+
+//------------------------------------------------------------------------------
+// Publica
+//------------------------------------------------------------------------------
+.page-publica-a-xarxanet #acte-formacio > div, .page-publica-a-xarxanet #colabora > div {
+  height: 150px;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-size: auto auto;
+  background-size: auto 165px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+  padding: 10px 15px;
+}
+.page-publica-a-xarxanet #acte-formacio > div {
+  background: url("../images/blocks/banner_assessorament.jpg");
+}
+.page-publica-a-xarxanet #colabora > div {
+   background: url("../images/blocks/banner_feste.jpg");
+}
+.page-publica-a-xarxanet #acte-formacio h2,
+.page-publica-a-xarxanet #colabora h2 {
+  min-height: 3.5em;
+}
+.page-publica-a-xarxanet #acte-formacio p,
+.page-publica-a-xarxanet #colabora p {
+  color: #FFFFFF;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.7);
+}
+.page-publica-a-xarxanet #acte-formacio a,
+.page-publica-a-xarxanet #colabora a {
+  color: #FFFFFF;
+}
+
+.page-publica-a-xarxanet #user-login {
+  width: 83%;
+  margin-left: 7%;
 }
