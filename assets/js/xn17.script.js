@@ -94,6 +94,61 @@ var mesNoticiesObert = false;
             $(this).parent(".block-menu").toggleClass("closed");
           });
         }
+
+        // Overrides header's menu title when viewing Monogràfics's related pages
+        var pattern1 = /^\/monografics/;
+        var pattern2 = /^\/especial\//;
+        var path = window.location.pathname;
+        if (pattern1.test(path) || pattern2.test(path)) {
+          $('.block-menu.menu.menu-noticies h4').text('Monogràfics');
+        }
+        if (pattern1.test(path)) {
+          $('#page-header').remove();
+        }
+        // Overrides header's menu title when viewing Opinió's related pages
+        var pattern1 = /^\/opinio/;
+        var pattern2 = /^\/opinio\//;
+        var pattern3 = /^\/autora\//;
+        var path = window.location.pathname;
+        if (pattern1.test(path) || pattern2.test(path) || pattern3.test(path)) {
+          $('.block-menu.menu.menu-noticies h4').text('Opinió');
+        }
+        if (pattern1.test(path)) {
+          $('#page-header').remove();
+        }
+        // Overrides header's menu title when viewing Finançament's related pages
+        var pattern1 = /^\/financament/;
+        var pattern2 = /^\/financament\//;
+        var path = window.location.pathname;
+        if (pattern1.test(path) || pattern2.test(path)) {
+          $('.block-menu.menu.menu-recursos h4').text('Finançament');
+        }
+        // Overrides header's menu title when viewing Agenda's related pages
+        var pattern1 = /^\/agenda/;
+        var pattern2 = /^\/agenda\//;
+        var path = window.location.pathname;
+        if (pattern1.test(path) || pattern2.test(path)) {
+          $('.block-menu.menu.menu-noticies h4').text('Agenda');
+        }
+        // Overrides header's menu title when viewing Biblioteca's related pages
+        var pattern1 = /^\/biblioteca/;
+        var pattern2 = /^\/biblioteca\//;
+        var path = window.location.pathname;
+        if (pattern1.test(path) || pattern2.test(path)) {
+          $('.block-menu.menu.menu-recursos h4').text('Biblioteca');
+        }
+        // Overrides header's menu title when viewing Fes voluntariat's related pages
+        var pattern1 = /^\/fes-voluntariat/;
+        var pattern2 = /^\/etiquetes\/general\/crida-de-voluntariat/;
+        var path = window.location.pathname;
+        if (pattern1.test(path)) {
+          $('.block-menu.menu.menu-recursos h4').text('Fes voluntariat');
+          $('#page-header').remove();
+        }
+        if (pattern2.test(path)) {
+          $('#page-header h1').text('Demandes de voluntariat');
+        }
+
         // -----------------------------------------------------------------------
         // Filtre Bilbioteca
         // -----------------------------------------------------------------------
