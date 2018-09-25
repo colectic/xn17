@@ -48,23 +48,26 @@ $tw = strip_tags($fields['field_twitter']->content);
 $inst = strip_tags($fields['field_instagram']->content);
 $yt = strip_tags($fields['field_youtube']->content);  
 $goo = strip_tags($fields['field_google']->content);    
-print '<div id="social-block">
-<h2>Xarxes Socials</h2>';
-if (!empty($fb)) {
-	print '<a href="'.$fb.'" title="'.$fb.'"><img src="/sites/all/themes/xn17/assets/images/xxss/fb-icon.png"/></a>';
+
+if (!empty($fb) || !empty($tw) || !empty($inst) || !empty($yt) || !empty($goo) ) {
+	print '<div id="social-block">
+	<h2>Xarxes Socials</h2>';
+	if (!empty($fb)) {
+		print '<a href="'.$fb.'" title="'.$fb.'"><img src="/sites/all/themes/xn17/assets/images/xxss/fb-icon.png"/></a>';
+	}
+	if (!empty($tw)) {
+		print '<a href="'.$tw.'" title="'.$tw.'"><img src="/sites/all/themes/xn17/assets/images/xxss/twitter-icon.png"/></a>';
+	}
+	if (!empty($inst)) {
+		print '<a href="'.$inst.'" title="'.$inst.'"><img src="/sites/all/themes/xn17/assets/images/xxss/inst-icon.png"/></a>';
+	}
+	if (!empty($yt)) {
+		print '<a href="'.$yt.'" title="'.$yt.'"><img src="/sites/all/themes/xn17/assets/images/xxss/youtube-icon.png"/></a>';
+	}
+	if (!empty($goo)) {
+		print '<a href="'.$goo.'" title="'.$goo.'"><img src="/sites/all/themes/xn17/assets/images/xxss/gplus-icon.png"/></a>';
+	}
+	print '</div>';
 }
-if (!empty($tw)) {
-	print '<a href="'.$tw.'" title="'.$tw.'"><img src="/sites/all/themes/xn17/assets/images/xxss/twitter-icon.png"/></a>';
-}
-if (!empty($inst)) {
-	print '<a href="'.$inst.'" title="'.$inst.'"><img src="/sites/all/themes/xn17/assets/images/xxss/inst-icon.png"/></a>';
-}
-if (!empty($yt)) {
-	print '<a href="'.$yt.'" title="'.$yt.'"><img src="/sites/all/themes/xn17/assets/images/xxss/youtube-icon.png"/></a>';
-}
-if (!empty($goo)) {
-	print '<a href="'.$goo.'" title="'.$goo.'"><img src="/sites/all/themes/xn17/assets/images/xxss/gplus-icon.png"/></a>';
-}
-print '</div>';
 
 ?>
