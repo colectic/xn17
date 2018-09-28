@@ -23,6 +23,9 @@
   margin: 30px 0;
   a { margin-right: 5px; }
 }
+.field-type-taxonomy-term-reference .field-items a {
+  text-transform: lowercase;
+}
 
 @media (max-width: $screen-md-min) {
   #main { margin-top: 0px; }
@@ -181,6 +184,18 @@
     background: $xn17-vermell url("../images/icon/icon-download-link-white.svg") no-repeat left 15px center;
   }
 }
+.node-type-event.agenda {
+  @media (min-width: $screen-sm-max) {
+      .field-name-field-date-event {
+        padding-bottom: 0;
+        display: block;
+        width: 100%;
+      }
+      .field-name-title h1 {
+        margin-top: 0;
+      }
+    }
+}
 
 //------------------------------------------------------------------------------
 //Notícia, Recurs i opinio
@@ -230,9 +245,16 @@
   .field-name-ambit-noticia,
   .field-name-field-ambit-noticia {
     @include flag;
+    display: block;
     top: 0;
     a { color: white; }
     z-index: 14;
+
+    &::after {
+      z-index: 4;
+      display: block;
+      height: 100%;
+    }
   }
   .field-name-field-autor-noticies .field-label,
   .field-name-field-autor .field-label { font-weight: normal; }
@@ -416,7 +438,7 @@
       .views-row-first{
         .cont_titular_entradeta{
           h4{
-            padding-top: 30px;
+            padding-top: 46px;
           }
         }
       }
@@ -509,6 +531,7 @@
     }
     .field-name-articles-autor-a{
       display: inline-block;
+      width: 100%;
     }
   }
 }
@@ -520,6 +543,35 @@
 .node-type-butlleti-financament {
   table, tbody, tr.body, tr.body td { border: 0px !important; }
   tr.body td { padding-top: 3px !important; }
+}
+
+.node-type-butlleti-financament {
+
+  #content  {
+    .region-content {
+      > .butlleti:first-child tbody {
+        tr:nth-child(3) td {
+          width: 50%;
+        }
+        tr:nth-child(3) td img {
+          width: 100%;
+          border-left: none;
+        }
+      }
+
+      > .butlleti:last-child > tbody > tr:first-child {
+        > td:nth-child(1) {
+          width: 75.5%;
+        }
+        > td:nth-child(2) {
+          width: 24.5%;
+        }
+      }
+
+
+    }
+  }
+  
 }
 
 
@@ -613,4 +665,38 @@ body.page-entitat {
 .page-publica-a-xarxanet #user-login {
   width: 83%;
   margin-left: 7%;
+}
+
+//------------------------------------------------------------------------------
+// Color links on several content types
+//------------------------------------------------------------------------------
+.node-type-opinio .xn17-standard-column2 .field:not(.field-name-addtoany):not(.field-name-autor-opinio) a,
+.node-type-doc-biblioteca .xn17-standard-column2 .field:not(.field-name-addtoany) a,
+.node-type-financament-full .xn17-standard-column2 a,
+.node-type-noticia-general .xn17-standard-column2 .field:not(.field-name-addtoany) a,
+.node-type-event .xn17-standard-column2 .field:not(.field-name-addtoany) a,
+.node-type-recurs-general .xn17-standard-column2 .field:not(.field-name-seccions-recurs-index):not(.field-name-addtoany) a,
+.page-faq #panels-ipe-regionid-right a:not([data-toggle="collapse"]) {
+  color: #a7a7a7;
+  text-decoration: underline;
+}
+
+.node-type-opinio .xn17-standard-column2 .field:not(.field-name-addtoany):not(.field-name-autor-opinio) a:hover,
+.node-type-doc-biblioteca .xn17-standard-column2 .field:not(.field-name-addtoany) a:hover,
+.node-type-financament-full .xn17-standard-column2 a:hover,
+.node-type-noticia-general .xn17-standard-column2 .field:not(.field-name-addtoany) a:hover,
+.node-type-event .xn17-standard-column2 .field:not(.field-name-addtoany) a:hover,
+.node-type-recurs-general .xn17-standard-column2 .field:not(.field-name-seccions-recurs-index):not(.field-name-addtoany) a:hover,
+.page-faq #panels-ipe-regionid-right a:not([data-toggle="collapse"]):hover {
+  color: #2f3031;
+  text-decoration: underline;
+}
+
+.node-type-noticia-general .xn17-standard-column1 .field-type-taxonomy-term-reference.field-name-field-ambit-noticia a,
+.node-type-noticia-general .xn17-standard-column1 .field-type-taxonomy-term-reference.field-name-field-ambit-noticia a:hover,
+.node-type-noticia-general .xn17-standard-column1 .field-type-taxonomy-term-reference.field-name-field-ambit-noticia a:focus,
+.node-type-noticia-general .xn17-standard-column1 .field-type-taxonomy-term-reference.field-name-field-ambit-noticia a:active {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
 }

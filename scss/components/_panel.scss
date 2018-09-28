@@ -30,6 +30,14 @@
 }
 
 .titol-regio{
+  display: block;
+
+  &::after { 
+    z-index: 4;
+    display: block;
+    height: 100%; 
+  }
+
   @include flag;
 }
 //------------------------------------------------------------------------------
