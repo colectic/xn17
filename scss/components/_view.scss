@@ -23,6 +23,7 @@
     position:absolute;
     top:20%;
     left:7%;
+    font-size: 16px;    
     @include padding-dreta(584 150);
     padding-bottom: 50px;
     @media screen and (min-width: $screen-xs) {
@@ -294,6 +295,10 @@
     @media (max-width: $screen-md-max){
       float: right;
       margin-right:5px;
+      .titol-paginador {
+        font-size: 1.1em;
+        padding-top: 25px;
+      }
     }
     @media (max-width: $screen-sm-max){
       height:155px;
@@ -381,7 +386,23 @@
 //------------------------------------------------------------------------------
 .biblioteca {
   @include load-more;
-  .view-header { @include view-header; padding-left: 0px; }
+  .view-header { 
+    @include view-header; 
+    padding-left: 0px; 
+    h1 {
+      position: absolute !important;
+      top: -55px;
+      left: 0;
+      margin-top: 0 !important;
+    }
+    @media (max-width: $screen-sm-max) {
+      h1 {
+        margin-top: 0px !important;
+        top: -95px;;
+        left: 0;
+      }
+    }
+  }
   .views-row { padding: 15px 0; }
   .views-field-field-doc-imatge {
     .wrapper {
@@ -419,8 +440,18 @@
     }
   }
   .views-field-nothing {
-    h4 { font-family: Fira Sans SemiBold; }
-  row   .sinopsi { padding: 15px 0; }
+    h4 { 
+      font-family: Fira Sans SemiBold; 
+      margin-top: 0;
+    }
+    .any-publicacio {
+      color: #878787;
+    }
+    @media (min-width: $screen-xs-max) {
+      .titol { padding-top: 0px; }
+    }
+
+    row .sinopsi { padding: 15px 0; }
     .autoria {
       color: $gray-medium;
       a { color: $gray-medium; }
@@ -434,6 +465,10 @@
     }
   }
 }
+.view-xn17-biblioteca {
+  position: relative;
+}
+
 
 //------------------------------------------------------------------------------
 // Recursos
@@ -449,7 +484,16 @@
     margin-top: 10px;
     border-top: solid 2px $xn17-vermell;
     margin-bottom: -15px;
-    span { @include flag; }
+    span { 
+      display: block;
+      @include flag; 
+
+      &::after {
+        z-index: 4;
+        display: block;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -869,7 +913,7 @@
       padding-top: 25px;
     }
     img{
-      @media screen and (max-width:$screen-xs-min){
+      /*@media screen and (max-width:$screen-xs-min){
         width:110px;
       }
       @media screen and (min-width:$screen-sm-min){
@@ -880,11 +924,12 @@
       }
       @media screen and (min-width:$screen-lg){
         width:105px;
-      }
+      }*/
       float:right;
       clear:both;
-      margin: 0px -20px 0px 0px ;
       border-radius: 50%;
+      margin: -13% -20px 0px 0px;
+      width: 50%;
     }
     .rightimage:before {
       content: '' ;

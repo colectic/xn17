@@ -16,6 +16,13 @@
   .content {
     .help-block { display: none; }
     background: rgba(237, 237, 237, .6);
+    position: absolute;
+    top: 45px;
+    z-index: 2;
+    transform: none;
+    .advanced {
+      transform: none !important;
+    }
     @include vertical-align-middle;
     input, select { @include input-field; }
     @media (max-width: $screen-md-max) {
@@ -115,7 +122,7 @@
   }
   &.filtre-biblioteca {
     @include header_image('biblioteca');
-    z-index: 1;
+    z-index: initial;
     .content {
       background: rgba(198, 198, 198, 0.8);
       &.advanced { transform: translateY(-21.5%); }
@@ -188,6 +195,9 @@
         padding-right: 0px;
         input { background-color: $xn17-vermell; }
       }
+    }
+    &::after {
+      z-index: 0;
     }
   }
 }
@@ -398,6 +408,7 @@
         padding-left: 28px;
       }
       &.telegram {
+        display: none !important;
         background: url('../images/icon/icon-tl.svg') no-repeat left;
         padding-left: 30px;
       }
