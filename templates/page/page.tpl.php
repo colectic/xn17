@@ -30,6 +30,7 @@
         <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
         <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
         <a href="https://t.me/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tl-circle.svg" alt="telegram icon"/></a>
+        <a href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="newsletter icon"/></a>
       </div>
     </div>
   </div>
@@ -171,6 +172,7 @@
     </div>
     <div class="footer-region col-lg-4 col-md-5 col-sm-12 col-xs-12 second">
       <div id="footer-links">
+  <a href="/butlletins">BUTLLETINS</a>  /
 	<a href="/contacte">CONTACTE</a>  /
 	<a href="/avis-legal">AVÍS LEGAL</a>  /
 	<a href="/politica_cookies">POLÍTICA DE COOKIES</a>
