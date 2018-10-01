@@ -196,14 +196,19 @@ footer {
       a { margin: 0px 2px; }
     }
     #footer-links {
-      font-size: 13px;
-      a:hover, a:focus, a:active {
-        text-decoration: underline;
-        color: white;
-      }
       @media (min-width: $screen-lg-min) {
         right: 0px;
       }
+    }
+    #footer-links {
+      font-size: 13px;
+    }
+
+    #footer-links a:hover,
+    #footer-links a:focus,
+    #footer-links a:active {
+      text-decoration: underline;
+      color: white;
     }
   }
 }
@@ -327,15 +332,4 @@ footer {
       a { font-family: 'Fira Sans SemiBold'; }
     }
   }
-}
-// -----------------------------------------------------------------------------
-// Global
-// -----------------------------------------------------------------------------
-
-// Remove telegram
-a[href^="https://t.me/xarxanetorg"] {
-  display: none !important;
-}
-.a2a_button_telegram {
-  display: none !important;
 }
