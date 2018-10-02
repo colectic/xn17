@@ -66,12 +66,6 @@ var mesNoticiesObert = false;
         
         $(".menu-icon").click(function(){
 
-          // Prevent double click on the button
-          
-          $(this).click(function() {
-            return false;
-          });
-
           // Variables
           
           var sm  = 768 - 15;
@@ -101,29 +95,29 @@ var mesNoticiesObert = false;
           // only visible the menu just opened
           
           if (wwi >= sm) {
-            $('.menu.menu-noticies.sticky, .menu.menu-recursos.sticky').slideToggle("fast");
-            $("#main-wrapper").fadeToggle("slow");
 
-            // Forces the noticies/recursos menus to be unsticky and visible, when closing the menu
-
-            // if ($(this).hasClass('active')) {
-            //   console.log(':-)');
-            //   $('.menu.menu-noticies, .menu.menu-recursos').removeClass('sticky').slideToggle("fast");
-            // }
-
+            if ($(this).hasClass('active')) {
+              // Forces the noticies/recursos menus to be unsticky and visible, when closing the menu
+              $("#main-wrapper").fadeToggle("slow");
+              $('.menu.menu-noticies, .menu.menu-recursos').removeClass('sticky').slideDown("fast");
+            }
+            else {
+              $('.menu.menu-noticies.sticky, .menu.menu-recursos.sticky').slideToggle("fast");
+              $("#main-wrapper").fadeToggle("slow");
+            }
           }
+          
+          $(this).toggleClass('active'); // Toggles a flag to determine the button status
 
           // Toggles the menu visibility, with a slide effect
 
-          $("#main-menu").slideToggle("slow", function() {
-            $(this).toggleClass('active'); // Toggles a flag to determine the button status
-          });
+          $("#main-menu").slideToggle("slow");
         });
 
         // On Close button Click Event
         // ---------------------------------------------------------------------
         
-        $("#close-button, .menu-icon.active").click(function(){
+        $("#close-button").click(function(){
 
           // Variables
 
@@ -158,7 +152,7 @@ var mesNoticiesObert = false;
           
           if (wwi >= sm) {
             $("#main-wrapper").fadeToggle("slow");
-            $('.menu.menu-noticies, .menu.menu-recursos').slideToggle("fast").removeClass('sticky');
+            $('.menu.menu-noticies, .menu.menu-recursos').slideDown("fast").removeClass('sticky');
           }
         });
 
