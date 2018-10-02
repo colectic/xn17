@@ -1,8 +1,14 @@
 // Page Layout
 // -----------------------------------------------------------------------------
+// Body
+// -----------------------------------------------------------------------------
+body {
+  overflow-x: hidden;
+}
+
 // Header
 // -----------------------------------------------------------------------------
-header {
+header {  
   &#first-header {
     background-color: $gray-darker;
     border-bottom: solid 1px white;
@@ -28,7 +34,7 @@ header {
       @media (max-width: $screen-xs-min) { left: 0px; }
       &.navbar-nav li {
         float: left;
-        @media (min-width: $screen-md-min) { margin-left: 18px; }
+        @media (min-width: $screen-md-min) { margin-left: 0px; }
         @media (max-width: $screen-md-min) { a { padding-right: 5px;}}
       }
       .leaf a { &:hover, &:focus { background-color: transparent; }}
@@ -85,6 +91,7 @@ header {
       height: 46px;
     }
     .menu-icon {
+      cursor: pointer;
       padding-top: 12px;
       padding-left: 25px;
       @media (max-width: $screen-md-min) { padding-left: 20px; }
