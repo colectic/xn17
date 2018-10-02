@@ -64,7 +64,7 @@ var mesNoticiesObert = false;
         // On Menu button Click Event
         // ---------------------------------------------------------------------
         
-        $(".menu-icon").click(function(){
+        $('.menu-icon').click(function(){
 
           // Variables
           
@@ -98,26 +98,28 @@ var mesNoticiesObert = false;
 
             if ($(this).hasClass('active')) {
               // Forces the noticies/recursos menus to be unsticky and visible, when closing the menu
-              $("#main-wrapper").fadeToggle("slow");
-              $('.menu.menu-noticies, .menu.menu-recursos').removeClass('sticky').slideDown("fast");
+              $('#main-wrapper').fadeToggle('slow');
+              $('.menu.menu-noticies, .menu.menu-recursos').removeClass('sticky').slideDown('fast');
             }
             else {
-              $('.menu.menu-noticies.sticky, .menu.menu-recursos.sticky').slideToggle("fast");
-              $("#main-wrapper").fadeToggle("slow");
+              $('.menu.menu-noticies.sticky, .menu.menu-recursos.sticky').slideToggle('fast');
+              $('#main-wrapper').fadeToggle('slow');
             }
           }
           
-          $(this).toggleClass('active'); // Toggles a flag to determine the button status
+          // Toggles a flag to determine the button status
+          
+          $('.menu-icon').toggleClass('active'); 
 
           // Toggles the menu visibility, with a slide effect
 
-          $("#main-menu").slideToggle("slow");
+          $('#main-menu').slideToggle('slow');
         });
 
         // On Close button Click Event
         // ---------------------------------------------------------------------
         
-        $("#close-button").click(function(){
+        $('#close-button').click(function(){
 
           // Variables
 
@@ -126,6 +128,10 @@ var mesNoticiesObert = false;
           var wst = $(window).scrollTop();
           var wwi = $(window).width();
           var tht = $('#third-header').offset().top;
+
+          // Toggles a flag to determine the button status
+
+          $(this).toggleClass('active'); 
 
           // Force a document scroll, based on the header's height
           
@@ -146,46 +152,46 @@ var mesNoticiesObert = false;
 
           // Toggles the menu visibility, with a slide effect
 
-          $("#main-menu").slideToggle("slow");
+          $('#main-menu').slideToggle('slow');
           
           // Forces the noticies/recursos menus to be unsticky and visible, when closing the menu
           
           if (wwi >= sm) {
-            $("#main-wrapper").fadeToggle("slow");
-            $('.menu.menu-noticies, .menu.menu-recursos').slideDown("fast").removeClass('sticky');
+            $('#main-wrapper').fadeToggle('slow');
+            $('.menu.menu-noticies, .menu.menu-recursos').slideDown('fast').removeClass('sticky');
           }
         });
 
         // Mobile Sub-menus
         
         // Level 2 submenus
-        $(".menu-link.depth-2").click(function(){
+        $('.menu-link.depth-2').click(function(){
           var md  = 992 - 15;
           var wwi = $(window).width();
           if (wwi < md) {
-            $(this).next(".submenu.depth-3").slideToggle("slow");
-            $(this).children().toggleClass("opened");
-            $(this).children().toggleClass("closed");
+            $(this).next('.submenu.depth-3').slideToggle('slow');
+            $(this).children().toggleClass('opened');
+            $(this).children().toggleClass('closed');
           }
         });
         // Level 1 submenus
-        $(".menu-link.depth-1").click(function(){
+        $('.menu-link.depth-1').click(function(){
           var md  = 992 - 15;
           var wwi = $(window).width();
           if (wwi < md) {
-            $(this).next(".submenu.depth-2").slideToggle("slow");
-            $(this).children().toggleClass("opened");
-            $(this).children().toggleClass("closed");
+            $(this).next('.submenu.depth-2').slideToggle('slow');
+            $(this).children().toggleClass('opened');
+            $(this).children().toggleClass('closed');
           }
         });
         // -----------------------------------------------------------------------
         // Main menu
         // -----------------------------------------------------------------------
         if ($(window).width() < 768) {
-          $(".block-menu").children('h4').click( function(){
-            $(this).next(".block__content").slideToggle("slow");
-            $(this).parent(".block-menu").toggleClass("opened");
-            $(this).parent(".block-menu").toggleClass("closed");
+          $('.block-menu').children('h4').click( function(){
+            $(this).next('.block__content').slideToggle('slow');
+            $(this).parent('.block-menu').toggleClass('opened');
+            $(this).parent('.block-menu').toggleClass('closed');
           });
         }
 
