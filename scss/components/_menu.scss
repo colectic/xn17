@@ -16,7 +16,7 @@
     transform: translateY(-50%);
     a { font-weight: bold; font-size: 18px; }
   }
-  #close-button { right: 15px; }
+  #close-button { right: 15px; cursor: pointer;}
   a.depth-1 { font-weight: 600; font-size: 28px; }
   .menu-link.depth-1 { padding: 8px 0px; border-bottom: solid 7px $gray; }
   a.depth-2 { font-weight: 600; font-size: 18px; }
@@ -33,12 +33,22 @@
       }
     }
     @media (max-width: $screen-md-max) {
-      a.depth-2.closed::after { content: url('../images/icon/icon-show-small.svg'); float: right; pointer-events: none; cursor: default;}
-      a.depth-2.opened::after { content: url('../images/icon/icon-hide-small.svg'); float: right; pointer-events: none; cursor: default;}
+      .expanded a.depth-2.closed::after { content: url('../images/icon/icon-show-small.svg'); float: right; pointer-events: none;}
+      .expanded a.depth-2.opened::after { content: url('../images/icon/icon-hide-small.svg'); float: right; pointer-events: none;}
       .menu-link-totes, .menu-link-tots {
         a.depth-2::after { content: none;}
       }
       .submenu.depth-3 { display: none; }
+      
+      .menu-link.depth-3 {
+        margin-top: 10px;
+      }
+
+      a.depth-3 {
+        line-height: 1.5em;
+        padding: 5px 0;
+        display: block;
+      }
     }
   }
   @media (max-width: $screen-xs-max) {
@@ -47,3 +57,27 @@
     .submenu.depth-2 { display: none; }
   }
 }
+
+
+// -----------------------------------------------------------------------------
+// Sub menu
+// -----------------------------------------------------------------------------
+
+.menu.menu-noticies,
+.menu.menu-recursos {
+  margin-bottom: 15px !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+
+  &.sticky {
+    background-color: white !important;
+    -webkit-box-shadow: 0px 10px 10px -6px $gray-medium !important;
+   -moz-box-shadow: 0px 10px 10px -6px $gray-medium !important;
+        box-shadow: 0px 10px 10px -6px $gray-medium !important;
+  }
+}
+
+
+
