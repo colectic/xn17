@@ -1,0 +1,221 @@
+// Page Entitats col·laboradores
+// -----------------------------------------------------------------------------
+
+body.page-entitat {
+
+  // Reset styles
+  
+  .canvas-container-inside {
+    padding-left: 0;
+    margin-left: 0;
+    padding-right: 0px;
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .canvas-container .panels-flexible-column {
+    padding: 0 15px;
+  }
+
+  .canvas-container .panels-flexible-column-inside {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .canvas-container .panels-flexible-row {
+    padding: 0;
+    margin: 0 -15px;
+  }
+
+  .canvas-container .panels-flexible-region {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .panels-flexible-row-canvas-container-5-inside {
+    padding-left: 0;
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: $screen-md) {
+
+    .map-wrapper {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  // Styles of the landing page
+
+  .canvas-container {
+    margin-top: 30px;
+
+    .first-1 {
+      // background-color: #f9f9f9;
+
+      .views-field-field-logotip {
+
+        img {
+          width: 100%;
+          max-width: 250px;
+          padding: 15px;
+          display: table;
+          margin: 0 auto;
+          float: none;
+          height: auto;
+          margin-top: -15px;
+        }
+
+        img[src~=default_logo] {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          max-width: auto;
+        }
+      }
+
+      .views-field-field-fotografies {
+        padding: 0;
+
+        img {
+          width: 100%;
+          max-width: 250px;
+          padding: 0;
+          border: 1px solid #ededed;
+          display: table;
+          margin: 0 auto;
+          float: none;
+          height: auto;
+          margin-top: 15px;
+
+          @media (max-width: $screen-sm) {
+            display: none;
+          }
+
+        }
+      }
+    }
+
+    .last-1 {
+
+      .first-2 {
+
+        .pane-title {
+          display: none;
+        }
+
+        #social-block {
+          margin-top: -15px;
+          margin-bottom: 45px;
+        }
+
+        #news-block, #events-block {
+          width: 100% !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+
+        .pane-custom.pane-1 {
+          display: inline-block;
+          width: 100%;
+          float: left;
+          margin-top: 15px;
+
+          .pane-content {
+            display: inline-block;
+          }
+
+          p {
+            margin-left: 0 !important;
+            display: block;
+          }
+
+          a {
+            background-color: #ddd;
+            color: #000;
+            border-radius: 4px;
+            padding: 8px 24px;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            margin-bottom: 15px;
+            display: inline-block;
+
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: darken(#ddd, 5%);
+            }
+          }
+        }
+      }
+
+      .last-2 {
+
+        .view-mapa-de-l-entitat {
+          margin-top: 0;
+
+          .gmap {
+            width: 100% !important;
+            height: 400px !important;
+          }
+        }
+
+        .no-map {
+          width: 100% !important;
+          height: 400px !important;
+        }
+      }
+
+      .pane-dades-de-l-entitat-2-panel-pane-2 {
+        position: relative;
+        border-top: 3px solid #BE1622;
+        background-color: #ededed;
+        padding: 45px 15px 15px;
+
+        .pane-title {
+          display: block;
+          position: absolute;
+          background-color: #BE1622;
+          padding-left: 15px;
+          padding-right: 5px;
+          padding-top: 5px;
+          height: 29px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 18px;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          margin-top: 0;
+
+          &:after {
+            content: url(/sites/all/themes/xn17/assets/images/elements/punta.svg);
+            position: absolute;
+            right: -10px;
+            top: 0px;
+          }
+        }
+      }
+
+      .pane-transparencia-de-l-entitat-panel-pane-1 {
+        background-color: #ededed;
+        padding: 15px 15px 30px;
+
+        select {
+          min-width: 150px;
+        }
+
+        .btn {
+          margin-top: 20px;
+          background-color: #BE1622;
+          border-color: #BE1622;
+        }
+      }
+
+    }
+  }
+
+}
