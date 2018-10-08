@@ -1,0 +1,49 @@
+// Page Agenda d'Entitats col·laboradores
+// -----------------------------------------------------------------------------
+
+body.page-agenda-entitat {
+
+  .view-esdeveniments-de-l-entitat {
+
+    .views-field-nothing { 
+      width: 100%;
+      padding-bottom: 15px;
+      position: relative;
+
+      > .field-content > .first {
+        width: 50%;
+        float: left;
+        padding-right: 15px;
+
+        img {
+          width: 100%;
+          height: auto;
+          min-width: 100%;
+        }
+      }
+
+      > .field-content > .last {
+        width: 50%;
+        float: left;
+
+        .tipus {
+          font-family: "Fira Sans",Helvetica,Arial,sans-serif;
+          font-size: 14px;
+          line-height: 1.42857;
+
+          > .first {
+            font-family: 'Fira Sans SemiBold';
+            color: #2f3031;
+            text-decoration: none;
+          }
+
+          > .last {
+            font-family: 'Fira Sans SemiBold';
+            color: #BE1622;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
