@@ -1,0 +1,312 @@
+// Page Webinars
+// -----------------------------------------------------------------------------
+
+body.page-node-126433 {
+
+  // Misc
+  .panels-flexible-region-51-center {
+    width: 100%;
+  }
+
+  .panels-flexible-region-51-webinars_anteriors {
+    float: left;
+    width: 100%;
+  }
+
+  @media (max-width: $screen-sm) {
+    .panels-flexible-region-51-fila_central {
+      width: 100%
+    }
+  }
+
+  .panels-flexible-region-51-fila_central-inside {
+    padding: 0 15px;
+  }
+
+  // Block superior
+
+  .pane-1 {
+
+    p {
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+
+      &:last-child {
+
+        &:after {
+          content: "No hi ha cap webinar en viu en aquests moments.";
+          display: block;
+          width: 100%;
+          text-align: center;
+          position: absolute;
+          top: 49%;
+          left: 0;
+          z-index: 1;
+          font-size: 12px;
+          color: #bbb;          
+        }
+      }
+    }
+
+    iframe {
+      background-color: #ededed;
+    }
+  }
+
+  // Block "Què són els webinars?"
+
+  .pane-2 {
+    border-top: 3px solid #BE1622;
+    background-color: #ededed;
+    position: relative;
+    padding: 15px;
+    padding-top: 45px;
+
+    .pane-title {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      background-color: #BE1622;
+      padding-left: 10px;
+      padding-right: 5px;
+      padding-top: 5px;
+      height: 29px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+      font-size: 16px;
+
+      &:after {
+        content: url(/sites/all/themes/xn17/assets/images/elements/punta.svg);
+        position: absolute;
+        right: -10px;
+        top: 0px;
+      }
+    }
+
+    .pane-content {
+
+      table {
+        width: 100% !important;
+
+        tbody {
+          border-top: none;
+
+          td {
+            border-top: none;
+          }
+        }
+      }
+
+      @media (max-width: $screen-sm) {
+
+        table {
+          width: 100% !important;
+
+          tr {
+            width: 100% !important;
+
+            td {
+              width: 100% !important;
+              float: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Block "Webinars realitzats"
+
+  .all-webinars {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .pane-title {
+      position: absolute;
+      left: 30px;
+      top: 15px;
+      z-index: 4;
+      background-color: #BE1622;
+      padding-left: 10px;
+      padding-right: 5px;
+      padding-top: 5px;
+      height: 29px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+      font-size: 16px;
+
+      &:after {
+        content: url(/sites/all/themes/xn17/assets/images/elements/punta.svg);
+        position: absolute;
+        right: -10px;
+        top: 0px;
+      }
+    }
+
+    .pane-content {
+      padding: 0 15px;
+
+      .view-content {
+
+        @media (min-width: $screen-sm) {
+
+          &:after {
+            content: "";
+            border-top: 3px solid #BE1622;
+            position: absolute;
+            top: 12px;
+            left: 30px;
+            z-index: 1;
+            width: 690px;
+          }
+        }
+
+        @media (min-width: $screen-md) {
+
+          &:after {
+            content: "";
+            border-top: 3px solid #BE1622;
+            position: absolute;
+            top: 12px;
+            left: 30px;
+            z-index: 1;
+            width: 910px;
+          }
+        }
+
+        @media (min-width: $screen-lg) {
+
+          &:after {
+            content: "";
+            border-top: 3px solid #BE1622;
+            position: absolute;
+            top: 12px;
+            left: 30px;
+            z-index: 1;
+            width: 1110px;
+          }
+        }
+      }
+
+      .views-row {
+        width: 100%;
+        float: left;
+        padding: 15px;
+
+        &.views-row-1 .views-field-title {
+          border-top: 3px solid #BE1622;
+        }
+
+        @media (min-width: $screen-sm) {
+          width: 50%;
+
+          &.views-row-1 .views-field-title {
+            border-top: none;
+          }
+        }
+
+        @media (min-width: $screen-md) {
+          width: 33.3333%;
+        }
+
+        @media (min-width: $screen-lg) {
+          width: 25%;
+          min-height: 600px;
+        }
+
+        .views-field-title {
+          background-color: #ededed;
+          width: 100%;
+          display: inline-block;
+          padding: 15px;
+
+          .views-label-title {
+            display: none;
+          }
+
+          a {
+            display: inline-block;
+            font-size: 1.42em;
+            line-height: 21.868px;
+            font-family: 'Fira Sans SemiBold';
+            color: #000000;
+            min-height: 105px;
+            margin-top: 25px;
+          }
+        }
+
+        .views-field-type {
+          display: none;
+        }
+
+        .views-field-path {
+          display: none;
+        }
+
+        .views-field-field-agenda-imatge {
+          background-color: #ededed;
+          width: 100%;
+          display: inline-block;
+          padding: 0 15px;
+
+          a, img {
+            width: 100%;
+            height: auto;
+            display: inline-block;
+          }
+
+        }
+
+        .views-field-field-resum {
+          background-color: #ededed;
+          width: 100%;
+          display: inline-block;
+          padding: 15px;
+          min-height: 200px;
+        }
+
+        .views-field-field-ambit-recurs {
+          display: none
+        }
+
+        .views-field-field-ambit-noticia {
+          background-color: #BE1622;
+          width: 100%;
+          display: inline-block;
+          color: #ffffff;
+          padding: 5px 15px;
+        }
+      }
+
+      @media (max-width: $screen-sm) {
+
+        .views-row {
+          min-height: auto;
+          
+          .views-field-title a,
+          .views-field-field-resum {
+            min-height: auto;
+          }
+
+          .views-field-field-agenda-imatge {
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

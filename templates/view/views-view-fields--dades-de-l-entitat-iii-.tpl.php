@@ -17,6 +17,34 @@
 *
 * @ingroup views_templates
 */
+
+$fb = strip_tags($fields['field_pagina_facebook']->content);
+$tw = strip_tags($fields['field_twitter']->content);  
+$inst = strip_tags($fields['field_instagram']->content);
+$yt = strip_tags($fields['field_youtube']->content);  
+$goo = strip_tags($fields['field_google']->content);    
+
+if (!empty($fb) || !empty($tw) || !empty($inst) || !empty($yt) || !empty($goo) ) {
+	print '<div id="social-block">
+	<h2 class="sr-only">Xarxes Socials</h2>';
+	if (!empty($fb)) {
+		print '<a href="'.$fb.'" title="'.$fb.'"><img src="/sites/all/themes/xn17/assets/images/xxss/fb-icon.png"/></a>';
+	}
+	if (!empty($tw)) {
+		print '<a href="'.$tw.'" title="'.$tw.'"><img src="/sites/all/themes/xn17/assets/images/xxss/twitter-icon.png"/></a>';
+	}
+	if (!empty($inst)) {
+		print '<a href="'.$inst.'" title="'.$inst.'"><img src="/sites/all/themes/xn17/assets/images/xxss/inst-icon.png"/></a>';
+	}
+	if (!empty($yt)) {
+		print '<a href="'.$yt.'" title="'.$yt.'"><img src="/sites/all/themes/xn17/assets/images/xxss/youtube-icon.png"/></a>';
+	}
+	if (!empty($goo)) {
+		print '<a href="'.$goo.'" title="'.$goo.'"><img src="/sites/all/themes/xn17/assets/images/xxss/gplus-icon.png"/></a>';
+	}
+	print '</div>';
+}
+
 $uid = strip_tags($fields['uid']->content);
 $news = views_get_view_result('noticies_de_l_entitat', NULL, $uid);
 $events = views_get_view_result('esdeveniments_de_l_entitat', NULL, $uid);
@@ -42,32 +70,5 @@ if (!empty($events)) {
 			</div>';
 }
 print '</div>';
-
-$fb = strip_tags($fields['field_pagina_facebook']->content);
-$tw = strip_tags($fields['field_twitter']->content);  
-$inst = strip_tags($fields['field_instagram']->content);
-$yt = strip_tags($fields['field_youtube']->content);  
-$goo = strip_tags($fields['field_google']->content);    
-
-if (!empty($fb) || !empty($tw) || !empty($inst) || !empty($yt) || !empty($goo) ) {
-	print '<div id="social-block">
-	<h2>Xarxes Socials</h2>';
-	if (!empty($fb)) {
-		print '<a href="'.$fb.'" title="'.$fb.'"><img src="/sites/all/themes/xn17/assets/images/xxss/fb-icon.png"/></a>';
-	}
-	if (!empty($tw)) {
-		print '<a href="'.$tw.'" title="'.$tw.'"><img src="/sites/all/themes/xn17/assets/images/xxss/twitter-icon.png"/></a>';
-	}
-	if (!empty($inst)) {
-		print '<a href="'.$inst.'" title="'.$inst.'"><img src="/sites/all/themes/xn17/assets/images/xxss/inst-icon.png"/></a>';
-	}
-	if (!empty($yt)) {
-		print '<a href="'.$yt.'" title="'.$yt.'"><img src="/sites/all/themes/xn17/assets/images/xxss/youtube-icon.png"/></a>';
-	}
-	if (!empty($goo)) {
-		print '<a href="'.$goo.'" title="'.$goo.'"><img src="/sites/all/themes/xn17/assets/images/xxss/gplus-icon.png"/></a>';
-	}
-	print '</div>';
-}
 
 ?>

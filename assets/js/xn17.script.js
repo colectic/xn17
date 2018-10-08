@@ -2,7 +2,7 @@
 * @file
 * Custom scripts for theme.
 */
-
+$ = jQuery;
 /**
 * La variable obert, Ã©s uina variable global epr tal que a la portada s'oculti
 * els llistat de recursoso en una primera instancia
@@ -28,8 +28,9 @@ var mesNoticiesObert = false;
       $(window).scroll(function(){
         var aTop = $('#third-header').offset().top;
         if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var nTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top - $(window).scrollTop(); }
-        if($('.pane-menu-menu-xn17-menu-noticies')[0]){	var rTop = $('.pane-menu-menu-xn17-menu-recursos').offset().top - $(window).scrollTop(); }
-	console.log($(window).scrollTop()+' '+panHei);
+        if($('.pane-menu-menu-xn17-menu-recursos')[0]){	var rTop = $('.pane-menu-menu-xn17-menu-recursos').offset().top - $(window).scrollTop(); }
+      	
+        // console.log($(window).scrollTop()+' '+panHei);
 
         if ($(this).scrollTop() >= aTop) {
           $('#third-header-clone').show();
@@ -59,39 +60,138 @@ var mesNoticiesObert = false;
       // Main menu
       // -----------------------------------------------------------------------
       $(document).ready(function() {
-        $(".menu-icon").click(function(){
-	  window.scrollTo(0,0);
-          $("#main-menu").slideToggle("slow", function(){
-            $("#main-wrapper").fadeToggle();
-          });
+
+        // On Menu button Click Event
+        // ---------------------------------------------------------------------
+        
+        $('.menu-icon').click(function(){
+
+          // Variables
+          
+          var sm  = 768 - 15;
+          var md  = 992 - 15;
+          var wst = $(window).scrollTop();
+          var wwi = $(window).width();
+          var tht = $('#third-header').offset().top;
+
+          // Force a document scroll, based on the header's height
+
+          if (wst >= 41 && (wwi >= sm && wwi < md)) {
+            window.scrollTo({
+              'top': 41,
+              'left': 0,
+              'behavior': 'auto'
+            });
+          }
+          else if (wst >= 120 && wwi >= md) {
+            window.scrollTo({
+              'top': 120,
+              'left': 0,
+              'behavior': 'auto'
+            });
+          }
+          
+          // On large viewports, we hide the entire page content, leaving
+          // only visible the menu just opened
+          
+          if (wwi >= sm) {
+
+            if ($(this).hasClass('active')) {
+              // Forces the noticies/recursos menus to be unsticky and visible, when closing the menu
+              $('#main-wrapper').fadeToggle('slow');
+              $('.menu.menu-noticies, .menu.menu-recursos').removeClass('sticky').slideDown('fast');
+            }
+            else {
+              $('.menu.menu-noticies.sticky, .menu.menu-recursos.sticky').slideToggle('fast');
+              $('#main-wrapper').fadeToggle('slow');
+            }
+          }
+          
+          // Toggles a flag to determine the button status
+          
+          $('.menu-icon').toggleClass('active'); 
+
+          // Toggles the menu visibility, with a slide effect
+
+          $('#main-menu').slideToggle('slow');
         });
-        $("#close-button").click(function(){
-          $("#main-menu").slideToggle("slow", function(){
-            $("#main-wrapper").fadeToggle();
-          });
+
+        // On Close button Click Event
+        // ---------------------------------------------------------------------
+        
+        $('#close-button').click(function(){
+
+          // Variables
+
+          var sm  = 768 - 15;
+          var md  = 992 - 15;
+          var wst = $(window).scrollTop();
+          var wwi = $(window).width();
+          var tht = $('#third-header').offset().top;
+
+          // Toggles a flag to determine the button status
+
+          $(this).toggleClass('active'); 
+
+          // Force a document scroll, based on the header's height
+          
+          if (wst >= 41 && (wwi >= sm && wwi < md)) {
+            window.scrollTo({
+              'top': 41,
+              'left': 0,
+              'behavior': 'auto'
+            });
+          }
+          else if (wst >= 120 && wwi >= md) {
+            window.scrollTo({
+              'top': 120,
+              'left': 0,
+              'behavior': 'auto'
+            });
+          }
+
+          // Toggles the menu visibility, with a slide effect
+
+          $('#main-menu').slideToggle('slow');
+          
+          // Forces the noticies/recursos menus to be unsticky and visible, when closing the menu
+          
+          if (wwi >= sm) {
+            $('#main-wrapper').fadeToggle('slow');
+            $('.menu.menu-noticies, .menu.menu-recursos').slideDown('fast').removeClass('sticky');
+          }
         });
-	if ($(window).width() < 768) {
-          $(".menu-link.depth-2").click(function(){
-            $(this).next(".submenu.depth-3").slideToggle("slow");
-            $(this).children().toggleClass("opened");
-            $(this).children().toggleClass("closed");
-          });
-	}
-        if ($(window).width() < 768) {
-          $(".menu-link.depth-1").click(function(){
-            $(this).next(".submenu.depth-2").slideToggle("slow");
-            $(this).children().toggleClass("opened");
-            $(this).children().toggleClass("closed");
-          });
-        }
+
+        // Mobile Sub-menus
+        
+        // Level 2 submenus
+        $('.menu-link.depth-2').click(function(){
+          var md  = 992 - 15;
+          var wwi = $(window).width();
+          if (wwi < md) {
+            $(this).next('.submenu.depth-3').slideToggle('slow');
+            $(this).children().toggleClass('opened');
+            $(this).children().toggleClass('closed');
+          }
+        });
+        // Level 1 submenus
+        $('.menu-link.depth-1').click(function(){
+          var md  = 992 - 15;
+          var wwi = $(window).width();
+          if (wwi < md) {
+            $(this).next('.submenu.depth-2').slideToggle('slow');
+            $(this).children().toggleClass('opened');
+            $(this).children().toggleClass('closed');
+          }
+        });
         // -----------------------------------------------------------------------
         // Main menu
         // -----------------------------------------------------------------------
         if ($(window).width() < 768) {
-          $(".block-menu").children('h4').click( function(){
-            $(this).next(".block__content").slideToggle("slow");
-            $(this).parent(".block-menu").toggleClass("opened");
-            $(this).parent(".block-menu").toggleClass("closed");
+          $('.block-menu').children('h4').click( function(){
+            $(this).next('.block__content').slideToggle('slow');
+            $(this).parent('.block-menu').toggleClass('opened');
+            $(this).parent('.block-menu').toggleClass('closed');
           });
         }
 

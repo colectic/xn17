@@ -1,0 +1,52 @@
+// Page Notícies d'Entitats col·laboradores
+// -----------------------------------------------------------------------------
+
+body.page-noticies-entitat {
+
+  .view-noticies-de-l-entitat {
+
+    .modul-2x1 {
+      margin-bottom: 30px;
+    }
+
+    .views-field-field-agenda-imatge-1 {
+
+      img {
+        width: 100%;
+        height: auto;
+        min-width: 100%;
+      }
+    }
+
+    .titular {
+      width: 100%;
+      height: 0;
+      padding-bottom: 48.23529%;
+      padding-left: 10px;
+      padding-top: 20px;
+      padding-right: 10px;
+      background-color: #ededed;
+
+      h4 {
+        font-family: 'Fira Sans SemiBold';
+        margin: 0px;
+        font-size: 1.42em;  
+      }
+    }
+
+    .views-field-field-ambit-noticia {
+      background-color: #ededed;
+      padding: 10px;
+      text-transform: uppercase;
+      font-family: 'Fira Sans SemiBold';
+      
+      .first {
+        color: #BE1622;
+      }
+
+      .last {
+        color: #2f3031;
+      }
+    }
+  }
+}
