@@ -151,6 +151,9 @@
   @media (max-width: $screen-xs-max){
     height:276px;
   }
+  .views-slideshow-cycle-main-frame-row {
+    width: 100% !important; // Force slideshow image to fill 100% of available width, overriding styles injected with JS
+  }
   .pane-content, .view-xn17-monografics-portada, .view-content, .skin-default{
     height:100%;
   }
