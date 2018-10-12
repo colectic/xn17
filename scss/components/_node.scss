@@ -186,15 +186,38 @@
 }
 .node-type-event.agenda {
   @media (min-width: $screen-sm-max) {
-      .field-name-field-date-event {
-        padding-bottom: 0;
-        display: block;
-        width: 100%;
-      }
-      .field-name-title h1 {
-        margin-top: 0;
-      }
+    .field-name-field-date-event {
+      padding-bottom: 0;
+      display: block;
+      width: 100%;
     }
+  }
+  
+  .field-name-title h1 {
+    margin-top: 0;
+    font-size: 36px;
+  }
+
+  .field-name-ciutat {
+    color: #BE1622;
+    font-size: 18px;
+    font-family: "Fira Sans semiBold",Helvetica,Arial,sans-serif;
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 45px;
+    }
+
+    p {
+      margin: 0
+    }
+  }
+
+  .field-name-field-date-event {
+    color: #2f3031;
+    font-size: 14px;
+    font-family: "Fira Sans semiBold",Helvetica,Arial,sans-serif;
+    margin-bottom: 30px;
+  }
 }
 
 //------------------------------------------------------------------------------
