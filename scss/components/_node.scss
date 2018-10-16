@@ -382,6 +382,10 @@
         width: 715px;
         @media (min-width: $screen-lg-min) { width: 650px; }
       }
+      .views-row-2 {
+        float: none;
+        clear: both;
+      }
     }
   }
   .field-name-body{
