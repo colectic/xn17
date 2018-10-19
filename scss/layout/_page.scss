@@ -340,3 +340,38 @@ footer {
     }
   }
 }
+
+// -----------------------------------------------------------------------------
+// Popup
+// -----------------------------------------------------------------------------
+
+#cboxLoadedContent {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  
+  #colorbox.popup_onload {
+    width: 100% !important;
+
+    #cboxWrapper {
+      width: 100% !important;
+
+      #cboxContent {
+        width: 100% !important;
+
+        #cboxLoadedContent {
+          width: 100% !important;
+          overflow: hidden !important;
+
+          img {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
