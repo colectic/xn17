@@ -17,30 +17,43 @@ var mesNoticiesObert = false;
   Drupal.radix = {
 
     subMenuToggler: function() {
-      // Desktop
+      // Desktop viewport
       enquire.register("screen and (min-width: 1200px)", {
         match: function() {
-          console.log('Desktop');
+          // Remove the toggler and show the submenu contents
           $('#submenu-toggler').remove();
-          $('.block-menu.menu.menu-noticies .block__content').show();
+          $('.block-menu.menu .block__content').show();
+          $('.pane.block-menu.menu .pane-content').show();
         },
       });
-      // Mobile
+      // Mobile viewport
       enquire.register("screen and (max-width: 1199px)", {
         match: function() {
-          console.log('Mobile');
           // Populate a submenu toggler
           var srOnlyText = 'Mostra o amaga les categories del submenu';
           var $toggler = $('<button id="submenu-toggler" class="opened"><span class="sr-only">' + srOnlyText + '</span></button>');
-          var $container = $('.block-menu.menu.menu-noticies');
-          $toggler.appendTo($container);
-          $('.block-menu.menu.menu-noticies .block__content').hide();
-          // Binding a click event
-          $toggler.click(function() {
-            var $blockContent = $(this).siblings('.block__content');
-            $(this).toggleClass('opened closed');
-            $blockContent.slideToggle(150);
-          });
+          var $block = $('.block-menu.menu');
+          var $pane = $('.pane-block.menu');
+          // If a block is used, append it to the block and bind a click event
+          if ($block.length > 0) {
+            var $blockContent = $block.find('.block__content');
+            $toggler.appendTo($block);
+            $blockContent.hide();
+            $toggler.click(function() {
+              $(this).toggleClass('opened closed');
+              $blockContent.slideToggle(150);
+            });
+          }
+          // If a pane is used, append it to the pane and bind a click event
+          if ($pane.length > 0) {
+            var $paneContent = $pane.find('.pane-content');
+            $toggler.appendTo($pane);
+            $paneContent.hide();
+            $toggler.click(function() {
+              $(this).toggleClass('opened closed');
+              $paneContent.slideToggle(150);
+            });
+          }
         },
       });
     }
