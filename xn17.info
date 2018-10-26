@@ -28,6 +28,8 @@ plugins[panels][styles] = panels/styles
 stylesheets[all][]     = assets/css/xn17.style.css
 
 ; Javascript
+scripts[] = assets/js/jquery.matchHeight-min.js
+scripts[] = assets/js/enquire.min.js
 scripts[] = assets/js/xn17.script.js
 
 ; Maximum depth for dropdown menus (1 = no dropdowns, 2 = single dropdown,

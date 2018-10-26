@@ -4,7 +4,7 @@
 */
 $ = jQuery;
 /**
-* La variable obert, Ã©s uina variable global epr tal que a la portada s'oculti
+* La variable obert, és una variable global per tal que a la portada s'oculti
 * els llistat de recursoso en una primera instancia
 */
 var mesRecursosObert = false;
@@ -12,12 +12,49 @@ var mesNoticiesObert = false;
 /*
 */
 
-
 (function ($, Drupal, window, document, undefined) {
+  
+  Drupal.radix = {
+
+    subMenuToggler: function() {
+      // Desktop
+      enquire.register("screen and (min-width: 1200px)", {
+        match: function() {
+          console.log('Desktop');
+          $('#submenu-toggler').remove();
+          $('.block-menu.menu.menu-noticies .block__content').show();
+        },
+      });
+      // Mobile
+      enquire.register("screen and (max-width: 1199px)", {
+        match: function() {
+          console.log('Mobile');
+          // Populate a submenu toggler
+          var srOnlyText = 'Mostra o amaga les categories del submenu';
+          var $toggler = $('<button id="submenu-toggler" class="opened"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $container = $('.block-menu.menu.menu-noticies');
+          $toggler.appendTo($container);
+          $('.block-menu.menu.menu-noticies .block__content').hide();
+          // Binding a click event
+          $toggler.click(function() {
+            var $blockContent = $(this).siblings('.block__content');
+            $(this).toggleClass('opened closed');
+            $blockContent.slideToggle(150);
+          });
+        },
+      });
+    }
+  };
+  
   /* TODO - Behaviors!!! */
+
+  Drupal.behaviors.radix = {
+    attach: function(context, setting) {
+      Drupal.radix.subMenuToggler();
+    }
+  };
   Drupal.behaviors.radix_dropdown = {
     attach: function(context, setting) {
-
       // -----------------------------------------------------------------------
       // Scrolling
       // -----------------------------------------------------------------------
@@ -187,13 +224,13 @@ var mesNoticiesObert = false;
         // -----------------------------------------------------------------------
         // Main menu
         // -----------------------------------------------------------------------
-        if ($(window).width() < 768) {
-          $('.block-menu').children('h4').click( function(){
-            $(this).next('.block__content').slideToggle('slow');
-            $(this).parent('.block-menu').toggleClass('opened');
-            $(this).parent('.block-menu').toggleClass('closed');
-          });
-        }
+        // if ($(window).width() < 768) {
+        //   $('.block-menu').children('h4').click( function(){
+        //     $(this).next('.block__content').slideToggle('slow');
+        //     $(this).parent('.block-menu').toggleClass('opened');
+        //     $(this).parent('.block-menu').toggleClass('closed');
+        //   });
+        // }
 
         // Overrides header's menu title when viewing Monogràfics's related pages
         var pattern1 = /^\/monografics/;
@@ -349,18 +386,18 @@ var mesNoticiesObert = false;
 				$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('expanded');
 			}
 
-			$('.pane-block.pane-menu-menu-xn17-menu-noticies h4').click(function(e) {
-				e.preventDefault();
-				$(this).siblings('.pane-content').slideToggle('fast');
-				$(this).parent().toggleClass('expanded');
-				$(this).parent().toggleClass('collapsed');
-				if ($(this).parent().hasClass('expanded')) {
-					$.cookie('menu-noticies', 'expanded');
-				}
-				else if ($(this).parent().hasClass('collapsed')) {
-					$.cookie('menu-noticies', 'collapsed');
-				}
-			});
+			// $('.pane-block.pane-menu-menu-xn17-menu-noticies h4').click(function(e) {
+			// 	e.preventDefault();
+			// 	$(this).siblings('.pane-content').slideToggle('fast');
+			// 	$(this).parent().toggleClass('expanded');
+			// 	$(this).parent().toggleClass('collapsed');
+			// 	if ($(this).parent().hasClass('expanded')) {
+			// 		$.cookie('menu-noticies', 'expanded');
+			// 	}
+			// 	else if ($(this).parent().hasClass('collapsed')) {
+			// 		$.cookie('menu-noticies', 'collapsed');
+			// 	}
+			// });
 		}
 	});
 })(jQuery);

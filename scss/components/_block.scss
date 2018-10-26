@@ -5,7 +5,43 @@
 // Menu
 // -----------------------------------------------------------------------------
 .block.menu {
+  position: relative;
   @include block_menu;
+
+  #submenu-toggler {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    z-index: 1;
+    background: none;
+    border: none;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: block;
+    
+    &.opened {
+
+      &:before {
+        content: url('../images/icon/icon-show-big.svg');
+      }
+    }
+
+    &.closed {
+
+      &:before {
+        content: url('../images/icon/icon-hide-big.svg');
+      }
+    }
+  }
+
+  &.sticky {
+
+    #submenu-toggler {
+      top: 4px;
+      right: 56px;
+    }
+  }
 }
 
 // -----------------------------------------------------------------------------
