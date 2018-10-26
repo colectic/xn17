@@ -21,7 +21,8 @@ var mesNoticiesObert = false;
       enquire.register("screen and (min-width: 1200px)", {
         match: function() {
           // Remove the toggler and show the submenu contents
-          $('#submenu-toggler').remove();
+          $('.block-menu-toggler').remove();
+          $('.pane-menu-toggler').remove();
           $('.block-menu.menu .block__content').show();
           $('.pane.block-menu.menu .pane-content').show();
         },
@@ -31,27 +32,30 @@ var mesNoticiesObert = false;
         match: function() {
           // Populate a submenu toggler
           var srOnlyText = 'Mostra o amaga les categories del submenu';
-          var $toggler = $('<button id="submenu-toggler" class="opened"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $blockToggler = $('<button class="block-menu-toggler opened"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $paneToggler = $('<button class="pane-menu-toggler opened"><span class="sr-only">' + srOnlyText + '</span></button>');
           var $block = $('.block-menu.menu');
           var $pane = $('.pane-block.menu');
           // If a block is used, append it to the block and bind a click event
           if ($block.length > 0) {
             var $blockContent = $block.find('.block__content');
-            $toggler.appendTo($block);
+            $blockToggler.appendTo($block);
             $blockContent.hide();
-            $toggler.click(function() {
-              $(this).toggleClass('opened closed');
-              $blockContent.slideToggle(150);
+            $blockToggler.click(function() {
+              console.log('Block Toggler clicked');
+              $(this).toggleClass('opened closed').addClass('block-menu-toggler');
+              $(this).siblings('.block__content').slideToggle(150);
             });
           }
           // If a pane is used, append it to the pane and bind a click event
           if ($pane.length > 0) {
             var $paneContent = $pane.find('.pane-content');
-            $toggler.appendTo($pane);
+            $paneToggler.appendTo($pane);
             $paneContent.hide();
-            $toggler.click(function() {
-              $(this).toggleClass('opened closed');
-              $paneContent.slideToggle(150);
+            $paneToggler.click(function() {
+              console.log('Pane Toggler clicked');
+              $(this).toggleClass('opened closed').addClass('pane-menu-toggler');
+              $(this).siblings('.pane-content').slideToggle(150);
             });
           }
         },
