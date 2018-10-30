@@ -1,9 +1,9 @@
 // Styles for Nodes
 // -----------------------------------------------------------------------------
 .page-header {
-    background-color: white;
-    padding: 40px 30px 20px 30px;
-    margin: 0px -15px;
+  background-color: white;
+  padding: 40px 30px 20px 30px;
+  margin: 0px -15px;
   .title {
     font-weight: 600;
     color: $xn17-vermell;
@@ -186,15 +186,38 @@
 }
 .node-type-event.agenda {
   @media (min-width: $screen-sm-max) {
-      .field-name-field-date-event {
-        padding-bottom: 0;
-        display: block;
-        width: 100%;
-      }
-      .field-name-title h1 {
-        margin-top: 0;
-      }
+    .field-name-field-date-event {
+      padding-bottom: 0;
+      display: block;
+      width: 100%;
     }
+  }
+  
+  .field-name-title h1 {
+    margin-top: 0;
+    font-size: 36px;
+  }
+
+  .field-name-ciutat {
+    color: #BE1622;
+    font-size: 18px;
+    font-family: "Fira Sans semiBold",Helvetica,Arial,sans-serif;
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 45px;
+    }
+
+    p {
+      margin: 0
+    }
+  }
+
+  .field-name-field-date-event {
+    color: #2f3031;
+    font-size: 14px;
+    font-family: "Fira Sans semiBold",Helvetica,Arial,sans-serif;
+    margin-bottom: 30px;
+  }
 }
 
 //------------------------------------------------------------------------------
@@ -319,94 +342,98 @@
             }
           }
           .twitter { 
-	    font-family: "Fira Sans SemiBold";
-            font-size: 0.85em;
-            color: $gray-dark;
-	  }
-        }
-        .mes-articles{
-          font-family: "Fira Sans Bold";
-          color: $gray-medium;
-          p{
-            margin-bottom: 0px;
-          }
-          a{
-            color: $gray-medium;
-          }
-        }
+           font-family: "Fira Sans SemiBold";
+           font-size: 0.85em;
+           color: $gray-dark;
+         }
+       }
+       .mes-articles{
+        font-family: "Fira Sans Bold";
+        color: $gray-medium;
         p{
-          clear: both;
-          padding-top: 10px;
+          margin-bottom: 0px;
+        }
+        a{
+          color: $gray-medium;
         }
       }
-    }
-    @media (min-width: $screen-md-min) {
-      float: left;
-      left: -80 px;
-      position: relative;
-      width: 280px;
-      left: -130px;
-      margin: 20px;
-    }
-
-  }
-  .field-name-seccions-recurs {
-    @media (min-width: $screen-md-min) {
-      .views-row-1 {
-        left: -120px;
-        padding-left: 120px;
-        position: relative;
-        width: 715px;
-        @media (min-width: $screen-lg-min) { width: 650px; }
+      p{
+        clear: both;
+        padding-top: 10px;
       }
     }
   }
-  .field-name-body{
-    @media (min-width: $screen-md-min) {
-      .field-item{
-        left: -120px;
-        padding-left: 120px;
-        position: relative;
-        width: 715px;
-        @media (min-width: $screen-lg-min) { width: 650px; }
-      }
-    }
-  }
-  .views-field-field-subtitols h2 {
-    font-size: $font-size-large;
-    font-weight: bold;
-    margin-top: 30px;
-  }
-  .xn17-standard-column1 {
-    @media (max-width: $screen-md-min) {
-      h1, .field-name-simple-share-icons, .field-name-post-date,
-      .field-name-field-autor-noticies, { display: none; }
-    }
-  }
-  .xn17-standard-column2 {
-    @media (min-width: $screen-md-min) {
-      h1, .field-name-simple-share-icons-copia-, .field-name-post-date-copia-,
-      .field-name-entitat-redactora-copia-, .field-name-autor-copia- { display: none; }
-    }
-    @media (max-width: $screen-md-min) {
-      h1 { margin-top: 30px; margin-bottom: 20px; }
-    }
-  }
-  .field-name-field-resum {
-    padding-top: 15px;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    border-top: solid 2px $xn17-vermell;
-    border-bottom: solid 2px $xn17-vermell;
-    .node-type-opinio & {
-      margin-top: 50px;
-    }
-  }
-  .anchor-sec {
-    display: block;
+  @media (min-width: $screen-md-min) {
+    float: left;
+    left: -80 px;
     position: relative;
-    top: -170px;
+    width: 280px;
+    left: -130px;
+    margin: 20px;
   }
+
+}
+.field-name-seccions-recurs {
+  @media (min-width: $screen-md-min) {
+    .views-row-1 {
+      left: -120px;
+      padding-left: 120px;
+      position: relative;
+      width: 715px;
+      @media (min-width: $screen-lg-min) { width: 650px; }
+    }
+    .views-row-2 {
+      float: none;
+      clear: both;
+    }
+  }
+}
+.field-name-body{
+  @media (min-width: $screen-md-min) {
+    .field-item{
+      left: -120px;
+      padding-left: 120px;
+      position: relative;
+      width: 715px;
+      @media (min-width: $screen-lg-min) { width: 650px; }
+    }
+  }
+}
+.views-field-field-subtitols h2 {
+  font-size: $font-size-large;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.xn17-standard-column1 {
+  @media (max-width: $screen-md-min) {
+    h1, .field-name-simple-share-icons, .field-name-post-date,
+    .field-name-field-autor-noticies, { display: none; }
+  }
+}
+.xn17-standard-column2 {
+  @media (min-width: $screen-md-min) {
+    h1, .field-name-simple-share-icons-copia-, .field-name-post-date-copia-,
+    .field-name-entitat-redactora-copia-, .field-name-autor-copia- { display: none; }
+  }
+  @media (max-width: $screen-md-min) {
+    h1 { margin-top: 30px; margin-bottom: 20px; }
+  }
+}
+.field-name-field-resum {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-top: solid 2px $xn17-vermell;
+  border-bottom: solid 2px $xn17-vermell;
+  .node-type-opinio & {
+    margin-top: 50px;
+  }
+}
+.anchor-sec {
+  display: block;
+  position: relative;
+  top: -170px;
+}
 }
 
 .node-noticia-general.node-teaser {
@@ -645,7 +672,7 @@ body.page-entitat {
   background: url("../images/blocks/banner_assessorament.jpg");
 }
 .page-publica-a-xarxanet #colabora > div {
-   background: url("../images/blocks/banner_feste.jpg");
+ background: url("../images/blocks/banner_feste.jpg");
 }
 .page-publica-a-xarxanet #acte-formacio h2,
 .page-publica-a-xarxanet #colabora h2 {
@@ -676,7 +703,8 @@ body.page-entitat {
 .node-type-noticia-general .xn17-standard-column2 .field:not(.field-name-addtoany) a,
 .node-type-event .xn17-standard-column2 .field:not(.field-name-addtoany) a,
 .node-type-recurs-general .xn17-standard-column2 .field:not(.field-name-seccions-recurs-index):not(.field-name-addtoany) a,
-.page-faq #panels-ipe-regionid-right a:not([data-toggle="collapse"]) {
+.page-faq #panels-ipe-regionid-right a:not([data-toggle="collapse"]),
+.page-node-126433 #content a {
   color: #a7a7a7;
   text-decoration: underline;
 }
@@ -687,7 +715,8 @@ body.page-entitat {
 .node-type-noticia-general .xn17-standard-column2 .field:not(.field-name-addtoany) a:hover,
 .node-type-event .xn17-standard-column2 .field:not(.field-name-addtoany) a:hover,
 .node-type-recurs-general .xn17-standard-column2 .field:not(.field-name-seccions-recurs-index):not(.field-name-addtoany) a:hover,
-.page-faq #panels-ipe-regionid-right a:not([data-toggle="collapse"]):hover {
+.page-faq #panels-ipe-regionid-right a:not([data-toggle="collapse"]):hover,
+.page-node-126433 #content a:hover {
   color: #2f3031;
   text-decoration: underline;
 }
@@ -700,3 +729,399 @@ body.page-entitat {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+//------------------------------------------------------------------------------
+// Webinar register form pages
+//------------------------------------------------------------------------------
+.node-type-inscripci-a-webinar .field-name-field-data-i-hora,
+.node-type-inscripci-a-webinar .field-name-field-ponents {
+  padding: 0 30px;
+}
+
+.node-type-inscripci-a-webinar .field-name-field-webinar-header-image {
+  margin: 0 auto 30px;
+  width: 100%;
+  max-width: 960px;
+  display: table;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.node-type-inscripci-a-webinar .form-actions .btn {
+  background-color: #be1723;
+  border: none;
+  padding: 12px 60px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken(#be1723, 5%);
+    border: none;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Page Webinars (summary page)
+// -----------------------------------------------------------------------------
+
+body.page-node-126433 {
+
+  // Misc
+  .panels-flexible-region-51-center {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+
+    .panels-flexible-row.panels-flexible-row-51-1 {
+      margin: 90px 0;
+    }
+  }
+
+  .panels-flexible-region-51-webinars_anteriors {
+    float: left;
+    width: 100%;
+  }
+
+  @media (max-width: $screen-sm) {
+    .panels-flexible-region-51-fila_central {
+      width: 100%
+    }
+  }
+
+  .panels-flexible-region-51-fila_central-inside {
+    padding: 0 15px;
+  }
+
+  // Block superior
+  
+  #cp-embed-youtube {
+    padding: 15px;
+    display: table;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    p {
+
+      iframe {
+        border: 1px solid #eeeeee;
+      }
+    }
+  }
+
+  #cp-en-viu {
+    padding: 30px 15px 15px;
+    margin-bottom: 30px;
+    border-top: 3px solid #BE1622;
+
+    p {
+      padding: 0;
+      position: relative;
+      background-color: #ededed;
+
+      iframe {
+        border: 1px solid #eeeeee;
+      }
+    }
+  }
+
+  // Block "Què són els webinars?"
+
+  #cp-about-webinars {
+    position: relative;
+    padding: 0;
+    padding-top: 45px;
+
+    .pane-title {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      padding: 0;
+      color: #000;
+      margin: 0;
+      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 21.868px;
+      font-family: 'Fira Sans SemiBold';
+    }
+
+    .pane-content {
+
+      table {
+        width: 100% !important;
+        padding-top: 0px;
+        display: block;
+
+        tr {
+          border: none;
+        }
+
+        tbody {
+          border: none !important;
+
+          td {
+            border: none !important;
+          }
+        }
+      }
+
+      @media (max-width: $screen-sm) {
+
+        table {
+          width: 100% !important;
+
+          tbody {
+            border: none !important;
+          }
+
+          tr {
+            width: 100% !important;
+
+            td {
+              width: 100% !important;
+              border: none !important;
+              float: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Propers Webinars
+
+  @media (max-width: 768px) {
+
+    .panels-flexible-region-51-propers_webinars {
+      width: 100%;
+    }
+  }
+
+  .panels-flexible-region-51-propers_webinars-inside {
+    padding: 0 15px 15px 15px;
+  }
+
+  .pane-propers-webinars {
+
+    .views-row {
+      margin-bottom: 15px;
+    }
+
+    .pane-title {
+      padding: 0;
+      color: #000;
+      margin: 0;
+      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 21.868px;
+      font-family: 'Fira Sans SemiBold';
+    }
+  }
+
+  // Block "Webinars realitzats"
+
+  #cp-webinars-done {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .pane-title {
+      position: absolute;
+      left: 30px;
+      top: 15px;
+      z-index: 4;
+      background-color: #BE1622;
+      padding-left: 10px;
+      padding-right: 5px;
+      padding-top: 5px;
+      height: 29px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+      font-size: 16px;
+
+      &:after {
+        content: url(/sites/all/themes/xn17/assets/images/elements/punta.svg);
+        position: absolute;
+        right: -10px;
+        top: 0px;
+      }
+    }
+
+    .pane-content {
+      padding: 0 15px;
+
+      .view-content {
+
+        @media (min-width: $screen-sm) {
+
+          &:after {
+            content: "";
+            border-top: 3px solid #BE1622;
+            position: absolute;
+            top: 12px;
+            left: 30px;
+            z-index: 1;
+            width: 690px;
+          }
+        }
+
+        @media (min-width: $screen-md) {
+
+          &:after {
+            content: "";
+            border-top: 3px solid #BE1622;
+            position: absolute;
+            top: 12px;
+            left: 30px;
+            z-index: 1;
+            width: 910px;
+          }
+        }
+
+        @media (min-width: $screen-lg) {
+
+          &:after {
+            content: "";
+            border-top: 3px solid #BE1622;
+            position: absolute;
+            top: 12px;
+            left: 30px;
+            z-index: 1;
+            width: 1110px;
+          }
+        }
+      }
+
+      .views-row {
+        width: 100%;
+        float: left;
+        padding: 15px;
+
+        &.views-row-1 .views-field-title {
+          border-top: 3px solid #BE1622;
+        }
+
+        @media (min-width: $screen-sm) {
+          width: 50%;
+
+          &.views-row-1 .views-field-title {
+            border-top: none;
+          }
+        }
+
+        @media (min-width: $screen-md) {
+          width: 33.3333%;
+        }
+
+        @media (min-width: $screen-lg) {
+          width: 25%;
+          min-height: 600px;
+        }
+
+        .views-field-title {
+          background-color: #ededed;
+          width: 100%;
+          display: inline-block;
+          padding: 15px;
+
+          .views-label-title {
+            display: none;
+          }
+
+          a {
+            display: inline-block;
+            font-size: 1.42em;
+            line-height: 21.868px;
+            font-family: 'Fira Sans SemiBold';
+            color: #000000;
+            min-height: 115px;
+            margin-top: 25px;
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .views-field-type {
+          display: none;
+        }
+
+        .views-field-path {
+          display: none;
+        }
+
+        .views-field-field-agenda-imatge {
+          background-color: #ededed;
+          width: 100%;
+          display: inline-block;
+          padding: 0 15px;
+
+          a, img {
+            width: 100%;
+            height: auto;
+            display: inline-block;
+          }
+
+        }
+
+        .views-field-field-resum {
+          background-color: #ededed;
+          width: 100%;
+          display: inline-block;
+          padding: 15px;
+          min-height: 200px;
+        }
+
+        .views-field-field-ambit-recurs {
+          display: none
+        }
+
+        .views-field-field-ambit-noticia {
+          background-color: #BE1622;
+          width: 100%;
+          display: inline-block;
+          color: #ffffff;
+          padding: 5px 15px;
+        }
+      }
+
+      @media (max-width: $screen-sm) {
+
+        .views-row {
+          min-height: auto;
+
+          .views-field-title a,
+          .views-field-field-resum {
+            min-height: auto;
+          }
+
+          .views-field-field-agenda-imatge {
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

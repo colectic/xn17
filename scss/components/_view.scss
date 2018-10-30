@@ -71,6 +71,9 @@
     padding-top:20px;
     padding-right:10px;
   }
+  .cont_titular_entradeta .titular h4 {
+    padding-top: 0px;
+  }
   .tipo-noticia{
     @include tipo-noticia-recurs;
     .field-content, a{
@@ -891,7 +894,20 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 //Opinio 2x1
+
 .view-id-xn17-opinio-secundaries, .view-id-xn17_autor{
+  &.view-id-xn17-opinio-secundaries_home {
+    /*Home is shorter*/
+    .pie{
+      margin-top: -60px; 
+    }
+    .cont_titular_entradeta{
+      img{
+        margin-top: -20%;
+      }
+    }
+  }
+
   .views-row{
     margin-top: -10px;
   }
