@@ -44,7 +44,6 @@ var mesNoticiesObert = false;
             $blockToggler.appendTo($blockTitle);
             $blockContent.hide();
             $blockToggler.click(function() {
-              // console.log('Block Toggler clicked');
               $(this).toggleClass('opened closed').addClass('block-menu-toggler');
               $(this).parent().siblings('.block__content').slideToggle(150);
             });
@@ -55,7 +54,6 @@ var mesNoticiesObert = false;
             $paneToggler.appendTo($paneTitle);
             $paneContent.hide();
             $('.pane-menu-toggler').click(function() { // Do not use "$paneToggler" here, otherwise it will not work in the homepage
-              // console.log('Pane Toggler clicked NEW');
               $(this).toggleClass('opened closed').addClass('pane-menu-toggler');
               $(this).parent().siblings('.pane-content').slideToggle(150);
             });
@@ -77,21 +75,36 @@ var mesNoticiesObert = false;
       // -----------------------------------------------------------------------
       // Scrolling
       // -----------------------------------------------------------------------
-      if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var frnTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top; }
-      if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var frnBot = frnTop + $('.pane-menu-menu-xn17-menu-noticies').outerHeight(true); }
-      if($('.panels-flexible-row-76-1')[0]){ var panHei = $('.panels-flexible-row-76-1').outerHeight(true)+600; }
+      
+      if ($('.pane-menu-menu-xn17-menu-noticies')[0]) { 
+        var frnTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top; 
+      }
+      if ($('.pane-menu-menu-xn17-menu-noticies')[0]) { 
+        var frnBot = frnTop + $('.pane-menu-menu-xn17-menu-noticies').outerHeight(true); 
+      }
+      if ($('.panels-flexible-row-76-1')[0]) { 
+        var a = $('.panels-flexible-row-76-1').offset().top;
+        var b = $('.panels-flexible-row-76-1').outerHeight(true);
+        var panHei = $('#recursos').offset().top - 775;
+      }
 
-      $(window).scroll(function(){
+      $(window).scroll(function() {
+
         var aTop = $('#third-header').offset().top;
-        if($('.pane-menu-menu-xn17-menu-noticies')[0]){ var nTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top - $(window).scrollTop(); }
-        if($('.pane-menu-menu-xn17-menu-recursos')[0]){	var rTop = $('.pane-menu-menu-xn17-menu-recursos').offset().top - $(window).scrollTop(); }
+        if ($('.pane-menu-menu-xn17-menu-noticies')[0]) {
+          var nTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top - $(window).scrollTop(); 
+        }
+        if ($('.pane-menu-menu-xn17-menu-recursos')[0]) {	
+          var rTop = $('.pane-menu-menu-xn17-menu-recursos').offset().top - $(window).scrollTop(); 
+        }
       	
         // console.log($(window).scrollTop()+' '+panHei);
 
         if ($(this).scrollTop() >= aTop) {
           $('#third-header-clone').show();
           $('.block-menu').addClass('sticky');
-          if($('.pane-menu-menu-xn17-menu-noticies')[0]) {
+          
+          if ($('.pane-menu-menu-xn17-menu-noticies')[0]) {
             if (nTop < $('#third-header-clone').height()) {
               $('.pane-menu-menu-xn17-menu-noticies').addClass('sticky');
             }
@@ -104,6 +117,18 @@ var mesNoticiesObert = false;
             if ($('.pane-menu-menu-xn17-menu-recursos').hasClass('sticky') && (($(window).scrollTop()) < panHei)) {
               $('.pane-menu-menu-xn17-menu-recursos').removeClass('sticky');
             }
+
+            // Fa que si el menu de noticies està expanded, el de recursos també ho estigui
+
+            if ($('.pane-menu-menu-xn17-menu-recursos').hasClass('sticky') && (($(window).scrollTop()) > panHei)) {
+              if ($('.pane-menu-menu-xn17-menu-noticies').hasClass('expanded')) {
+                $('.pane-menu-menu-xn17-menu-recursos .pane-content').show();
+              }
+              else {
+                $('.pane-menu-menu-xn17-menu-recursos .pane-content').hide();
+              }
+            }
+
           }
         }
         if ($(this).scrollTop() < aTop) {
