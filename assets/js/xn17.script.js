@@ -4,7 +4,7 @@
 */
 $ = jQuery;
 /**
-* La variable obert, Ã©s uina variable global epr tal que a la portada s'oculti
+* La variable obert, és una variable global per tal que a la portada s'oculti
 * els llistat de recursoso en una primera instancia
 */
 var mesRecursosObert = false;
@@ -12,12 +12,68 @@ var mesNoticiesObert = false;
 /*
 */
 
-
 (function ($, Drupal, window, document, undefined) {
+  
+  Drupal.radix = {
+
+    subMenuToggler: function() {
+      // Desktop viewport
+      enquire.register("screen and (min-width: 1200px)", {
+        match: function() {
+          // Remove the toggler and show the submenu contents
+          $('.block-menu-toggler').remove();
+          $('.pane-menu-toggler').remove();
+          $('.block-menu.menu .block__content').show();
+          $('.pane-block.menu .pane-content').show();
+        },
+      });
+      // Mobile viewport
+      enquire.register("screen and (max-width: 1199px)", {
+        match: function() {
+          // Populate a submenu toggler
+          var srOnlyText = 'Mostra o amaga les categories del submenu';
+          var $blockToggler = $('<button class="block-menu-toggler opened"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $paneToggler = $('<button class="pane-menu-toggler opened"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $block = $('.block-menu.menu');
+          var $blockTitle = $('.block-menu.menu .block__title');
+          var $pane = $('.pane-block.menu');
+          var $paneTitle = $('.pane-block.menu .pane-title');
+          // If a block is used, ap pend it to the block and bind a click event
+          if ($block.length > 0) {
+            var $blockContent = $block.find('.block__content');
+            $blockToggler.appendTo($blockTitle);
+            $blockContent.hide();
+            $blockToggler.click(function() {
+              // console.log('Block Toggler clicked');
+              $(this).toggleClass('opened closed').addClass('block-menu-toggler');
+              $(this).parent().siblings('.block__content').slideToggle(150);
+            });
+          }
+          // If a pane is used, append it to the pane and bind a click event
+          if ($pane.length > 0) {
+            var $paneContent = $pane.find('.pane-content');
+            $paneToggler.appendTo($paneTitle);
+            $paneContent.hide();
+            $('.pane-menu-toggler').click(function() { // Do not use "$paneToggler" here, otherwise it will not work in the homepage
+              // console.log('Pane Toggler clicked NEW');
+              $(this).toggleClass('opened closed').addClass('pane-menu-toggler');
+              $(this).parent().siblings('.pane-content').slideToggle(150);
+            });
+          }
+        },
+      });
+    }
+  };
+  
   /* TODO - Behaviors!!! */
+
+  Drupal.behaviors.radix = {
+    attach: function(context, setting) {
+      Drupal.radix.subMenuToggler();
+    }
+  };
   Drupal.behaviors.radix_dropdown = {
     attach: function(context, setting) {
-
       // -----------------------------------------------------------------------
       // Scrolling
       // -----------------------------------------------------------------------
@@ -187,13 +243,13 @@ var mesNoticiesObert = false;
         // -----------------------------------------------------------------------
         // Main menu
         // -----------------------------------------------------------------------
-        if ($(window).width() < 768) {
-          $('.block-menu').children('h4').click( function(){
-            $(this).next('.block__content').slideToggle('slow');
-            $(this).parent('.block-menu').toggleClass('opened');
-            $(this).parent('.block-menu').toggleClass('closed');
-          });
-        }
+        // if ($(window).width() < 768) {
+        //   $('.block-menu').children('h4').click( function(){
+        //     $(this).next('.block__content').slideToggle('slow');
+        //     $(this).parent('.block-menu').toggleClass('opened');
+        //     $(this).parent('.block-menu').toggleClass('closed');
+        //   });
+        // }
 
         // Overrides header's menu title when viewing Monogràfics's related pages
         var pattern1 = /^\/monografics/;
@@ -349,18 +405,18 @@ var mesNoticiesObert = false;
 				$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('expanded');
 			}
 
-			$('.pane-block.pane-menu-menu-xn17-menu-noticies h4').click(function(e) {
-				e.preventDefault();
-				$(this).siblings('.pane-content').slideToggle('fast');
-				$(this).parent().toggleClass('expanded');
-				$(this).parent().toggleClass('collapsed');
-				if ($(this).parent().hasClass('expanded')) {
-					$.cookie('menu-noticies', 'expanded');
-				}
-				else if ($(this).parent().hasClass('collapsed')) {
-					$.cookie('menu-noticies', 'collapsed');
-				}
-			});
+			// $('.pane-block.pane-menu-menu-xn17-menu-noticies h4').click(function(e) {
+			// 	e.preventDefault();
+			// 	$(this).siblings('.pane-content').slideToggle('fast');
+			// 	$(this).parent().toggleClass('expanded');
+			// 	$(this).parent().toggleClass('collapsed');
+			// 	if ($(this).parent().hasClass('expanded')) {
+			// 		$.cookie('menu-noticies', 'expanded');
+			// 	}
+			// 	else if ($(this).parent().hasClass('collapsed')) {
+			// 		$.cookie('menu-noticies', 'collapsed');
+			// 	}
+			// });
 		}
 	});
 })(jQuery);
