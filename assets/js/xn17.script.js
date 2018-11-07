@@ -263,6 +263,7 @@ var mesNoticiesObert = false;
     },
 
     stickyMenuToggler: function() {
+      
       $('.sticky-toggler').click(function() {
         $(this).toggleClass('closed open');
         if ($('#sticky-wrapper .inner .pane-content').length > 0) {
@@ -271,6 +272,28 @@ var mesNoticiesObert = false;
 
         if ($('#sticky-wrapper .inner .block__content').length > 0) {
           $('#sticky-wrapper .inner .block__content').slideToggle(150);
+        }
+      });
+    },
+
+    stickyMenuTogglerCookie: function() {
+
+      var $body = $('body');
+
+      // Create a cookie with current Sticky menu state, if not exists
+      
+      if (!$.cookie('stickyMenuState')) {
+        $.cookie('stickyMenuState', 'open');
+      }
+
+      // Once it exists, toggle the cookie value on each toggler click event
+      
+      $('.sticky-toggler').click(function() {
+        if ($(this).hasClass('open')) {
+          $.cookie('stickyMenuState', 'open');
+        }
+        else {
+          $.cookie('stickyMenuState', 'closed');
         }
       });
     },
@@ -293,6 +316,12 @@ var mesNoticiesObert = false;
           $('.pane-menu-toggler').remove();
           $('.block-menu.menu .block__content').show();
           $('.pane-block.menu .pane-content').show();
+
+          // Store the 'open' state in da cookie
+          
+          if (!$.cookie('regularMenuState')) {
+            $.cookie('regularMenuState', 'open');
+          }
         },
       });
       
@@ -317,10 +346,24 @@ var mesNoticiesObert = false;
           if ($block.length > 0) {
             var $blockContent = $block.find('.block__content');
             $blockToggler.appendTo($blockTitle);
-            $blockContent.hide();
+            // $blockContent.hide();
+
+            // Store the 'open' state in da cookie
+          
+            if (!$.cookie('regularMenuState')) {
+              $.cookie('regularMenuState', 'open');
+            }
+
             $blockToggler.click(function() {
               $(this).toggleClass('open closed').addClass('block-menu-toggler');
               $(this).parent().siblings('.block__content').slideToggle(150);
+
+              if ($(this).hasClass('open')) {
+                $.cookie('regularMenuState', 'open');
+              }
+              else {
+                $.cookie('regularMenuState', 'closed'); 
+              }
             });
           }
       
@@ -330,9 +373,23 @@ var mesNoticiesObert = false;
             var $paneContent = $pane.find('.pane-content');
             $paneToggler.appendTo($paneTitle);
             // $paneContent.hide();
+            
+            // Store the 'open' state in da cookie
+          
+            if (!$.cookie('regularMenuState')) {
+              $.cookie('regularMenuState', 'open');
+            }
+
             $('.pane-menu-toggler').click(function() { // Do not use "$paneToggler" here, otherwise it will not work in the homepage
               $(this).toggleClass('open closed').addClass('pane-menu-toggler');
               $(this).parent().siblings('.pane-content').slideToggle(150);
+
+              if ($(this).hasClass('open')) {
+                $.cookie('regularMenuState', 'open');
+              }
+              else {
+                $.cookie('regularMenuState', 'closed'); 
+              }
             });
           }
         },
