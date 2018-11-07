@@ -97,6 +97,7 @@
 </header>
 <header id="sticky-wrapper">
   <div class="container">
+    <button class="sticky-toggler open"><span class="sr-only">Mostra o amaga les categories del submenu</span></button>
     <div class="row">
       <div class="inner"></div>
     </div>

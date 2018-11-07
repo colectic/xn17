@@ -14,67 +14,22 @@ var mesNoticiesObert = false;
 
 (function ($, Drupal, window, document, undefined) {
   
-  Drupal.radix = {
+  Drupal.xn17 = {
 
-    subMenuToggler: function() {
-      // Desktop viewport
-      enquire.register("screen and (min-width: 1200px)", {
-        match: function() {
-          // Remove the toggler and show the submenu contents
-          $('.block-menu-toggler').remove();
-          $('.pane-menu-toggler').remove();
-          $('.block-menu.menu .block__content').show();
-          $('.pane-block.menu .pane-content').show();
-        },
-      });
-      // Mobile viewport
-      enquire.register("screen and (max-width: 1199px)", {
-        match: function() {
-          // Populate a submenu toggler
-          var srOnlyText = 'Mostra o amaga les categories del submenu';
-          var $blockToggler = $('<button class="block-menu-toggler opened"><span class="sr-only">' + srOnlyText + '</span></button>');
-          var $paneToggler = $('<button class="pane-menu-toggler opened"><span class="sr-only">' + srOnlyText + '</span></button>');
-          var $block = $('.block-menu.menu');
-          var $blockTitle = $('.block-menu.menu .block__title');
-          var $pane = $('.pane-block.menu');
-          var $paneTitle = $('.pane-block.menu .pane-title');
-          // If a block is used, ap pend it to the block and bind a click event
-          if ($block.length > 0) {
-            var $blockContent = $block.find('.block__content');
-            $blockToggler.appendTo($blockTitle);
-            $blockContent.hide();
-            $blockToggler.click(function() {
-              $(this).toggleClass('opened closed').addClass('block-menu-toggler');
-              $(this).parent().siblings('.block__content').slideToggle(150);
-            });
-          }
-          // If a pane is used, append it to the pane and bind a click event
-          if ($pane.length > 0) {
-            var $paneContent = $pane.find('.pane-content');
-            $paneToggler.appendTo($paneTitle);
-            $paneContent.hide();
-            $('.pane-menu-toggler').click(function() { // Do not use "$paneToggler" here, otherwise it will not work in the homepage
-              $(this).toggleClass('opened closed').addClass('pane-menu-toggler');
-              $(this).parent().siblings('.pane-content').slideToggle(150);
-            });
-          }
-        },
-      });
-    }
-  };
-  
-  /* TODO - Behaviors!!! */
-
-  Drupal.behaviors.radix = {
-    attach: function(context, setting) {
-      Drupal.radix.subMenuToggler();
-    }
-  };
-  Drupal.behaviors.radix_dropdown = {
-    attach: function(context, setting) {
-      // -----------------------------------------------------------------------
-      // Scrolling
-      // -----------------------------------------------------------------------
+    /**
+     * Handling of the Sticky Menus on page load & window scroll
+     * 
+     * Basically, we play with the DOM, cloning the given menu to a fixed placeholder,
+     * which behavior is controlled by a offset's comparisions against the window's scroll
+     *
+     * There are several scenarios:
+     *
+     *  1) Homepage: With 2 Sticky menus in the same page
+     *  2) Internal pages related to Notícies
+     *  2) Internal pages related to Recursos
+     */
+    
+    stickyMenu: function() {
 
       var $body = $('body');
       var $window = $(window);
@@ -89,7 +44,7 @@ var mesNoticiesObert = false;
       var $panelRecursos = $('.front .panels-flexible-row-76-2');
 
       /**
-       * Not-front page
+       * Not-front pages
        */
 
       if ($body.hasClass('not-front')) {
@@ -101,14 +56,18 @@ var mesNoticiesObert = false;
           var $menuTop = parseInt($menu.offset().top);
           var $windowTop = parseInt($window.scrollTop());
 
-          if ($blockNoticiesTop < $windowTop) {
-            $blockNoticies.addClass('sticky');
+          if ($windowTop > $blockNoticiesTop) {
+            var $blockNoticiesContents = $blockNoticies.html();
+            $stickyWrapperInner.empty();
+            $stickyWrapperInner.html($blockNoticiesContents);
+            $stickyWrapper.show();
           }
           else {
-            $blockNoticies.removeClass('sticky');
+            $stickyWrapperInner.empty();
+            $stickyWrapper.hide();
           }
 
-          if ($menuTop < $windowTop) {
+          if ($windowTop > $menuTop) {
             $fixedMenu.show();
           }
           else {
@@ -118,14 +77,28 @@ var mesNoticiesObert = false;
           $(window).scroll(function() {
             var $windowTop = parseInt($window.scrollTop());
 
-            if ($blockNoticiesTop < $windowTop) {
-              $blockNoticies.addClass('sticky');
+            if ($windowTop > $blockNoticiesTop) {
+              var $blockNoticiesContents = $blockNoticies.html();
+              $stickyWrapperInner.empty();
+              $stickyWrapperInner.html($blockNoticiesContents);
+              $stickyWrapper.show();
+
+              // Hide the Sticky menu when scrolling the page with the Main menu open
+              
+              if ($('#main-menu').is(':visible')) {
+                $stickyWrapper.addClass('hidden');
+              }
+              else {
+                $stickyWrapper.removeClass('hidden');
+              }
+
             }
             else {
-              $blockNoticies.removeClass('sticky');
+              $stickyWrapperInner.empty();
+              $stickyWrapper.hide();
             }
 
-            if ($menuTop < $windowTop) {
+            if ($windowTop > $menuTop) {
               $fixedMenu.show();
             }
             else {
@@ -141,14 +114,18 @@ var mesNoticiesObert = false;
           var $menuTop = parseInt($menu.offset().top);
           var $windowTop = parseInt($window.scrollTop());
 
-          if ($blockRecursosTop < $windowTop) {
-            $blockRecursos.addClass('sticky');
+          if ($windowTop > $blockRecursosTop) {
+            var $blockRecursosContents = $blockRecursos.html();
+            $stickyWrapperInner.empty();
+            $stickyWrapperInner.html($blockRecursosContents);
+            $stickyWrapper.show();
           }
           else {
-            $blockRecursos.removeClass('sticky');
+            $stickyWrapperInner.empty();
+            $stickyWrapper.hide();
           }
 
-          if ($menuTop < $windowTop) {
+          if ($windowTop > $menuTop) {
             $fixedMenu.show();
           }
           else {
@@ -158,14 +135,28 @@ var mesNoticiesObert = false;
           $(window).scroll(function() {
             var $windowTop = parseInt($window.scrollTop());
 
-            if ($blockRecursosTop < $windowTop) {
-              $blockRecursos.addClass('sticky');
+            if ($windowTop > $blockRecursosTop) {
+              var $blockRecursosContents = $blockRecursos.html();
+              $stickyWrapperInner.empty();
+              $stickyWrapperInner.html($blockRecursosContents);
+              $stickyWrapper.show();
+
+              // Hide the Sticky menu when scrolling the page with the Main menu open
+              
+              if ($('#main-menu').is(':visible')) {
+                $stickyWrapper.addClass('hidden');
+              }
+              else {
+                $stickyWrapper.removeClass('hidden');
+              }
+
             }
             else {
-              $blockRecursos.removeClass('sticky');
+              $stickyWrapperInner.empty();
+              $stickyWrapper.hide();
             }
 
-            if ($menuTop < $windowTop) {
+            if ($windowTop > $menuTop) {
               $fixedMenu.show();
             }
             else {
@@ -173,6 +164,7 @@ var mesNoticiesObert = false;
             }
           });
         }
+
       }
 
       /**
@@ -191,22 +183,29 @@ var mesNoticiesObert = false;
         // Determine Sticky-wrapper visibility
         
         if ($windowTop < $paneNoticiesTop) {
+          $stickyWrapper.hide();
           $stickyWrapperInner.empty();
         }
         else if ($windowTop > $paneNoticiesTop && $windowTop < $breakPoint) {
-          var $paneNoticiesSticky = $paneNoticies.clone();
+          var $paneNoticiesContents = $paneNoticies.html();
           $stickyWrapperInner.empty();
-          $paneNoticiesSticky.appendTo($stickyWrapperInner);
+          $stickyWrapperInner.html($paneNoticiesContents);
+          if ($stickyWrapper.is(':hidden')) {
+            $stickyWrapper.show();
+          }
         }
         else if ($windowTop > $breakPoint) {
-          var $paneRecursosSticky = $paneRecursos.clone();
+          var $paneRecursosContents = $paneRecursos.html();
           $stickyWrapperInner.empty();
-          $paneRecursosSticky.appendTo($stickyWrapperInner);
+          $stickyWrapperInner.html($paneRecursosContents);
+          if ($stickyWrapper.is(':hidden')) {
+            $stickyWrapper.show();
+          }
         }
 
         // Determine Sticky-menu visibility
 
-        if ($menuTop < $windowTop) {
+        if ($windowTop > $menuTop) {
           $fixedMenu.show();
         }
         else {
@@ -223,21 +222,37 @@ var mesNoticiesObert = false;
           
           if ($windowTop < $paneNoticiesTop) {
             $stickyWrapperInner.empty();
+            $stickyWrapper.hide();
           }
           else if ($windowTop > $paneNoticiesTop && $windowTop < $breakPoint) {
-            var $paneNoticiesSticky = $paneNoticies.clone();
+            var $paneNoticiesContents = $paneNoticies.html();
             $stickyWrapperInner.empty();
-            $paneNoticiesSticky.appendTo($stickyWrapperInner);
+            $stickyWrapperInner.html($paneNoticiesContents);
+            if ($stickyWrapper.is(':hidden')) {
+              $stickyWrapper.show();
+            }
+
+            // Hide the Sticky menu when scrolling the page with the Main menu open
+            
+            if ($('#main-menu').is(':visible')) {
+              $stickyWrapper.addClass('hidden');
+            }
+            else {
+              $stickyWrapper.removeClass('hidden');
+            }
           }
           else if ($windowTop > $breakPoint) {
-            var $paneRecursosSticky = $paneRecursos.clone();
+            var $paneRecursosContents = $paneRecursos.html();
             $stickyWrapperInner.empty();
-            $paneRecursosSticky.appendTo($stickyWrapperInner);
+            $stickyWrapperInner.html($paneRecursosContents);
+            if ($stickyWrapper.is(':hidden')) {
+              $stickyWrapper.show();
+            }
           }
 
           // Determine Sticky-menu visibility
 
-          if ($menuTop < $windowTop) {
+          if ($windowTop > $menuTop) {
             $fixedMenu.show();
           }
           else {
@@ -245,6 +260,97 @@ var mesNoticiesObert = false;
           }
         });
       }
+    },
+
+    stickyMenuToggler: function() {
+      $('.sticky-toggler').click(function() {
+        $(this).toggleClass('closed open');
+        if ($('#sticky-wrapper .inner .pane-content').length > 0) {
+          $('#sticky-wrapper .inner .pane-content').slideToggle(150);
+        }
+
+        if ($('#sticky-wrapper .inner .block__content').length > 0) {
+          $('#sticky-wrapper .inner .block__content').slideToggle(150);
+        }
+      });
+    },
+
+    /**
+     * Handles the expand/collapse feature of the Sticky Menus
+     */
+
+    regularMenuToggler: function() {
+      
+      // Desktop viewport
+      
+      enquire.register("screen and (min-width: 1200px)", {
+        
+        match: function() {
+      
+          // Remove the toggler and show the submenu contents
+      
+          $('.block-menu-toggler').remove();
+          $('.pane-menu-toggler').remove();
+          $('.block-menu.menu .block__content').show();
+          $('.pane-block.menu .pane-content').show();
+        },
+      });
+      
+      // Mobile viewport
+      
+      enquire.register("screen and (max-width: 1199px)", {
+        
+        match: function() {
+      
+          // Populate a submenu toggler
+      
+          var srOnlyText = 'Mostra o amaga les categories del submenu';
+          var $blockToggler = $('<button class="block-menu-toggler open"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $paneToggler = $('<button class="pane-menu-toggler open"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $block = $('.block-menu.menu');
+          var $blockTitle = $('.block-menu.menu .block__title');
+          var $pane = $('.pane-block.menu');
+          var $paneTitle = $('.pane-block.menu .pane-title');
+      
+          // If a block is used, ap pend it to the block and bind a click event
+      
+          if ($block.length > 0) {
+            var $blockContent = $block.find('.block__content');
+            $blockToggler.appendTo($blockTitle);
+            $blockContent.hide();
+            $blockToggler.click(function() {
+              $(this).toggleClass('open closed').addClass('block-menu-toggler');
+              $(this).parent().siblings('.block__content').slideToggle(150);
+            });
+          }
+      
+          // If a pane is used, append it to the pane and bind a click event
+      
+          if ($pane.length > 0) {
+            var $paneContent = $pane.find('.pane-content');
+            $paneToggler.appendTo($paneTitle);
+            // $paneContent.hide();
+            $('.pane-menu-toggler').click(function() { // Do not use "$paneToggler" here, otherwise it will not work in the homepage
+              $(this).toggleClass('open closed').addClass('pane-menu-toggler');
+              $(this).parent().siblings('.pane-content').slideToggle(150);
+            });
+          }
+        },
+      });
+    },
+  };
+  
+
+  Drupal.behaviors.xn17 = {
+    attach: function(context, setting) {
+      Drupal.xn17.stickyMenu();
+      Drupal.xn17.stickyMenuToggler();
+      Drupal.xn17.regularMenuToggler();
+    }
+  };
+
+  Drupal.behaviors.radix_dropdown = {
+    attach: function(context, setting) {
 
 // ===========================================================================================================      
 
@@ -284,7 +390,7 @@ var mesNoticiesObert = false;
           }
           
           // On large viewports, we hide the entire page content, leaving
-          // only visible the menu just opened
+          // only visible the menu just open
           
           if (wwi >= sm) {
 
