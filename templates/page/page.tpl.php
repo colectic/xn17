@@ -95,6 +95,13 @@
     </div>
   </div>
 </header>
+<header id="sticky-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="inner"></div>
+    </div>
+  </div>
+</header>
 <div id="main-menu">
   <div class="container">
     <div class="top-menu-region col-xs-10 first">

@@ -877,3 +877,25 @@
   #form_monografics {
     margin-bottom: 30px; 
   }
+
+// Sticky wrapper
+
+#sticky-wrapper {
+  width: 100%;
+  display: inline-block;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
+  
+  .panel-pane {
+    margin-bottom: 0 !important;
+  }
+  
+  .pane-title {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
