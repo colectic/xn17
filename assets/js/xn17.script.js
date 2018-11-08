@@ -165,6 +165,11 @@ var mesNoticiesObert = false;
           });
         }
 
+        // For pages without any menu
+
+        if ($blockNoticies.length == 0 && $blockRecursos.length == 0) {
+          $stickyWrapper.remove();
+        }
       }
 
       /**
@@ -218,6 +223,13 @@ var mesNoticiesObert = false;
         $(window).scroll(function() {
           var $windowTop = parseInt($window.scrollTop());
 
+          // Maintain the expanded or collapsed state on window scroll
+          
+          // if (!!$.cookie('stickyMenuState')) {
+          //   var state = $.cookie('stickyMenuState');
+          //   $stickyWrapper.removeClass().addClass(state);
+          // }
+
           // Determine Sticky-wrapper visibility
           
           if ($windowTop < $paneNoticiesTop) {
@@ -263,15 +275,32 @@ var mesNoticiesObert = false;
     },
 
     stickyMenuToggler: function() {
-      
-      $('.sticky-toggler').click(function() {
+
+      $('#sticky-toggler').click(function() {
         $(this).toggleClass('closed open');
+        var state = $(this).attr('class');
+        $('#sticky-wrapper').removeClass().addClass(state);
+        
+        //  Pane based menu
+         
         if ($('#sticky-wrapper .inner .pane-content').length > 0) {
-          $('#sticky-wrapper .inner .pane-content').slideToggle(150);
+          if ($(this).hasClass('closed')) {
+            $('#sticky-wrapper .inner .pane-content').slideUp(150);
+          }
+          else if ($(this).hasClass('open')) {
+           $('#sticky-wrapper .inner .pane-content').slideDown(150); 
+          }
         }
 
+        // Block based menu
+        
         if ($('#sticky-wrapper .inner .block__content').length > 0) {
-          $('#sticky-wrapper .inner .block__content').slideToggle(150);
+          if ($(this).hasClass('closed')) {
+            $('#sticky-wrapper .inner .block__content').slideUp(150);
+          }
+          else if ($(this).hasClass('open')) {
+           $('#sticky-wrapper .inner .block__content').slideDown(150); 
+          }
         }
       });
     },
@@ -288,7 +317,7 @@ var mesNoticiesObert = false;
 
       // Once it exists, toggle the cookie value on each toggler click event
       
-      $('.sticky-toggler').click(function() {
+      $('#sticky-toggler').click(function() {
         if ($(this).hasClass('open')) {
           $.cookie('stickyMenuState', 'open');
         }
@@ -396,13 +425,13 @@ var mesNoticiesObert = false;
       });
     },
   };
-  
 
   Drupal.behaviors.xn17 = {
     attach: function(context, setting) {
       Drupal.xn17.stickyMenu();
       Drupal.xn17.stickyMenuToggler();
       Drupal.xn17.regularMenuToggler();
+      Drupal.xn17.stickyMenuTogglerCookie();
     }
   };
 

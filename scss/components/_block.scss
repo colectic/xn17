@@ -878,17 +878,14 @@
     margin-bottom: 30px; 
   }
 
-
-
-
-
 // ==============================================================================
-// Sticky wrapper
+// Sticky Menu
 // ==============================================================================
 
 #sticky-wrapper {
   width: 100%;
   display: inline-block;
+  display: none;
   position: fixed;
   top: 50px;
   left: 0;
@@ -900,7 +897,7 @@
     position: relative;
   }
 
-  button {
+  #sticky-toggler {
     outline: none;
     position: absolute;
     top: 15px;
@@ -956,7 +953,7 @@
     .pane-content,
     .block__content {
       width: 100%;
-      display: inline-block;
+      display: block;
       float: left;
       margin: 0px 0 -5px;
       padding-top: 5px;
@@ -1005,6 +1002,28 @@
             }
           }
         }
+      }
+    }
+  }
+
+  &.open {
+
+    .inner {
+
+      .pane-content,
+      .block__content {
+        display: block;
+      }
+    }
+  }
+
+  &.closed {
+
+    .inner {
+
+      .pane-content,
+      .block__content {
+        display: none;
       }
     }
   }
