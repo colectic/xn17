@@ -14,128 +14,431 @@ var mesNoticiesObert = false;
 
 (function ($, Drupal, window, document, undefined) {
   
-  Drupal.radix = {
+  Drupal.xn17 = {
 
-    subMenuToggler: function() {
+    /**
+     * Handling of the Sticky Menus on page load & window scroll
+     * 
+     * Basically, we play with the DOM, cloning the given menu to a fixed placeholder,
+     * which behavior is controlled by a offset's comparisions against the window's scroll
+     *
+     * There are several scenarios:
+     *
+     *  1) Homepage: With 2 Sticky menus in the same page
+     *  2) Internal pages related to Notícies
+     *  2) Internal pages related to Recursos
+     */
+    
+    stickyMenu: function() {
+
+      var $body = $('body');
+      var $window = $(window);
+      var $menu = $('#third-header');
+      var $fixedMenu = $('#third-header-clone');
+      var $stickyWrapper = $('#sticky-wrapper');
+      var $stickyWrapperInner = $('#sticky-wrapper .inner');
+      var $paneNoticies = $('.pane-menu-menu-xn17-menu-noticies');
+      var $paneRecursos = $('.pane-menu-menu-xn17-menu-recursos');
+      var $blockNoticies = $('.block-menu.menu.menu-noticies');
+      var $blockRecursos = $('.block-menu.menu.menu-recursos');
+      var $panelRecursos = $('.front .panels-flexible-row-76-2');
+
+      /**
+       * Not-front pages
+       */
+
+      if ($body.hasClass('not-front')) {
+
+        // Noticies
+        
+        if ($blockNoticies.length > 0) {
+          var $blockNoticiesTop = parseInt($blockNoticies.offset().top);
+          var $menuTop = parseInt($menu.offset().top);
+          var $windowTop = parseInt($window.scrollTop());
+
+          if ($windowTop > $blockNoticiesTop) {
+            var $blockNoticiesContents = $blockNoticies.html();
+            $stickyWrapperInner.empty();
+            $stickyWrapperInner.html($blockNoticiesContents);
+            $stickyWrapper.show();
+          }
+          else {
+            $stickyWrapperInner.empty();
+            $stickyWrapper.hide();
+          }
+
+          if ($windowTop > $menuTop) {
+            $fixedMenu.show();
+          }
+          else {
+            $fixedMenu.hide();
+          }
+
+          $(window).scroll(function() {
+            var $windowTop = parseInt($window.scrollTop());
+
+            if ($windowTop > $blockNoticiesTop) {
+              var $blockNoticiesContents = $blockNoticies.html();
+              $stickyWrapperInner.empty();
+              $stickyWrapperInner.html($blockNoticiesContents);
+              $stickyWrapper.show();
+
+              // Hide the Sticky menu when scrolling the page with the Main menu open
+              
+              if ($('#main-menu').is(':visible')) {
+                $stickyWrapper.addClass('hidden');
+              }
+              else {
+                $stickyWrapper.removeClass('hidden');
+              }
+
+            }
+            else {
+              $stickyWrapperInner.empty();
+              $stickyWrapper.hide();
+            }
+
+            if ($windowTop > $menuTop) {
+              $fixedMenu.show();
+            }
+            else {
+              $fixedMenu.hide();
+            }
+          });
+        }
+
+        // Recursos
+        
+        if ($blockRecursos.length > 0) {
+          var $blockRecursosTop = parseInt($blockRecursos.offset().top);
+          var $menuTop = parseInt($menu.offset().top);
+          var $windowTop = parseInt($window.scrollTop());
+
+          if ($windowTop > $blockRecursosTop) {
+            var $blockRecursosContents = $blockRecursos.html();
+            $stickyWrapperInner.empty();
+            $stickyWrapperInner.html($blockRecursosContents);
+            $stickyWrapper.show();
+          }
+          else {
+            $stickyWrapperInner.empty();
+            $stickyWrapper.hide();
+          }
+
+          if ($windowTop > $menuTop) {
+            $fixedMenu.show();
+          }
+          else {
+            $fixedMenu.hide();
+          }
+
+          $(window).scroll(function() {
+            var $windowTop = parseInt($window.scrollTop());
+
+            if ($windowTop > $blockRecursosTop) {
+              var $blockRecursosContents = $blockRecursos.html();
+              $stickyWrapperInner.empty();
+              $stickyWrapperInner.html($blockRecursosContents);
+              $stickyWrapper.show();
+
+              // Hide the Sticky menu when scrolling the page with the Main menu open
+              
+              if ($('#main-menu').is(':visible')) {
+                $stickyWrapper.addClass('hidden');
+              }
+              else {
+                $stickyWrapper.removeClass('hidden');
+              }
+
+            }
+            else {
+              $stickyWrapperInner.empty();
+              $stickyWrapper.hide();
+            }
+
+            if ($windowTop > $menuTop) {
+              $fixedMenu.show();
+            }
+            else {
+              $fixedMenu.hide();
+            }
+          });
+        }
+
+        // For pages without any menu
+
+        if ($blockNoticies.length == 0 && $blockRecursos.length == 0) {
+          $stickyWrapper.remove();
+        }
+      }
+
+      /**
+       * Front page
+       */
+
+      if ($body.hasClass('front')) {
+        
+        var correction = 664;
+        var $menuTop = parseInt($menu.offset().top);
+        var $windowTop = parseInt($window.scrollTop());
+        var $paneNoticiesTop = parseInt($paneNoticies.offset().top);
+        var $paneRecursosTop = parseInt($paneRecursos.offset().top);
+        var $breakPoint = parseInt($panelRecursos.offset().top) - correction;
+
+        // Determine Sticky-wrapper visibility
+        
+        if ($windowTop < $paneNoticiesTop) {
+          $stickyWrapper.hide();
+          $stickyWrapperInner.empty();
+        }
+        else if ($windowTop > $paneNoticiesTop && $windowTop < $breakPoint) {
+          var $paneNoticiesContents = $paneNoticies.html();
+          $stickyWrapperInner.empty();
+          $stickyWrapperInner.html($paneNoticiesContents);
+          if ($stickyWrapper.is(':hidden')) {
+            $stickyWrapper.show();
+          }
+        }
+        else if ($windowTop > $breakPoint) {
+          var $paneRecursosContents = $paneRecursos.html();
+          $stickyWrapperInner.empty();
+          $stickyWrapperInner.html($paneRecursosContents);
+          if ($stickyWrapper.is(':hidden')) {
+            $stickyWrapper.show();
+          }
+        }
+
+        // Determine Sticky-menu visibility
+
+        if ($windowTop > $menuTop) {
+          $fixedMenu.show();
+        }
+        else {
+          $fixedMenu.hide();
+        }
+
+        // Window-scroll event
+        // ===============================================================================
+
+        $(window).scroll(function() {
+          var $windowTop = parseInt($window.scrollTop());
+
+          // Maintain the expanded or collapsed state on window scroll
+          
+          // if (!!$.cookie('stickyMenuState')) {
+          //   var state = $.cookie('stickyMenuState');
+          //   $stickyWrapper.removeClass().addClass(state);
+          // }
+
+          // Determine Sticky-wrapper visibility
+          
+          if ($windowTop < $paneNoticiesTop) {
+            $stickyWrapperInner.empty();
+            $stickyWrapper.hide();
+          }
+          else if ($windowTop > $paneNoticiesTop && $windowTop < $breakPoint) {
+            var $paneNoticiesContents = $paneNoticies.html();
+            $stickyWrapperInner.empty();
+            $stickyWrapperInner.html($paneNoticiesContents);
+            if ($stickyWrapper.is(':hidden')) {
+              $stickyWrapper.show();
+            }
+
+            // Hide the Sticky menu when scrolling the page with the Main menu open
+            
+            if ($('#main-menu').is(':visible')) {
+              $stickyWrapper.addClass('hidden');
+            }
+            else {
+              $stickyWrapper.removeClass('hidden');
+            }
+          }
+          else if ($windowTop > $breakPoint) {
+            var $paneRecursosContents = $paneRecursos.html();
+            $stickyWrapperInner.empty();
+            $stickyWrapperInner.html($paneRecursosContents);
+            if ($stickyWrapper.is(':hidden')) {
+              $stickyWrapper.show();
+            }
+          }
+
+          // Determine Sticky-menu visibility
+
+          if ($windowTop > $menuTop) {
+            $fixedMenu.show();
+          }
+          else {
+            $fixedMenu.hide();
+          }
+        });
+      }
+    },
+
+    stickyMenuToggler: function() {
+
+      $('#sticky-toggler').click(function() {
+        $(this).toggleClass('closed open');
+        var state = $(this).attr('class');
+        $('#sticky-wrapper').removeClass().addClass(state);
+        
+        //  Pane based menu
+         
+        if ($('#sticky-wrapper .inner .pane-content').length > 0) {
+          if ($(this).hasClass('closed')) {
+            $('#sticky-wrapper .inner .pane-content').slideUp(150);
+          }
+          else if ($(this).hasClass('open')) {
+           $('#sticky-wrapper .inner .pane-content').slideDown(150); 
+          }
+        }
+
+        // Block based menu
+        
+        if ($('#sticky-wrapper .inner .block__content').length > 0) {
+          if ($(this).hasClass('closed')) {
+            $('#sticky-wrapper .inner .block__content').slideUp(150);
+          }
+          else if ($(this).hasClass('open')) {
+           $('#sticky-wrapper .inner .block__content').slideDown(150); 
+          }
+        }
+      });
+    },
+
+    stickyMenuTogglerCookie: function() {
+
+      var $body = $('body');
+
+      // Create a cookie with current Sticky menu state, if not exists
+      
+      if (!$.cookie('stickyMenuState')) {
+        $.cookie('stickyMenuState', 'open');
+      }
+
+      // Once it exists, toggle the cookie value on each toggler click event
+      
+      $('#sticky-toggler').click(function() {
+        if ($(this).hasClass('open')) {
+          $.cookie('stickyMenuState', 'open');
+        }
+        else {
+          $.cookie('stickyMenuState', 'closed');
+        }
+      });
+    },
+
+    /**
+     * Handles the expand/collapse feature of the Sticky Menus
+     */
+
+    regularMenuToggler: function() {
+      
       // Desktop viewport
+      
       enquire.register("screen and (min-width: 1200px)", {
+        
         match: function() {
+      
           // Remove the toggler and show the submenu contents
+      
           $('.block-menu-toggler').remove();
           $('.pane-menu-toggler').remove();
           $('.block-menu.menu .block__content').show();
           $('.pane-block.menu .pane-content').show();
+
+          // Store the 'open' state in da cookie
+          
+          if (!$.cookie('regularMenuState')) {
+            $.cookie('regularMenuState', 'open');
+          }
         },
       });
+      
       // Mobile viewport
+      
       enquire.register("screen and (max-width: 1199px)", {
+        
         match: function() {
+      
           // Populate a submenu toggler
+      
           var srOnlyText = 'Mostra o amaga les categories del submenu';
-          var $blockToggler = $('<button class="block-menu-toggler opened"><span class="sr-only">' + srOnlyText + '</span></button>');
-          var $paneToggler = $('<button class="pane-menu-toggler opened"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $blockToggler = $('<button class="block-menu-toggler open"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $paneToggler = $('<button class="pane-menu-toggler open"><span class="sr-only">' + srOnlyText + '</span></button>');
           var $block = $('.block-menu.menu');
           var $blockTitle = $('.block-menu.menu .block__title');
           var $pane = $('.pane-block.menu');
           var $paneTitle = $('.pane-block.menu .pane-title');
+      
           // If a block is used, ap pend it to the block and bind a click event
+      
           if ($block.length > 0) {
             var $blockContent = $block.find('.block__content');
             $blockToggler.appendTo($blockTitle);
-            $blockContent.hide();
+            // $blockContent.hide();
+
+            // Store the 'open' state in da cookie
+          
+            if (!$.cookie('regularMenuState')) {
+              $.cookie('regularMenuState', 'open');
+            }
+
             $blockToggler.click(function() {
-              $(this).toggleClass('opened closed').addClass('block-menu-toggler');
+              $(this).toggleClass('open closed').addClass('block-menu-toggler');
               $(this).parent().siblings('.block__content').slideToggle(150);
+
+              if ($(this).hasClass('open')) {
+                $.cookie('regularMenuState', 'open');
+              }
+              else {
+                $.cookie('regularMenuState', 'closed'); 
+              }
             });
           }
+      
           // If a pane is used, append it to the pane and bind a click event
+      
           if ($pane.length > 0) {
             var $paneContent = $pane.find('.pane-content');
             $paneToggler.appendTo($paneTitle);
-            $paneContent.hide();
+            // $paneContent.hide();
+            
+            // Store the 'open' state in da cookie
+          
+            if (!$.cookie('regularMenuState')) {
+              $.cookie('regularMenuState', 'open');
+            }
+
             $('.pane-menu-toggler').click(function() { // Do not use "$paneToggler" here, otherwise it will not work in the homepage
-              $(this).toggleClass('opened closed').addClass('pane-menu-toggler');
+              $(this).toggleClass('open closed').addClass('pane-menu-toggler');
               $(this).parent().siblings('.pane-content').slideToggle(150);
+
+              if ($(this).hasClass('open')) {
+                $.cookie('regularMenuState', 'open');
+              }
+              else {
+                $.cookie('regularMenuState', 'closed'); 
+              }
             });
           }
         },
       });
-    }
+    },
   };
-  
-  /* TODO - Behaviors!!! */
 
-  Drupal.behaviors.radix = {
+  Drupal.behaviors.xn17 = {
     attach: function(context, setting) {
-      Drupal.radix.subMenuToggler();
+      Drupal.xn17.stickyMenu();
+      Drupal.xn17.stickyMenuToggler();
+      Drupal.xn17.regularMenuToggler();
+      Drupal.xn17.stickyMenuTogglerCookie();
     }
   };
+
   Drupal.behaviors.radix_dropdown = {
     attach: function(context, setting) {
-      // -----------------------------------------------------------------------
-      // Scrolling
-      // -----------------------------------------------------------------------
-      
-      if ($('.pane-menu-menu-xn17-menu-noticies')[0]) { 
-        var frnTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top; 
-      }
-      if ($('.pane-menu-menu-xn17-menu-noticies')[0]) { 
-        var frnBot = frnTop + $('.pane-menu-menu-xn17-menu-noticies').outerHeight(true); 
-      }
-      if ($('.panels-flexible-row-76-1')[0]) { 
-        var a = $('.panels-flexible-row-76-1').offset().top;
-        var b = $('.panels-flexible-row-76-1').outerHeight(true);
-        var panHei = $('#recursos').offset().top - 775;
-      }
 
-      $(window).scroll(function() {
-
-        var aTop = $('#third-header').offset().top;
-        if ($('.pane-menu-menu-xn17-menu-noticies')[0]) {
-          var nTop = $('.pane-menu-menu-xn17-menu-noticies').offset().top - $(window).scrollTop(); 
-        }
-        if ($('.pane-menu-menu-xn17-menu-recursos')[0]) {	
-          var rTop = $('.pane-menu-menu-xn17-menu-recursos').offset().top - $(window).scrollTop(); 
-        }
-      	
-        // console.log($(window).scrollTop()+' '+panHei);
-
-        if ($(this).scrollTop() >= aTop) {
-          $('#third-header-clone').show();
-          $('.block-menu').addClass('sticky');
-          
-          if ($('.pane-menu-menu-xn17-menu-noticies')[0]) {
-            if (nTop < $('#third-header-clone').height()) {
-              $('.pane-menu-menu-xn17-menu-noticies').addClass('sticky');
-            }
-            if ($('.pane-menu-menu-xn17-menu-noticies').hasClass('sticky') && ($(window).scrollTop() < frnTop)) {
-              $('.pane-menu-menu-xn17-menu-noticies').removeClass('sticky');
-            }
-            if (rTop < $('#third-header-clone').height()) {
-              $('.pane-menu-menu-xn17-menu-recursos').addClass('sticky');
-            }
-            if ($('.pane-menu-menu-xn17-menu-recursos').hasClass('sticky') && (($(window).scrollTop()) < panHei)) {
-              $('.pane-menu-menu-xn17-menu-recursos').removeClass('sticky');
-            }
-
-            // Fa que si el menu de noticies està expanded, el de recursos també ho estigui
-
-            if ($('.pane-menu-menu-xn17-menu-recursos').hasClass('sticky') && (($(window).scrollTop()) > panHei)) {
-              if ($('.pane-menu-menu-xn17-menu-noticies').hasClass('expanded')) {
-                $('.pane-menu-menu-xn17-menu-recursos .pane-content').show();
-              }
-              else {
-                $('.pane-menu-menu-xn17-menu-recursos .pane-content').hide();
-              }
-            }
-
-          }
-        }
-        if ($(this).scrollTop() < aTop) {
-          $('#third-header-clone').hide();
-          $('.block-menu').removeClass('sticky');
-        }
-      });
+// ===========================================================================================================      
 
       // -----------------------------------------------------------------------
       // Main menu
@@ -173,7 +476,7 @@ var mesNoticiesObert = false;
           }
           
           // On large viewports, we hide the entire page content, leaving
-          // only visible the menu just opened
+          // only visible the menu just open
           
           if (wwi >= sm) {
 
@@ -287,11 +590,12 @@ var mesNoticiesObert = false;
           $('#page-header').remove();
         }
         // Overrides header's menu title when viewing Opinió's related pages
-        var pattern1 = /^\/opinio/;
+        var pattern1 = /^\/opinio$/;
         var pattern2 = /^\/opinio\//;
         var pattern3 = /^\/autora\//;
+        var pattern4 = /^\/autors-es$/;
         var path = window.location.pathname;
-        if (pattern1.test(path) || pattern2.test(path) || pattern3.test(path)) {
+        if (pattern1.test(path) || pattern2.test(path) || pattern3.test(path) || pattern4.test(path)) {
           $('.block-menu.menu.menu-noticies h4').text('Opinió');
         }
         if (pattern1.test(path)) {
@@ -414,21 +718,24 @@ var mesNoticiesObert = false;
 
 (function($) {
 	$(function() {
-		if ($('.menu.menu-noticies').length > 0) {
-			if (!!$.cookie('menu-noticies')) {
-				if ($.cookie('menu-noticies') == 'expanded') {
-					$('.pane-block.pane-menu-menu-xn17-menu-noticies .pane-content').slideDown();
-					$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('expanded');
-				}
-				else if ($.cookie('menu-noticies') == 'collapsed') {
-					$('.pane-block.pane-menu-menu-xn17-menu-noticies .pane-content').slideUp();
-					$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('collapsed');
-				}
-			}
-			else {
-				$.cookie('menu-noticies', 'expanded');
-				$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('expanded');
-			}
+
+// ===========================================================================================================    
+		// if ($('.menu.menu-noticies').length > 0) {
+		// 	if (!!$.cookie('menu-noticies')) {
+		// 		if ($.cookie('menu-noticies') == 'expanded') {
+		// 			$('.pane-block.pane-menu-menu-xn17-menu-noticies .pane-content').slideDown();
+		// 			$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('expanded');
+		// 		}
+		// 		else if ($.cookie('menu-noticies') == 'collapsed') {
+		// 			$('.pane-block.pane-menu-menu-xn17-menu-noticies .pane-content').slideUp();
+		// 			$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('collapsed');
+		// 		}
+		// 	}
+		// 	else {
+		// 		$.cookie('menu-noticies', 'expanded');
+		// 		$('.pane-block.pane-menu-menu-xn17-menu-noticies').addClass('expanded');
+		// 	}
+// ===========================================================================================================
 
 			// $('.pane-block.pane-menu-menu-xn17-menu-noticies h4').click(function(e) {
 			// 	e.preventDefault();
@@ -442,6 +749,6 @@ var mesNoticiesObert = false;
 			// 		$.cookie('menu-noticies', 'collapsed');
 			// 	}
 			// });
-		}
+		// }
 	});
 })(jQuery);

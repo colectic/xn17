@@ -95,6 +95,14 @@
     </div>
   </div>
 </header>
+<header id="sticky-wrapper" class="open">
+  <div class="container">
+    <button id="sticky-toggler" class="open"><span class="sr-only">Mostra o amaga les categories del submenu</span></button>
+    <div class="row">
+      <div class="inner"></div>
+    </div>
+  </div>
+</header>
 <div id="main-menu">
   <div class="container">
     <div class="top-menu-region col-xs-10 first">
