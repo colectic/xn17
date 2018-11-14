@@ -459,6 +459,10 @@ var mesNoticiesObert = false;
       });
     },
 
+    /**
+     * Handles the opening event of the Main Menu
+     */
+    
     mainMenuOpenEvent: function() {
 
       $('.menu-icon').click(function() {
@@ -514,6 +518,10 @@ var mesNoticiesObert = false;
       });
     },
 
+    /**
+     * Handles the closing event of the Main Menu
+     */
+    
     mainMenuCloseEvent: function() {
 
       $('#close-button').click(function() {
@@ -560,6 +568,10 @@ var mesNoticiesObert = false;
       });
     },
 
+    /**
+     * Handles the toggling events of the inner items of the Main Menu
+     */
+
     mainMenuSubmenus: function() {
 
       // Level 2 submenus
@@ -586,6 +598,12 @@ var mesNoticiesObert = false;
         }
       });      
     },
+
+    /**
+     * Handles the overriding of the default titles of Notícies & Recursos
+     * menús, by doing a comparision between a given pattern and the current 
+     * pathname taken from the url being viewed
+     */
 
     subMenuTitleOverrides: function() {
 
@@ -654,6 +672,49 @@ var mesNoticiesObert = false;
       if (pattern2.test(path)) {
         $('#page-header h1').text('Demandes de voluntariat');
       }      
+    },
+
+    /**
+     * Helper function to retrieve the raw value of a url parameter
+     */
+
+    getUrlParameter: function(param) {
+
+      var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === param) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+      }
+    },
+
+    /**
+     * Gets the date value of a url param in '/agenda', sent from the Homepage's calendar
+     * puts the value in the date field and auto-submits the form
+     */
+
+    agendaSetCalendarDateInForm: function() {
+
+      var date = Drupal.xn17.getUrlParameter('field_date_event_value[value][date]');
+      var $form = $('#views-exposed-form-xn17-agenda-page');
+      var $input  = $('#edit-field-date-event-value2-value-datepicker-popup-1');
+
+      // Set a regex pattern to validate date in format dd/mm/yyyy or dd-mm-yyyy
+      
+      var pattern = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+      
+      // If there's a valid date, puts it in the field and submits the form
+      
+      if (typeof(date) !== 'undefined' && pattern.test(date)) {
+        $input.val(date);
+        $form.submit();
+      }
     }
   };
 
@@ -666,6 +727,7 @@ var mesNoticiesObert = false;
       Drupal.xn17.mainMenuCloseEvent();
       Drupal.xn17.mainMenuSubmenus();
       Drupal.xn17.subMenuTitleOverrides();
+      Drupal.xn17.agendaSetCalendarDateInForm();
     }
   };
 
