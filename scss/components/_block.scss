@@ -882,7 +882,7 @@
 // Sticky Menu
 // ==============================================================================
 
-#sticky-wrapper {
+.fixed-menu {
   width: 100%;
   display: inline-block;
   display: none;
@@ -897,7 +897,7 @@
     position: relative;
   }
 
-  #sticky-toggler {
+  button {
     outline: none;
     position: absolute;
     top: 15px;
@@ -1012,7 +1012,7 @@
 
       .pane-content,
       .block__content {
-        display: block;
+        // display: block;
       }
     }
   }
@@ -1023,7 +1023,8 @@
 
       .pane-content,
       .block__content {
-        display: none;
+        // display: none;
       }
     }
   }
+}

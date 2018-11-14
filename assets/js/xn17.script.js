@@ -35,8 +35,15 @@ var mesNoticiesObert = false;
       var $window = $(window);
       var $menu = $('#third-header');
       var $fixedMenu = $('#third-header-clone');
-      var $stickyWrapper = $('#sticky-wrapper');
-      var $stickyWrapperInner = $('#sticky-wrapper .inner');
+      
+      // var $stickyWrapper = $('#sticky-wrapper');
+      // var $stickyWrapperInner = $('#sticky-wrapper .inner');
+      
+      var $fixedMenuNoticies = $('#fixed-menu-noticies');
+      var $fixedMenuNoticiesInner = $('#fixed-menu-noticies .inner');
+      var $fixedMenuRecursos = $('#fixed-menu-recursos');
+      var $fixedMenuRecursosInner = $('#fixed-menu-recursos .inner');
+
       var $paneNoticies = $('.pane-menu-menu-xn17-menu-noticies');
       var $paneRecursos = $('.pane-menu-menu-xn17-menu-recursos');
       var $blockNoticies = $('.block-menu.menu.menu-noticies');
@@ -56,15 +63,17 @@ var mesNoticiesObert = false;
           var $menuTop = parseInt($menu.offset().top);
           var $windowTop = parseInt($window.scrollTop());
 
+          // Clone Noticies menu content in their regarding fixed clon
+
+          var $blockNoticiesContents = $blockNoticies.html();
+          $fixedMenuNoticiesInner.empty().html($blockNoticiesContents);
+          $fixedMenuRecursos.hide();
+
           if ($windowTop > $blockNoticiesTop) {
-            var $blockNoticiesContents = $blockNoticies.html();
-            $stickyWrapperInner.empty();
-            $stickyWrapperInner.html($blockNoticiesContents);
-            $stickyWrapper.show();
+            $fixedMenuNoticies.show();
           }
           else {
-            $stickyWrapperInner.empty();
-            $stickyWrapper.hide();
+            $fixedMenuNoticies.hide();
           }
 
           if ($windowTop > $menuTop) {
@@ -78,24 +87,19 @@ var mesNoticiesObert = false;
             var $windowTop = parseInt($window.scrollTop());
 
             if ($windowTop > $blockNoticiesTop) {
-              var $blockNoticiesContents = $blockNoticies.html();
-              $stickyWrapperInner.empty();
-              $stickyWrapperInner.html($blockNoticiesContents);
-              $stickyWrapper.show();
+              $fixedMenuNoticies.show();
 
-              // Hide the Sticky menu when scrolling the page with the Main menu open
+              // Hide the fixed menu when scrolling the page with the Main menu open
               
               if ($('#main-menu').is(':visible')) {
-                $stickyWrapper.addClass('hidden');
+                $fixedMenuNoticies.addClass('hidden');
               }
               else {
-                $stickyWrapper.removeClass('hidden');
+                $fixedMenuNoticies.removeClass('hidden');
               }
-
             }
             else {
-              $stickyWrapperInner.empty();
-              $stickyWrapper.hide();
+              $fixedMenuNoticies.hide();
             }
 
             if ($windowTop > $menuTop) {
@@ -114,15 +118,17 @@ var mesNoticiesObert = false;
           var $menuTop = parseInt($menu.offset().top);
           var $windowTop = parseInt($window.scrollTop());
 
+          // Clone Recursos menu content in their regarding fixed clon
+
+          var $blockRecursosContents = $blockRecursos.html();
+          $fixedMenuRecursosInner.empty().html($blockRecursosContents);
+          $fixedMenuNoticies.hide();
+
           if ($windowTop > $blockRecursosTop) {
-            var $blockRecursosContents = $blockRecursos.html();
-            $stickyWrapperInner.empty();
-            $stickyWrapperInner.html($blockRecursosContents);
-            $stickyWrapper.show();
+            $fixedMenuRecursos.show();
           }
           else {
-            $stickyWrapperInner.empty();
-            $stickyWrapper.hide();
+            $fixedMenuRecursos.hide();
           }
 
           if ($windowTop > $menuTop) {
@@ -136,24 +142,19 @@ var mesNoticiesObert = false;
             var $windowTop = parseInt($window.scrollTop());
 
             if ($windowTop > $blockRecursosTop) {
-              var $blockRecursosContents = $blockRecursos.html();
-              $stickyWrapperInner.empty();
-              $stickyWrapperInner.html($blockRecursosContents);
-              $stickyWrapper.show();
+              $fixedMenuRecursos.show();
 
-              // Hide the Sticky menu when scrolling the page with the Main menu open
+              // Hide the fixed menu when scrolling the page with the Main menu open
               
               if ($('#main-menu').is(':visible')) {
-                $stickyWrapper.addClass('hidden');
+                $fixedMenuRecursos.addClass('hidden');
               }
               else {
-                $stickyWrapper.removeClass('hidden');
+                $fixedMenuRecursos.removeClass('hidden');
               }
-
             }
             else {
-              $stickyWrapperInner.empty();
-              $stickyWrapper.hide();
+              $fixedMenuRecursos.hide();
             }
 
             if ($windowTop > $menuTop) {
@@ -163,12 +164,13 @@ var mesNoticiesObert = false;
               $fixedMenu.hide();
             }
           });
-        }
+        }        
 
-        // For pages without any menu
+        // On pages without any menu: remove the fixed menus
 
         if ($blockNoticies.length == 0 && $blockRecursos.length == 0) {
-          $stickyWrapper.remove();
+          $fixedMenuNoticies.remove();
+          $fixedMenuRecursos.remove();
         }
       }
 
@@ -185,30 +187,36 @@ var mesNoticiesObert = false;
         var $paneRecursosTop = parseInt($paneRecursos.offset().top);
         var $breakPoint = parseInt($panelRecursos.offset().top) - correction;
 
-        // Determine Sticky-wrapper visibility
+        // Clone both Noticies & Recursos menu in their regarding fixed clones
+        
+        var $paneNoticiesContents = $paneNoticies.html();
+        var $paneRecursosContents = $paneRecursos.html();
+        $fixedMenuNoticiesInner.empty().html($paneNoticiesContents);
+        $fixedMenuRecursosInner.empty().html($paneRecursosContents);
+
+        // Determine Fixed Menu's visibility
         
         if ($windowTop < $paneNoticiesTop) {
-          $stickyWrapper.hide();
-          $stickyWrapperInner.empty();
+          $fixedMenuNoticies.hide();
+          $fixedMenuRecursos.hide();
+          // $fixedMenuNoticiesInner.empty();
+          // $fixedMenuRecursosInner.empty();
         }
         else if ($windowTop > $paneNoticiesTop && $windowTop < $breakPoint) {
-          var $paneNoticiesContents = $paneNoticies.html();
-          $stickyWrapperInner.empty();
-          $stickyWrapperInner.html($paneNoticiesContents);
-          if ($stickyWrapper.is(':hidden')) {
-            $stickyWrapper.show();
-          }
+          $fixedMenuNoticies.show();
+          $fixedMenuRecursos.hide();
         }
         else if ($windowTop > $breakPoint) {
-          var $paneRecursosContents = $paneRecursos.html();
-          $stickyWrapperInner.empty();
-          $stickyWrapperInner.html($paneRecursosContents);
-          if ($stickyWrapper.is(':hidden')) {
-            $stickyWrapper.show();
-          }
+          $fixedMenuNoticies.hide();
+          $fixedMenuRecursos.show();
+
+          // if ($stickyWrapper.is(':hidden')) {
+            // $fixedMenuNoticies.hide();
+            // $fixedMenuRecursos.show();
+          // }
         }
 
-        // Determine Sticky-menu visibility
+        // Determine fixed header visibility
 
         if ($windowTop > $menuTop) {
           $fixedMenu.show();
@@ -216,9 +224,6 @@ var mesNoticiesObert = false;
         else {
           $fixedMenu.hide();
         }
-
-        // Window-scroll event
-        // ===============================================================================
 
         $(window).scroll(function() {
           var $windowTop = parseInt($window.scrollTop());
@@ -230,36 +235,44 @@ var mesNoticiesObert = false;
           //   $stickyWrapper.removeClass().addClass(state);
           // }
 
-          // Determine Sticky-wrapper visibility
+          // Determine Fixed Menu's visibility
           
           if ($windowTop < $paneNoticiesTop) {
-            $stickyWrapperInner.empty();
-            $stickyWrapper.hide();
+            $fixedMenuNoticies.hide();
+            $fixedMenuRecursos.hide();
           }
           else if ($windowTop > $paneNoticiesTop && $windowTop < $breakPoint) {
-            var $paneNoticiesContents = $paneNoticies.html();
-            $stickyWrapperInner.empty();
-            $stickyWrapperInner.html($paneNoticiesContents);
-            if ($stickyWrapper.is(':hidden')) {
-              $stickyWrapper.show();
-            }
+            $fixedMenuNoticies.show();
+            $fixedMenuRecursos.hide();
 
-            // Hide the Sticky menu when scrolling the page with the Main menu open
+            // var $paneNoticiesContents = $paneNoticies.html();
+            // $stickyWrapperInner.empty();
+            // $stickyWrapperInner.html($paneNoticiesContents);
+            // if ($stickyWrapper.is(':hidden')) {
+            //   $stickyWrapper.show();
+            // }
+
+            // Hide both Fixed menus when scrolling the page with the Main menu open
             
             if ($('#main-menu').is(':visible')) {
-              $stickyWrapper.addClass('hidden');
+              $fixedMenuNoticies.addClass('hidden');
+              $fixedMenuRecursos.addClass('hidden');
             }
             else {
-              $stickyWrapper.removeClass('hidden');
+              $fixedMenuNoticies.removeClass('hidden');
+              $fixedMenuRecursos.removeClass('hidden');
             }
           }
           else if ($windowTop > $breakPoint) {
-            var $paneRecursosContents = $paneRecursos.html();
-            $stickyWrapperInner.empty();
-            $stickyWrapperInner.html($paneRecursosContents);
-            if ($stickyWrapper.is(':hidden')) {
-              $stickyWrapper.show();
-            }
+            $fixedMenuNoticies.hide();
+            $fixedMenuRecursos.show();
+
+            // var $paneRecursosContents = $paneRecursos.html();
+            // $stickyWrapperInner.empty();
+            // $stickyWrapperInner.html($paneRecursosContents);
+            // if ($stickyWrapper.is(':hidden')) {
+            //   $stickyWrapper.show();
+            // }
           }
 
           // Determine Sticky-menu visibility
@@ -276,30 +289,40 @@ var mesNoticiesObert = false;
 
     stickyMenuToggler: function() {
 
-      $('#sticky-toggler').click(function() {
-        $(this).toggleClass('closed open');
-        var state = $(this).attr('class');
-        $('#sticky-wrapper').removeClass().addClass(state);
+      $('.fixed-menu button').click(function() {
+        var $button = $(this);
+        var state = $button.attr('class');
+        var $fixedMenu = $('.fixed-menu'); // This will affect both fixed menus
         
-        //  Pane based menu
+        if (state == 'open') {
+          state = 'closed';
+        }
+        else if (state == 'closed') {
+          state = 'open';
+        }
+
+        $button.attr('class', state);
+        $fixedMenu.removeClass().addClass('fixed-menu ' + state);
+
+        //  Pane based menu (Home page)
          
-        if ($('#sticky-wrapper .inner .pane-content').length > 0) {
-          if ($(this).hasClass('closed')) {
-            $('#sticky-wrapper .inner .pane-content').slideUp(150);
+        if ($fixedMenu.find('.inner .pane-content').length > 0) {
+          if ($button.hasClass('closed')) {
+            $fixedMenu.find('.inner .pane-content').slideUp(150);
           }
-          else if ($(this).hasClass('open')) {
-           $('#sticky-wrapper .inner .pane-content').slideDown(150); 
+          else if ($button.hasClass('open')) {
+           $fixedMenu.find('.inner .pane-content').slideDown(150); 
           }
         }
 
-        // Block based menu
+        // Block based menu (Inner pages)
         
-        if ($('#sticky-wrapper .inner .block__content').length > 0) {
-          if ($(this).hasClass('closed')) {
-            $('#sticky-wrapper .inner .block__content').slideUp(150);
+        if ($fixedMenu.find('.inner .block__content').length > 0) {
+          if ($button.hasClass('closed')) {
+            $fixedMenu.find('.inner .block__content').slideUp(150);
           }
-          else if ($(this).hasClass('open')) {
-           $('#sticky-wrapper .inner .block__content').slideDown(150); 
+          else if ($button.hasClass('open')) {
+           $fixedMenu.find('.inner .block__content').slideDown(150); 
           }
         }
       });
@@ -430,8 +453,8 @@ var mesNoticiesObert = false;
     attach: function(context, setting) {
       Drupal.xn17.stickyMenu();
       Drupal.xn17.stickyMenuToggler();
-      Drupal.xn17.regularMenuToggler();
-      Drupal.xn17.stickyMenuTogglerCookie();
+      // Drupal.xn17.regularMenuToggler();
+      // Drupal.xn17.stickyMenuTogglerCookie();
     }
   };
 
