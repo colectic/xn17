@@ -17,33 +17,28 @@ var mesNoticiesObert = false;
   Drupal.xn17 = {
 
     /**
-     * Handling of the Sticky Menus on page load & window scroll
+     * Handling of the Fixed Menus on page load & window scroll event
      * 
-     * Basically, we play with the DOM, cloning the given menu to a fixed placeholder,
+     * Basically, we play with the DOM, cloning both menus to a pair of css-fixed placeholders,
      * which behavior is controlled by a offset's comparisions against the window's scroll
      *
      * There are several scenarios:
      *
-     *  1) Homepage: With 2 Sticky menus in the same page
-     *  2) Internal pages related to Notícies
-     *  2) Internal pages related to Recursos
+     *  1) Homepage: With 2 Fixed menus in the same page, build with Panes
+     *  2) Internal pages related to Notícies, build with Blocks
+     *  2) Internal pages related to Recursos, build with Blocks
      */
     
-    stickyMenu: function() {
+    fixedMenu: function() {
 
       var $body = $('body');
       var $window = $(window);
       var $menu = $('#third-header');
       var $fixedMenu = $('#third-header-clone');
-      
-      // var $stickyWrapper = $('#sticky-wrapper');
-      // var $stickyWrapperInner = $('#sticky-wrapper .inner');
-      
       var $fixedMenuNoticies = $('#fixed-menu-noticies');
       var $fixedMenuNoticiesInner = $('#fixed-menu-noticies .inner');
       var $fixedMenuRecursos = $('#fixed-menu-recursos');
       var $fixedMenuRecursosInner = $('#fixed-menu-recursos .inner');
-
       var $paneNoticies = $('.pane-menu-menu-xn17-menu-noticies');
       var $paneRecursos = $('.pane-menu-menu-xn17-menu-recursos');
       var $blockNoticies = $('.block-menu.menu.menu-noticies');
@@ -51,7 +46,9 @@ var mesNoticiesObert = false;
       var $panelRecursos = $('.front .panels-flexible-row-76-2');
 
       /**
+       * --------------------------------------------------------------------
        * Not-front pages
+       * --------------------------------------------------------------------
        */
 
       if ($body.hasClass('not-front')) {
@@ -175,7 +172,9 @@ var mesNoticiesObert = false;
       }
 
       /**
+       * --------------------------------------------------------------------
        * Front page
+       * --------------------------------------------------------------------
        */
 
       if ($body.hasClass('front')) {
@@ -199,8 +198,6 @@ var mesNoticiesObert = false;
         if ($windowTop < $paneNoticiesTop) {
           $fixedMenuNoticies.hide();
           $fixedMenuRecursos.hide();
-          // $fixedMenuNoticiesInner.empty();
-          // $fixedMenuRecursosInner.empty();
         }
         else if ($windowTop > $paneNoticiesTop && $windowTop < $breakPoint) {
           $fixedMenuNoticies.show();
@@ -209,11 +206,6 @@ var mesNoticiesObert = false;
         else if ($windowTop > $breakPoint) {
           $fixedMenuNoticies.hide();
           $fixedMenuRecursos.show();
-
-          // if ($stickyWrapper.is(':hidden')) {
-            // $fixedMenuNoticies.hide();
-            // $fixedMenuRecursos.show();
-          // }
         }
 
         // Determine fixed header visibility
@@ -228,13 +220,6 @@ var mesNoticiesObert = false;
         $(window).scroll(function() {
           var $windowTop = parseInt($window.scrollTop());
 
-          // Maintain the expanded or collapsed state on window scroll
-          
-          // if (!!$.cookie('stickyMenuState')) {
-          //   var state = $.cookie('stickyMenuState');
-          //   $stickyWrapper.removeClass().addClass(state);
-          // }
-
           // Determine Fixed Menu's visibility
           
           if ($windowTop < $paneNoticiesTop) {
@@ -244,13 +229,6 @@ var mesNoticiesObert = false;
           else if ($windowTop > $paneNoticiesTop && $windowTop < $breakPoint) {
             $fixedMenuNoticies.show();
             $fixedMenuRecursos.hide();
-
-            // var $paneNoticiesContents = $paneNoticies.html();
-            // $stickyWrapperInner.empty();
-            // $stickyWrapperInner.html($paneNoticiesContents);
-            // if ($stickyWrapper.is(':hidden')) {
-            //   $stickyWrapper.show();
-            // }
 
             // Hide both Fixed menus when scrolling the page with the Main menu open
             
@@ -266,13 +244,6 @@ var mesNoticiesObert = false;
           else if ($windowTop > $breakPoint) {
             $fixedMenuNoticies.hide();
             $fixedMenuRecursos.show();
-
-            // var $paneRecursosContents = $paneRecursos.html();
-            // $stickyWrapperInner.empty();
-            // $stickyWrapperInner.html($paneRecursosContents);
-            // if ($stickyWrapper.is(':hidden')) {
-            //   $stickyWrapper.show();
-            // }
           }
 
           // Determine Sticky-menu visibility
@@ -287,12 +258,37 @@ var mesNoticiesObert = false;
       }
     },
 
-    stickyMenuToggler: function() {
+    /**
+     * Handles the expand/collapse feature of the Fixed Menus
+     * 
+     * Also includes support for cookies, in order to remember the user's choice
+     * about the fixed menu state (collapsed or expanded)
+     */
+
+    fixedMenuToggler: function() {
+
+      // Set initial state, if a cookie exists
+
+      if (!!$.cookie('fixedMenuState')) {
+        var stateByCookie = $.cookie('fixedMenuState');
+       
+        $('.fixed-menu button').removeClass().addClass(stateByCookie);
+        $('.fixed-menu').removeClass().addClass('fixed-menu ' + stateByCookie);
+
+        // Collapse any fixed menu content, as fast as possible, if the cookie says 'closed'
+
+        if (stateByCookie == 'closed') {
+          $('.fixed-menu').find('.inner > div').slideUp(1);
+        }
+      }
+
+      // Toggler (Click event)
 
       $('.fixed-menu button').click(function() {
+
         var $button = $(this);
         var state = $button.attr('class');
-        var $fixedMenu = $('.fixed-menu'); // This will affect both fixed menus
+        var $fixedMenu = $('.fixed-menu'); // This will affect both fixed menus (if they are present)
         
         if (state == 'open') {
           state = 'closed';
@@ -301,10 +297,16 @@ var mesNoticiesObert = false;
           state = 'open';
         }
 
-        $button.attr('class', state);
+        // Updating classes with the new state value on button & fixed menus
+
+        $('.fixed-menu button').removeClass().addClass(state);  // This will affect both fixed menus buttons (if they are present)
         $fixedMenu.removeClass().addClass('fixed-menu ' + state);
 
-        //  Pane based menu (Home page)
+        // Update the cookie that will remember the state in future page loads
+        
+        $.cookie('fixedMenuState', state);
+
+        //  Toggling Pane based menu (Home page)
          
         if ($fixedMenu.find('.inner .pane-content').length > 0) {
           if ($button.hasClass('closed')) {
@@ -315,7 +317,7 @@ var mesNoticiesObert = false;
           }
         }
 
-        // Block based menu (Inner pages)
+        // Toggling Block based menu (Inner pages)
         
         if ($fixedMenu.find('.inner .block__content').length > 0) {
           if ($button.hasClass('closed')) {
@@ -328,30 +330,11 @@ var mesNoticiesObert = false;
       });
     },
 
-    stickyMenuTogglerCookie: function() {
-
-      var $body = $('body');
-
-      // Create a cookie with current Sticky menu state, if not exists
-      
-      if (!$.cookie('stickyMenuState')) {
-        $.cookie('stickyMenuState', 'open');
-      }
-
-      // Once it exists, toggle the cookie value on each toggler click event
-      
-      $('#sticky-toggler').click(function() {
-        if ($(this).hasClass('open')) {
-          $.cookie('stickyMenuState', 'open');
-        }
-        else {
-          $.cookie('stickyMenuState', 'closed');
-        }
-      });
-    },
-
     /**
-     * Handles the expand/collapse feature of the Sticky Menus
+     * Handles the expand/collapse feature of the Regular Menus
+     * 
+     * Also includes support for cookies, in order to remember the user's choice
+     * about the regular menu state (collapsed or expanded)
      */
 
     regularMenuToggler: function() {
@@ -368,16 +351,10 @@ var mesNoticiesObert = false;
           $('.pane-menu-toggler').remove();
           $('.block-menu.menu .block__content').show();
           $('.pane-block.menu .pane-content').show();
-
-          // Store the 'open' state in da cookie
-          
-          if (!$.cookie('regularMenuState')) {
-            $.cookie('regularMenuState', 'open');
-          }
         },
       });
       
-      // Mobile viewport
+      // Tablet & Mobile viewports
       
       enquire.register("screen and (max-width: 1199px)", {
         
@@ -393,54 +370,90 @@ var mesNoticiesObert = false;
           var $pane = $('.pane-block.menu');
           var $paneTitle = $('.pane-block.menu .pane-title');
       
-          // If a block is used, ap pend it to the block and bind a click event
+          // If a Block is used
       
           if ($block.length > 0) {
+
+            // Append it to the block
+            
             var $blockContent = $block.find('.block__content');
             $blockToggler.appendTo($blockTitle);
-            // $blockContent.hide();
 
-            // Store the 'open' state in da cookie
-          
-            if (!$.cookie('regularMenuState')) {
-              $.cookie('regularMenuState', 'open');
+            // Set initial state, if a cookie exists
+
+            if (!!$.cookie('regularMenuState')) {
+              var stateByCookie = $.cookie('regularMenuState');
+             
+              $('.block-menu-toggler').removeClass().addClass('block-menu-toggler ' + stateByCookie);
+              $('.block-menu.menu').removeClass('closed').removeClass('open').addClass(stateByCookie);
+
+              // Collapse any fixed menu content, as fast as possible, if the cookie says 'closed'
+
+              if (stateByCookie == 'closed') {
+                $('.block-menu.menu').find('.block__content').slideUp(1);
+              }
+              else if (stateByCookie == 'open') {
+                $('.block-menu.menu').find('.block__content').slideDown(1);
+              }
             }
 
-            $blockToggler.click(function() {
-              $(this).toggleClass('open closed').addClass('block-menu-toggler');
-              $(this).parent().siblings('.block__content').slideToggle(150);
+            // Bind a click event
+          
+            $('.block-menu-toggler').click(function() {
 
               if ($(this).hasClass('open')) {
-                $.cookie('regularMenuState', 'open');
+                $(this).removeClass().addClass('block-menu-toggler closed');
+                $(this).parent().siblings('.block__content').slideUp(150);
+                $.cookie('regularMenuState', 'closed');
               }
-              else {
-                $.cookie('regularMenuState', 'closed'); 
+              else if ($(this).hasClass('closed')) {
+                $(this).removeClass().addClass('block-menu-toggler open');
+                $(this).parent().siblings('.block__content').slideDown(150);
+                $.cookie('regularMenuState', 'open');
               }
             });
           }
       
-          // If a pane is used, append it to the pane and bind a click event
-      
+          // If a Pane is used
+
           if ($pane.length > 0) {
+
+            // Append it to the pane
+            
             var $paneContent = $pane.find('.pane-content');
             $paneToggler.appendTo($paneTitle);
-            // $paneContent.hide();
-            
-            // Store the 'open' state in da cookie
-          
-            if (!$.cookie('regularMenuState')) {
-              $.cookie('regularMenuState', 'open');
+
+            // Set initial state, if a cookie exists
+
+            if (!!$.cookie('regularMenuState')) {
+              var stateByCookie = $.cookie('regularMenuState');
+             
+              $('.pane-menu-toggler').removeClass().addClass('pane-menu-toggler ' + stateByCookie);
+              $('.pane-block.menu').removeClass('closed').removeClass('open').addClass(stateByCookie);
+
+              // Collapse any fixed menu content, as fast as possible, if the cookie says 'closed'
+
+              if (stateByCookie == 'closed') {
+                $('.pane-block.menu').find('.pane-content').slideUp(1);
+              }
+              else if (stateByCookie == 'open') {
+                $('.pane-block.menu').find('.pane-content').slideDown(1);
+              }
             }
 
-            $('.pane-menu-toggler').click(function() { // Do not use "$paneToggler" here, otherwise it will not work in the homepage
-              $(this).toggleClass('open closed').addClass('pane-menu-toggler');
-              $(this).parent().siblings('.pane-content').slideToggle(150);
+            // Bind a click event
+          
+            $('.pane-menu-toggler').click(function() {
 
               if ($(this).hasClass('open')) {
-                $.cookie('regularMenuState', 'open');
+                $('.pane-menu-toggler').removeClass().addClass('pane-menu-toggler closed'); // Affects both menus: Noticies & Recursos
+                $('.pane-block.menu').find('.pane-content').slideUp(150); // Affects both menus: Noticies & Recursos
+                $.cookie('regularMenuState', 'closed');
               }
-              else {
-                $.cookie('regularMenuState', 'closed'); 
+              else if ($(this).hasClass('closed')) {
+                $('.pane-menu-toggler').removeClass().addClass('pane-menu-toggler open'); // Affects both menus: Noticies & Recursos
+                $('.pane-block.menu').find('.pane-content').slideDown(150); // Affects both menus: Noticies & Recursos
+                $.cookie('regularMenuState', 'open');
               }
             });
           }
@@ -451,10 +464,9 @@ var mesNoticiesObert = false;
 
   Drupal.behaviors.xn17 = {
     attach: function(context, setting) {
-      Drupal.xn17.stickyMenu();
-      Drupal.xn17.stickyMenuToggler();
-      // Drupal.xn17.regularMenuToggler();
-      // Drupal.xn17.stickyMenuTogglerCookie();
+      Drupal.xn17.fixedMenu();
+      Drupal.xn17.fixedMenuToggler();
+      Drupal.xn17.regularMenuToggler();
     }
   };
 
