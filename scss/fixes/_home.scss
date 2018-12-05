@@ -1,0 +1,213 @@
+// Homepage
+// -----------------------------------------------------------------------------
+
+.front {
+
+  /** 
+  * Viewport < 768px
+  */
+  
+  @media (max-width: 768px) {
+
+    // Monogràfics
+
+    .pane-xn17-monografics-portada {
+      margin-right: 30px;
+      min-height: 360px !important;
+
+      .skin-default {
+        margin-right: 0;
+
+        > .imatge {
+          margin: 0 0 30px 0;
+          padding: 0;
+          min-height: 360px !important;
+
+          #views_slideshow_cycle_teaser_section_xn17_monografics_portada-default {
+            width: 100% !important;
+
+            .views_slideshow_slide {
+              min-height: 360px !important;
+            
+              .modul-monografic-portada {
+                min-height: 360px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Noticia destacada
+
+    .view-xn17-noticia-destacada-principal {
+
+      .destacat_2x2 {
+        padding-bottom: 80%;
+      }
+    }
+
+    // Noticies destacades secundàries
+
+    .view-xn17-noticia-destacats-secundaris {
+
+      .modul_2x1 {
+        height: auto;
+        padding: 0;
+
+        .titular {
+          height: auto;
+          padding-bottom: 30px;
+        }
+
+        .tipo-noticia {
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+    // Banner non-profit
+
+    .pane-custom.pane-1 .modul_2x1 img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    // Slideshow 'A Xarxanet'
+
+    #views_slideshow_cycle_main_xn17_destacats-block_1 {
+
+      #views_slideshow_cycle_teaser_section_xn17_destacats-block_1 {
+        width: 100% !important;
+        min-height: 300px;
+
+        .views_slideshow_slide {
+          width: 100% !important;
+
+          .slideshows_destacat_2x2 {
+            padding-bottom: 100% !important;
+            background-position: center center !important;
+          }
+        }
+      }
+    }
+
+    // Recursos destacats a portada
+
+    .view-id-xn17_recursos_destacats_portada {
+
+      .destacat_2x2 {
+        padding-bottom: 90%;
+      }
+
+    }
+
+    // Noticies destacades secundàries
+
+    .view-xn17-recursos-destacats-portada,
+    .views-field-field-ambit-recurs {
+
+      .modul_2x1 {
+        height: auto;
+        padding: 0;
+
+        .titular {
+          height: auto;
+          padding-bottom: 30px;
+        }
+
+        .tipo-recurs {
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+    // Recull de documents
+
+    .pane-xn17-recull-documents {
+      padding: 0;
+      margin-left: -15px;
+      margin-right: 15px;
+
+      > .pane-content {
+        padding: 0 15px;
+
+        .modul_4x3 {
+
+          .document-biblioteca {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    // Videos
+
+    .view-xn17-videos {
+      
+      .slick__arrow {
+        margin-top: -21px;
+      }
+
+      #slick-views-xn17-videos-1-slider {
+
+        .lightbox-item .info img {
+          opacity: 0.8;
+          width: 64px;
+        }
+        
+        .content-info {
+          top: initial;
+          bottom: 30px;
+          left: 50%;
+          z-index: 1;
+          width: 100%;
+          max-width: 280px;
+          margin-left: -140px;
+          background-color: rgba(#000, 0.75);
+  
+          .titular {
+  
+            h4 {
+              margin-bottom: 0;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    // Novetats a la Biblioteca
+
+    .document-biblioteca {
+      margin: 0 0 0 0;
+      width: 100%;
+
+      .imatge {
+        display: table;
+        margin: 20px auto 20px;
+        width: auto;
+        position: relative;
+      }
+    }
+
+    // Banners de recursos
+
+    .bloc-recursos-portada {
+
+      .block__content {
+        background-size: cover;
+        height: auto;
+      }
+    }
+  }
+
+  /** 
+  * Viewport < 992px
+  */
+
+  @media (max-width: 992px) {
+
+  }
+
+}
