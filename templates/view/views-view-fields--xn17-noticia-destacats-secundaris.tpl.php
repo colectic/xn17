@@ -53,27 +53,37 @@
 		$type = $fields['type']->raw;
 
 		if ($type == "opinio") { ?>
-			<div class="view-id-xn17-opinio-secundaries view-id-xn17-opinio-secundaries_home">
-				<div class="views-field views-field-field-autor-foto-quadrada">        
-					<div class="field-content">
-						<div class="modul_2x1">
-							<div class="cont_titular_entradeta">
-								<div class="rightimage">
-									<?php echo $fields['field_autor_foto_quadrada']->content ?>
-								</div>
-								<div class="titular">
-									<h4>
-										<?php echo $fields['title']->content ?>
-									</h4>
-								</div>
-							</div>
-						</div>
-						<div class="pie">
-							<?php echo $fields['title_2']->content; ?>
-						</div>
-					</div>
-				</div>
-			</div>
+		<?php	
+			print '<div class="modul_2x1">';
+			print '<div>' . $rawImatge . '</div>';
+			print '<div class="titular">';
+			print '<h4>'. $fields['title']->content .'</h4>';
+			
+			if ($type == 'opinio') { 
+				print '</div>';
+				print '<div class="tipo-noticia"><a href="/opinio">Opinió</a></div>';
+				print '</div>';
+			}
+			else {
+				if ($type == 'noticia_general'){
+					$type = 'Notícies';
+					$tipus = strip_tags($fields['field_ambit_noticia']->content);
+					$tipus = "<a href='/noticies/{$tipus}'>{$tipus}</a>";
+				}
+				if ($type == 'event'){
+					$type = 'Agenda';
+					$tipus = strip_tags($fields['field_event_type']->content);
+					$tipus = "<a href='/agenda?field_event_type_value={$tipus}'>{$tipus}</a>";
+				}
+
+				print '</div>';
+				print '<div class="tipo-noticia">';
+				print $type . ' > ' . $tipus;
+				print '</div>';
+				print '</div>';
+			} 
+		?>	
+
 		<?php	} else {
 			print '<div class="modul_2x1">';
 			print '<div>' . $rawImatge . '</div>';
