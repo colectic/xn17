@@ -10,6 +10,7 @@
  * @see html.tpl.php
  */
 ?>
+
 <header id="third-header-clone" class="header hidde" role="header">
   <div class="container">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -95,6 +96,25 @@
     </div>
   </div>
 </header>
+
+<header id="fixed-menu-noticies" class="fixed-menu open">
+  <div class="container">
+    <button id="fixed-menu-noticies-toggler" class="open"><span class="sr-only">Mostra o amaga les categories de notícies</span></button>
+    <div class="row">
+      <div class="inner"></div>
+    </div>
+  </div>
+</header>
+
+<header id="fixed-menu-recursos" class="fixed-menu open">
+  <div class="container">
+    <button id="fixed-menu-recursos-toggler" class="open"><span class="sr-only">Mostra o amaga les categories de recursos</span></button>
+    <div class="row">
+      <div class="inner"></div>
+    </div>
+  </div>
+</header>
+
 <div id="main-menu">
   <div class="container">
     <div class="top-menu-region col-xs-10 first">

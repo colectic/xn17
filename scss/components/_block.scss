@@ -11,7 +11,8 @@
   margin: 0 0 -0.5em 0;
 }
 
-.panels-flexible-region-76-menu {
+.panels-flexible-region-76-menu,
+.panels-flexible-region-76-center {
   width: 100%;
 }
 
@@ -50,7 +51,7 @@
     padding: 0;
     display: block;
     
-    &.opened {
+    &.open {
 
       &:before {
         content: url('../images/icon/icon-show-big.svg');
@@ -117,7 +118,7 @@
     padding: 0;
     display: block;
     
-    &.opened {
+    &.open {
 
       &:before {
         content: url('../images/icon/icon-show-big.svg');
@@ -877,3 +878,154 @@
   #form_monografics {
     margin-bottom: 30px; 
   }
+
+// ==============================================================================
+// Sticky Menu
+// ==============================================================================
+
+.fixed-menu {
+  width: 100%;
+  display: inline-block;
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  z-index: 20;
+  background: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
+  
+  > .container {
+    position: relative;
+  }
+
+  button {
+    outline: none;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    line-height: 0;
+    padding: 0;
+    display: block;
+    
+    &.open {
+
+      &:before {
+        content: url('../images/icon/icon-show-big.svg');
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
+    }
+
+    &.closed {
+
+      &:before {
+        content: url('../images/icon/icon-hide-big.svg');
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
+    }
+  }
+
+  .inner {
+    padding: 15px 30px;
+    position: relative;
+    width: 100%;
+    float: left;
+
+    .pane-title,
+    .block__title {
+      color: #BE1622;
+      font-size: 18px;
+      font-family: "Fira Sans SemiBold", Helvetica, Arial, sans-serif;
+      margin: 0;
+
+      button {
+        display: none;
+      }
+    }
+
+    .pane-content,
+    .block__content {
+      width: 100%;
+      display: block;
+      float: left;
+      margin: 0px 0 -5px;
+      padding-top: 5px;
+
+      ul {
+        width: 100%;
+        display: inline-block;
+
+        li {
+          display: inline-block;
+          float: left;
+
+          a {
+            padding: 2px 4px 2px 0;
+            float: left;
+            background-color: transparent;
+            font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+
+            &:hover,
+            &:focus {
+              color: #BE1622;
+              background-color: transparent;
+            }
+
+            &:active {
+              color: lighten(#BE1622, 5%);
+              background-color: transparent;
+            }
+          }
+
+          &:after {
+            content: ' / ';
+            color: #878787;
+            font-weight: normal;
+            float: left;
+            font-size: 10px;
+            position: relative;
+            top: 4px;
+            padding-right: 4px;
+          }
+
+          &:last-child {
+
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.open {
+
+    .inner {
+
+      .pane-content,
+      .block__content {
+        // display: block;
+      }
+    }
+  }
+
+  &.closed {
+
+    .inner {
+
+      .pane-content,
+      .block__content {
+        // display: none;
+      }
+    }
+  }
+}

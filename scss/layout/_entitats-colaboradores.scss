@@ -219,4 +219,23 @@ body.page-entitat {
     }
   }
 
+  // Custom Edit button
+  
+  #edit-entity-button {
+    background-color: #ddd;
+    color: #000;
+    border-radius: 4px;
+    padding: 8px 24px;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: inline-block;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken(#ddd, 5%);
+    }
+  }
+
 }
