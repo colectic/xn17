@@ -599,6 +599,23 @@
   }
 
   //------------------------------------------------------------------------------
+  // Bloc capçalera FAQS
+  //------------------------------------------------------------------------------
+
+  .faq-banner {
+    background-image: url(/sites/default/files/userfiles/Administrador_images/faq.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: 267px;
+    display: inline-block;
+
+    .block__content * {
+      display: none;
+    }
+  }
+
+  //------------------------------------------------------------------------------
   // Bloc footer per opinio
   //------------------------------------------------------------------------------
   #content-footer{
