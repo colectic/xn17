@@ -1,7 +1,7 @@
-// Principal Recursos
+// Principal Recursos i interior
 // -----------------------------------------------------------------------------
 @media (min-width: 992px) and (max-width: 1200px) {
-  .page-recursos{
+  .page-recursos, .node-type-recurs-general{
     .block--fes-voluntariat,.bloc--financament{
       margin-right: 10px;
       width: 48.9%;
@@ -25,12 +25,23 @@
     .bloc-banner .block__content{
       margin: 0;
     }
+    .block--articles-relacionats{
+      // .modul_2x1 .titular{
+      //   padding-bottom: 0;
+      //   height: auto;
+      // }
+      // .modul_2x1 {
+      //   padding-bottom: 10px;
+      //   height: auto;
+      // }
+    }
   }
+
 }
 
 
 @media (max-width: 768px){
-  .page-recursos{
+  .page-recursos, .node-type-recurs-general{
     .modul_2x1 .titular{
       padding-bottom: 0;
       height: auto;
@@ -40,4 +51,12 @@
       height: auto;
     }
   }
+  .node-type-recurs-general{
+    .field-name-body .field-items img{
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+  
 }
+
