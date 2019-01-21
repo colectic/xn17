@@ -1,0 +1,24 @@
+// Principal Recursos-> finançament
+// -----------------------------------------------------------------------------
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-financament {
+    .financament .views-field-nothing .data-lloc {
+      position: relative;
+      bottom: 0;
+    }
+    .financament .views-field-nothing .resum{
+      padding-bottom: 10px;
+    }
+  }
+}
+
+
+@media (max-width: 768px){
+  .page-financament {
+    .financament .views-field-nothing .data-lloc {
+      position: relative;
+      bottom: 0;
+    }
+  }
+}
+

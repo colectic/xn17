@@ -1,0 +1,24 @@
+// Principal Recursos-> agenda
+// -----------------------------------------------------------------------------
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-agenda {
+    .agenda .views-field-nothing .data-lloc {
+      position: relative;
+      bottom: 0;
+    }
+    .agenda .views-field-nothing .resum{
+      padding-bottom: 10px;
+    }
+  }
+}
+
+
+@media (max-width: 768px){
+  .page-agenda {
+    .agenda .views-field-nothing .data-lloc {
+      position: relative;
+      bottom: 0;
+    }
+  }
+}
+
