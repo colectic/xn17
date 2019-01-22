@@ -1,0 +1,31 @@
+// Principal faqs
+// -----------------------------------------------------------------------------
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-faq{
+    .panels-flexible-column .pane-content img{
+      width: 100% !important;
+      height: auto !important;
+    }
+    .bloc-recursos:nth-child(even){
+      padding-right: 0;
+    }
+    .bloc-recursos:nth-child(odd){
+      padding-left: 0;
+    }
+    .bloc-banner .block__content{
+      margin: 0;
+    }
+  }
+
+}
+
+
+@media (max-width: 768px){
+  .page-faq{
+    .panels-flexible-column .pane-content img{
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+}
+
