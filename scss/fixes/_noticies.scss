@@ -1,10 +1,14 @@
 // Principal Noticies
 // -----------------------------------------------------------------------------
+.modul_2x1{
+      padding-bottom: 137.882%;
+    }
+    .modul_2x1 .titular {
+      padding-bottom: 57.235%;
+    }
 @media (min-width: 992px) and (max-width: 1200px) {
   .page-noticies {
-    .modul_2x1{
-      padding-bottom: 130.882%;
-    }
+    
     .bloc-recursos:nth-child(even){
       padding-right: 0;
     }
@@ -20,20 +24,62 @@
     .node-noticia-general {
       margin-bottom: 15px;
     }
+    .view.view-xn17-noticies.view-id-xn17_noticies.view-display-id-block_2.view-id-bloc-mes-xn17-noticies {
+      margin-left: -15px;
+      margin-right: -15px;  
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 991px){
+  .page-noticies {
+    .pane-bundle-xn17-noticies-destacades-secundaries-2x2 .row{
+      padding: 0;
+    }
+    .node-noticia-general {
+      margin-bottom: 15px;
+    }
+    .view.view-xn17-noticies.view-id-xn17_noticies.view-display-id-block_2.view-id-bloc-mes-xn17-noticies {
+      margin-left: -15px;
+      margin-right: -15px;  
+    }
+    .modul_2x1 .titular h4 {
+      font-size: 1.8em;
+    }
   }
 }
 
-
 @media (max-width: 768px){
   .page-noticies {
-    .modul_2x1 .titular{
+    .modul_2x1 .titular, .panels-flexible-subportal_noticies .panels-flexible-region-subportal_noticies-destacada_principal .node-noticia-general .field-name-title{
       padding-bottom: 0;
       height: auto;
       padding-bottom: 5px;
     }
-    .modul_2x1 {
+    .modul_2x1, .panels-flexible-subportal_noticies .panels-flexible-region-subportal_noticies-destacada_principal .node-noticia-general {
       padding-bottom: 10px;
       height: auto;
+    }
+    .pane-bundle-xn17-noticies-destacades-secundaries-2x2 .row{
+      padding: 0;
+    }
+    .node-noticia-general {
+      margin-bottom: 15px;
+    }
+    .view.view-xn17-noticies.view-id-xn17_noticies.view-display-id-block_2.view-id-bloc-mes-xn17-noticies {
+      margin-left: -15px;
+      margin-right: -15px;  
+    }
+    .panels-flexible-subportal_noticies .panels-flexible-region-subportal_noticies-center .group-titular-entradeta {
+        position: relative;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        padding-bottom: 0;
+    }
+    .panels-flexible-subportal_noticies .panels-flexible-region-subportal_noticies-center .group-titular-entradeta .field-name-title h4 {
+        margin-top: 0;
     }
   }
 

@@ -29,6 +29,7 @@ var mesNoticiesObert = false;
       //     $('.node-type-panel .modul_2x1 .titular').matchHeight(options);
       //   });
       // });
+      //$('.page-opinio .views-field').matchHeight(options);
     },
 
 

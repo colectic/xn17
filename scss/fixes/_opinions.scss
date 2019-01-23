@@ -1,0 +1,111 @@
+.page-opinio {
+  .view-id-xn17-opinio-secundaries .cont_titular_entradeta img, .view-id-xn17_autor .cont_titular_entradeta img {
+      float: right;
+      clear: both;
+      border-radius: 50%;
+      margin: 3px -20px 0 0px;
+      width: 50%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px){
+  .page-opinio {
+    .view-id-xn17-opinio-destacada .titular-entradeta p{
+      font-size: 0.4em;
+    }
+    .view-id-xn17-opinio-destacada .views-field{
+      margin-bottom: 30px;
+    }
+    .view-id-xn17-opinio-destacada .pie {
+        top: 0;
+        bottom: 0;
+        font-size: 0.35em;
+        line-height: 1em;
+    }
+    .view-id-xn17-opinio-destacada .titular-entradeta h4{
+      font-size: 0.7em;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .page-opinio {
+    .modul_2x1 .titular{
+      padding-bottom: 0;
+      height: auto;
+      padding-bottom: 5px;
+    }
+    .modul_2x1{
+      padding-bottom: 10px;
+      height: auto;
+    }
+    .destacat_2x2 {
+      color: #FFFFFF;
+      margin-bottom: 25px;
+      width: 100%;
+      height: auto;
+      padding-bottom: 0;
+    }
+    .view-id-xn17-opinio-destacada .views-field{
+      margin-bottom: 30px;
+    }
+    .view-id-xn17-opinio-destacada .imatge-destacada-opinio {
+      width: 100%;
+      float: none;
+      padding-right: 0;
+      margin-bottom: 0;
+    }
+    .view-id-xn17-opinio-destacada .titular-entradeta {
+        width: 100%;
+        float: none;
+        padding-left: 0;
+    }
+    .view-id-xn17-opinio-destacada .pie {
+        float: none;
+        position: relative;
+        top: 0;
+        padding:5px 0 5px 10px;
+        padding-top: 5px;
+        width: 100%;
+        height: 30px;
+        padding-top: 8px;
+        
+    }
+    .view-id-xn17-opinio-destacada .titular-entradeta {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .view-id-xn17-opinio-destacada .titular-entradeta h4 {
+      padding-top: 0;
+    }
+    .view-id-xn17-opinio-secundaries .views-row, .view-id-xn17_autor .views-row {
+        margin-top:-0;
+      }
+    .rightimage {
+      text-align: center;
+      padding-top: 30px;
+    }
+    .view-id-xn17-opinio-secundaries .cont_titular_entradeta img, .page-opinio .view-id-xn17_autor .cont_titular_entradeta img {
+        float: none;
+        clear: both;
+        border-radius: 50%;
+        margin: 0 auto 0 auto;
+        width: 50%;
+        text-align: center;
+
+    }
+    .view-id-xn17-opinio-secundaries .cont_titular_entradeta {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+  }
+
+}
+@media (max-width: 480px){
+   .page-opinio {
+    .destacat_2x2 {
+        font-size: 1em;
+    }
+  }
+}
