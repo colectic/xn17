@@ -1,0 +1,44 @@
+// Principal Recursos i interior
+// -----------------------------------------------------------------------------
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-monografics {
+    .block--fes-voluntariat,.bloc--financament{
+      margin-right: 10px;
+      width: 48.9%;
+    }
+    .block--cursos, .block-image{
+      margin-left: 10px !important;
+      width: 48.9%;
+    }
+    .bloc-recursos.economics{
+      clear: both;
+    }
+    .bloc-recursos .block__content {
+      min-height: 150px;
+    }
+    .bloc-recursos:nth-child(even){
+      padding-right: 0;
+    }
+    .bloc-recursos:nth-child(odd){
+      padding-left: 0;
+    }
+    .bloc-banner .block__content{
+      margin: 0;
+    }
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 991px){
+  .page-monografics{
+    .view-seccions-especials .text h3{
+      line-height: 0.4em;
+    }
+  }
+}
+@media (max-width: 768px){
+  .page-monografics {
+  
+  }
+}
+

@@ -1,4 +1,4 @@
-.page-opinio {
+.page-opinio, .page-node {
   .view-id-xn17-opinio-secundaries .cont_titular_entradeta img, .view-id-xn17_autor .cont_titular_entradeta img {
       float: right;
       clear: both;
@@ -25,11 +25,26 @@
     .view-id-xn17-opinio-destacada .titular-entradeta h4{
       font-size: 0.7em;
     }
+    .bloc-recursos:nth-child(even){
+      padding-right: 0;
+    }
+    .bloc-recursos:nth-child(odd){
+      padding-left: 0;
+    }
+    .bloc-banner .block__content{
+      margin: 0;
+    }
+  }
+  .page-node{
+    .cont_titular_entradeta img{
+      margin: 3px -20px 0 0px;
+    }
+    
   }
 }
 
 @media (max-width: 768px){
-  .page-opinio {
+  .page-opinio, .page-node, .node-type-autor-a {
     .modul_2x1 .titular{
       padding-bottom: 0;
       height: auto;
@@ -46,21 +61,21 @@
       height: auto;
       padding-bottom: 0;
     }
-    .view-id-xn17-opinio-destacada .views-field{
+    .view-id-xn17-opinio-destacada .views-field, .node-autor-a .fitxa-autor .views-field{
       margin-bottom: 30px;
     }
-    .view-id-xn17-opinio-destacada .imatge-destacada-opinio {
+    .view-id-xn17-opinio-destacada .imatge-destacada-opinio, .node-autor-a .fitxa-autor .imatge-destacada-opinio{
       width: 100%;
       float: none;
       padding-right: 0;
       margin-bottom: 0;
     }
-    .view-id-xn17-opinio-destacada .titular-entradeta {
+    .view-id-xn17-opinio-destacada .titular-entradeta,  .node-autor-a .fitxa-autor .titular-entradeta{
         width: 100%;
         float: none;
         padding-left: 0;
     }
-    .view-id-xn17-opinio-destacada .pie {
+    .view-id-xn17-opinio-destacada .pie,  .node-autor-a .fitxa-autor .pie{
         float: none;
         position: relative;
         top: 0;
@@ -86,7 +101,7 @@
       text-align: center;
       padding-top: 30px;
     }
-    .view-id-xn17-opinio-secundaries .cont_titular_entradeta img, .page-opinio .view-id-xn17_autor .cont_titular_entradeta img {
+    .view-id-xn17-opinio-secundaries .cont_titular_entradeta img, .view-id-xn17_autor .cont_titular_entradeta img {
         float: none;
         clear: both;
         border-radius: 50%;
@@ -95,10 +110,23 @@
         text-align: center;
 
     }
-    .view-id-xn17-opinio-secundaries .cont_titular_entradeta {
+    .view-id-xn17-opinio-secundaries .cont_titular_entradeta, .view-id-xn17_autor .cont_titular_entradeta{
         padding-right: 5%;
         padding-left: 5%;
     }
+  }
+    .node-type-autor-a .node-autor-a .fitxa-autor {
+      width: 100%;
+      padding-bottom: 0;
+      background-color: #ededed;
+      margin-bottom: 15px;
+      height: auto;
+  }
+  .node-type-autor-a .node-autor-a .fitxa-autor .presentacio {
+      float: none;
+      padding-right: 5%;
+      padding-left: 5%;
+      padding-bottom: 5%;
   }
 
 }

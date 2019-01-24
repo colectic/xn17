@@ -9,15 +9,63 @@
     .agenda .views-field-nothing .resum{
       padding-bottom: 10px;
     }
+    .bloc-recursos:nth-child(even){
+      padding-right: 0;
+    }
+    .bloc-recursos:nth-child(odd){
+      padding-left: 0;
+    }
+    .bloc-banner .block__content{
+      margin: 0;
+    }
+  }
+  .page-node{
+    .block--fes-voluntariat,.bloc--financament{
+      margin-right: 10px;
+      width: 48.9%;
+    }
+    .block--cursos, .block-image{
+      margin-left: 10px !important;
+      width: 48.9%;
+    }
+    .bloc-recursos.economics{
+      clear: both;
+    }
+    .bloc-recursos .block__content {
+      min-height: 150px;
+    }
+    .bloc-recursos:nth-child(even){
+      padding-right: 0;
+    }
+    .bloc-recursos:nth-child(odd){
+      padding-left: 0;
+    }
+    .bloc-banner .block__content{
+      margin: 0;
+    }
   }
 }
 
 
 @media (max-width: 768px){
-  .page-agenda {
+  .page-agenda, .page-node{
     .agenda .views-field-nothing .data-lloc {
       position: relative;
       bottom: 0;
+    }
+    #edit-combine, #edit-field-date-event-value2-value-datepicker-popup-1,#edit-city,.views-exposed-widget.views-submit-button,#edit-submit-xn17-agenda, .form-item.form-type-date-popup.form-item-field-date-event-value2-value.form-group, .form-item.form-type-textfield.form-item-field-date-event-value2-value-date.form-group,.edit-field-date-event-value2-value {
+      width: 100%;
+    }
+    .views-exposed-form .views-exposed-widget{
+      padding: .5em 0 0 0;
+      width: 100%;
+    }
+    .block.filtre.filtre-agenda::after {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .block.filtre.filtre-agenda {
+      height: 350px;
     }
   }
 }

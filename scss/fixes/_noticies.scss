@@ -46,6 +46,11 @@
       font-size: 1.8em;
     }
   }
+  .page-node {
+    .field.field-name-field-usuari-autor.field-type-text.field-label-hidden {
+      margin-top: 40px;
+    }
+  }
 }
 
 @media (max-width: 768px){
@@ -80,6 +85,20 @@
     }
     .panels-flexible-subportal_noticies .panels-flexible-region-subportal_noticies-center .group-titular-entradeta .field-name-title h4 {
         margin-top: 0;
+    }
+  }
+  .page-node {
+    .modul_2x1 .titular{
+      padding-bottom: 0;
+      height: auto;
+      padding-bottom: 5px;
+    }
+    .modul_2x1 {
+      padding-bottom: 10px;
+      height: auto;
+    }
+    .field.field-name-field-usuari-autor.field-type-text.field-label-hidden {
+      margin-top: 40px;
     }
   }
 
