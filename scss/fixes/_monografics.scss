@@ -1,4 +1,4 @@
-// Principal Recursos i interior
+// Principal monografics
 // -----------------------------------------------------------------------------
 @media (min-width: 992px) and (max-width: 1200px) {
   .page-monografics {
@@ -26,6 +26,29 @@
       margin: 0;
     }
   }
+  .page-node {
+    .bloc-header-image img {
+      width: 100%;
+    }
+    .view-id-xn17-especial-un-contingut-destacat .cont_titular_entradeta {
+      padding-right: 31.18503%;
+    }
+    .view-id-xn17-especial-un-contingut-destacat .altres-continguts {
+      padding-top: 10px;
+    }
+    .view-id-xn17-especial-un-contingut-destacat {
+      height: 490px;
+    }
+    .view-id-xn17-especial-un-contingut-destacat .destacat-principal {
+      height: 490px;
+    }
+    .view-xn17-etiquetes .modul_2x1 .titular{
+      padding-bottom: 57.235%;
+    }
+    .view-xn17-etiquetes .modul_2x1 {
+      padding-bottom: 137.882%;
+    }
+  }
 
 }
 
@@ -35,10 +58,44 @@
       line-height: 0.4em;
     }
   }
+  .page-node {
+    .bloc-header-image img {
+      width: 100%;
+    }
+  }
 }
 @media (max-width: 768px){
   .page-monografics {
-  
+    .views-row{
+      border-top: none;
+    }
+    .pdng_mdl {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+    }
+    .views-row .text h3 {
+      font-size: 3em;
+    }
+    .views-row-last.views-row{
+      border: none;
+    }
+  }
+  .page-node{
+    .view-id-xn17-especial-un-contingut-destacat {
+        height: auto;
+    }
+    .view-id-xn17-especial-un-contingut-destacat .cont_titular_entradeta {
+      height: auto;
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .view-id-xn17-especial-un-contingut-destacat .altres-continguts {
+      margin-bottom: 60px;
+      padding-top: 10px;
+      height: auto;
+      background-color: #ededed;
+    }
   }
 }
 
