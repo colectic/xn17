@@ -45,7 +45,11 @@
     }
   }
 }
-
+@media (min-width: 769px) and (max-width: 991px){
+    .agenda .view-header h1{
+      margin-top: -116px;
+    }
+}
 
 @media (max-width: 768px){
   .page-agenda, .page-node{
@@ -66,6 +70,11 @@
     }
     .block.filtre.filtre-agenda {
       height: 350px;
+    }
+     .agenda .view-header h1 {
+      color: #2f3031;
+      margin-top: -30px;
+      word-break: break-all;
     }
   }
 }
