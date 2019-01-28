@@ -220,7 +220,13 @@
   */
 
   @media (max-width: 992px) {
-
+    .pane-xn17-monografics-portada {
+      .views-slideshow-controls-bottom {
+        display: none;
+      }
+      .skin-default {
+        background-color: transparent;
+      }
+    }
   }
-
 }
