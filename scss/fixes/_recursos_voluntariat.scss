@@ -59,7 +59,16 @@
   }
   .page-node{
     .view-xn17-slide-imatges-secundaries .views-field-field-imatges img{
-       width: 100% !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+    .views-slideshow-cycle-main-frame-row{
+      height: auto !important;
+      width: 100% !important;
+      position: relative !important;
+    }
+    .views-slideshow-cycle-main-frame {
+      width: 100% !important;
       height: auto !important;
     }
   }

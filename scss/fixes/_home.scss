@@ -200,6 +200,20 @@
         height: auto;
       }
     }
+
+
+    //noticies xarxanet
+     .modul_1x1,.modul_2x1 {
+      height: auto !important;
+      padding-bottom: 0 !important;
+    }
+     .modul_1x1 .titular,.modul_2x1 .titular {
+      height: auto !important;
+      padding-bottom: 10px !important;
+    }
+    .modul_1x1 .tipo-noticia{
+      padding-bottom: 5px !important;
+    }
   }
 
   /** 
@@ -207,7 +221,22 @@
   */
 
   @media (max-width: 992px) {
-
+    .views-slideshow-controls-bottom{
+      margin-bottom: 30px;
+    }
+    .modul_2x1 img {
+      width: 100% !important;
+      height: auto !important;
+    }
+    .modul_1x1 .titular {
+        padding-bottom: 50.353%;
+    }
+    .modul_1x1 {
+        padding-bottom: 65.176%;
+    }
+    .pane-xn17-recull-documents .document-biblioteca {
+      min-height: 350px;
+    }
   }
 
 }
