@@ -28,7 +28,7 @@
       margin: 0;
     }
   }
-  .page-node{
+  .page-node, .page-etiquetes{
     .bloc-recursos:nth-child(even){
       padding-right: 0;
     }
@@ -43,7 +43,7 @@
 
 
 @media (max-width: 768px){
-  .node-type-panel {
+  .node-type-panel,.page-etiquetes {
     .pane-custom{
       margin-bottom: 40px;
     }
@@ -57,7 +57,7 @@
       height: auto;
     }
   }
-  .page-node{
+  .page-node, .page-etiquetes{
     .view-xn17-slide-imatges-secundaries .views-field-field-imatges img{
       width: 100% !important;
       height: auto !important;
