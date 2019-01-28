@@ -6,6 +6,19 @@
   /** 
   * Viewport < 768px
   */
+  .views-slideshow-controls-bottom .titol-paginador {
+    display: none;
+  }
+  .pane-xn17-monografics-portada .views-slideshow-controls-bottom {
+    padding-left: 0;
+  }
+  .pane-xn17-monografics-portada .views-slideshow-controls-bottom .views_slideshow_pager_field_item {
+    padding-right: 13px;
+  }
+  .pane-xn17-monografics-portada .views-slideshow-controls-bottom .paginador {
+    padding-right: 0; 
+    top: 15px;
+  }
   
   @media (max-width: 768px) {
 
