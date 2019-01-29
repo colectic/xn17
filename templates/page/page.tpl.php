@@ -46,16 +46,16 @@
       <div class="header-region col-lg-6 col-md-6 col-sm-12 col-xs-12 second">
         <ul id="secondary-menu" class="menu nav navbar-nav">
           <?php print render($secondary_menu); ?>
-          <li class="leaf active hidden-md hidden-lg"><img id="search-icon" src="/sites/all/themes/xn17/assets/images/icon/icon-search-white.svg" alt="search icon"/></li>
+          <li class="leaf active hidden-md hidden-lg"><button class="btn-search"><img id="search-icon" src="/sites/all/themes/xn17/assets/images/icon/icon-search-white.svg" alt="search icon"/></button></li>
         </ul>
       </div>
     <?php endif; ?>
   </div>
 </header>
-<header id="second-header" class="header hidden-sm" role="header">
+<header id="second-header" class="header" role="header">
   <div class="container">
     <?php if ($logo): ?>
-      <div class="header-region col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="header-region col-lg-6 col-md-6 col-sm-12 col-xs-12 hidden-sm">
         <div id="site-logo">
           <a href="<?php print $front_page; ?>" class="navbar-brand" rel="home" title="<?php print t('Home'); ?>">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" id="logo" />
@@ -64,7 +64,7 @@
       </div>
     <?php endif; ?>
     <?php if ($search_form): ?>
-      <div class="header-region col-lg-6 col-md-6 col-sm-12 col-xs-12 hidden-xs">
+      <div class="header-region col-lg-6 col-md-6 col-sm-6 col-xs-12 header-search pull-right">
         <div id="search-form">
           <?php print $search_form; ?>
         </div>
@@ -74,6 +74,15 @@
 </header>
 <header id="third-header" class="header" role="header">
   <div class="container">
+    <!-- <?php //if ($search_form) : ?>
+      <div class="hidden-xs hidden-md hidden-lg">
+        <div class="header-region col-lg-6 col-md-6 col-sm-12 col-xs-12 header-search">
+          <div id="search-form">
+            <?php //print $search_form; ?>
+          </div>
+        </div>
+      </div>
+    <?php //endif; ?> -->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="sticky-logo hidden-xs hidden-md hidden-lg">
         <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="menu icon"/>

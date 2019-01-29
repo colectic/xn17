@@ -32,7 +32,17 @@ var mesNoticiesObert = false;
       //$('.page-opinio .views-field').matchHeight(options);
     },
 
-
+    buttonSearch: function () {
+      $('#secondary-menu .btn-search').click(function () {
+        var display = $('#second-header .header-search').css('display');
+        if(display=='none'){
+          $('#second-header .header-search').css('display','block');
+        }
+        else {
+          $('#second-header .header-search').css('display','none');
+        }
+      });
+    },
 
     /**
      * Handling of the Fixed Menus on page load & window scroll event
@@ -745,6 +755,7 @@ var mesNoticiesObert = false;
       Drupal.xn17.subMenuTitleOverrides();
       Drupal.xn17.agendaSetCalendarDateInForm();
       Drupal.xn17.equalHeight();
+      Drupal.xn17.buttonSearch();
     }
   };
 
