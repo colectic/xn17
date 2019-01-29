@@ -43,5 +43,11 @@
         display: none;
         transition: visibility 0s, opacity 0.5s linear;
     }
+    .page-node{
+        .field-content img{
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
 
 }
