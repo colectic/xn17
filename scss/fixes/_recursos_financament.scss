@@ -40,6 +40,25 @@
       word-break: break-all;
       font-size: 3em;
     }
+    .views-exposed-form .views-exposed-widget {
+        float: none;
+        padding: .5em 0 0 0;
+        width: 100%;
+    }
+    #edit-field-finfull-tipus-value {
+        width: 100%;
+    }
+    .form-item.form-type-select.form-item-field-finfull-tipus-value.form-group,#edit-field-finfull-ambit-value,#edit-combine,#edit-submit-xn17-financament {
+        width: 100%;
+    }
+    .block.filtre.filtre-financament{
+      height: 300px;
+    }
+    .block.filtre .content {
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
   }
 }
 
