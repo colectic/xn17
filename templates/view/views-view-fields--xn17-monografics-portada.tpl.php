@@ -56,12 +56,18 @@
                   </div>';
   }*/
 
+  if(!empty($fields['field_enllac_monogrific']->content)) {
+    $linkURL = $fields['field_enllac_monogrific']->content;
+  } else {
+    $linkURL = drupal_lookup_path('alias',"node/".$fields['nid']->content);  
+  }
+  
   $view = views_get_current_view();
   print "<div class='titol-regio'>" . check_plain($view->get_title()) . "</div>";
   print '<div class="modul-monografic-portada" style="background-image: url(' . $rawImatge . ');">';
     print '<div class="cont_titular_entradeta">';
       print '<div class="titular_content"><h2>'.$fields['title']->content.'</h2>';
-      print '<h3>'.$fields['title_1']->content.'</h3></div>';
+      print '<h3><a href="'.$linkURL.'">'.$fields['title_1']->content.'</a></h3></div>';
       print '<div class="hidden-xs resum" style="z-index:0;">' . $fields['field_resum']->content . '</div>';
     print '</div>';
   print '</div>';

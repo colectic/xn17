@@ -1,0 +1,39 @@
+// Principal publica
+// -----------------------------------------------------------------------------
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-publica-a-xarxanet{
+    .bloc-recursos:nth-child(even){
+      padding-right: 0;
+    }
+    .bloc-recursos:nth-child(odd){
+      padding-left: 0;
+    }
+    .bloc-banner .block__content{
+      margin: 0;
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 991px){
+  .page-publica-a-xarxanet{
+    .panel-3col-33-stacked .panel-col-first,.panel-3col-33-stacked .panel-col,.panel-3col-33-stacked .panel-col-last{
+      float: none;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+     #acte-formacio h2,  #colabora h2{
+      min-height: auto;
+    }
+  }
+}
+@media (max-width: 768px){
+  .page-publica-a-xarxanet{
+    .panel-3col-33-stacked .panel-col-first,.panel-3col-33-stacked .panel-col,.panel-3col-33-stacked .panel-col-last{
+      float: none;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+     #acte-formacio h2,  #colabora h2{
+      min-height: auto;
+    }
+  }
+}
