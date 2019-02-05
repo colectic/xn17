@@ -1,0 +1,53 @@
+.responsive-table {
+    overflow-x: auto;
+}
+// #secondary-menu .leaf #search-icon{
+//     display: none;
+// }
+#secondary-menu .btn-search {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+@media (min-width: 769px) and (max-width: 991px){
+    .header-search{
+        display: none;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    #search-form #edit-basic{
+        width: 100%;
+    }
+    #search-form {
+        width: 100%;
+    }
+    #search-form #edit-keys {
+        width: 100%;
+    }
+   #search-form .form-item.form-type-textfield.form-item-keys.form-group {
+        width: 100%;
+    }
+    .front{
+        .pane-xn17-monografics-portada .skin-default {
+            margin-right: 0;
+        }
+        .pane-xn17-monografics-portada .imatge {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+}
+@media (max-width: 768px){
+    .header-search{
+        display: none;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .page-node{
+        .field-content img{
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+}

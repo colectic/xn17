@@ -1,0 +1,23 @@
+// Principal cerca
+// -----------------------------------------------------------------------------
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-search{
+    .bloc-recursos:nth-child(even){
+      padding-right: 0;
+    }
+    .bloc-recursos:nth-child(odd){
+      padding-left: 0;
+    }
+    .bloc-banner .block__content{
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .page-search{
+    #edit-submit{
+      margin-top: 10px;
+    }
+  }
+}

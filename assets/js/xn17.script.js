@@ -18,6 +18,32 @@ var mesNoticiesObert = false;
   
   Drupal.xn17 = {
 
+
+    equalHeight: function () {
+      var options = {property: 'height'};
+      $('.agenda .views-field-nothing').matchHeight(options);
+      $('.financament .views-field-nothing').matchHeight(options);
+      // $('.node-type-panel .modul_2x1 .titular').matchHeight(options);
+      // $('.pager--infinite-scroll.pager--infinite-scroll').click(function () {
+      //   $('body').ajaxComplete(function () {
+      //     $('.node-type-panel .modul_2x1 .titular').matchHeight(options);
+      //   });
+      // });
+      //$('.page-opinio .views-field').matchHeight(options);
+    },
+
+    buttonSearch: function () {
+      $('#secondary-menu .btn-search').click(function () {
+        var display = $('#second-header .header-search').css('display');
+        if(display=='none'){
+          $('#second-header .header-search').css('display','block');
+        }
+        else {
+          $('#second-header .header-search').css('display','none');
+        }
+      });
+    },
+
     /**
      * Handling of the Fixed Menus on page load & window scroll event
      * 
@@ -728,6 +754,8 @@ var mesNoticiesObert = false;
       Drupal.xn17.mainMenuSubmenus();
       Drupal.xn17.subMenuTitleOverrides();
       Drupal.xn17.agendaSetCalendarDateInForm();
+      Drupal.xn17.equalHeight();
+      Drupal.xn17.buttonSearch();
     }
   };
 

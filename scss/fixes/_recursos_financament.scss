@@ -1,0 +1,64 @@
+// Principal Recursos-> finançament
+// -----------------------------------------------------------------------------
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-financament {
+    .financament .views-field-nothing .data-lloc {
+      position: relative;
+      bottom: 0;
+    }
+    .financament .views-field-nothing .resum{
+      padding-bottom: 10px;
+    }
+    .bloc-recursos:nth-child(even){
+      padding-right: 0;
+    }
+    .bloc-recursos:nth-child(odd){
+      padding-left: 0;
+    }
+    .bloc-banner .block__content{
+      margin: 0;
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 991px){
+  .page-financament {
+    .financament .view-header h1{
+      margin-top: -116px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .page-financament {
+    .financament .views-field-nothing .data-lloc {
+      position: relative;
+      bottom: 0;
+    }
+   .financament .view-header h1 {
+      color: #2f3031;
+      margin-top: -30px;
+      word-break: break-all;
+      font-size: 3em;
+    }
+    .views-exposed-form .views-exposed-widget {
+        float: none;
+        padding: .5em 0 0 0;
+        width: 100%;
+    }
+    #edit-field-finfull-tipus-value {
+        width: 100%;
+    }
+    .form-item.form-type-select.form-item-field-finfull-tipus-value.form-group,#edit-field-finfull-ambit-value,#edit-combine,#edit-submit-xn17-financament {
+        width: 100%;
+    }
+    .block.filtre.filtre-financament{
+      height: 300px;
+    }
+    .block.filtre .content {
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+  }
+}
+

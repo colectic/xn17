@@ -21,7 +21,7 @@ $nom_autor = $autor->title;
         $urlNode = url($content['field_opinio_destacada'][0]['#href']);
         print "<a href='" . $urlNode . "'><h4>" . $node->title . "</h4></a>";
         ?>
-        <div class="hidden-xs">
+        <div class="hola hidden-xs">
         <?php
         print "<a href='" . $urlNode . "'>" . $node->field_resum['und'][0]['value'] . "</a>";
         print "<div class='data'>" . format_date($node->field_data_calculada['und'][0]['value'], "custom", "d, M Y") . "</div>";
