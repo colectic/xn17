@@ -106,18 +106,18 @@
   </div>
 </header>
 
-<header id="fixed-menu-noticies" class="fixed-menu open">
+<header id="fixed-menu-noticies" class="fixed-menu closed">
   <div class="container">
-    <button id="fixed-menu-noticies-toggler" class="open"><span class="sr-only">Mostra o amaga les categories de notícies</span></button>
+    <button id="fixed-menu-noticies-toggler" class="closed"><span class="sr-only">Mostra o amaga les categories de notícies</span></button>
     <div class="row">
       <div class="inner"></div>
     </div>
   </div>
 </header>
 
-<header id="fixed-menu-recursos" class="fixed-menu open">
+<header id="fixed-menu-recursos" class="fixed-menu closed">
   <div class="container">
-    <button id="fixed-menu-recursos-toggler" class="open"><span class="sr-only">Mostra o amaga les categories de recursos</span></button>
+    <button id="fixed-menu-recursos-toggler" class="closed"><span class="sr-only">Mostra o amaga les categories de recursos</span></button>
     <div class="row">
       <div class="inner"></div>
     </div>

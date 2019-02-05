@@ -387,8 +387,8 @@ var mesNoticiesObert = false;
           // Populate a submenu toggler
       
           var srOnlyText = 'Mostra o amaga les categories del submenu';
-          var $blockToggler = $('<button class="block-menu-toggler open"><span class="sr-only">' + srOnlyText + '</span></button>');
-          var $paneToggler = $('<button class="pane-menu-toggler open"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $blockToggler = $('<button class="block-menu-toggler closed"><span class="sr-only">' + srOnlyText + '</span></button>');
+          var $paneToggler = $('<button class="pane-menu-toggler closed"><span class="sr-only">' + srOnlyText + '</span></button>');
           var $block = $('.block-menu.menu');
           var $blockTitle = $('.block-menu.menu .block__title');
           var $pane = $('.pane-block.menu');

@@ -49,5 +49,15 @@
             height: auto !important;
         }
     }
+    .page-noticies{
+        .block-menu.menu.menu-noticies .block__content{
+            display: none;
+        }
+    }
+    .page-recursos{
+        .block-menu.menu.menu-recursos .block__content{
+            display: none;
+        }
+    }
 
 }
