@@ -367,6 +367,10 @@
       color: $xn17-vermell;
       bottom: 30px;
       position: absolute;
+
+      .date-display-range {
+        display: inline;
+      }
     }
     @media (min-width: $screen-xs-max) { padding-top: 15px; padding-left: 15px;}
     @media (max-width: $screen-xs-max) {
@@ -384,6 +388,33 @@
   }
   @media (min-width: $screen-xs-max) {
     .views-field-nothing, .views-field-field-agenda-imatge { border-top: solid 1px $gray; }
+  }
+
+  // Filtre
+  #edit-field-esdeveniment-en-linia-value-wrapper {
+    margin-top: 8px; 
+
+    > label, .views-widget {
+      float: left;
+    }
+  }
+  #edit-field-esdeveniment-en-linia-value {
+    div.form-type-radio {
+      display: inline;
+
+      label {
+        padding: 0;
+        margin-left: 10px;
+
+        input {
+          padding: 0;
+          margin: 0;
+          width: 20px;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
   }
 }
 

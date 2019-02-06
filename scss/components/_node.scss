@@ -188,8 +188,13 @@
   @media (min-width: $screen-sm-max) {
     .field-name-field-date-event {
       padding-bottom: 0;
-      display: block;
-      width: 100%;
+      display: inline-block;
+      width: auto;
+      margin-right: 0.5em;
+    }
+    .field-name-esdeveniment-en-linia {
+      display: inline-block;
+      font-weight: bold;
     }
   }
   
