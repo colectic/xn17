@@ -1,15 +1,40 @@
 .page-opinio, .page-node {
+  .destacat_2x2 .titular-entradeta {
+    max-height: 282px;
+    overflow: hidden;
+  }
+  .view-id-xn17-opinio-destacada .titular-entradeta h4 {
+    margin-top: 0px;
+  }
   .view-id-xn17-opinio-secundaries .cont_titular_entradeta img, .view-id-xn17_autor .cont_titular_entradeta img {
       float: right;
       clear: both;
       border-radius: 50%;
-      margin: 3px -20px 0 0px;
+      margin: 0px -20px 0 0px;
       width: 50%;
   }
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-opinio, .page-node {
+    .destacat_2x2 .titular-entradeta {
+      max-height: 220px;
+    }
+  }
+  .view-id-xn17-opinio-destacada .titular-entradeta h4,
+  .view-id-xn17-opinio-secundaries .cont_titular_entradeta h4, 
+  .view-id-xn17_autor .cont_titular_entradeta h4 {
+    padding-top: 10px;
+  }
+}
+
+
+
 @media (min-width: 769px) and (max-width: 991px){
   .page-opinio {
+    .destacat_2x2 .titular-entradeta {
+      max-height: none;
+    }
     .view-id-xn17-opinio-destacada .titular-entradeta p{
       font-size: 0.4em;
     }
