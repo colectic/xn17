@@ -986,7 +986,7 @@
       display:block;
       float: right;
       position: relative;
-      @include padding-top(220 210);
+      @include padding-top(190 203);
       @media screen and (max-width:$screen-xs){
         height:70px;
       }
