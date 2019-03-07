@@ -1,0 +1,85 @@
+// Skin pel Dia Mundial de la Dona 2019
+// @see hook_preprocess_html (template.php)
+// -----------------------------------------------------------------------------
+
+body.woman-day {
+
+  // Small & large viewports
+
+  .header-region {
+
+    #site-logo {
+
+      &:after {
+        content: "";
+        background-image: url(//xarxanet.org/sites/default/files/woman-day-icon.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        width: 32px;
+        height: 50px;
+        position: absolute;
+        top: -8px;
+        right: -30px;
+        z-index: 1;
+      }
+    }
+  }
+
+  // Medium viewports
+
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    #third-header {
+
+      .sticky-logo {
+        position: relative;
+
+        &:after {
+          content: "";
+          background-image: url(//xarxanet.org/sites/default/files/woman-day-icon.png);
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size
+          : cover;
+          display: block;
+          width: 32px;
+          height: 50px;
+          position: absolute;
+          top: -8px;
+          right: -45px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  // Medium & large viewports (Sticky header)
+
+  @media (min-width: 768px) {
+
+    #third-header-clone {
+
+      .sticky-logo {
+        position: relative;
+
+        &:after {
+          content: "";
+          background-image: url(//xarxanet.org/sites/default/files/woman-day-icon.png);
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size
+          : cover;
+          display: block;
+          width: 32px;
+          height: 50px;
+          position: absolute;
+          top: 0px;
+          right: -45px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
