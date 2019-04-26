@@ -452,11 +452,11 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 	 <table class="butlleti" style='width: 100%; margin-bottom: 20px;'><tr class='body'>
 	<td style='padding: 10px 0 0 0'>
 	<a href="http://voluntariat.org/" style='text-decoration:none'>
-		<img src="<?php echo $pathroot; ?>/sites/default/files/butlletins/actualitat/banner_voluntariat.jpg" alt="banner voluntariat" />
+		<img src="<?php echo $pathroot; ?>/sites/default/files/butlletins/actualitat/banner_voluntariat.jpg" alt="banner voluntariat" style="width: 100%;"/>
 	</a></td></tr><tr class='body'>
 	<td style='padding: 10px 0 0 0'>
 	<a href="http://www.xarxanet.org/formulari-dassessorament" style='text-decoration:none'>
-		<img src="<?php echo $pathroot; ?>/sites/default/files/butlletins/actualitat/banner_assessorament.jpg" alt="banner voluntariat" style='border: 0 none;'/>
+		<img src="<?php echo $pathroot; ?>/sites/default/files/butlletins/actualitat/banner_assessorament.jpg" alt="banner voluntariat" style="border: 0 none; width: 100%;"/>
 	</a></td></tr>
 	<td style='padding: 10px 0 0 0'>
 	<a style="text-decoration:none" href="http://nonprofit.xarxanet.org">
