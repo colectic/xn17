@@ -87,6 +87,6 @@
       </div>
     </div>
     <?php print $content ?>
-    <a id="publish-link" href="/publica"><img src="/sites/all/themes/xn17/assets/images/icon/icon-publish-red.svg" />PUBLICA UN ESDEVENIMENT</a>
+    <a id="publish-link" href="/node/add/event"><img src="/sites/all/themes/xn17/assets/images/icon/icon-publish-red.svg" />PUBLICA UN ESDEVENIMENT</a>
   </div>
 </div>
