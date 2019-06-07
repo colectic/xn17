@@ -40,6 +40,19 @@ function xn17_preprocess_html(&$variables) {
       }
     }
   }
+
+  // Afegint una custom class al <body> pel Dia Mundial de la Dona 2019
+  
+  $begin_date = strtotime(date('07-03-2019 22:00:00'));
+  $end_date = strtotime(date('08-03-2019 23:59:59'));
+  $now = strtotime(date('d-m-Y H:i:s'));
+  
+  if ($now >= $begin_date && $now <= $end_date ) {
+    $variables['classes_array'][] = 'woman-day';
+  }
+  else if (isset($_GET['skin']) && $_GET['skin'] == 'woman-day') {
+    $variables['classes_array'][] = 'woman-day';
+  }
 }
 
 /**

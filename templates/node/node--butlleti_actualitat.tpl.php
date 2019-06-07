@@ -379,7 +379,7 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 				$img = file_create_url($node->field_actualitat_lat_sup_img_e['und'][0]['uri']);
 				$alt = $node->field_actualitat_lat_sup_img_e['und'][0]['alt'];
 			}
-			echo "<table class='butlleti' style='width: 100%; margin-bottom: 20px; background-color: #ededed;'><tr class='body'>";
+			echo "<table class='butlleti' style='width: 100%; min-width: 295px; margin-bottom: 20px; background-color: #ededed;'><tr class='body'>";
 
 			if ($node->field_actualitat_lat_sup_epigraf['und'][0]['value'] != '') {
 				echo "<td style='background-color: #BE1622; color: white; font-family: Fira Sans SemiBold,Helvetica,Arial,sans-serif; font-size: 12pt; padding: 0px 10px; height: 28px;'>{$node->field_actualitat_lat_sup_epigraf['und'][0]['value']}</td>";
@@ -452,11 +452,11 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 	 <table class="butlleti" style='width: 100%; margin-bottom: 20px;'><tr class='body'>
 	<td style='padding: 10px 0 0 0'>
 	<a href="http://voluntariat.org/" style='text-decoration:none'>
-		<img src="<?php echo $pathroot; ?>/sites/default/files/butlletins/actualitat/banner_voluntariat.jpg" alt="banner voluntariat" />
+		<img src="<?php echo $pathroot; ?>/sites/default/files/butlletins/actualitat/banner_voluntariat.jpg" alt="banner voluntariat" style="width: 100%;"/>
 	</a></td></tr><tr class='body'>
 	<td style='padding: 10px 0 0 0'>
 	<a href="http://www.xarxanet.org/formulari-dassessorament" style='text-decoration:none'>
-		<img src="<?php echo $pathroot; ?>/sites/default/files/butlletins/actualitat/banner_assessorament.jpg" alt="banner voluntariat" style='border: 0 none;'/>
+		<img src="<?php echo $pathroot; ?>/sites/default/files/butlletins/actualitat/banner_assessorament.jpg" alt="banner voluntariat" style="border: 0 none; width: 100%;"/>
 	</a></td></tr>
 	<td style='padding: 10px 0 0 0'>
 	<a style="text-decoration:none" href="http://nonprofit.xarxanet.org">

@@ -379,7 +379,7 @@ foreach ($wrapper->field_abast_noticies as $noticia){
 		}
 		?>	
 		<p style="text-align: right">
-			<a style="font-weight: bold; color: #000001; text-decoration: none" href="http://www.voluntariat.org/Promoci%C3%B3delvoluntariat/Volsfervoluntariat.aspx">
+			<a style="font-weight: bold; color: #000001; text-decoration: none" href="https://connectat.voluntariat.gencat.cat/propostes">
 				Més crides a voluntariat
 			</a>
 			<a href="#inici" style="text-decoration: none">  <img src="<?php echo $pathroot;?>/sites/default/files/butlletins/abast/fletxeta.gif" alt="torna a dalt" style="border:0 none;"/></a>
