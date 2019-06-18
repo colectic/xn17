@@ -67,3 +67,35 @@
     }
   }
 }
+
+#comment-form {
+
+  #comment-body-add-more-wrapper fieldset {
+    display: none;
+  }
+  
+  .form-item-anti-spam {
+    margin-top: 30px;
+
+    input {
+      max-width: 304px;
+    }
+  }
+  
+  fieldset.captcha {
+    border: none;
+    box-shadow: none;
+
+    .panel-heading {
+      display: none;
+    }
+
+    .panel-body {
+      padding: 0;
+
+      .help-block {
+        display: none;
+      }
+    }
+  }
+}
