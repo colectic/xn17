@@ -1125,8 +1125,35 @@ body.page-node-126433 {
   }
 }
 
+// -----------------------------------------------------------------------------
+// Correció del field "Àmbit de la notícia" (node-edit form)
+// -----------------------------------------------------------------------------
 
+.page-node-edit.node-type-noticia-general {
 
+  .field-name-field-tipus-noticia {
 
+    select {
+      width: auto;
+      min-width: 150px;
+    }
+  }
 
+  .field-name-field-ambit-noticia {
+    position: initial;
+    z-index: initial;
+    background-color: initial;
+    padding: initial;
+    height: initial;
+    color: initial;
+    text-transform: initial;
+    font-weight: initial;
+    display: initial;
+    top: initial;
 
+    select {
+      width: auto;
+      min-width: 150px;
+    }
+  }
+}
