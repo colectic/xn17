@@ -18,6 +18,49 @@ var mesNoticiesObert = false;
   
   Drupal.xn17 = {
 
+    /**
+     * Handles in a more accurately manner the anchors of the Resources' indexs
+     * 
+     * This prevent to scroll to the target element, that by default gets hidden by the browser
+     * after going to it. This snippets prevents that.
+     */
+
+    resourcesIndexAnchors: function() {
+
+      if ($('body').hasClass('node-type-recurs-general')) {
+      
+        $('.field-name-seccions-recurs-index .view li a').click(function(event) {
+          
+          event.preventDefault();
+
+          // Getting the target element and it's offset's top
+
+          var targetId = $(this).attr('href').replace('#', '');
+          var $targetElement = $('#' + targetId);
+          var targetElementOffsetTop = parseInt($targetElement.offset().top);
+          
+          // Calculating the height of some fixed elements of the page
+
+          var marginTop = 15;
+          var drupalAdminMenu = 0;
+          if ($('#admin-menu').length > 0) {
+            drupalAdminMenu = parseInt($('#admin-menu').height());
+          }
+          var mainFixedHeaderHeight = parseInt($('#third-header-clone').height());
+          var resourcesFixedToolbarHeight = parseInt($('#fixed-menu-recursos').height());
+          var targetElementHeight = $targetElement.height();
+
+          // Calculating the real amount of pixels to scroll to reach the target element
+          // One we know the total height of fixed elements on the page
+
+          var scrollTo = targetElementOffsetTop - resourcesFixedToolbarHeight - mainFixedHeaderHeight - drupalAdminMenu - marginTop;
+          
+          // Finally, scroll to the target element (without any animation)
+
+          window.scrollTo(0, scrollTo);
+        });
+      }
+    },
 
     equalHeight: function () {
       var options = {property: 'height'};
@@ -746,6 +789,7 @@ var mesNoticiesObert = false;
 
   Drupal.behaviors.xn17_tothomweb = {
     attach: function(context, setting) {
+      Drupal.xn17.resourcesIndexAnchors();
       Drupal.xn17.fixedMenu();
       Drupal.xn17.fixedMenuToggler();
       Drupal.xn17.regularMenuToggler();
