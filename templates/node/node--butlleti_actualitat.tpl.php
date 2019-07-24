@@ -379,7 +379,7 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 				$img = file_create_url($node->field_actualitat_lat_sup_img_e['und'][0]['uri']);
 				$alt = $node->field_actualitat_lat_sup_img_e['und'][0]['alt'];
 			}
-			echo "<table class='butlleti' style='width: 100%; min-width: 295px; margin-bottom: 20px; background-color: #ededed;'><tr class='body'>";
+			echo "<table class='butlleti' style='width: 373px; margin-bottom: 20px; background-color: #ededed;'><tr class='body'>";
 
 			if ($node->field_actualitat_lat_sup_epigraf['und'][0]['value'] != '') {
 				echo "<td style='background-color: #BE1622; color: white; font-family: Fira Sans SemiBold,Helvetica,Arial,sans-serif; font-size: 12pt; padding: 0px 10px; height: 28px;'>{$node->field_actualitat_lat_sup_epigraf['und'][0]['value']}</td>";
