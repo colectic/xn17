@@ -222,8 +222,15 @@ foreach ($wrapper->field_abast_noticies as $noticia){
 			<table class="butlleti" style="width:100%; font-size:11px;">
 				<tr><td style="font-weight:bold">
 					<?php
-					$created = time(); 
-					echo $dies[date('N', $created)-1].', '.date('j', $created).' '.$mesos[date('n', $created)-1].' de '.date('Y', $created);
+					
+					// Whilst this is not exactly true, it's the closest approach
+					// in order to get the newsletter's sending date. 
+					// The date of sending is not stored in the DB by SimpleNews at all.
+
+					$sending_date = $node->created;
+
+					$date_to_render =  $dies[date('N', $sending_date) - 1] . ', ' . date('j', $sending_date) . ' ' . $mesos[date('n', $sending_date) - 1] . ' de ' . date('Y', $sending_date);
+					print $date_to_render;
 					?>
 				</td>
 				<td style="text-align: right; font-weight:bold">
