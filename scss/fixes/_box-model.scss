@@ -88,17 +88,19 @@
         @media (min-width: 768px) {
           margin: 0;
           font-size: 2em;
-          height: 4em;
+          height: 5.05em;
         }
   
         @media (min-width: 992px) {
           font-size: 1.25em;
-          height: 5em;
+          height: 4.4em;
+          line-height: 1.1em;
         }
         
         @media (min-width: 1200px) {
           font-size: 1.42em;
-          height: 6em;
+          height: 5.4em;
+          line-height: 1.1em;
         }
         
         a {
