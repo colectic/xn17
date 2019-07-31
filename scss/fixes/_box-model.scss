@@ -22,6 +22,18 @@
   .first {
     position: relative;
 
+    figure {
+
+      a {
+        display: block;
+        
+        img {
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+
     .video-trigger {
       position: absolute;
       top: 0px;
