@@ -61,3 +61,46 @@
     }
 
 }
+
+// Fixes a les finestres modals "Lightbox"
+
+#lightbox {
+    
+    #outerImageContainer {
+
+        iframe {
+            border: none !important;
+        }
+    }
+
+    #bottomNavClose {
+        padding: 0;
+        position: relative;
+        top: -3px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    #lightbox2-overlay {
+        width: 100% !important;
+    }
+    
+    #lightbox {
+        width: 90% !important;
+        left: 5% !important;
+    
+        #outerImageContainer {
+            width: 100% !important;
+
+            iframe {
+                border: none !important;
+                width: 100% !important;
+            }
+        }
+
+        #imageDataContainer {
+            width: 100% !important;
+        }
+    }
+}
