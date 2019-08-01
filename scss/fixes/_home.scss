@@ -259,4 +259,264 @@
       }
     }
   }
+
+  // Fixes al Banner de Nonprofit
+
+  .pane-custom.pane-1.pdng_mdl {
+    margin: 0 -15px 0px;
+    display: block;
+    overflow: hidden;
+
+    img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    @media (min-width: 768px) {
+      height: 395px;
+      margin: 0 -15px 30px;
+
+      .pane-content {
+        height: 100%;
+        display: block;
+
+        .modul_2x1 {
+          background-color: transparent;
+          padding-top: 0px;
+          width: 100%;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          height: 100%;
+          display: block;
+
+          p,
+          a {
+            height: 100%;
+            display: block;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 992px) {
+      height: 260px;
+
+      .pane-content {
+        height: 100%;
+        display: block;
+
+        .modul_2x1 {
+          background-color: transparent;
+          padding-top: 0px;
+          width: 100%;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          height: 100%;
+          display: block;
+
+          p,
+          a {
+            height: 100%;
+            display: block;
+            margin: 0;
+
+            img {
+              width: auto !important;
+              height: 100% !important;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      height: 320px;
+    }
+  }
+
+  // Fixes al carrusel "A Xarxanet"
+
+  .view-id-xn17_destacats.view-display-id-block_1 {
+    margin-bottom: 30px;
+
+    @media (min-width: 992px) {
+      overflow: hidden;
+      display: block;
+      height: 260px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 320px;
+    }
+  }
+
+  .pane-xn17-destacats .views-slideshow-cycle-main-frame div .cont_titular_entradeta {
+  
+    h3 {
+      text-shadow: 0px 0px 30px black;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .pane-xn17-destacats .views-slideshow-cycle-main-frame div .cont_titular_entradeta {
+      top: 5%;
+      padding-bottom: 0;
+
+      h3 {
+        font-size: 2.8em;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .pane-xn17-destacats .views-slideshow-cycle-main-frame div .cont_titular_entradeta {
+      top: 5%;
+      left: 5%;
+
+      h3 {
+        font-size: 1.8em;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .pane-xn17-destacats .views-slideshow-cycle-main-frame div .cont_titular_entradeta {
+
+      h3 {
+        font-size: 2.3em;
+      }
+    }
+  }
+
+  // Panel de Destacats (Notícies)
+
+  .pane-xn17-noticia-destacada-principal-panel-pane-1 {
+
+    .view-xn17-noticia-destacada-principal {
+
+    .destacat_2x2  {
+        padding-bottom: 0;
+        height: 320px;
+        margin-bottom: 30px;
+        
+        @media (min-width: 480px) {
+          height: 320px;
+        }
+
+        @media (min-width: 992px) {
+          height: 260px;
+        }
+
+        @media (min-width: 1200px) {
+          height: 320px;
+        }
+
+        .cont_titular_entradeta {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 21px;
+          padding-right: 0;
+          padding-bottom: 0;
+
+
+          h3 {
+            margin: 50px 45px 30px;
+            font-size: 1em;
+
+            @media (min-width: 480px) {
+              margin: 50px 45px 30px 45px;
+            }
+            
+            @media (min-width: 768px) {
+              margin: 50px 25% 30px 45px;
+              font-size: 1.5em;
+              line-height: 1.25em;
+            }
+
+            @media (min-width: 992px) {
+              margin: 50px 60px 30px 45px;
+              font-size: 1em;
+            }
+
+            @media (min-width: 1200px) {
+              font-size: 1.5000em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Panel de Destacats (Recursos)
+
+  .panels-flexible-76 .regio_3 {
+    border-top: none;
+
+    .pane-xn17-recursos-destacats-portada-panel-pane-1 {
+      border-top: 3px solid #be1522;
+
+      .view-xn17-recursos-destacats-portada {
+
+      .destacat_2x2  {
+          padding-bottom: 0;
+          height: 320px;
+          margin-bottom: 30px;
+          
+          @media (min-width: 480px) {
+            height: 320px;
+          }
+
+          @media (min-width: 992px) {
+            height: 260px;
+          }
+
+          @media (min-width: 1200px) {
+            height: 320px;
+          }
+
+          .cont_titular_entradeta {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 21px;
+            padding-right: 0;
+            padding-bottom: 0;
+
+
+            h3 {
+              margin: 50px 45px 30px;
+              font-size: 1em;
+
+              @media (min-width: 480px) {
+                margin: 50px 45px 30px 45px;
+              }
+              
+              @media (min-width: 768px) {
+                margin: 50px 25% 30px 45px;
+                font-size: 1.5em;
+                line-height: 1.25em;
+              }
+
+              @media (min-width: 992px) {
+                margin: 50px 60px 30px 45px;
+                font-size: 1em;
+              }
+
+              @media (min-width: 1200px) {
+                font-size: 1.5000em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Monogràfics de portada
+
+  .pane-xn17-monografics-portada {
+    margin-right: 30px;
+  }
 }
