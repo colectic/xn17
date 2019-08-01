@@ -260,66 +260,6 @@
     }
   }
 
-  // Panel de Destacats
-
-  .pane-xn17-noticia-destacada-principal-panel-pane-1 {
-
-    .view-xn17-noticia-destacada-principal {
-
-    .destacat_2x2  {
-        padding-bottom: 0;
-        height: 320px;
-        margin-bottom: 30px;
-        
-        @media (min-width: 480px) {
-          height: 320px;
-        }
-
-        @media (min-width: 992px) {
-          height: 260px;
-        }
-
-        @media (min-width: 1200px) {
-          height: 320px;
-        }
-
-        .cont_titular_entradeta {
-          position: absolute;
-          top: 0;
-          left: 0;
-          font-size: 21px;
-          padding-right: 0;
-          padding-bottom: 0;
-
-
-          h3 {
-            margin: 50px 45px 30px;
-            font-size: 1em;
-
-            @media (min-width: 480px) {
-              margin: 50px 45px 30px 45px;
-            }
-            
-            @media (min-width: 768px) {
-              margin: 50px 25% 30px 45px;
-              font-size: 1.5em;
-              line-height: 1.25em;
-            }
-
-            @media (min-width: 992px) {
-              margin: 50px 60px 30px 45px;
-              font-size: 1em;
-            }
-
-            @media (min-width: 1200px) {
-              font-size: 1.5000em;
-            }
-          }
-        }
-      }
-    }
-  }
-
   // Fixes al Banner de Nonprofit
 
   .pane-custom.pane-1.pdng_mdl {
@@ -447,5 +387,136 @@
         font-size: 2.3em;
       }
     }
+  }
+
+  // Panel de Destacats (Notícies)
+
+  .pane-xn17-noticia-destacada-principal-panel-pane-1 {
+
+    .view-xn17-noticia-destacada-principal {
+
+    .destacat_2x2  {
+        padding-bottom: 0;
+        height: 320px;
+        margin-bottom: 30px;
+        
+        @media (min-width: 480px) {
+          height: 320px;
+        }
+
+        @media (min-width: 992px) {
+          height: 260px;
+        }
+
+        @media (min-width: 1200px) {
+          height: 320px;
+        }
+
+        .cont_titular_entradeta {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 21px;
+          padding-right: 0;
+          padding-bottom: 0;
+
+
+          h3 {
+            margin: 50px 45px 30px;
+            font-size: 1em;
+
+            @media (min-width: 480px) {
+              margin: 50px 45px 30px 45px;
+            }
+            
+            @media (min-width: 768px) {
+              margin: 50px 25% 30px 45px;
+              font-size: 1.5em;
+              line-height: 1.25em;
+            }
+
+            @media (min-width: 992px) {
+              margin: 50px 60px 30px 45px;
+              font-size: 1em;
+            }
+
+            @media (min-width: 1200px) {
+              font-size: 1.5000em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Panel de Destacats (Recursos)
+
+  .panels-flexible-76 .regio_3 {
+    border-top: none;
+
+    .pane-xn17-recursos-destacats-portada-panel-pane-1 {
+      border-top: 3px solid #be1522;
+
+      .view-xn17-recursos-destacats-portada {
+
+      .destacat_2x2  {
+          padding-bottom: 0;
+          height: 320px;
+          margin-bottom: 30px;
+          
+          @media (min-width: 480px) {
+            height: 320px;
+          }
+
+          @media (min-width: 992px) {
+            height: 260px;
+          }
+
+          @media (min-width: 1200px) {
+            height: 320px;
+          }
+
+          .cont_titular_entradeta {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 21px;
+            padding-right: 0;
+            padding-bottom: 0;
+
+
+            h3 {
+              margin: 50px 45px 30px;
+              font-size: 1em;
+
+              @media (min-width: 480px) {
+                margin: 50px 45px 30px 45px;
+              }
+              
+              @media (min-width: 768px) {
+                margin: 50px 25% 30px 45px;
+                font-size: 1.5em;
+                line-height: 1.25em;
+              }
+
+              @media (min-width: 992px) {
+                margin: 50px 60px 30px 45px;
+                font-size: 1em;
+              }
+
+              @media (min-width: 1200px) {
+                font-size: 1.5000em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Monogràfics de portada
+
+  .pane-xn17-monografics-portada {
+    margin-right: 30px;
   }
 }
