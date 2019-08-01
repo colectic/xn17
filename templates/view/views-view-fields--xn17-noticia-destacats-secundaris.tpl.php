@@ -41,8 +41,6 @@
 
 <?php	if ($content_type == 'opinio'): ?>
 	
-	<!-- Box type: 'Opinion' -->
-	
 	<div class="box box-opinion">
 		<article>
 			<div class="first">
@@ -64,8 +62,6 @@
 
 
 <?php	if ($content_type == 'noticia_general'): ?>
-	
-<!-- Box type: 'News' -->
 	
 	<div class="box box-news">
 		<article>
@@ -96,8 +92,6 @@
 
 
 <?php	if ($content_type == 'event'): ?>
-
-	<!-- Box type: 'Esdeveniment agenda' -->
 
 	<div class="box box-news">
 		<article>

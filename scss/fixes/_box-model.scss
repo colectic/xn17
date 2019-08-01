@@ -71,9 +71,9 @@
       height: 199px;
     }
 
-    @media (min-width: 992px) {
-      height: 11em;
-    }
+    // @media (min-width: 992px) {
+    //   height: 11em;
+    // }
 
     @media (min-width: 992px) {
       height: 135px;
@@ -112,6 +112,92 @@
         @media (min-width: 1200px) {
           font-size: 1.42em;
           height: 5.4em;
+          line-height: 1.1em;
+        }
+        
+        a {
+          color: #2f3031;
+        }
+      }
+    }
+
+    .type {
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      z-index: 1;
+      font-family: 'Fira Sans Bold';
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      padding: 0 10px;
+
+      a {
+        color: #BE1622;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: #BE1622;
+        }
+      }
+    }
+  }
+}
+
+//  Nou model de caixa (sense imatge)
+
+.small-box {
+  margin-bottom: 30px;
+  background-color: #ededed;
+
+  .last {
+    padding: 20px 10px 10px;
+    position: relative;
+    height: auto;
+    display: block;
+    
+    @media (min-width: 768px) {
+      height: 210px;
+    }
+
+    @media (min-width: 992px) {
+      padding: 10px 10px 15px;
+      height: 135px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 160px;
+    }
+
+    .title {
+  
+      h2 {
+        font-family: 'Fira Sans SemiBold';
+        font-weight: 500;
+        line-height: 1em;
+        color: inherit;
+        margin: 0 0 30px;
+        font-size: 1.5em;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        
+        @media (min-width: 768px) {
+          margin: 0;
+          font-size: 2em;
+          height: 5em;
+        }
+  
+        @media (min-width: 992px) {
+          font-size: 1.25em;
+          height: 5.4em;
+          line-height: 1.1em;
+        }
+        
+        @media (min-width: 1200px) {
+          font-size: 1.42em;
+          height: 5.2em;
           line-height: 1.1em;
         }
         
