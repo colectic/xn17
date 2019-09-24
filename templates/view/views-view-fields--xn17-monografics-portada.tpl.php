@@ -36,32 +36,6 @@
     $raw_image = strip_tags($fields['field_imatges']->content);
   }
 
-  /*
-  if (strip_tags($raw_image, '<img>') == '') $raw_image = "<a href='" . strip_tags($fields['path']->content) . "'>" . theme_image_style (array('style_name' => 'tag-mig', 'path' => 'public://no-image.jpg', 'title' => 'just a test image', 'alt' => 'test image')) . "</a>";
-  if ((strip_tags($fields['field_imatge_emergent']->content) != '') || (strip_tags($fields['field_video_emergent']->content) != '')) {
-    if (strip_tags($fields['field_imatge_emergent']->content) != '') {
-      //Imatge emergent
-      $class = 'imatge';
-      $newurl = strip_tags($fields['field_imatge_emergent']->content);
-      $rel = "lightbox";
-    }
-    if (strip_tags($fields['field_video_emergent']->content) != '') {
-      //Vídeo emergent
-      $class = 'video';
-      $rel = "lightframe";
-      $newurl = strip_tags($fields['field_video_emergent']->content);
-    }
-    $title = strip_tags($fields['title']->content);
-    $raw_image = strip_tags($raw_image, "<img>");
-    $raw_image = '	<div class="field-content lightbox-item">
-                      '.$raw_image.'
-                <div class="content">
-                <a rel="'.$rel.'" href="'.$newurl.'" class="info" title="'.$title.'"><img alt="icona '.$class.'" src="/sites/all/themes/sasson_xarxanet/images/pictos/emergent-'.$class.'.svg" /></a>
-                </div>
-                  </div>';
-  }
-  */
-
   // Get the title and url for external content
 
   $row_entity = $row->_field_data['node_field_data_field_noticia_monografic_nid']['entity'];
