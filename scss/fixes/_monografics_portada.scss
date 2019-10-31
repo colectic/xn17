@@ -1,0 +1,29 @@
+// Monogràfics de portada
+// -----------------------------------------------------------------------------
+
+// @Start XARXANET-286
+
+#views_slideshow_cycle_main_xn17_monografics_portada-default 
+
+.modul-monografic-portada {
+  
+  .titular_content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    
+    h2 {
+      margin-top: 0;
+      font-size: 14px;
+      background-position: 0% 90%;
+    }
+    
+    h3 {
+      font-size: 20px;
+    }
+  }
+}
+
+// @End XARXANET-286
