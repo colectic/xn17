@@ -544,16 +544,14 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 				<p>
 					<a href="https://suport.fundesplai.org/" style="color:white;  font-weight:normal">Suport Tercer Sector – Fundesplai</a><br />
 					<a href="http://www.peretarres.org" style="color:white;  font-weight:normal">Fundació Pere Tarrés</a><br />
-					<a href="http://www.ateneus.cat" style="color:white;  font-weight:normal">Federació d'Ateneus de Catalunya</a><br />
-					<a href="http://www.xvac.cat" style="color:white;  font-weight:normal">Xarxa de Voluntariat Ambiental de Catalunya</a><br />
-					<a href="http://www.iwith.org/ca/" style="color:white;  font-weight:normal">I-with.org</a><br />
+					<a href="https://www.lavinianext.com/ca/" style="color:white;  font-weight:normal">LaviniaNext</a><br />
+					<a href="http://colectic.coop/" style="color:white;  font-weight:normal">Colectic</a><br />
+					<a href="http://voluntaris.cat/" style="color:white;  font-weight:normal">Federació Catalana del Voluntariat Social</a><br />
 				</p>
 			</td><td style="padding-left:15px">
 				<p>
-					<a href="http://www.federacio.net/ca" style="color:white;  font-weight:normal">Federació Catalana del Voluntariat Social</a><br />
-					<a href="http://magno.uab.es/fas" style="color:white;  font-weight:normal">Fundació Autònoma Solidària</a><br />
-					<a href="http://www.escoltesiguies.cat" style="color:white;  font-weight:normal">Minyons Escoltes i Guies de Catalunya (MEG)</a><br />
-					<a href="http://www.tothomweb.com" style="color:white;  font-weight:normal">TOTHOMweb</a><br />
+					<a href="https://www.escoltesiguies.cat/" style="color:white;  font-weight:normal">Minyons Escoltes i Guies de Catalunya</a><br />
+					<a href="http://www.tothomweb.com/" style="color:white;  font-weight:normal">TOTHOMweb</a><br />
 				</p>
 			</td></tr>
 		</table>

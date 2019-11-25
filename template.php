@@ -104,7 +104,6 @@ foreach (glob($includes_path) as $filename) {
  */
 
 function xn17_preprocess_page(&$variables) {
-  
   // Add copyright to theme.
   
   if ($copyright = theme_get_setting('copyright')) {
