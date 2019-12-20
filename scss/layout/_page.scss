@@ -403,36 +403,15 @@ body.recurs {
   .field-name-body.field-type-text-with-summary {
 
     h1, h2, h3, h4, h5, h6 {
+      font-size: 16px !important;
       display: inline-block;
       margin: 20px 0 10px;
       width: 100%;
+      
       font-family: "Fira Sans", Helvetica, Arial, sans-serif;
       font-weight: bold;
       color: #2f3031;
     }
 
-    h1 {
-      font-size: 24px !important;
-    }
-
-    h2 {
-      font-size: 22px !important;
-    }
-
-    h3 {
-      font-size: 20px !important;
-    }
-
-    h4 {
-      font-size: 18px !important;
-    }
-
-    h5 {
-      font-size: 16px !important;
-    }
-
-    h6 {
-      font-size: 14px !important;
-    }
   }
 }
