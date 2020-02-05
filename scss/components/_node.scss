@@ -225,6 +225,22 @@
   }
 }
 
+.node-type-event {
+  
+  .xn17-standard-column2 {
+
+    .field-name-body {
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 20px 0 10px;
+      }
+    }
+  }
+}
+
 //------------------------------------------------------------------------------
 //Notícia, Recurs i opinio
 //------------------------------------------------------------------------------
@@ -350,12 +366,13 @@
             }
           }
           .twitter { 
-           font-family: "Fira Sans SemiBold";
-           font-size: 0.85em;
-           color: $gray-dark;
-         }
-       }
-       .mes-articles{
+            font-family: "Fira Sans SemiBold";
+            font-size: 0.85em;
+            color: $gray-dark;
+        }
+      }
+      
+      .mes-articles{
         font-family: "Fira Sans Bold";
         color: $gray-medium;
         p{
