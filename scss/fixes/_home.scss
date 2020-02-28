@@ -519,4 +519,36 @@
   .pane-xn17-monografics-portada {
     margin-right: 30px;
   }
+  
+  // Nous Banners de recursos a la Home
+      
+  .bloc-recursos-portada {
+        
+    // Banner de recursos generals
+  
+    &.generals {
+      width: 100%;
+      padding: 0 30px 0 0;
+      margin: 15px 0 !important;
+  
+      .pane-content {
+        background-size: cover;
+        padding: 15px 30px;
+        height: auto;
+
+        @media (min-width: 992px) {
+        
+          .entradeta-recurs {
+            display: block;
+          }
+          
+          .sub-seccions {
+            display: block;
+            right: 30px;
+            padding-left: 60px;
+          }
+        }
+      }
+    }
+  }
 }
