@@ -166,7 +166,7 @@
 @mixin bloc-banner($img, $height:'auto') {
   padding: 10px 0;
   @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { padding: 10px; }
-  .block__content, .content {
+  .block__content, .content, .pane-content {
     height: $height;
     background: url('../images/blocks/'+$img+'.jpg');
     background-size: auto 165px;
@@ -183,7 +183,7 @@
   padding: 0px 15px;
   margin-bottom: 30px;
   @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { padding: 10px; }
-  .block__content, .content {
+  .block__content, .content, .pane-content {
     height: $height;
     @media (max-width: $screen-sm-max){
       height: 165px;
