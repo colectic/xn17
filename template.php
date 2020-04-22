@@ -100,6 +100,41 @@ foreach (glob($includes_path) as $filename) {
 }
 
 /**
+ * Implements template_preprocess_node()
+ */
+
+function xn17_preprocess_node(&$variables) {
+
+  /**
+   * A custom snippet to decide when to use the old or the new template 
+   * of the "A l'Abast newsletter", from a given release date
+   */
+
+  $release_on = '04-05-2020';
+
+  if (isset($variables['node']) && $variables['node']->type == 'butlleti_abast_nou') {
+    $node = $variables['node'];
+    $created_date = $node->created;
+
+    if (isset($_GET['date'])) {
+      $release_date = strtotime(date($_GET['date'])); // A date in dd-mm-yyyy format, for test purposes only
+    }
+    else {
+      $release_date = strtotime(date($release_on)); // Default release date
+    }
+    
+    if ($created_date >= $release_date) {
+      // Use the NEW version template
+      array_unshift($variables['theme_hook_suggestions'], 'node__butlleti_abast_new');
+    }
+    else {
+      // Use the OLD version template
+      array_unshift($variables['theme_hook_suggestions'], 'node__butlleti_abast_old');
+    }
+  }
+}
+
+/**
  * Implements template_preprocess_page()
  */
 
