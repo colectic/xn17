@@ -2139,12 +2139,12 @@
 											<table width="100%" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;">
 												<tr>
 													<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-														<a class="inline-icons" href="https://www.facebook.com/xarxanet" style="text-decoration:none;font-family:'Open sans' !important;color:#85ab70;">
+														<a class="inline-icons" href="https://es-es.facebook.com/treballiaferssocialscat/" style="text-decoration:none;font-family:'Open sans' !important;color:#85ab70;">
 															<img src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/facebook_icon.png?token=<?php print time(); ?>" width="32" alt="Visita la nostra pàgina a Facebook" style="border-width:0;font-family:'Open sans' !important;" />
 														</a>
 													</td>
 													<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-														<a class="inline-icons" href="http://www.twitter.com/xarxanetorg" style="text-decoration:none;font-family:'Open sans' !important;color:#85ab70;">
+														<a class="inline-icons" href="https://twitter.com/BDgacc" style="text-decoration:none;font-family:'Open sans' !important;color:#85ab70;">
 															<img src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/twitter_icon.png?token=<?php print time(); ?>" width="32" alt="Segueix-nos a Twitter" style="border-width:0;font-family:'Open sans' !important;" />
 														</a>
 													</td>
@@ -2169,7 +2169,7 @@
 												<a class="text-red no-decoration regular text-xs" href="<?php print $path_root; ?>/hemeroteca-butlleti-labast" style="font-family:'Open sans' !important;font-weight:600;font-size:12px !important;text-decoration:none;color:#671013 !important;">Butlletins anteriors</a>
 											</span>
 											<span class="inline-links" style="font-family:'Open sans' !important;display:inline-block;Margin:0 5px;width:auto;">
-												<a class="text-red no-decoration regular text-xs" href="mailto:alabast@voluntariat.org?Subject=Consulta%20butlletí" style="font-family:'Open sans' !important;font-weight:600;font-size:12px !important;text-decoration:none;color:#671013 !important;">Contacte</a>
+												<a class="text-red no-decoration regular text-xs" href="https://voluntariat.gencat.cat/contacte/" style="font-family:'Open sans' !important;font-weight:600;font-size:12px !important;text-decoration:none;color:#671013 !important;">Contacte</a>
 											</span>
 										</td>
 									</tr>
