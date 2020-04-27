@@ -2078,6 +2078,49 @@
 				<?php endforeach; ?>
 			<?php endif; ?>
 
+			<!-- Bottom content (3 columns) -->
+			
+			<tr>
+				<td class="inner-left inner-right" style="padding-top:0; padding-bottom:0; font-family:'Open sans' !important; padding-left:20px; padding-right:20px;">
+					<table width="100%" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0" style="padding-bottom: 20px; background-color: #fff; margin-bottom: 45px; margin-top: 45px;">
+						<tbody>
+							<tr style="vertical-align: top">
+								<td class="images-bottom" align="top" style="margin-left: 10px" width="33%">
+									<div style="position: relative; text-align:center">
+											<a style="text-decoration: none;" href="https://connectat.voluntariat.gencat.cat/inici">
+												<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_1.jpg">
+												<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 11px; text-decoration: none;">
+													<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center" class="titol-banners">Connecta't al voluntariat</p>
+												</div>
+											</a>
+									</div>
+								</td>
+								<td class="images-bottom" align="top" style="margin-left: 10px" width="33%">
+									<div style="position: relative; text-align:center">
+										<a style="text-decoration: none;" href="https://voluntariat.gencat.cat/persones-voluntaries/format-com-a-voluntari/pla-de-formacio/">
+											<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_2.jpg">
+											<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 11px; text-decoration: none;">
+												<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center" class="titol-banners">Pla de Formació</p>
+											</div>
+										</a>
+									</div>
+								</td>
+								<td class="images-bottom" align="top" style="margin-left: 10px" width="33%">
+									<div style="position: relative; text-align:center">
+										<a style="text-decoration: none;" href="https://voluntariat.gencat.cat/administracions-publiques/punts-de-voluntariat-local/">
+											<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_3.jpg">
+											<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 11px; text-decoration: none;">
+												<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center" class="titol-banners">Punts de voluntariat local de Catalunya</p>
+											</div>
+										</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+
 			<!-- Footer -->
 
 			<tr>
