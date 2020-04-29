@@ -784,6 +784,47 @@ var mesNoticiesObert = false;
         $input.val(date);
         $form.submit();
       }
+    },
+
+    /**
+     * In the 'Covid-19 special' page we have to dynamically append a banner after
+     * the 3th element of the grid.
+     * 
+     * In order to do it fast & easy, it will be done through this function
+     * with pure Javascript/jQuery.
+     * 
+     * This function can be removed when the page ('/especial/covid-19') would be unpublished.
+     */
+    
+    covid19SpecialOverrides: function() {
+
+      if ($('#covid19-special').length > 0) {
+        var html;
+        var banner = '';
+        banner += '<div class="views-row col-lg-3 col-md-3 col-sm-6 col-xs-12 modul-2x1">';
+        banner += '<div class="modul_2x1" id="covid19-grid-banner">';
+        banner += '<a class="first" href="https://voluntariat.gencat.cat/recursos-i-serveis/serveis-dassessorament-i-acompanyament/">';
+        banner += '<span>' + Drupal.t('Servei d\'Assessorament gratuït per a entitats') +'</span>';
+        banner += '</a>';
+        banner += '<a class="last" href="https://voluntariat.gencat.cat/recursos-i-serveis/serveis-dassessorament-i-acompanyament/">';
+        banner += '<span>' + Drupal.t('Informa\'t!') +'</span>';
+        banner += '</a>';
+        banner += '</div>';
+        banner += '</div>';
+        html = $.parseHTML(banner);
+        
+        // Prepare the element and the target
+        
+        var $banner = $(html);
+        var $target = $('#covid19-special .view-xn17-etiquetes').find('.views-row:eq(2)');
+        
+        // Append the banner, avoiding duplicates (due to AJAX triggered by the 'View more' button)
+
+        if ($('#covid19-grid-banner').length > 0) {
+          $('#covid19-grid-banner').parent().remove();
+        }
+        $banner.insertAfter($target);
+      }
     }
   };
 
@@ -800,6 +841,7 @@ var mesNoticiesObert = false;
       Drupal.xn17.agendaSetCalendarDateInForm();
       Drupal.xn17.equalHeight();
       Drupal.xn17.buttonSearch();
+      Drupal.xn17.covid19SpecialOverrides(); // Can be removed when the landing would be unpublished
     }
   };
 

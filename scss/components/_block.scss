@@ -1047,25 +1047,179 @@
       }
     }
   }
+}
 
-  &.open {
+// ==============================================================================
+// Banner 'Covid-19' (Home page)
+// ==============================================================================
 
-    .inner {
+#covid19-home-banner {
+  padding: 0 30px;
 
-      .pane-content,
-      .block__content {
-        // display: block;
+  a {
+    display: flex;
+    margin: 0 0 20px;
+    position: relative;
+    background-image: url(/sites/all/themes/xn17/assets/images/covid-19/covid19-home-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    width: 100%;
+    min-height: 80px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      padding: 15px 30px;
+    }
+
+    @media (min-width: 992px) {
+      padding: 0 30px;
+    }
+
+    .leading-icon {
+      display: none;
+
+      @media (min-width: 992px) {
+        display: inline;
+      }
+    }
+
+    .claim-text {
+      font-size: 22px;
+      font-family: "Fira Sans Bold", Helvetica, Arial, sans-serif;
+      
+      @media (min-width: 992px) {
+        font-size: 22px;
+      }
+      
+      @media (min-width: 1200px) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+// ==============================================================================
+// Especial 'Covid-19'
+// ==============================================================================
+
+#covid19-special {
+
+  @media (max-width: 767px) {
+    .view-id-xn17_especial_cap_alera {
+      
+      .bloc-header-image {
+        background-image: url(/sites/default/files/styles/xn17_header/public/covid19_top_banner.jpg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        position: relative;
+        min-height: 200px;
+
+        img {
+          display: none;
+        }
+      }
+      .view-footer h1 {
+        font-family: 'Fira Sans SemiBold';
+        font-size: 2.5em;
+        opacity: 0.5;
+        color: white;
+        margin-top: -45px;
+        position: relative;
+        z-index: 1;
+        text-transform: lowercase;
+        margin-bottom: 30px;
       }
     }
   }
 
-  &.closed {
+  .bloc-header-image {
+  
+    img {
+      display: block;
+    }
+  }
 
-    .inner {
+  .pane-node-body {
+    margin-top: -25px;
+    padding: 0 15px;
 
-      .pane-content,
-      .block__content {
-        // display: none;
+    a {
+      color: #a7a7a7;
+      text-decoration: underline;
+    }
+  }
+
+  #covid19-grid-banner {
+    background-image: url(/sites/all/themes/xn17/assets/images/covid-19/covid19-grid-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 150%;
+    position: relative;
+    min-height: 360px;
+    
+    @media (min-width: 480px) {
+      background-size: cover;
+    }
+
+    @media (min-width: 992px) {
+      min-height: initial;
+    }
+
+    .first {
+      display: block;
+      color: #ffffff;
+      font-family: "Fira Sans Bold", Helvetica, Arial, sans-serif;
+      position: absolute;
+      top: 25%;
+      left: 20px;
+      z-index: 2;
+      text-shadow: 0px 1px 3px #000000;
+      padding-right: 30px;
+      font-size: 30px;
+      
+      @media (min-width: 480px) {
+        font-size: 36px;
+        max-width: 60%;
+      }
+      
+      @media (min-width: 768px) {
+        font-size: 32px;
+        padding-right: 15px;
+        max-width: initial;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 22px;
+      }
+
+      @media (min-width: 1200px) {
+        top: 55%;
+        line-height: 1.1em;
+      }
+    }
+    
+    .last {
+      display: block;
+      color: #fff;
+      font-family: "Fira Sans Bold", Helvetica, Arial, sans-serif;
+      position: absolute;
+      bottom: 5%;
+      right: 0;
+      z-index: 2;
+      font-size: 20px;
+      width: 100%;
+      text-align: right;
+      text-transform: uppercase;
+      padding: 0 15px;
+      
+      @media (min-width: 768px) {
+        text-align: center;
       }
     }
   }
