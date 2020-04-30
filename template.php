@@ -110,7 +110,8 @@ function xn17_preprocess_node(&$variables) {
    * of the "A l'Abast newsletter", from a given release date
    */
 
-  $release_on = '23-04-2020';
+  // $release_on = '23-04-2020';
+  $release_on = '01-01-2030';
 
   if (isset($variables['node']) && $variables['node']->type == 'butlleti_abast_nou') {
     $node = $variables['node'];
