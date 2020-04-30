@@ -1050,6 +1050,71 @@
 }
 
 // ==============================================================================
+// Bloc "Informa't"
+// ==============================================================================
+
+.bloc-informat {
+  background-image: url(/sites/all/themes/xn17/assets/images/blocks/banner_informat.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  position: relative;
+  min-height: 150px;
+  display: flex;
+  align-items: flex-end;
+
+  .block__content {
+    width: 100%;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+  
+  .first {
+    font-family: 'Fira Sans Bold';
+    font-size: 20px;
+    line-height: 1.25em;
+    display: block;
+    padding: 0 15px;
+  }
+  
+  .last {
+    font-family: 'Fira Sans semiBold';
+    margin: 0;
+    padding: 10px 15px;
+    
+    a {
+      display: block;
+      text-align: right;
+    }
+    
+    &.button {
+      padding: 0;
+      background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.5) 0%, rgba(190,22,34,0.8) 65%, rgba(190,22,34,1) 100%);
+      background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.5) 0%,rgba(190,22,34,0.8) 65%,rgba(190,22,34,1) 100%);
+      background: linear-gradient(45deg,  rgba(0,0,0,0.5) 0%,rgba(190,22,34,0.8) 65%,rgba(190,22,34,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#be1622',GradientType=1 );
+
+      a {
+        display: block;
+        margin-top: 25px;
+        padding: 10px 15px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// ==============================================================================
 // Banner 'Covid-19' (Home page)
 // ==============================================================================
 
