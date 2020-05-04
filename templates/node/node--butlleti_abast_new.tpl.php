@@ -2174,7 +2174,7 @@
 								<td class="images-bottom" align="top" style="margin-left: 10px" width="33%">
 									<div style="position: relative; text-align:center">
 											<a style="text-decoration: none;" href="https://connectat.voluntariat.gencat.cat/inici">
-												<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_1.jpg">
+												<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_1.png">
 												<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 12px; text-decoration: none;">
 													<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center; font-weight: 600;" class="titol-banners">Connecta't al voluntariat</p>
 												</div>
@@ -2184,7 +2184,7 @@
 								<td class="images-bottom" align="top" style="margin-left: 10px" width="33%">
 									<div style="position: relative; text-align:center">
 										<a style="text-decoration: none;" href="https://voluntariat.gencat.cat/persones-voluntaries/format-com-a-voluntari/pla-de-formacio/">
-											<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_2.jpg">
+											<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_2.png">
 											<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 12px; text-decoration: none;">
 												<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center; font-weight: 600;" class="titol-banners">Pla de Formació</p>
 											</div>
@@ -2194,7 +2194,7 @@
 								<td class="images-bottom" align="top" style="margin-left: 10px" width="33%">
 									<div style="position: relative; text-align:center">
 										<a style="text-decoration: none;" href="https://voluntariat.gencat.cat/administracions-publiques/punts-de-voluntariat-local/">
-											<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_3.jpg">
+											<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_3.png">
 											<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 12px; text-decoration: none;">
 												<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center; font-weight: 600;" class="titol-banners">Punts de voluntariat</p>
 											</div>
