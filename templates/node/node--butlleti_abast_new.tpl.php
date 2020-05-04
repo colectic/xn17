@@ -2078,6 +2078,92 @@
 				<?php endforeach; ?>
 			<?php endif; ?>
 
+			<!-- Section: "Directe a" -->
+
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" align="left" class="content-news-text">
+						<tbody>
+							<tr>
+								<td>
+									<table width="100%" border="0" cellpadding="0" cellspacing="0">
+										<tbody>
+											<tr>
+												<td class="content-text">
+													<table border="0" cellspacing="0" cellpadding="0">
+														<tbody>
+															<tr>
+																<td vspace="0" style="padding: 20px 0px 0px 20px;">
+																	<h2 style="font-family: Open Sans, sans-serif; color: #333; font-size: 20px; text-decoration: none; font-weight: 600; padding-bottom: 0; margin-bottom: 0;">Directe a </h2>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<table>
+																		<tbody>
+																			<tr>
+																				<td>
+																					<ul style="padding-left: 50px; padding-bottom: 15px;" class="download_pdf">
+																						<li style="color: #671013; margin-top: 15px">
+																							<!-- Auditoria Accesibilidad - Se inserta un "span" oculto en los enlaces que abren en una ventana nueva para que quede indicado -->
+																							<a style="font-family: Open Sans, sans-serif; font-size: 16px; color: #671013; font-weight: 600; text-decoration: none;" href="https://voluntariat.gencat.cat" target="_blank">El nostre web</a>
+																							<br>
+																							<span style="font-family: Open Sans, sans-serif; font-size: 14px; color: #333; font-weight: 400">
+																								<p>voluntariat.gencat.cat</p>
+																							</span>
+																						</li>
+																						<li style="color: #671013; margin-top: 15px">
+																							<!-- Auditoria Accesibilidad - Se inserta un "span" oculto en los enlaces que abren en una ventana nueva para que quede indicado -->
+																							<a style="font-family: Open Sans, sans-serif; font-size: 16px; color: #671013; font-weight: 600; text-decoration: none;" href="https://voluntariat.gencat.cat/persones-voluntaries/" target="_blank">Persones voluntàries</a>
+																							<br>
+																							<span style="font-family: Open Sans, sans-serif; font-size: 14px; color: #333; font-weight: 400">
+																								<p>Coneix els teus drets i deures</p>
+																							</span>
+																						</li>
+																						<li style="color: #671013; margin-top: 15px">
+																							<!-- Auditoria Accesibilidad - Se inserta un "span" oculto en los enlaces que abren en una ventana nueva para que quede indicado -->
+																							<a style="font-family: Open Sans, sans-serif; font-size: 16px; color: #671013; font-weight: 600; text-decoration: none;" href="https://voluntariat.gencat.cat/entitats/" target="_blank">Entitats</a>
+																							<br>
+																							<span style="font-family: Open Sans, sans-serif; font-size: 14px; color: #333; font-weight: 400">
+																								<p>Registra't al Cens d'entitats de voluntariat</p>
+																							</span>
+																						</li>
+																						<li style="color: #671013; margin-top: 15px">
+																							<!-- Auditoria Accesibilidad - Se inserta un "span" oculto en los enlaces que abren en una ventana nueva para que quede indicado -->
+																							<a style="font-family: Open Sans, sans-serif; font-size: 16px; color: #671013; font-weight: 600; text-decoration: none;" href="https://voluntariat.gencat.cat/administracions-publiques/" target="_blank">Administracions</a>
+																							<br>
+																							<span style="font-family: Open Sans, sans-serif; font-size: 14px; color: #333; font-weight: 400">
+																								<p>Suport i assessorament</p>
+																							</span>
+																						</li>
+																						<li style="color: #671013; margin-top: 15px">
+																							<!-- Auditoria Accesibilidad - Se inserta un "span" oculto en los enlaces que abren en una ventana nueva para que quede indicado -->
+																							<a style="font-family: Open Sans, sans-serif; font-size: 16px; color: #671013; font-weight: 600; text-decoration: none;" href="https://voluntariat.gencat.cat/recursos-i-serveis/" target="_blank">Recursos i serveis</a>
+																							<br>
+																							<span style="font-family: Open Sans, sans-serif; font-size: 14px; color: #333; font-weight: 400">
+																								<p>Serveis d'assessorament i acompanyament</p>
+																							</span>
+																						</li>
+																					</ul>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+
 			<!-- Bottom content (3 columns) -->
 			
 			<tr>
@@ -2089,8 +2175,8 @@
 									<div style="position: relative; text-align:center">
 											<a style="text-decoration: none;" href="https://connectat.voluntariat.gencat.cat/inici">
 												<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_1.jpg">
-												<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 11px; text-decoration: none;">
-													<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center" class="titol-banners">Connecta't al voluntariat</p>
+												<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 12px; text-decoration: none;">
+													<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center; font-weight: 600;" class="titol-banners">Connecta't al voluntariat</p>
 												</div>
 											</a>
 									</div>
@@ -2099,8 +2185,8 @@
 									<div style="position: relative; text-align:center">
 										<a style="text-decoration: none;" href="https://voluntariat.gencat.cat/persones-voluntaries/format-com-a-voluntari/pla-de-formacio/">
 											<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_2.jpg">
-											<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 11px; text-decoration: none;">
-												<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center" class="titol-banners">Pla de Formació</p>
+											<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 12px; text-decoration: none;">
+												<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center; font-weight: 600;" class="titol-banners">Pla de Formació</p>
 											</div>
 										</a>
 									</div>
@@ -2109,8 +2195,8 @@
 									<div style="position: relative; text-align:center">
 										<a style="text-decoration: none;" href="https://voluntariat.gencat.cat/administracions-publiques/punts-de-voluntariat-local/">
 											<img style="max-width:100%" width="186" src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/bottom_banner_3.jpg">
-											<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 11px; text-decoration: none;">
-												<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center" class="titol-banners">Punts de voluntariat local de Catalunya</p>
+											<div class="text-banners" style="font-family:'Open sans' !important; font-weight:800; line-height: 12px; color: #671013; font-size: 12px; text-decoration: none;">
+												<p style="margin-bottom: 0.2em; vertical-align: top; text-align: center; font-weight: 600;" class="titol-banners">Punts de voluntariat</p>
 											</div>
 										</a>
 									</div>
