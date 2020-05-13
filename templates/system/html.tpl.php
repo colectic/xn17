@@ -46,11 +46,12 @@
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-  <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/fonts/FiraSans-Regular.ttf'; ?>" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/fonts/FiraSans-SemiBold.ttf'; ?>" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/fonts/FiraSans-Bold.ttf'; ?>" as="font" type="font/ttf" crossorigin>
+  <?php if (strpos($base_url, 'xarxanet.org') !== false): ?>
+    <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/fonts/FiraSans-Regular.ttf'; ?>" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/fonts/FiraSans-SemiBold.ttf'; ?>" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/fonts/FiraSans-Bold.ttf'; ?>" as="font" type="font/ttf" crossorigin>
+  <?php endif; ?>
   <?php print $styles; ?>
-  <?php print $scripts; ?>
   <!--[if lt IE 9]>
    <script>
       document.createElement('header');
@@ -68,6 +69,7 @@
   </div>
   <?php print $page_top; ?>
   <?php print $page; ?>
+  <?php print $scripts; ?>
   <?php print $page_bottom; ?>
 </body>
 </html>

@@ -160,6 +160,12 @@ function xn17_preprocess_page(&$variables) {
  */
 
 function xn17_preprocess_html(&$variables) {
+  // Pass global $base_url variables to the template
+  
+  global $base_url;
+  $variables['base_url'] = $base_url;
+
+  // Custom overrides in Panels
   
   if ($node = menu_get_object()) {
     
