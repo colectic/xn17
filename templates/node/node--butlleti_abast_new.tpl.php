@@ -2230,7 +2230,7 @@
 														</a>
 													</td>
 													<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-														<a class="inline-icons" href="https://twitter.com/BDgacc" style="text-decoration:none;font-family:'Open sans' !important;color:#85ab70;">
+														<a class="inline-icons" href="https://twitter.com/femcomunitatcat" style="text-decoration:none;font-family:'Open sans' !important;color:#85ab70;">
 															<img src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/twitter_icon.png?token=<?php print time(); ?>" width="32" alt="Segueix-nos a Twitter" style="border-width:0;font-family:'Open sans' !important;" />
 														</a>
 													</td>
