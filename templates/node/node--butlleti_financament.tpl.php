@@ -79,7 +79,7 @@
 * @ingroup themeable
 */
 
-$pathroot = 'https://www.xarxanet.org';
+$pathroot = 'https://xarxanet.org';
 
 // Data
 $mesos = array('de gener', 'de febrer', 'de març', 'd\'abril', 'de maig', 'de juny', 'de juliol', 'd\'agost', 'de setembre', 'd\'octubre', 'de novembre', 'de desembre');
