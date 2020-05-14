@@ -47,20 +47,20 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php if (strpos($base_url, 'xarxanet.org') !== false): ?>
-    <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/assets/fonts/FiraSans-Regular.ttf'; ?>" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/assets/fonts/FiraSans-SemiBold.ttf'; ?>" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="<?php print drupal_get_path('theme', 'xn17') . '/assets/fonts/FiraSans-Bold.ttf'; ?>" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="<?php print $base_url . url(drupal_get_path('theme', 'xn17') . '/assets/fonts/FiraSans-Regular.ttf'); ?>" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="<?php print $base_url . url(drupal_get_path('theme', 'xn17') . '/assets/fonts/FiraSans-SemiBold.ttf'); ?>" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="<?php print $base_url . url(drupal_get_path('theme', 'xn17') . '/assets/fonts/FiraSans-Bold.ttf'); ?>" as="font" type="font/ttf" crossorigin>
   <?php endif; ?>
   <?php print $styles; ?>
   <!--[if lt IE 9]>
-   <script>
+    <script>
       document.createElement('header');
       document.createElement('nav');
       document.createElement('section');
       document.createElement('article');
       document.createElement('aside');
       document.createElement('footer');
-   </script>
+    </script>
   <![endif]-->
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
