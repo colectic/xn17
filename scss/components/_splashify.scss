@@ -49,6 +49,10 @@
   height: 100%;
   overflow: hidden;
   margin: 0;
+
+  .sliding-popup-bottom {
+    display: none !important;
+  }
 }
 
 .splashify_body a {
