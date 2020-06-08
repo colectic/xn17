@@ -19,6 +19,31 @@
     padding-right: 0; 
     top: 15px;
   }
+
+  .pane-xn17-recull-documents {
+    // padding-left: 0;
+    // padding-right: 30px;
+    // width: 100%;
+
+    .bkgd-gris {
+      padding-bottom: 60px;
+      margin-bottom: 0px;
+    }
+
+    .btn-biblioteca {
+      position: relative;
+      top: -45px;
+      left: 0;
+      z-index: 1;
+      float: right;
+      margin-right: 30px;
+      background-color: #BE1622;
+      padding: 5px 10px;
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+  }
   
   @media (max-width: 768px) {
 
