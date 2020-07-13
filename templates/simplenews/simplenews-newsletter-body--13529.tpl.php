@@ -372,10 +372,10 @@ foreach ($wrapper->field_abast_noticies as $noticia){
 			}
 			echo '<a href="'.$url.'" style="font-weight: bold; color: #800000; font-size: 14px; font-family:Arial; text-decoration: none">'.$title.'</a>';
 			echo '<p style="font-size: 12px; margin: 0; vertical-align: top; margin: 5px 0 10px;">
-			<b>Entitat: </b>'.$voluntariat->field_abast_voluntariat_entitat->value().'<br/>
-			<b>Lloc: </b>'.$voluntariat->field_abast_voluntariat_lloc->value().'<br/>
-			<b>Dedicació: </b>'.$voluntariat->field_abast_voluntariat_dedicaci->value().'<br/>
-			<b>Perfil: </b>'.str_replace(array('<p>', '</p>'), '', $voluntariat->field_abast_voluntariat_perfil->value()).'
+			<strong>Entitat: </strong>'.$voluntariat->field_abast_voluntariat_entitat->value().'<br/>
+			<strong>Lloc: </strong>'.$voluntariat->field_abast_voluntariat_lloc->value().'<br/>
+			<strong>Dedicació: </strong>'.$voluntariat->field_abast_voluntariat_dedicaci->value().'<br/>
+			<strong>Perfil: </strong>'.str_replace(array('<p>', '</p>'), '', $voluntariat->field_abast_voluntariat_perfil->value()).'
 			</p>';
 		}
 		?>	
@@ -396,9 +396,9 @@ foreach ($wrapper->field_abast_noticies as $noticia){
 			if ($title = $pfvc->field_abast_pfvc_titol->value()){
 				echo '<a href="'.$title['url'].'" style="font-weight: bold; color: #800000; font-size: 14px; font-family:Arial; text-decoration: none">'.$title['title'].'</a>';
 				echo '	<p style="font-size: 12px; margin: 0; vertical-align: top; margin: 5px 0 10px;">
-						<b>Data d\'inici: </b>'.$pfvc->field_abast_pfvc_dates->value().'<br/>
-						<b>Lloc: </b>'.$pfvc->field_abast_pfvc_lloc->value().'<br/>
-						<b>Entitat: </b>'.$pfvc->field_abast_pfvc_entitat->value().'</p>';
+						<strong>Data d\'inici: </strong>'.$pfvc->field_abast_pfvc_dates->value().'<br/>
+						<strong>Lloc: </strong>'.$pfvc->field_abast_pfvc_lloc->value().'<br/>
+						<strong>Entitat: </strong>'.$pfvc->field_abast_pfvc_entitat->value().'</p>';
 			}
 		}
 		?>
@@ -438,9 +438,9 @@ foreach ($wrapper->field_abast_noticies as $noticia){
 				$entitat = ($form->field_abast_formacions_entitat->value()) ? $form->field_abast_formacions_entitat->value() : $form_xn->field_organizer['und'][0]['value'];				
 				echo '<a href="'.$url.'" style="font-weight: bold; color: #800000; font-size: 14px; font-family:Arial; text-decoration: none">'.$title.'</a>';
 				echo '	<p style="font-size: 12px; margin: 0; vertical-align: top; margin: 5px 0 10px;">
-						<b>Data d\'inici: </b>'.$data.'<br/>
-						<b>Lloc: </b>'.$lloc.'<br/>
-						<b>Entitat: </b>'.$entitat.'</p>';
+						<strong>Data d\'inici: </strong>'.$data.'<br/>
+						<strong>Lloc: </strong>'.$lloc.'<br/>
+						<strong>Entitat: </strong>'.$entitat.'</p>';
 			}
 		}
 		?>
@@ -482,9 +482,9 @@ foreach ($wrapper->field_abast_noticies as $noticia){
 				$entitat = ($activitat->field_abast_activitats_entitat->value()) ? $activitat->field_abast_activitats_entitat->value() : $act_xn->field_organizer['und'][0]['value'];				
 				echo '<a href="'.$url.'" style="font-weight: bold; color: #800000; font-size: 14px; font-family:Arial; text-decoration: none">'.$title.'</a>';
 				echo '	<p style="font-size: 12px; margin: 0; vertical-align: top; margin: 5px 0 10px;">
-						<b>Data d\'inici: </b>'.$data.'<br/>
-						<b>Lloc: </b>'.$lloc.'<br/>
-						<b>Entitat: </b>'.$entitat.'</p>';
+						<strong>Data d\'inici: </strong>'.$data.'<br/>
+						<strong>Lloc: </strong>'.$lloc.'<br/>
+						<strong>Entitat: </strong>'.$entitat.'</p>';
 			}
 		}
 		?>
@@ -516,7 +516,7 @@ foreach ($wrapper->field_abast_noticies as $noticia){
 				}
 				$convocant = ($financament->field_abast_financament_convocan->value()) ? $financament->field_abast_financament_convocan->value() : strip_tags($fin_xn->field_convocant['und'][0]['value']);
 				echo '<a href="'.$url.'" style="font-weight: bold; color: #800000; font-size: 14px; font-family:Arial; text-decoration: none">'.$title.'</a>';
-				echo '<p style="font-size: 12px; margin: 0; vertical-align: top; margin: 5px 0 10px;"><b>Termini: </b>'.$termini.'<br/><b>Convocant: </b>'.$convocant.'</p>';
+				echo '<p style="font-size: 12px; margin: 0; vertical-align: top; margin: 5px 0 10px;"><strong>Termini: </strong>'.$termini.'<br/><strong>Convocant: </strong>'.$convocant.'</p>';
 			}
 		}
 		?>

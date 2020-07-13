@@ -273,7 +273,7 @@ ksort($financ_nodes);
 					<a style="text-decoration:none; color:#53544F; font-family:Verdana; font-size:12pt; line-height: 1.3em" href="<?php echo $financ_node['link']?>"><?php echo $financ_node['title']?></a>
 				</td></tr>
 				<tr><td colspan="2">
-					<p style="margin: 0px;"><?php echo $financ_node['teaser']?><br/><b>Convocant: </b><?php echo $financ_node['convocant']?><br/><b>Termini: </b><?php echo $financ_node['termini']?></p>
+					<p style="margin: 0px;"><?php echo $financ_node['teaser']?><br/><strong>Convocant: </strong><?php echo $financ_node['convocant']?><br/><strong>Termini: </strong><?php echo $financ_node['termini']?></p>
 					<p style="margin-top:0px; text-align: right;"><a style="text-decoration:none; font-weight:bold; color:#B2290C;" href="<?php echo $financ_node['link']?>">Més informació</a></p>
 				</td></tr>
 
@@ -338,9 +338,9 @@ ksort($financ_nodes);
 	<td colspan="2" style="border-top: 3px solid #53544F; padding: 4px;">
 		 <table class="butlleti"  style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; color:white;">
 			<tr class='body'><td colspan="2" style="padding-left:10px;">
-				<b>Xarxanet.org és un projecte de</b>
+				<strong>Xarxanet.org és un projecte de</strong>
 			</td><td colspan="2" style="padding-left:50px;">
-				<b>Entitats promotores</b>
+				<strong>Entitats promotores</strong>
 			</td></tr>
 			<tr class='body'><td style="vertical-align:top; padding-left:10px; padding-top:15px">
 				<table class="butlleti"><tr class='body'><td>

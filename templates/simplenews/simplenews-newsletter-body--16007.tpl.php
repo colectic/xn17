@@ -81,7 +81,7 @@ $node = $build['#node'];
 						<a href='{$url}' style='font-family: Fira Sans SemiBold,Helvetica,Arial,sans-serif; color: #2f3031; font-size: 18pt; font-weight: lighter; line-height: 24px; text-decoration: none;'>{$title}</a>
 						<p style='padding-top: 5px; margin: 2px 0; padding-bottom: 10px;'>{$teaser}</p>";
 			if ($node->field_actualitat_dest_prin_rel['und'][0]['nid'] != '') {
-				echo '<b>Altres informacions relacionades</b>
+				echo '<strong>Altres informacions relacionades</strong>
 						<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; border-collapse: collapse;">';
 				foreach ($node->field_actualitat_dest_prin_rel['und'] as $rel) {
 					$news_node = node_load($rel['nid']);
@@ -317,7 +317,7 @@ $node = $build['#node'];
 				<a href='{$url}' style='font-family: Fira Sans SemiBold,Helvetica,Arial,sans-serif; color: #2f3031; font-size: 12pt; line-height: 21px; text-decoration: none;'>{$title}</a>
 				<p style='padding-top: 5px; margin: 2px 0; padding-bottom: 10px;'>{$teaser}</p>";
 			if (($node->field_actualitat_lat_sup_rel['und'][0]['nid'] != '') || ($node->field_actualitat_lat_sup_rel_ex['und'][0]['url'] != '')) {
-				echo '<b>Altres informacions relacionades</b>
+				echo '<strong>Altres informacions relacionades</strong>
 				<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; border-collapse: collapse;">';
 				foreach ($node->field_actualitat_lat_sup_rel_ex['und'] as $rel) {
 					$title = $rel['title'];
@@ -437,9 +437,9 @@ $node = $build['#node'];
 	<td colspan="2" style="border-top: 3px solid #53544F; padding: 4px;">
 		 <table class="butlleti"  style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; color:white;">
 			<tr class='body'><td colspan="2" style="padding-left:10px;">
-				<b>Xarxanet.org és un projecte de</b>
+				<strong>Xarxanet.org és un projecte de</strong>
 			</td><td colspan="2" style="padding-left:50px;">
-				<b>Entitats promotores</b>
+				<strong>Entitats promotores</strong>
 			</td></tr>
 			<tr class='body'><td style="vertical-align:top; padding-left:10px; padding-top:15px">
 				<table class="butlleti"><tr class='body'><td>

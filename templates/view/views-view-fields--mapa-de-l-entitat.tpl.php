@@ -25,8 +25,8 @@ $longitude = $fields[coordinates]->handler->view->result[0]->location_longitude;
 $location = '' ;
 print '<div class="entitatmapa ">';				
 	if ($fields[coordinates]->handler->view->result[0]->location_street && $fields[coordinates]->handler->view->result[0]->location_city) {
-		if ($fields[coordinates]->handler->view->result[0]->location_street != '') $location .= '<b>'.$fields[coordinates]->handler->view->result[0]->location_name.'</b> <br/>';
-		$location .= '<b>'.$fields[coordinates]->handler->view->result[0]->users_name.'</b><br/>'.$fields[coordinates]->handler->view->result[0]->location_street.'<br/>'.$fields[coordinates]->handler->view->result[0]->location_city;
+		if ($fields[coordinates]->handler->view->result[0]->location_street != '') $location .= '<strong>'.$fields[coordinates]->handler->view->result[0]->location_name.'</strong> <br/>';
+		$location .= '<strong>'.$fields[coordinates]->handler->view->result[0]->users_name.'</strong><br/>'.$fields[coordinates]->handler->view->result[0]->location_street.'<br/>'.$fields[coordinates]->handler->view->result[0]->location_city;
 		
 	}              	
 	if ($latitude != 0 || $longitude != 0) {

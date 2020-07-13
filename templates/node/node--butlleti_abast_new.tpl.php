@@ -1510,16 +1510,16 @@
 													<a href="<?php print $volunteering->link; ?>" style="font-family:'Open sans' !important;color:#671013;text-decoration:none;"><?php print $volunteering->title; ?></a>
 												</h3>
 												<?php if ($volunteering->entity): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Entitat:</b> <?php print $volunteering->entity; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Entitat:</strong> <?php print $volunteering->entity; ?></p>
 												<?php endif; ?>
 												<?php if ($volunteering->place): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Lloc:</b> <?php print $volunteering->place; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Lloc:</strong> <?php print $volunteering->place; ?></p>
 												<?php endif; ?>
 												<?php if ($volunteering->sector): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Dedicació:</b> <?php print $volunteering->sector; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Dedicació:</strong> <?php print $volunteering->sector; ?></p>
 												<?php endif; ?>
 												<?php if ($volunteering->profile): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Perfil:</b> <?php print $volunteering->profile; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Perfil:</strong> <?php print $volunteering->profile; ?></p>
 												<?php endif; ?>
 											</li>
 										<?php endforeach; ?>
@@ -1564,13 +1564,13 @@
 													<a href="<?php print $pfvc->link; ?>" style="font-family:'Open sans' !important;color:#671013;text-decoration:none;"><?php print $pfvc->title; ?></a>
 												</h3>
 												<?php if ($pfvc->dates): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Data d'inici:</b> <?php print $pfvc->dates; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Data d'inici:</strong> <?php print $pfvc->dates; ?></p>
 												<?php endif; ?>
 												<?php if ($pfvc->place): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Lloc:</b> <?php print $pfvc->place; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Lloc:</strong> <?php print $pfvc->place; ?></p>
 												<?php endif; ?>
 												<?php if ($pfvc->entity): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Entitat:</b> <?php print $pfvc->entity; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Entitat:</strong> <?php print $pfvc->entity; ?></p>
 												<?php endif; ?>
 											</li>
 										<?php endforeach; ?>
@@ -1615,13 +1615,13 @@
 													<a href="<?php print $training->link; ?>" style="font-family:'Open sans' !important;color:#671013;text-decoration:none;"><?php print $training->title; ?></a>
 												</h3>
 												<?php if ($training->date): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Data d'inici:</b> <?php print $training->date; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Data d'inici:</strong> <?php print $training->date; ?></p>
 												<?php endif; ?>
 												<?php if ($training->place): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Lloc:</b> <?php print $training->place; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Lloc:</strong> <?php print $training->place; ?></p>
 												<?php endif; ?>
 												<?php if ($training->entity): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Entitat:</b> <?php print $training->entity; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Entitat:</strong> <?php print $training->entity; ?></p>
 												<?php endif; ?>
 											</li>
 										<?php endforeach; ?>
@@ -1666,13 +1666,13 @@
 													<a href="<?php print $activity->link; ?>" style="font-family:'Open sans' !important;color:#671013;text-decoration:none;"><?php print $activity->title; ?></a>
 												</h3>
 												<?php if ($activity->date): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Data d'inici:</b> <?php print $activity->date; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Data d'inici:</strong> <?php print $activity->date; ?></p>
 												<?php endif; ?>
 												<?php if ($activity->place): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Lloc:</b> <?php print $activity->place; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Lloc:</strong> <?php print $activity->place; ?></p>
 												<?php endif; ?>
 												<?php if ($activity->entity): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Entitat:</b> <?php print $activity->entity; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Entitat:</strong> <?php print $activity->entity; ?></p>
 												<?php endif; ?>
 											</li>
 										<?php endforeach; ?>
@@ -1717,10 +1717,10 @@
 													<a href="<?php print $finance->link; ?>" style="font-family:'Open sans' !important;color:#671013;text-decoration:none;"><?php print $finance->title; ?></a>
 												</h3>
 												<?php if ($finance->date): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Termini:</b> <?php print $finance->date; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Termini:</strong> <?php print $finance->date; ?></p>
 												<?php endif; ?>
 												<?php if ($finance->entity): ?>
-													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><b>Convocant:</b> <?php print $finance->entity; ?></p>
+													<p class="text-sm" style="Margin:0;font-family:'Open sans' !important;font-size:14px !important;Margin-bottom:10px;color:#333333;"><strong>Convocant:</strong> <?php print $finance->entity; ?></p>
 												<?php endif; ?>
 											</li>
 										<?php endforeach; ?>
@@ -2291,7 +2291,7 @@
 									<tr>
 										<td class="inner-left inner-right inner-bottom contents" style="padding-top:0;width:100%;font-family:'Open sans' !important;padding-left:20px;padding-right:20px;padding-bottom:20px;font-size:14px;text-align:center;">
 											<div class="text-xxs text-left" style="font-family:'Open sans' !important;font-size:10px !important;text-align:left;">
-												<b><u>Avís legal</u></b>: D’acord amb l’article 17.1 de la Llei 19/2014, la Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se'n citi la font i la data d'actualització i que no es desnaturalitzi la informació (article 8 de la Llei 37/2007) i també que no es contradigui amb una llicència específica. Si l'adreça de correu que informeu al donar-vos d'alta deixa d'estar activa us donarem de baixa a la base de dades.
+												<strong>Avís legal</strong>: D’acord amb l’article 17.1 de la Llei 19/2014, la Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se'n citi la font i la data d'actualització i que no es desnaturalitzi la informació (article 8 de la Llei 37/2007) i també que no es contradigui amb una llicència específica. Si l'adreça de correu que informeu al donar-vos d'alta deixa d'estar activa us donarem de baixa a la base de dades.
 												Aquest butlletí és una iniciativa del Departament de Treball, Afers Socials i Famílies de la Generalitat de Catalunya, coeditat amb la Fundació Pere Tarrés. ISSN: 2385-4146.
 											</div>
 										</td>
