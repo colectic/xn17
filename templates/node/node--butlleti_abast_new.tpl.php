@@ -2291,7 +2291,7 @@
 									<tr>
 										<td class="inner-left inner-right inner-bottom contents" style="padding-top:0;width:100%;font-family:'Open sans' !important;padding-left:20px;padding-right:20px;padding-bottom:20px;font-size:14px;text-align:center;">
 											<div class="text-xxs text-left" style="font-family:'Open sans' !important;font-size:10px !important;text-align:left;">
-												<b><u>Avís legal</u></b>: D’acord amb l’article 17.1 de la Llei 19/2014, la Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se'n citi la font i la data d'actualització i que no es desnaturalitzi la informació (article 8 de la Llei 37/2007) i també que no es contradigui amb una llicència específica. Si l'adreça de correu que informeu al donar-vos d'alta deixa d'estar activa us donarem de baixa a la base de dades.
+												<strong>Avís legal</strong>: D’acord amb l’article 17.1 de la Llei 19/2014, la Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se'n citi la font i la data d'actualització i que no es desnaturalitzi la informació (article 8 de la Llei 37/2007) i també que no es contradigui amb una llicència específica. Si l'adreça de correu que informeu al donar-vos d'alta deixa d'estar activa us donarem de baixa a la base de dades.
 												Aquest butlletí és una iniciativa del Departament de Treball, Afers Socials i Famílies de la Generalitat de Catalunya, coeditat amb la Fundació Pere Tarrés. ISSN: 2385-4146.
 											</div>
 										</td>
