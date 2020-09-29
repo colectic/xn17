@@ -869,11 +869,11 @@ var mesNoticiesObert = false;
         'captionText': 'La taula és una vista de calendari amb el mes actual; amb el nom abreviat dels dies de la setmana a la capçalera, començant pel dilluns.'
       });
       Drupal.xn17.addCaptionToTable({
-        'tableSelector': '.page-politica-cookies #cookies-table',
+        'tableSelector': '.page-politica-cookies .pane-1 table',
         'captionText': 'La taula ofereix informació sobre les galetes que es fan servir en aquest lloc web. Consta de 4 columnes: procedència de la cookie, nom de la cookie, la seva finalitat i el venciment d\'aquesta.'
       });
       Drupal.xn17.addCaptionToTable({
-        'tableSelector': '#node-135151-table',
+        'tableSelector': '.page-node-135151 .views-field-field-continguts table',
         'captionText': 'Taula on es detallen els porcentatges de deducció en base a l\'import de deducció. Fins un import de 150€ el percentatge de la deducció arriba al 75%; per la resta d\'imports, és del 30%.'
       });
     }
