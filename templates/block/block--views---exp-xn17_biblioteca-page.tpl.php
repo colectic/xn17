@@ -74,10 +74,10 @@
     </div>
     <div id="sortby-arrows">
       <div class="sortby-arrow <?php if ($sortby == 'created') echo 'active'; ?>" id="all-arrow">
-        <img src="/sites/all/themes/xn17/assets/images/elements/punta-avall.svg" />&nbsp;
+        <img src="/sites/all/themes/xn17/assets/images/elements/punta-avall.svg" alt="Icona d'una fletxa apuntant cap avall"/>&nbsp;
       </div>
       <div class="sortby-arrow <?php if ($sortby == 'totalcount') echo 'active'; ?>" id="events-arrow">
-        <img src="/sites/all/themes/xn17/assets/images/elements/punta-avall.svg" />&nbsp;
+        <img src="/sites/all/themes/xn17/assets/images/elements/punta-avall.svg" alt="Icona d'una fletxa apuntant cap avall"/>&nbsp;
       </div>
     </div>
     <?php

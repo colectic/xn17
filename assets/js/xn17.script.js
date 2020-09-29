@@ -825,6 +825,28 @@ var mesNoticiesObert = false;
         }
         $banner.insertAfter($target);
       }
+    },
+
+    /**
+     * Helper function to improve the a11y of the tables, by adding
+     * a hidden caption just before the <thead> tag.
+     *
+     * @param   {object}  params  
+     *          An object containing the following data:
+     *            
+     *            - tableSelector {string}  A valid CSS selector to identify the table.
+     *            - captionText:  {string}  A fully descriptive text explaining the table structure and data.
+     */
+    addCaptionToTable: function(params) {
+      var tableSelector = params.tableSelector;
+      var captionText = params.captionText;
+      if ($(tableSelector).find('caption').length < 1) { // Avoids weird caption duplicates
+        if (tableSelector && captionText) { // Ensure both params exists
+          var $caption = $('<caption class="sr-only"></caption');
+          $caption.text(captionText);
+          $(tableSelector).prepend($caption);
+        }
+      }
     }
   };
 
@@ -842,6 +864,18 @@ var mesNoticiesObert = false;
       Drupal.xn17.equalHeight();
       Drupal.xn17.buttonSearch();
       Drupal.xn17.covid19SpecialOverrides(); // Can be removed when the landing would be unpublished
+      Drupal.xn17.addCaptionToTable({
+        'tableSelector': '.front .view-xn17-agenda-portada .calendar-calendar table',
+        'captionText': 'La taula és una vista de calendari amb el mes actual; amb el nom abreviat dels dies de la setmana a la capçalera, començant pel dilluns.'
+      });
+      Drupal.xn17.addCaptionToTable({
+        'tableSelector': '.page-politica-cookies #cookies-table',
+        'captionText': 'La taula ofereix informació sobre les galetes que es fan servir en aquest lloc web. Consta de 4 columnes: procedència de la cookie, nom de la cookie, la seva finalitat i el venciment d\'aquesta.'
+      });
+      Drupal.xn17.addCaptionToTable({
+        'tableSelector': '#node-135151-table',
+        'captionText': 'Taula on es detallen els porcentatges de deducció en base a l\'import de deducció. Fins un import de 150€ el percentatge de la deducció arriba al 75%; per la resta d\'imports, és del 30%.'
+      });
     }
   };
 
