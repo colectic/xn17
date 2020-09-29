@@ -234,3 +234,26 @@ function xn17_menu_link__main($variables) {
   
   return '<div' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</div>\n";
 }
+
+/**
+ * Overrides default's theme_file_icon() field rendering function.
+ * Basically, this function adds a custom alt text for uploaded PDF files,
+ * and, in the other hand, a default one for the other mime types.
+ *
+ * @see  modules/file/file.module
+ */
+function xn17_file_icon($variables) {
+  if ($variables['file']->filemime === 'application/pdf') {
+    $variables['alt'] = 'Icona d\'un arxiu PDF';
+  }
+  else {
+    $variables['alt'] = 'Icona d\'arxiu';
+  }
+  $file = $variables['file'];
+  $alt = $variables['alt'];
+  $icon_directory = $variables['icon_directory'];
+
+  $mime = check_plain($file->filemime);
+  $icon_url = file_icon_url($file, $icon_directory);
+  return '<img class="file-icon" alt="' . check_plain($alt) . '" title="' . $mime . '" src="' . $icon_url . '" />';
+}
