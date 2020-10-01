@@ -876,6 +876,14 @@ var mesNoticiesObert = false;
         'tableSelector': '.page-node-135151 .views-field-field-continguts table',
         'captionText': 'Taula on es detallen els porcentatges de deducció en base a l\'import de deducció. Fins un import de 150€ el percentatge de la deducció arriba al 75%; per la resta d\'imports, és del 30%.'
       });
+      Drupal.xn17.addCaptionToTable({
+        'tableSelector': '.page-entitats-col-laboradores .view-display-id-page table',
+        'captionText': 'Taula que mostra un llistat d\'entitats col·laboradores, amb les columnes: Nom, Ciutat, Àmbit d\'intervenció, Telèfon i Correu electrònic.'
+      });
+      Drupal.xn17.addCaptionToTable({
+        'tableSelector': '.page-node-55148 .view-hemeroteca-actualitat table',
+        'captionText': 'Taula que mostra un llistat dels butlletins d\'Actualitat, amb les columnes: Número de butlletí i Data de publicació.'
+      });
     }
   };
 
