@@ -100,3 +100,36 @@
   }
 
 }
+
+// Correccions a Mobile
+
+@media (max-width: $screen-md) {
+
+  .node-type-noticia-general {
+
+    .xn17-standard-column1 {
+      
+      .field-name-field-usuari-autor {
+        display: none;
+      }
+    }
+    
+    .xn17-standard-column2 {
+
+      .field-name-titol-copia {
+
+        h1 {
+          margin-top: 0;
+        }
+      }
+      
+      .field-name-entitat-redactora-copia- {
+        margin-top: -40px;
+      }
+
+      .field-name-simple-share-icons-copia- {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
