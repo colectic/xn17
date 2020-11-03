@@ -434,6 +434,10 @@
             color:$gray-dark;
           }
         }
+
+        @media (max-width: $screen-md) {
+          padding-top: 10px;
+        }
       }
       .field-name-ambit-noticia {
         background: none;

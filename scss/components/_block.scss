@@ -34,6 +34,50 @@
   }
 }
 
+// Menu dels portals
+
+@media (max-width: $screen-md) {
+
+  // Home page
+  .pane-menu-menu-xn17-menu-noticies.menu-noticies,
+  .pane-menu-menu-xn17-menu-recursos.menu-recursos {
+
+    .pane-title {
+
+      button {
+        display: none !important;
+      }
+    }
+
+    .pane-content {
+      display: none !important;
+    }
+  }
+
+  // Home page - Sticky Menus
+  #fixed-menu-noticies,
+  #fixed-menu-recursos {
+    display: none !important;
+  }
+
+  // Pàgines interiors
+
+  .menu.menu-noticies, 
+  .menu.menu-recursos {
+
+    .block__title {
+
+      button {
+        display: none !important;
+      }
+    }
+
+    .block__content {
+      display: none !important;
+    }
+  }
+}
+
 // Menu fet amb block
 
 .block.menu {

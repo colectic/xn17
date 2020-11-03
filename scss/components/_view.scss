@@ -70,6 +70,10 @@
     padding-left: 10px;
     padding-top:20px;
     padding-right:10px;
+
+    @media (max-width: $screen-md) {
+      padding-top: 10px;
+    }
   }
   .cont_titular_entradeta .titular h4 {
     padding-top: 0px;
