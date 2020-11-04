@@ -105,6 +105,12 @@
 
 @media (max-width: $screen-md) {
 
+  .page-node .views-slideshow-cycle-main-frame, .page-etiquetes .views-slideshow-cycle-main-frame {
+    min-height: 0px;
+  }
+
+  // Notícies 
+
   .node-type-noticia-general {
 
     .xn17-standard-column1 {
@@ -116,20 +122,62 @@
     
     .xn17-standard-column2 {
 
-      .field-name-titol-copia {
+      .field-name-slide-imatges-secundaries {
 
-        h1 {
+        .views-slideshow-cycle-main-frame {
+          // min-height: 0;
+        }
+      }
+
+      .field-name-entitat-redactora-copia- {
+        margin-top: -40px;
+      }
+
+      .field-name-simple-share-icons-copia- {
+        margin-top: 15px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // Recursos
+
+  .node-type-recurs-general {
+
+    .bloc-header-image {
+      display: none;
+    }
+
+    .xn17-standard-column1 {
+      
+      .field-name-field-usuari-autor {
+        display: none;
+      }
+
+      .field-name-field-autor {
+        display: none;
+      }
+    }
+
+    .xn17-standard-column2 {
+
+      .field-name-slide-imatges-secundaries {
+
+        .views-slideshow-cycle-main-frame {
           margin-top: 0;
         }
       }
       
       .field-name-entitat-redactora-copia- {
         margin-top: -40px;
-      }
-
-      .field-name-simple-share-icons-copia- {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
     }
+  }
+
+  .page-recursos .view-xn17-recursos .view-header h1 {
+    color: #fff !important;
+    margin-top: -90px !important;
+    padding-bottom: 15px;
   }
 }
