@@ -156,7 +156,7 @@
 
 }
 @media (max-width: 480px){
-   .page-opinio {
+  .page-opinio {
     .destacat_2x2 {
         font-size: 1em;
     }
@@ -167,12 +167,26 @@
     padding-left: 5%;
     padding-bottom: 5%;
     position: relative;
+  }
+  .node-type-autor-a .node-autor-a .fitxa-autor .presentacio p {
+      margin-top: 10px;
+      color: #2f3031;
+  }
+  .node-type-autor-a .node-autor-a .fitxa-autor .presentacio .twitter a {
+      color: #2f3031;
+  }
 }
-.node-type-autor-a .node-autor-a .fitxa-autor .presentacio p {
-    margin-top: 10px;
-    color: #2f3031;
-}
-.node-type-autor-a .node-autor-a .fitxa-autor .presentacio .twitter a {
-    color: #2f3031;
-}
+
+.page-autors-es {
+
+  .view-xn17-opinio {
+
+    .views-field-field-autor-foto-quadrada {
+
+      .modul_1x1 {
+        display: block;
+        overflow: hidden;
+      }
+    }
+  }
 }
