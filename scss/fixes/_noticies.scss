@@ -122,13 +122,6 @@
     
     .xn17-standard-column2 {
 
-      .field-name-slide-imatges-secundaries {
-
-        .views-slideshow-cycle-main-frame {
-          // min-height: 0;
-        }
-      }
-
       .field-name-entitat-redactora-copia- {
         margin-top: -40px;
       }
@@ -179,5 +172,40 @@
     color: #fff !important;
     margin-top: -90px !important;
     padding-bottom: 15px;
+  }
+}
+
+// Correccions a les imatges secundaries (imatge fixe i carrusel)
+
+.node-type-noticia-general,
+.node-type-recurs-general {
+
+  .xn17-standard-column2 {
+  
+    .field-name-slide-imatges-secundaries {
+  
+      .views-slideshow-cycle-main-frame {
+        
+        @media (max-width: 768px) {
+          min-height: 30em !important;
+        }
+
+        @media (max-width: 660px) {
+          min-height: 26em !important;
+        }
+
+        @media (max-width: 560px) {
+          min-height: 24em !important;
+        }
+
+        @media (max-width: 460px) {
+          min-height: 20em !important;
+        }
+
+        @media (max-width: 360px) {
+          min-height: 16em !important;
+        }
+      }
+    }
   }
 }
