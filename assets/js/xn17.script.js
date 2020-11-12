@@ -847,6 +847,49 @@ var mesNoticiesObert = false;
           $(tableSelector).prepend($caption);
         }
       }
+    },
+    /**
+     * After installing the Yoast SEO module, we noticed that it's 'Slug' field was overriding the 
+     * Pathauto provided field for URL aliases in the first vertical tab.
+     * 
+     * As it's an undesired behavior, we've hidden the vertical tab related to the 'Pathauto' module,
+     * an also the 'Slug' field of the Yoast SEO module.
+     * 
+     * But, the vertical tab to hide is the first of them, with a class 'selected' that activates it. 
+     * So in this snippet we're forcing the second tab to be shown, instead the first we hide with pure CSS.
+     * 
+     * @see  sites/all/themes/xn17/scss/fixes/_publica.scss (at bottom lines).
+     */
+    verticalTabOverrides: function() {
+      // As vertical tabs doesn't provide any class or id, we have to hide the 'Pathauto' tab like this:
+      // On node add form:
+      var $flag = $('.page-node-add .node-form .vertical-tabs-list .first.selected').find('.summary');
+      if ($flag.text() == 'Automatic alias') {
+        $('.page-node-add .node-form .vertical-tabs-list .first.selected').css('display', 'none');
+        // If already hidden, do this stuff:
+        if ($('.page-node-add .node-form .vertical-tabs-list .first.selected').is(':hidden')) {
+          // Unselect the first tab and mark the second one as selected.
+          $('.page-node-add .node-form .vertical-tabs-list .first').removeClass('selected');
+          $('.page-node-add .node-form .vertical-tabs-list .first').next().addClass('selected');
+          // Hide the first vertical pane and show the second one.
+          $('.page-node-add .node-form .vertical-tabs-panes fieldset:nth-child(1)').css('display', 'none');
+          $('.page-node-add .node-form .vertical-tabs-panes fieldset:nth-child(2)').css('display', 'block');
+        }
+      }
+      // On node edit form:
+      var $flag = $('.page-node-edit .node-form .vertical-tabs-list .first.selected').find('.summary');
+      if ($flag.text() == 'Automatic alias') {
+        $('.page-node-edit .node-form .vertical-tabs-list .first.selected').css('display', 'none');
+        // If already hidden, do this stuff:
+        if ($('.page-node-edit .node-form .vertical-tabs-list .first.selected').is(':hidden')) {
+          // Unselect the first tab and mark the second one as selected.
+          $('.page-node-edit .node-form .vertical-tabs-list .first').removeClass('selected');
+          $('.page-node-edit .node-form .vertical-tabs-list .first').next().addClass('selected');
+          // Hide the first vertical pane and show the second one.
+          $('.page-node-edit .node-form .vertical-tabs-panes fieldset:nth-child(1)').css('display', 'none');
+          $('.page-node-edit .node-form .vertical-tabs-panes fieldset:nth-child(2)').css('display', 'block');
+        }
+      }
     }
   };
 
@@ -864,6 +907,7 @@ var mesNoticiesObert = false;
       Drupal.xn17.equalHeight();
       Drupal.xn17.buttonSearch();
       Drupal.xn17.covid19SpecialOverrides(); // Can be removed when the landing would be unpublished
+      Drupal.xn17.verticalTabOverrides();
       Drupal.xn17.addCaptionToTable({
         'tableSelector': '.front .view-xn17-agenda-portada .calendar-calendar table',
         'captionText': 'La taula és una vista de calendari amb el mes actual; amb el nom abreviat dels dies de la setmana a la capçalera, començant pel dilluns.'
