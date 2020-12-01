@@ -204,6 +204,7 @@
         <a href="/contacte">CONTACTE</a>  /
         <a href="/avis-legal">AVÍS LEGAL</a>  /
         <a href="/politica_cookies">POLÍTICA DE COOKIES</a>
+        <a href="/declaracio-accessibilitat">DECLARACIÓ D'ACCESSIBILITAT</a>
       </div>
     </div>
     <div class="footer-region col-lg-2 col-md-7 col-sm-12 col-xs-12 third">
