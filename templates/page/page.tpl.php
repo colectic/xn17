@@ -200,10 +200,10 @@
     </div>
     <div class="footer-region col-lg-4 col-md-5 col-sm-12 col-xs-12 second">
       <div id="footer-links">
-  <a href="/butlletins">BUTLLETINS</a>  /
-	<a href="/contacte">CONTACTE</a>  /
-	<a href="/avis-legal">AVÍS LEGAL</a>  /
-	<a href="/politica_cookies">POLÍTICA DE COOKIES</a>
+        <a href="/butlletins">BUTLLETINS</a>  /
+        <a href="/contacte">CONTACTE</a>  /
+        <a href="/avis-legal">AVÍS LEGAL</a>  /
+        <a href="/politica_cookies">POLÍTICA DE COOKIES</a>
       </div>
     </div>
     <div class="footer-region col-lg-2 col-md-7 col-sm-12 col-xs-12 third">
