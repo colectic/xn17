@@ -116,3 +116,31 @@
         }
     }
 }
+
+// Declaracio d'Accessibilitat
+
+.a11y-disclaimer {
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    ol {
+        list-style: lower-alpha;
+    }
+
+    a {
+        color: #a7a7a7;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: #2f3031;
+        }
+    }
+}
