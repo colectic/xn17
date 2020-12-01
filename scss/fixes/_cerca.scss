@@ -21,3 +21,30 @@
     }
   }
 }
+
+// Search block (a11y)
+
+#search-form {
+
+  .form-wrapper {
+    position: relative;
+
+    .form-text {
+      border: none;
+    }
+    
+    .form-submit {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      background-color: $xn17-vermell;
+      color: #fff;
+      border: none;
+      height: 100%;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+}
