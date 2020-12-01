@@ -900,6 +900,22 @@ var mesNoticiesObert = false;
       if ($('#search-form label').length > 0) {
         $('#search-form label').text('Cerca ');
       }
+    },
+
+    /**
+     * Enable clicking with space key in all elements having 
+     * a role="button" attribute
+     */
+
+    enableSpaceKeyClick: function() {
+      $('*[role="button"]').keypress(function(e) {
+        e.preventDefault();
+        // SpaceKey = '0' [Gecko], '32' [Webkit & others]. 
+        // EnterKey = '13'
+        if (e.keyCode == 0 || e.keyCode == 32 || e.keyCode == 13) {
+          $(this).trigger('click');
+        } 
+      });
     }
   };
 
@@ -919,6 +935,8 @@ var mesNoticiesObert = false;
       Drupal.xn17.covid19SpecialOverrides(); // Can be removed when the landing would be unpublished
       Drupal.xn17.verticalTabOverrides();
       Drupal.xn17.i18nSearchBlockLabel();
+      Drupal.xn17.enableSpaceKeyClick();
+
       Drupal.xn17.addCaptionToTable({
         'tableSelector': '.front .view-xn17-agenda-portada .calendar-calendar table',
         'captionText': 'La taula és una vista de calendari amb el mes actual; amb el nom abreviat dels dies de la setmana a la capçalera, començant pel dilluns.'
