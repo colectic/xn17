@@ -18,7 +18,7 @@
 	<a href="/"><img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/></a>
       </div>
       <div class="menu-icon">
-        <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="menu icon"/>
+        <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="Mostra o amaga el menú principal" role="button" tabindex="0"/>
       </div>
       <div class="main-selector main-resources">
         <a href="/recursos">recursos</a>
@@ -27,10 +27,10 @@
         <a href="/noticies">notícies</a>
       </div>
       <div class="social-icons hidden-xs hidden-sm">
-        <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
-        <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
-        <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
-        <a href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="newsletter icon"/></a>
+        <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="Obrir la pàgina de Xarxanet a Facebook en una nova pestanya"/></a>
+        <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="Obrir la pàgina de Xarxanet a Twitter en una nova pestanya"/></a>
+        <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="Obrir la pàgina de Xarxanet a Instagram en una nova pestanya"/></a>
+        <a href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="Anar a la pàgina dels butlletins de Xarxanet"/></a>
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
       <div class="header-region col-lg-6 col-md-6 col-sm-12 col-xs-12 second">
         <ul id="secondary-menu" class="menu nav navbar-nav">
           <?php print render($secondary_menu); ?>
-          <li class="leaf active hidden-md hidden-lg"><button class="btn-search"><img id="search-icon" src="/sites/all/themes/xn17/assets/images/icon/icon-search-white.svg" alt="search icon"/></button></li>
+          <li class="leaf active hidden-md hidden-lg"><button class="btn-search"><img id="search-icon" src="/sites/all/themes/xn17/assets/images/icon/icon-search-white.svg" alt="CERCA" /></button></li>
         </ul>
       </div>
     <?php endif; ?>
@@ -85,10 +85,10 @@
     <?php //endif; ?> -->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="sticky-logo hidden-xs hidden-md hidden-lg">
-        <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="menu icon"/>
+        <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="Logotip de Xarxanet"/>
       </div>
       <div class="menu-icon">
-        <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="menu icon"/>
+        <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="Mostra o amaga el menú principal" role="button" tabindex="0"/>
       </div>
       <div class="main-selector main-resources">
         <a href="/recursos">recursos</a>
@@ -97,10 +97,10 @@
         <a href="/noticies">notícies</a>
       </div>
       <div class="social-icons hidden-xs hidden-sm">
-        <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
-        <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
-        <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
-        <a href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="newsletter icon"/></a>
+        <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="Obrir la pàgina de Xarxanet a Facebook en una nova pestanya"/></a>
+        <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="Obrir la pàgina de Xarxanet a Twitter en una nova pestanya"/></a>
+        <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="Obrir la pàgina de Xarxanet a Instagram en una nova pestanya"/></a>
+        <a href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="Anar a la pàgina dels butlletins de Xarxanet"/></a>
       </div>
     </div>
   </div>
@@ -193,17 +193,18 @@
   <div class="container">
     <div class="footer-region col-lg-6 col-md-12 col-sm-12 col-xs-12 first">
       <div id="footer-logo">
-	<a href="/">
- 	      <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/>
-	</a>
+        <a href="/">
+          <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logotip de Xarxanet"/>
+        </a>
       </div>
     </div>
     <div class="footer-region col-lg-4 col-md-5 col-sm-12 col-xs-12 second">
       <div id="footer-links">
-  <a href="/butlletins">BUTLLETINS</a>  /
-	<a href="/contacte">CONTACTE</a>  /
-	<a href="/avis-legal">AVÍS LEGAL</a>  /
-	<a href="/politica_cookies">POLÍTICA DE COOKIES</a>
+        <a href="/butlletins">BUTLLETINS</a>  /
+        <a href="/contacte">CONTACTE</a>  /
+        <a href="/avis-legal">AVÍS LEGAL</a>  /
+        <a href="/politica_cookies">POLÍTICA DE COOKIES</a>
+        <a href="/declaracio-accessibilitat">DECLARACIÓ D'ACCESSIBILITAT</a>
       </div>
     </div>
     <div class="footer-region col-lg-2 col-md-7 col-sm-12 col-xs-12 third">

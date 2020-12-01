@@ -579,13 +579,15 @@
       text-align: center;
       margin-bottom: 15px;
       background: $gray-light url("../images/elements/slim_line.svg") repeat-x center;
-      h4 {
+      h2, h4 {
+        font-size: 18px;
         font-weight: 600;
         color: $gray-medium;
         display: inline-block;
         width: auto;
         background-color: $gray-light;
         padding: 0 15px;
+        margin-top: 10px;
       }
     }
     .segueixnos {
@@ -632,6 +634,9 @@
         margin: 5px 15px 0 15px;
         border-top: solid 1px $gray-dark;
         padding: 10px 0;
+        span {
+          font-size: 12px;
+        }
       }
     }
     .unprojectede {
@@ -641,11 +646,18 @@
       width: 100%;
       .main-footer-title {
         text-align: left;
+        h2, h4 {
+          font-size: 18px;
+          margin-top: 10px;
+        }
       }
       .logo-title {
         margin: 0 15px;
         border-top: solid 1px $gray-dark;
         padding: 10px 0;
+        span {
+          font-size: 12px;
+        }
       }
     }
   }
