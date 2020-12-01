@@ -18,7 +18,7 @@
 	<a href="/"><img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/></a>
       </div>
       <div class="menu-icon">
-        <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="Botó per expandir/contraure el menú" role="button" tabindex="0"/>
+        <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="Mostra o amaga el menú principal" role="button" tabindex="0"/>
       </div>
       <div class="main-selector main-resources">
         <a href="/recursos">recursos</a>
@@ -88,7 +88,7 @@
         <img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="Logotip de Xarxanet"/>
       </div>
       <div class="menu-icon">
-        <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="Expandir/contraure el menú principal" role="button" tabindex="0"/>
+        <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="Mostra o amaga el menú principal" role="button" tabindex="0"/>
       </div>
       <div class="main-selector main-resources">
         <a href="/recursos">recursos</a>
