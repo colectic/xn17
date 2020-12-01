@@ -1,2 +1,55 @@
 // Styles for Forms
 // -----------------------------------------------------------------------------
+
+input,
+textarea,
+.form-control {
+  color: $gray-dark;
+
+  /* Placeholders */
+  
+  &::-webkit-input-placeholder {
+    font-style: italic !important;
+    font-weight: 400 !important;
+    color: #595959 !important;
+  }
+  
+  &::-moz-placeholder {
+    font-style: italic !important;
+    font-weight: 400 !important;
+    color: #595959 !important;
+  }
+  
+  &:-ms-input-placeholder {
+    font-style: italic !important;
+    font-weight: 400 !important;
+    color: #595959 !important;
+  }
+  
+  &:-moz-placeholder {
+    font-style: italic !important;
+    font-weight: 400 !important;
+    color: #595959 !important;
+  }
+}
+
+// Captcha
+
+.captcha.panel {
+  margin-top: 20px;
+  box-shadow: none;
+  border: none;
+
+  .panel-heading {
+    display: none;
+  }
+  
+  .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+
+    .help-block {
+      color: $gray-dark;
+    }
+  }
+}
