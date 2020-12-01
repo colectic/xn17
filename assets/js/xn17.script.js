@@ -890,6 +890,16 @@ var mesNoticiesObert = false;
           $('.page-node-edit .node-form .vertical-tabs-panes fieldset:nth-child(2)').css('display', 'block');
         }
       }
+    },
+
+    /**
+     * Attempts to translate a hidden label in the Search's block,
+     * not translatable by default in the Drupal manner.
+     */
+    i18nSearchBlockLabel: function() {
+      if ($('#search-form label').length > 0) {
+        $('#search-form label').text('Cerca ');
+      }
     }
   };
 
@@ -908,6 +918,7 @@ var mesNoticiesObert = false;
       Drupal.xn17.buttonSearch();
       Drupal.xn17.covid19SpecialOverrides(); // Can be removed when the landing would be unpublished
       Drupal.xn17.verticalTabOverrides();
+      Drupal.xn17.i18nSearchBlockLabel();
       Drupal.xn17.addCaptionToTable({
         'tableSelector': '.front .view-xn17-agenda-portada .calendar-calendar table',
         'captionText': 'La taula és una vista de calendari amb el mes actual; amb el nom abreviat dels dies de la setmana a la capçalera, començant pel dilluns.'
