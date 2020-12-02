@@ -97,7 +97,15 @@ function xn17_custom_comments_form_validate(&$form, &$form_state) {
  */
 
 function xn17_form_comment_form_alter(&$form, &$form_state, &$form_id) {
+
+  // Adding autocomplete attributes to Comments Form
+
+  $form['#attributes']['autocomplete'] = 'on';
+  $form['author']['name']['#attributes']['autocomplete'] = 'name';
+  $form['author']['mail']['#attributes']['autocomplete'] = 'email';
   
+  // Additional overrides
+
   $form['comment_body']['#after_build'][] = 'xn17_customize_comment_form';  
 }
 
