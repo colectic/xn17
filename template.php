@@ -58,6 +58,14 @@ function xn17_form_alter(&$form, &$form_state, $form_id) {
     $form['submitted']['telefon']['#attributes']['autocomplete'] = 'tel';
     $form['submitted']['entitat']['#attributes']['autocomplete'] = 'organization';
   }
+
+  // Adding autocomplete attributes to Login Form
+
+  if ($form_id == 'user_login') {
+    $form['#attributes']['autocomplete'] = 'on';
+    $form['name']['#attributes']['autocomplete'] = 'email';
+    $form['pass']['#attributes']['autocomplete'] = 'current-password';
+  }
 }
 
 /**
