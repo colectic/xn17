@@ -1,0 +1,40 @@
+// Links
+// -----------------------------------------------------------------------------
+
+// Pàgines tipus Page
+
+.node-type-page {
+
+  .node.node-page {
+
+    a {
+      color: $xn17-vermell;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $gray-dark;
+      }
+    }
+  }
+}
+
+// Pàgines tipus Webform
+
+.node-type-webform {
+
+  .node.node-webform {
+
+    a {
+      color: $xn17-vermell;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $gray-dark;
+      }
+    }
+  }
+}
