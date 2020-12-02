@@ -34,10 +34,16 @@ function xn17_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'views_exposed_form') {
     $view = $form_state['view'];
-    
-    // Overriding 'Financament' Exposed Form
+
+    // 'Financament' Exposed Form
     
     if ($view->name == 'xn17_financament' && $view->current_display == 'page') {
+      $form['combine']['#title'] = '<span class="sr-only">' . t('Cercar per') . '</span>';
+    }
+
+    // 'Biblioteca' Exposed Form
+
+    if ($view->name == 'xn17_biblioteca' && $view->current_display == 'page') {
       $form['combine']['#title'] = '<span class="sr-only">' . t('Cercar per') . '</span>';
     }
   }
