@@ -383,7 +383,8 @@
           margin-bottom: 0px;
         }
         a{
-          color: $gray-medium;
+          // color: $gray-medium;
+          color: $xn17-vermell;
         }
       }
       p{
@@ -723,11 +724,6 @@ body.page-entitat {
   color: #FFFFFF;
 }
 
-.page-publica-a-xarxanet #user-login {
-  width: 83%;
-  margin-left: 7%;
-}
-
 //------------------------------------------------------------------------------
 // Color links on several content types
 //------------------------------------------------------------------------------
@@ -739,7 +735,8 @@ body.page-entitat {
 .node-type-recurs-general .xn17-standard-column2 .field:not(.field-name-seccions-recurs-index):not(.field-name-addtoany) a,
 .page-faq #panels-ipe-regionid-right a:not([data-toggle="collapse"]),
 .page-node-126433 #content a {
-  color: #a7a7a7;
+  // color: #a7a7a7;
+  color: $xn17-vermell;
   text-decoration: underline;
 }
 
