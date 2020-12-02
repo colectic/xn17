@@ -47,6 +47,17 @@ function xn17_form_alter(&$form, &$form_state, $form_id) {
       $form['combine']['#title'] = '<span class="sr-only">' . t('Cercar per') . '</span>';
     }
   }
+
+  // Adding autocomplete attributes to Contact Form
+
+  if ($form_id == 'webform_client_form_216') {
+    $form['#attributes']['autocomplete'] = 'on';
+    $form['submitted']['nom']['#attributes']['autocomplete'] = 'given-name';
+    $form['submitted']['cognoms']['#attributes']['autocomplete'] = 'family-name';
+    $form['submitted']['correu']['#attributes']['autocomplete'] = 'email';
+    $form['submitted']['telefon']['#attributes']['autocomplete'] = 'tel';
+    $form['submitted']['entitat']['#attributes']['autocomplete'] = 'organization';
+  }
 }
 
 /**
