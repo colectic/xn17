@@ -29,6 +29,18 @@ function xn17_form_alter(&$form, &$form_state, $form_id) {
 
     $form['#validate'][] = 'xn17_custom_comments_form_validate';
   }
+
+  // Overrides on Views' Exposed forms
+
+  if ($form_id == 'views_exposed_form') {
+    $view = $form_state['view'];
+    
+    // Overriding 'Financament' Exposed Form
+    
+    if ($view->name == 'xn17_financament' && $view->current_display == 'page') {
+      $form['combine']['#title'] = '<span class="sr-only">' . t('Cercar per') . '</span>';
+    }
+  }
 }
 
 /**
