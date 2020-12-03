@@ -12,7 +12,8 @@ $bootstrap-sass-asset-helper: false !default;
 
 $gray-darker:            #231f20 !default;
 $gray-dark:              #2f3031 !default;
-$gray-medium:            #878787 !default;
+$gray-medium:            #6b6b6b !default; // Old value: #878787
+$gray-medium-light:      #999999 !default;
 $gray:                   #c6c6c6 !default;
 $gray-light:             #ededed !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee

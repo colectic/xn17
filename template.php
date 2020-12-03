@@ -29,6 +29,43 @@ function xn17_form_alter(&$form, &$form_state, $form_id) {
 
     $form['#validate'][] = 'xn17_custom_comments_form_validate';
   }
+
+  // Overrides on Views' Exposed forms
+
+  if ($form_id == 'views_exposed_form') {
+    $view = $form_state['view'];
+
+    // 'Financament' Exposed Form
+    
+    if ($view->name == 'xn17_financament' && $view->current_display == 'page') {
+      $form['combine']['#title'] = '<span class="sr-only">' . t('Cercar per') . '</span>';
+    }
+
+    // 'Biblioteca' Exposed Form
+
+    if ($view->name == 'xn17_biblioteca' && $view->current_display == 'page') {
+      $form['combine']['#title'] = '<span class="sr-only">' . t('Cercar per') . '</span>';
+    }
+  }
+
+  // Adding autocomplete attributes to Contact Form
+
+  if ($form_id == 'webform_client_form_216') {
+    $form['#attributes']['autocomplete'] = 'on';
+    $form['submitted']['nom']['#attributes']['autocomplete'] = 'given-name';
+    $form['submitted']['cognoms']['#attributes']['autocomplete'] = 'family-name';
+    $form['submitted']['correu']['#attributes']['autocomplete'] = 'email';
+    $form['submitted']['telefon']['#attributes']['autocomplete'] = 'tel';
+    $form['submitted']['entitat']['#attributes']['autocomplete'] = 'organization';
+  }
+
+  // Adding autocomplete attributes to Login Form
+
+  if ($form_id == 'user_login') {
+    $form['#attributes']['autocomplete'] = 'on';
+    $form['name']['#attributes']['autocomplete'] = 'email';
+    $form['pass']['#attributes']['autocomplete'] = 'current-password';
+  }
 }
 
 /**
@@ -68,7 +105,15 @@ function xn17_custom_comments_form_validate(&$form, &$form_state) {
  */
 
 function xn17_form_comment_form_alter(&$form, &$form_state, &$form_id) {
+
+  // Adding autocomplete attributes to Comments Form
+
+  $form['#attributes']['autocomplete'] = 'on';
+  $form['author']['name']['#attributes']['autocomplete'] = 'name';
+  $form['author']['mail']['#attributes']['autocomplete'] = 'email';
   
+  // Additional overrides
+
   $form['comment_body']['#after_build'][] = 'xn17_customize_comment_form';  
 }
 

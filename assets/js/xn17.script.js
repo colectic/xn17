@@ -916,6 +916,24 @@ var mesNoticiesObert = false;
           $(this).trigger('click');
         } 
       });
+    },
+
+    /**
+     * Helper function that improves the accessibility of the
+     * Videos carousel of the Home page
+     */
+    homeVideosCarouselA11y: function() {
+      if ($('#slick-views-xn17-videos-1 .slick-track').length >0) {
+        var $slidesContainer = $('#slick-views-xn17-videos-1 .slick-track');
+        var $prevButton = $('#slick-views-xn17-videos-1 .slick-prev').attr({
+          'aria-label': 'Vídeo anterior',
+          'aria-controls': 'slick-views-xn17-videos-1-slider'
+        });
+        var $nextButton = $('#slick-views-xn17-videos-1 .slick-next').attr({
+          'aria-label': 'Següent vídeo',
+          'aria-controls': 'slick-views-xn17-videos-1-slider'
+        });
+      }
     }
   };
 
@@ -936,7 +954,8 @@ var mesNoticiesObert = false;
       Drupal.xn17.verticalTabOverrides();
       Drupal.xn17.i18nSearchBlockLabel();
       Drupal.xn17.enableSpaceKeyClick();
-
+      Drupal.xn17.homeVideosCarouselA11y();
+      
       Drupal.xn17.addCaptionToTable({
         'tableSelector': '.front .view-xn17-agenda-portada .calendar-calendar table',
         'captionText': 'La taula és una vista de calendari amb el mes actual; amb el nom abreviat dels dies de la setmana a la capçalera, començant pel dilluns.'
