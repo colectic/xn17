@@ -203,7 +203,10 @@
         <a href="/butlletins">BUTLLETINS</a>  /
         <a href="/contacte">CONTACTE</a>  /
         <a href="/avis-legal">AVÍS LEGAL</a>  /
-        <a href="/politica_cookies">POLÍTICA DE COOKIES</a>
+        <a href="/politica_cookies">POLÍTICA DE COOKIES</a>  /
+        <?php if (module_exists('tothomweb_sitemap')): ?>
+          <a href="/<?php print variable_get('tothomweb_sitemap_url', 'mapa-web') ?>">MAPA WEB</a>  /
+        <?php endif; ?>
         <a href="/declaracio-accessibilitat">DECLARACIÓ D'ACCESSIBILITAT</a>
       </div>
     </div>
