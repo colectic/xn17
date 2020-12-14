@@ -178,7 +178,7 @@ var mesNoticiesObert = false;
         }
 
         // Recursos
-        
+
         if ($blockRecursos.length > 0) {
           var $blockRecursosTop = parseInt($blockRecursos.offset().top);
           var $menuTop = parseInt($menu.offset().top);
@@ -211,7 +211,7 @@ var mesNoticiesObert = false;
               $fixedMenuRecursos.show();
 
               // Hide the fixed menu when scrolling the page with the Main menu open
-              
+
               if ($('#main-menu').is(':visible')) {
                 $fixedMenuRecursos.addClass('hidden');
               }
@@ -230,7 +230,7 @@ var mesNoticiesObert = false;
               $fixedMenu.hide();
             }
           });
-        }        
+        }
 
         // On pages without any menu: remove the fixed menus
 
@@ -245,7 +245,7 @@ var mesNoticiesObert = false;
        */
 
       if ($body.hasClass('front')) {
-        
+
         var correction = 664;
         var $menuTop = parseInt($menu.offset().top);
         var $windowTop = parseInt($window.scrollTop());
@@ -254,14 +254,14 @@ var mesNoticiesObert = false;
         var $breakPoint = parseInt($panelRecursos.offset().top) - correction;
 
         // Clone both Noticies & Recursos menu in their regarding fixed clones
-        
+
         var $paneNoticiesContents = $paneNoticies.html();
         var $paneRecursosContents = $paneRecursos.html();
         $fixedMenuNoticiesInner.empty().html($paneNoticiesContents);
         $fixedMenuRecursosInner.empty().html($paneRecursosContents);
 
         // Determine Fixed Menu's visibility
-        
+
         if ($windowTop < $paneNoticiesTop) {
           $fixedMenuNoticies.hide();
           $fixedMenuRecursos.hide();
@@ -288,7 +288,7 @@ var mesNoticiesObert = false;
           var $windowTop = parseInt($window.scrollTop());
 
           // Determine Fixed Menu's visibility
-          
+
           if ($windowTop < $paneNoticiesTop) {
             $fixedMenuNoticies.hide();
             $fixedMenuRecursos.hide();
@@ -298,7 +298,7 @@ var mesNoticiesObert = false;
             $fixedMenuRecursos.hide();
 
             // Hide both Fixed menus when scrolling the page with the Main menu open
-            
+
             if ($('#main-menu').is(':visible')) {
               $fixedMenuNoticies.addClass('hidden');
               $fixedMenuRecursos.addClass('hidden');
@@ -327,7 +327,7 @@ var mesNoticiesObert = false;
 
     /**
      * Handles the expand/collapse feature of the Fixed Menus
-     * 
+     *
      * Also includes support for cookies, in order to remember the user's choice
      * about the fixed menu state (collapsed or expanded)
      */
@@ -338,7 +338,7 @@ var mesNoticiesObert = false;
 
       if (!!$.cookie('fixedMenuState')) {
         var stateByCookie = $.cookie('fixedMenuState');
-       
+
         $('.fixed-menu button').removeClass().addClass(stateByCookie);
         $('.fixed-menu').removeClass().addClass('fixed-menu ' + stateByCookie);
 
@@ -356,7 +356,7 @@ var mesNoticiesObert = false;
         var $button = $(this);
         var state = $button.attr('class');
         var $fixedMenu = $('.fixed-menu'); // This will affect both fixed menus (if they are present)
-        
+
         if (state == 'open') {
           state = 'closed';
         }
@@ -370,28 +370,28 @@ var mesNoticiesObert = false;
         $fixedMenu.removeClass().addClass('fixed-menu ' + state);
 
         // Update the cookie that will remember the state in future page loads
-        
+
         $.cookie('fixedMenuState', state);
 
         //  Toggling Pane based menu (Home page)
-         
+
         if ($fixedMenu.find('.inner .pane-content').length > 0) {
           if ($button.hasClass('closed')) {
             $fixedMenu.find('.inner .pane-content').slideUp(150);
           }
           else if ($button.hasClass('open')) {
-           $fixedMenu.find('.inner .pane-content').slideDown(150); 
+           $fixedMenu.find('.inner .pane-content').slideDown(150);
           }
         }
 
         // Toggling Block based menu (Inner pages)
-        
+
         if ($fixedMenu.find('.inner .block__content').length > 0) {
           if ($button.hasClass('closed')) {
             $fixedMenu.find('.inner .block__content').slideUp(150);
           }
           else if ($button.hasClass('open')) {
-           $fixedMenu.find('.inner .block__content').slideDown(150); 
+           $fixedMenu.find('.inner .block__content').slideDown(150);
           }
         }
       });
@@ -399,36 +399,36 @@ var mesNoticiesObert = false;
 
     /**
      * Handles the expand/collapse feature of the Regular Menus
-     * 
+     *
      * Also includes support for cookies, in order to remember the user's choice
      * about the regular menu state (collapsed or expanded)
      */
 
     regularMenuToggler: function() {
-      
+
       // Desktop viewport
-      
+
       enquire.register('screen and (min-width: 1200px)', {
-        
+
         match: function() {
-      
+
           // Remove the toggler and show the submenu contents
-      
+
           $('.block-menu-toggler').remove();
           $('.pane-menu-toggler').remove();
           $('.block-menu.menu .block__content').show();
           $('.pane-block.menu .pane-content').show();
         },
       });
-      
+
       // Tablet & Mobile viewports
-      
+
       enquire.register('screen and (max-width: 1199px)', {
-        
+
         match: function() {
-      
+
           // Populate a submenu toggler
-      
+
           var srOnlyText = 'Mostra o amaga les categories del submenu';
           var $blockToggler = $('<button class="block-menu-toggler closed"><span class="sr-only">' + srOnlyText + '</span></button>');
           var $paneToggler = $('<button class="pane-menu-toggler closed"><span class="sr-only">' + srOnlyText + '</span></button>');
@@ -436,13 +436,13 @@ var mesNoticiesObert = false;
           var $blockTitle = $('.block-menu.menu .block__title');
           var $pane = $('.pane-block.menu');
           var $paneTitle = $('.pane-block.menu .pane-title');
-      
+
           // If a Block is used
-      
+
           if ($block.length > 0) {
 
             // Append it to the block
-            
+
             var $blockContent = $block.find('.block__content');
             $blockToggler.appendTo($blockTitle);
 
@@ -450,7 +450,7 @@ var mesNoticiesObert = false;
 
             if (!!$.cookie('regularMenuState')) {
               var stateByCookie = $.cookie('regularMenuState');
-             
+
               $('.block-menu-toggler').removeClass().addClass('block-menu-toggler ' + stateByCookie);
               $('.block-menu.menu').removeClass('closed').removeClass('open').addClass(stateByCookie);
 
@@ -465,7 +465,7 @@ var mesNoticiesObert = false;
             }
 
             // Bind a click event
-          
+
             $('.block-menu-toggler').click(function() {
 
               if ($(this).hasClass('open')) {
@@ -480,13 +480,13 @@ var mesNoticiesObert = false;
               }
             });
           }
-      
+
           // If a Pane is used
 
           if ($pane.length > 0) {
 
             // Append it to the pane
-            
+
             var $paneContent = $pane.find('.pane-content');
             $paneToggler.appendTo($paneTitle);
 
@@ -494,7 +494,7 @@ var mesNoticiesObert = false;
 
             if (!!$.cookie('regularMenuState')) {
               var stateByCookie = $.cookie('regularMenuState');
-             
+
               $('.pane-menu-toggler').removeClass().addClass('pane-menu-toggler ' + stateByCookie);
               $('.pane-block.menu').removeClass('closed').removeClass('open').addClass(stateByCookie);
 
@@ -509,7 +509,7 @@ var mesNoticiesObert = false;
             }
 
             // Bind a click event
-          
+
             $('.pane-menu-toggler').click(function() {
 
               if ($(this).hasClass('open')) {
@@ -531,13 +531,13 @@ var mesNoticiesObert = false;
     /**
      * Handles the opening event of the Main Menu
      */
-    
+
     mainMenuOpenEvent: function() {
 
       $('.menu-icon').click(function() {
 
         // Variables
-        
+
         var sm  = 768 - 15;
         var md  = 992 - 15;
         var wst = $(window).scrollTop();
@@ -560,10 +560,10 @@ var mesNoticiesObert = false;
             'behavior': 'auto'
           });
         }
-        
+
         // On large viewports, we hide the entire page content, leaving
         // only visible the menu just open
-        
+
         if (wwi >= sm) {
 
           if ($(this).hasClass('active')) {
@@ -576,10 +576,10 @@ var mesNoticiesObert = false;
             $('#main-wrapper').fadeToggle('slow');
           }
         }
-        
+
         // Toggles a flag to determine the button status
-        
-        $('.menu-icon').toggleClass('active'); 
+
+        $('.menu-icon').toggleClass('active');
 
         // Toggles the menu visibility, with a slide effect
 
@@ -590,7 +590,7 @@ var mesNoticiesObert = false;
     /**
      * Handles the closing event of the Main Menu
      */
-    
+
     mainMenuCloseEvent: function() {
 
       $('#close-button').click(function() {
@@ -605,10 +605,10 @@ var mesNoticiesObert = false;
 
         // Toggles a flag to determine the button status
 
-        $(this).toggleClass('active'); 
+        $(this).toggleClass('active');
 
         // Force a document scroll, based on the header's height
-        
+
         if (wst >= 41 && (wwi >= sm && wwi < md)) {
           window.scrollTo({
             'top': 41,
@@ -627,9 +627,9 @@ var mesNoticiesObert = false;
         // Toggles the menu visibility, with a slide effect
 
         $('#main-menu').slideToggle('slow');
-        
+
         // Forces the noticies/recursos menus to be unsticky and visible, when closing the menu
-        
+
         if (wwi >= sm) {
           $('#main-wrapper').fadeToggle('slow');
           $('.menu.menu-noticies, .menu.menu-recursos').slideDown('fast').removeClass('sticky');
@@ -644,7 +644,7 @@ var mesNoticiesObert = false;
     mainMenuSubmenus: function() {
 
       // Level 2 submenus
-      
+
       $('.menu-link.depth-2').click(function() {
         var md  = 992 - 15;
         var wwi = $(window).width();
@@ -654,9 +654,9 @@ var mesNoticiesObert = false;
           $(this).children().toggleClass('closed');
         }
       });
-      
+
       // Level 1 submenus
-      
+
       $('.menu-link.depth-1').click(function() {
         var md  = 992 - 15;
         var wwi = $(window).width();
@@ -665,19 +665,19 @@ var mesNoticiesObert = false;
           $(this).children().toggleClass('opened');
           $(this).children().toggleClass('closed');
         }
-      });      
+      });
     },
 
     /**
      * Handles the overriding of the default titles of Notícies & Recursos
-     * menús, by doing a comparision between a given pattern and the current 
+     * menús, by doing a comparision between a given pattern and the current
      * pathname taken from the url being viewed
      */
 
     subMenuTitleOverrides: function() {
 
       // Overrides header's menu title when viewing Monogràfics's related pages
-      
+
       var pattern1 = /^\/monografics/;
       var pattern2 = /^\/especial\//;
       var path = window.location.pathname;
@@ -687,9 +687,9 @@ var mesNoticiesObert = false;
       if (pattern1.test(path)) {
         $('#page-header').remove();
       }
-      
+
       // Overrides header's menu title when viewing Opinió's related pages
-      
+
       var pattern1 = /^\/opinio$/;
       var pattern2 = /^\/opinio\//;
       var pattern3 = /^\/autora\//;
@@ -701,36 +701,36 @@ var mesNoticiesObert = false;
       if (pattern1.test(path)) {
         $('#page-header').remove();
       }
-      
+
       // Overrides header's menu title when viewing Finançament's related pages
-      
+
       var pattern1 = /^\/financament/;
       var pattern2 = /^\/financament\//;
       var path = window.location.pathname;
       if (pattern1.test(path) || pattern2.test(path)) {
         $('.block-menu.menu.menu-recursos h4').text('Finançament');
       }
-      
+
       // Overrides header's menu title when viewing Agenda's related pages
-      
+
       var pattern1 = /^\/agenda/;
       var pattern2 = /^\/agenda\//;
       var path = window.location.pathname;
       if (pattern1.test(path) || pattern2.test(path)) {
         $('.block-menu.menu.menu-noticies h4').text('Agenda');
       }
-      
+
       // Overrides header's menu title when viewing Biblioteca's related pages
-      
+
       var pattern1 = /^\/biblioteca/;
       var pattern2 = /^\/biblioteca\//;
       var path = window.location.pathname;
       if (pattern1.test(path) || pattern2.test(path)) {
         $('.block-menu.menu.menu-recursos h4').text('Biblioteca');
       }
-      
+
       // Overrides header's menu title when viewing Fes voluntariat's related pages
-      
+
       var pattern1 = /^\/fes-voluntariat/;
       var pattern2 = /^\/etiquetes\/general\/crida-de-voluntariat/;
       var path = window.location.pathname;
@@ -740,7 +740,7 @@ var mesNoticiesObert = false;
       }
       if (pattern2.test(path)) {
         $('#page-header h1').text('Demandes de voluntariat');
-      }      
+      }
     },
 
     /**
@@ -775,11 +775,11 @@ var mesNoticiesObert = false;
       var $input  = $('#edit-field-date-event-value2-value-datepicker-popup-1');
 
       // Set a regex pattern to validate date in format dd/mm/yyyy or dd-mm-yyyy
-      
+
       var pattern = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
-      
+
       // If there's a valid date, puts it in the field and submits the form
-      
+
       if (typeof(date) !== 'undefined' && pattern.test(date)) {
         $input.val(date);
         $form.submit();
@@ -789,13 +789,13 @@ var mesNoticiesObert = false;
     /**
      * In the 'Covid-19 special' page we have to dynamically append a banner after
      * the 3th element of the grid.
-     * 
+     *
      * In order to do it fast & easy, it will be done through this function
      * with pure Javascript/jQuery.
-     * 
+     *
      * This function can be removed when the page ('/especial/covid-19') would be unpublished.
      */
-    
+
     covid19SpecialOverrides: function() {
 
       if ($('#covid19-special').length > 0) {
@@ -812,12 +812,12 @@ var mesNoticiesObert = false;
         banner += '</div>';
         banner += '</div>';
         html = $.parseHTML(banner);
-        
+
         // Prepare the element and the target
-        
+
         var $banner = $(html);
         var $target = $('#covid19-special .view-xn17-etiquetes').find('.views-row:eq(2)');
-        
+
         // Append the banner, avoiding duplicates (due to AJAX triggered by the 'View more' button)
 
         if ($('#covid19-grid-banner').length > 0) {
@@ -831,9 +831,9 @@ var mesNoticiesObert = false;
      * Helper function to improve the a11y of the tables, by adding
      * a hidden caption just before the <thead> tag.
      *
-     * @param   {object}  params  
+     * @param   {object}  params
      *          An object containing the following data:
-     *            
+     *
      *            - tableSelector {string}  A valid CSS selector to identify the table.
      *            - captionText:  {string}  A fully descriptive text explaining the table structure and data.
      */
@@ -845,49 +845,6 @@ var mesNoticiesObert = false;
           var $caption = $('<caption class="sr-only"></caption');
           $caption.text(captionText);
           $(tableSelector).prepend($caption);
-        }
-      }
-    },
-    /**
-     * After installing the Yoast SEO module, we noticed that it's 'Slug' field was overriding the 
-     * Pathauto provided field for URL aliases in the first vertical tab.
-     * 
-     * As it's an undesired behavior, we've hidden the vertical tab related to the 'Pathauto' module,
-     * an also the 'Slug' field of the Yoast SEO module.
-     * 
-     * But, the vertical tab to hide is the first of them, with a class 'selected' that activates it. 
-     * So in this snippet we're forcing the second tab to be shown, instead the first we hide with pure CSS.
-     * 
-     * @see  sites/all/themes/xn17/scss/fixes/_publica.scss (at bottom lines).
-     */
-    verticalTabOverrides: function() {
-      // As vertical tabs doesn't provide any class or id, we have to hide the 'Pathauto' tab like this:
-      // On node add form:
-      var $flag = $('.page-node-add .node-form .vertical-tabs-list .first.selected').find('.summary');
-      if ($flag.text() == 'Automatic alias') {
-        $('.page-node-add .node-form .vertical-tabs-list .first.selected').css('display', 'none');
-        // If already hidden, do this stuff:
-        if ($('.page-node-add .node-form .vertical-tabs-list .first.selected').is(':hidden')) {
-          // Unselect the first tab and mark the second one as selected.
-          $('.page-node-add .node-form .vertical-tabs-list .first').removeClass('selected');
-          $('.page-node-add .node-form .vertical-tabs-list .first').next().addClass('selected');
-          // Hide the first vertical pane and show the second one.
-          $('.page-node-add .node-form .vertical-tabs-panes fieldset:nth-child(1)').css('display', 'none');
-          $('.page-node-add .node-form .vertical-tabs-panes fieldset:nth-child(2)').css('display', 'block');
-        }
-      }
-      // On node edit form:
-      var $flag = $('.page-node-edit .node-form .vertical-tabs-list .first.selected').find('.summary');
-      if ($flag.text() == 'Automatic alias') {
-        $('.page-node-edit .node-form .vertical-tabs-list .first.selected').css('display', 'none');
-        // If already hidden, do this stuff:
-        if ($('.page-node-edit .node-form .vertical-tabs-list .first.selected').is(':hidden')) {
-          // Unselect the first tab and mark the second one as selected.
-          $('.page-node-edit .node-form .vertical-tabs-list .first').removeClass('selected');
-          $('.page-node-edit .node-form .vertical-tabs-list .first').next().addClass('selected');
-          // Hide the first vertical pane and show the second one.
-          $('.page-node-edit .node-form .vertical-tabs-panes fieldset:nth-child(1)').css('display', 'none');
-          $('.page-node-edit .node-form .vertical-tabs-panes fieldset:nth-child(2)').css('display', 'block');
         }
       }
     },
@@ -903,18 +860,18 @@ var mesNoticiesObert = false;
     },
 
     /**
-     * Enable clicking with space key in all elements having 
+     * Enable clicking with space key in all elements having
      * a role="button" attribute
      */
 
     enableSpaceKeyClick: function() {
       $('*[role="button"]').keypress(function(e) {
         e.preventDefault();
-        // SpaceKey = '0' [Gecko], '32' [Webkit & others]. 
+        // SpaceKey = '0' [Gecko], '32' [Webkit & others].
         // EnterKey = '13'
         if (e.keyCode == 0 || e.keyCode == 32 || e.keyCode == 13) {
           $(this).trigger('click');
-        } 
+        }
       });
     },
 
@@ -951,11 +908,10 @@ var mesNoticiesObert = false;
       Drupal.xn17.equalHeight();
       Drupal.xn17.buttonSearch();
       Drupal.xn17.covid19SpecialOverrides(); // Can be removed when the landing would be unpublished
-      Drupal.xn17.verticalTabOverrides();
       Drupal.xn17.i18nSearchBlockLabel();
       Drupal.xn17.enableSpaceKeyClick();
       Drupal.xn17.homeVideosCarouselA11y();
-      
+
       Drupal.xn17.addCaptionToTable({
         'tableSelector': '.front .view-xn17-agenda-portada .calendar-calendar table',
         'captionText': 'La taula és una vista de calendari amb el mes actual; amb el nom abreviat dels dies de la setmana a la capçalera, començant pel dilluns.'
@@ -994,18 +950,18 @@ var mesNoticiesObert = false;
         $('#edit-field-doc-editorial-tid-wrapper').toggle();
         $('.views-submit-button').toggle();
       });
-      
+
       // Recull de documents de Biblioteca a la Home
-      
+
       $('.view-xn17-recull-documents .document-biblioteca').mouseover( function() {
         $('.sinopsi', this).fadeIn('1500', function() {});
       });
       $('.view-xn17-recull-documents .document-biblioteca').mouseleave( function() {
         $('.sinopsi', this).fadeOut('250', function() {});
       });
-      
+
       // Notícies a la Home
-      
+
       if (mesNoticiesObert == false) {
         $('.front .view-id-bloc-mes-xn17-noticies .view-content').css('display', 'none');
         $('.front .view-id-bloc-mes-xn17-noticies .pager__item a').click(function() {
@@ -1014,9 +970,9 @@ var mesNoticiesObert = false;
           $('.front .view-id-bloc-mes-xn17-noticies .view-content').css('display', 'inherit');
         });
       };
-      
+
       // Recursos a la Home
-      
+
       if (mesRecursosObert == false) {
         $('.front .view-id-bloc-mes-xn17-recursos .view-content').css('display', 'none');
         $('.front .view-id-bloc-mes-xn17-recursos .pager__item a').click(function() {
@@ -1033,7 +989,7 @@ var mesNoticiesObert = false;
       });
 
       // Comentaris
-      
+
       $('#comments-header').click( function() {
         $('#comments-body').slideToggle('slow');
         $('#comments').toggleClass('closed');
@@ -1048,11 +1004,11 @@ var mesNoticiesObert = false;
       }
 
       // Making Youtube videos responsive
-      
+
       $('iframe[src^="https://www.youtube"]').attr('width', '100%');
-      
+
       // Override of Search Form placeholder
-      
+
       $('#search-form #edit-keys').attr('placeholder', 'Cerca');
     }
   };
