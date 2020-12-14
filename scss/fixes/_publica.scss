@@ -38,51 +38,10 @@
   }
 }
 
-/**
- * Modificacions motivades pel mòdul Yoast SEO.
- * S'amaga el vertical tab del 'Path Àlies' per tal que no el modifiquin.
- * També s'amaga el field 'Slug' proporcionat pel Yoast SEO.
- */
-
-.page-node-add, 
+.page-node-add,
 .page-node-edit {
-
-  .node-form {
-
-    // Bloc Yoast SEO
-
-    #yoast-wrapper {
-
-      #url_container {
-        display: none !important;
-      }
-      #snippet-editor-slug {
-        display: none !important;
-      }
-    }
-
-    // Vertical Tab (hauria de ser la referida al Path àlies, si no hi han canvis)
-
-    .vertical-tabs-list {
-
-      .first {
-        // display: none !important;
-        // Ho ocultarem millor per Javascript, on puc fer la selecció dinàmica
-        // Més info a: Drupal.xn17.verticalTabOverrides();
-      }
-    }
-
-    // Vertical Pane (hauria de ser la referida al Path àlies, si no hi han canvis)
-
-    .vertical-tabs-panes {
-
-      .vertical-tabs-pane {
-
-        &.path-form {
-          display: none !important;
-        }
-      }
-    }
+  .vertical-tabs-list {
+    overflow: hidden;
   }
 }
 
