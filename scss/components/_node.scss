@@ -927,22 +927,7 @@ body.page-node-126433 {
 
   // Propers Webinars
 
-  @media (max-width: 768px) {
-
-    .panels-flexible-region-51-propers_webinars {
-      width: 100%;
-    }
-  }
-
-  .panels-flexible-region-51-propers_webinars-inside {
-    padding: 0 15px 15px 15px;
-  }
-
-  .pane-propers-webinars {
-
-    .views-row {
-      margin-bottom: 15px;
-    }
+  #next-webinars {
 
     .pane-title {
       padding: 0;
@@ -953,7 +938,51 @@ body.page-node-126433 {
       line-height: 21.868px;
       font-family: 'Fira Sans SemiBold';
     }
+
+    ul {
+      padding-left: 15px;
+
+      li {
+        margin-bottom: 10px;
+
+        strong {
+          font-size: 16px;
+        }
+
+        small {
+          font-size: 13px;
+        }
+      }
+    }
   }
+
+  // @media (max-width: 768px) {
+
+  //   .panels-flexible-region-51-propers_webinars {
+  //     width: 100%;
+  //   }
+  // }
+
+  // .panels-flexible-region-51-propers_webinars-inside {
+  //   padding: 0 15px 15px 15px;
+  // }
+
+  // .pane-propers-webinars {
+
+  //   .views-row {
+  //     margin-bottom: 15px;
+  //   }
+
+  //   .pane-title {
+  //     padding: 0;
+  //     color: #000;
+  //     margin: 0;
+  //     margin-bottom: 30px;
+  //     font-size: 26px;
+  //     line-height: 21.868px;
+  //     font-family: 'Fira Sans SemiBold';
+  //   }
+  // }
 
   // Block "Webinars realitzats"
 
@@ -1147,6 +1176,61 @@ body.page-node-126433 {
           }
         }
       }
+    }
+
+    .pager--infinite-scroll {
+      display: block;
+      float: none;
+      clear: both;
+      margin: -30px 15px 45px;
+    }
+
+    .pager--infinite-scroll li.pager__item {
+      display: block;
+      width: 100%;
+      margin: 0;
+      position: relative;
+      top: 30px;
+      background-color: #ffffff;
+      text-transform: lowercase;
+      overflow-x: hidden;
+    }
+
+    .pager--infinite-scroll li.pager__item a {
+      background: white url(../images/elements/mes.svg) no-repeat center top;
+      text-transform: lowercase;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      color: #2f3031;
+      text-decoration: none;
+      padding: 3rem 1rem 1rem;
+    }
+
+    .pager--infinite-scroll li.pager__item a:before {
+      content: "";
+      border-bottom: 5px solid #7b7979;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 25px;
+      width: 50%;
+      margin-left: 50px;
+    }
+
+    .pager--infinite-scroll li.pager__item a:after {
+      content: "";
+      border-bottom: 5px solid #7b7979;
+      display: block;
+      position: absolute;
+      right: 50%;
+      top: 25px;
+      width: 50%;
+      margin-right: 50px;
+    }
+
+    .ajax-progress {
+      display: none;
     }
   }
 }
