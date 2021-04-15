@@ -226,14 +226,18 @@ for ($i = 1; $i <= 4; $i++) {
 //Finançaments
 $lastweek = $node->created - 604800;
 $now = $node->created;
+$next_few_days = $now + (5 * 86400);
 $query = "SELECT nid FROM `node` WHERE type='financament_full' AND status=1 ORDER BY created DESC";
 $nodes = db_query($query);
 $financ_nodes = array();
-
 foreach ($nodes as $row) {
-	$financ_node = node_load($row->nid);
-	$financ_end = strtotime($financ_node->field_date['und'][0][value2]);
-	if (($financ_end > $now) && ($financ_node->created < $now)){
+  $financ_node = node_load($row->nid);
+  $financ_end = strtotime($financ_node->field_date['und'][0][value2]);
+  // if (($financ_end > $now) && ($financ_node->created < $now)){ // Condició anterior
+  // Nou condicional so·licitat per Marta Fontanals el 13.04.2021 (XARXANET-411)
+  // on es demana que hi hagi 4-5 dies de marge ($next_few_days) entre la data de creació del butlletí
+  // i la data de fi de convocatòria dels nodes de Finançament que s'hi mostren.
+  if (($financ_end > $next_few_days) && ($financ_node->created < $now)){
 		if (($financ_node->created > $lastweek) || (count($financ_nodes) < 15)){
 			$financ_start = strtotime($financ_node->field_date['und'][0][value]);
 			$key = $financ_end;
