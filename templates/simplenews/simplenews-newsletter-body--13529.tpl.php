@@ -676,9 +676,9 @@ foreach ($wrapper->field_abast_noticies as $noticia){
 			</td><td>
 				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca"><img alt="Licencia de Creative Commons" src="http://i.creativecommons.org/l/by-nc-sa/3.0/es/88x31.png" style="border:0 none;"/></a>
 			</td></tr>
-		</table>	
+		</table>
 		<p style="font-size: 10px; text-align: justify; margin: 0"><a href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/">Avís legal</a>: D’acord amb l’article 17.1 de la Llei 19/2014, la &copy;Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se'n citi la font i la data d'actualització i que no es desnaturalitzi la informació (article 8 de la Llei 37/2007) i també que no es contradigui amb una llicència específica. Si l'adreça de correu que informeu al donar-vos d'alta deixa d'estar activa us donarem de baixa a la base de dades.
-		<br/>Aquest butlletí és una iniciativa del Departament de Treball, Afers Socials i Famílies de la Generalitat de Catalunya, coeditat amb la Fundació Pere Tarrés. ISSN: 2385-4146</p> 
+		<br/>Aquest butlletí és una iniciativa del Departament de Drets Socials de la Generalitat de Catalunya, coeditat amb la Fundació Pere Tarrés. ISSN: 2385-4146</p>
 	</td>
 </tr><tr>
 	<td colspan="2" style="border-top: dotted 2px #800000; border-bottom: dotted 2px #800000; font-size:1px">&nbsp;</td>
