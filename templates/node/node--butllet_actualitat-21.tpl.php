@@ -174,7 +174,8 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 							<tr>
 								<td>
 									<h2><?php echo $monographicTitle; ?></h2>
-									<p><?php echo $monographicText; ?></p>		
+									<p><?php echo $monographicText; ?></p>	
+									<p><?php echo "prova"; ?></p>	
 								</td>
 								<td>
 									<a href="<?php echo $monographicLink; ?>">
