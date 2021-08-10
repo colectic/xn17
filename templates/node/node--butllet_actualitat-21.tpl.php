@@ -200,6 +200,7 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 					<a href="http://www.xarxanet.org/hemeroteca_actualitat" style=" color:#878787">Butlletins anteriors</a>
 				</td>
 			</tr>
+
 			<?php if (!empty($monographicNode)) : ?>
 				<tr>
 					<td colspan="2" style="padding-left:15px; padding-right:15px;">
