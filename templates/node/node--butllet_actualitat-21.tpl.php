@@ -99,6 +99,51 @@ $monographicImageAlt = $monographicNode->field_imatges['und'][0]['field_file_ima
 $monographicText = $monographicNode->field_resum['und'][0]['value'];
 $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE));
 
+//$entity Section
+$entityID = $node->field_actualitat21_entitat['und'][0]['nid'];
+$entityNode = node_load($entityID);
+$entityTitle = $entityNode->title;
+$entityImage = image_style_url('large', $entityNode->field_imatges['und'][0]['uri']);
+$entityImageAlt = $entityNode->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
+$entityText = $entityNode->field_resum['und'][0]['value'];
+$entityLink = url('node/' . $entityNode->nid, array('absolute' => TRUE));
+
+//$highlight Section
+$highlightID = $node->field_actualitat21_destaquem['und'][0]['nid'];
+$highlightNode = node_load($highlightID);
+$highlightTitle = $highlightNode->title;
+$highlightImage = image_style_url('large', $highlightNode->field_imatges['und'][0]['uri']);
+$highlightImageAlt = $highlightNode->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
+$highlightText = $highlightNode->field_resum['und'][0]['value'];
+$highlightLink = url('node/' . $highlightNode->nid, array('absolute' => TRUE));
+
+//Resource Section
+$resourceID = $node->field_actualitat21_recurs['und'][0]['nid'];
+$resourceNode = node_load($resourceID);
+$resourceTitle = $resourceNode->title;
+$resourceImage = image_style_url('large', $resourceNode->field_imatges['und'][0]['uri']);
+$resourceImageAlt = $resourceNode->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
+$resourceText = $resourceNode->field_resum['und'][0]['value'];
+$resourceLink = url('node/' . $resourceNode->nid, array('absolute' => TRUE));
+
+//contrast1 Section
+$contrast1ID = $node->field_actualitat21_noticontrast1['und'][0]['nid'];
+$contrast1Node = node_load($contrast1ID);
+$contrast1Title = $contrast1Node->title;
+$contrast1Image = image_style_url('large', $contrast1Node->field_imatges['und'][0]['uri']);
+$contrast1ImageAlt = $contrast1Node->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
+$contrast1Text = $contrast1Node->field_resum['und'][0]['value'];
+$contrast1Link = url('node/' . $contrast1Node->nid, array('absolute' => TRUE));
+
+//contrast2 Section
+$contrast2ID = $node->field_actualitat21_noticontrast2['und'][0]['nid'];
+$contrast2Node = node_load($contrast2ID);
+$contrast2Title = $contrast2Node->title;
+$contrast2Image = image_style_url('large', $contrast2Node->field_imatges['und'][0]['uri']);
+$contrast2ImageAlt = $contrast2Node->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
+$contrast2Text = $contrast2Node->field_resum['und'][0]['value'];
+$contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
+
 
 // echo '<pre>';
 // echo var_dump($monographicNode);
@@ -199,6 +244,7 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 
 			<?php endif; ?>
 			<!-- SECTION  || L'entitat protagonista -->
+			<?php if (!empty($entityNode)) : ?>
 			<tr>
 				<td colspan="2" style="padding-left: 15px; padding-right:15px;">
 					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
@@ -221,13 +267,13 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 									<table colspan="2">
 										<tr>
 											<td style="padding-left: 20px; padding-right: 15px; padding-top: 20px;">
-												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $monographicTitle; ?></h3>
-												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $monographicText; ?></span>
+												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $entityTitle; ?></h3>
+												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $entityText; ?></span>
 											</td>
 										</tr>
 										<tr>
 											<td style="padding-left: 20px; padding-top: 17px; padding-bottom: 20px;">
-												<a href="<?php echo $monographicLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
+												<a href="<?php echo $entityLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
 													Llegiu-ne més
 												</a>
 											</td>
@@ -235,8 +281,8 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 									</table>
 								</td>
 								<td style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; border-radius: 10px; padding-left: 10px; vertical-align:top;">
-									<a href="<?php print $monographicLink; ?>">
-										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+									<a href="<?php print $entityLink; ?>">
+										<img src="<?php print $entityImage; ?>" width="600" alt="<?php print $entityImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 									</a>
 								</td>
 							</tr>
@@ -244,7 +290,9 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 					</table>
 				</td>
 			</tr>
+			<?php endif; ?>
 			<!-- SECTION  || Destaquem-->
+			<?php if (!empty($highlightNode)) : ?>
 			<tr>
 				<td colspan="2" style="padding-left: 15px; padding-right:15px;">
 					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
@@ -264,21 +312,21 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 						<tbody>
 							<tr>
 								<td style="padding-top: 20px; padding-left: 20px; padding-bottom: 20px; border-radius: 10px; padding-right: 10px; vertical-align:top;">
-									<a href="<?php print $monographicLink; ?>">
-										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+									<a href="<?php print $highlightLink; ?>">
+										<img src="<?php print $highlightImage; ?>" width="600" alt="<?php print $highlightImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 									</a>
 								</td>
 								<td style="width: 55%;">
 									<table colspan="2">
 										<tr>
 											<td style="padding-right: 20px; padding-left: 15px; padding-top: 20px;">
-												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $monographicTitle; ?></h3>
-												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $monographicText; ?></span>
+												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $highlightTitle; ?></h3>
+												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $highlightText; ?></span>
 											</td>
 										</tr>
 										<tr>
 											<td style="padding-left: 20px; padding-top: 17px; padding-bottom: 20px;">
-												<a href="<?php echo $monographicLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
+												<a href="<?php echo $highlightLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
 													Llegiu-ne més
 												</a>
 											</td>
@@ -290,7 +338,9 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 					</table>
 				</td>
 			</tr>
+			<?php endif; ?>
 			<!-- SECTION  || El recurs de la setmana -->
+			<?php if (!empty($resourceNode)) : ?>
 			<tr>
 				<td colspan="2" style="padding-left: 15px; padding-right:15px;">
 					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
@@ -313,13 +363,13 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 									<table colspan="2">
 										<tr>
 											<td style="padding-left: 20px; padding-right: 15px; padding-top: 20px;">
-												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $monographicTitle; ?></h3>
-												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $monographicText; ?></span>
+												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $resourceTitle; ?></h3>
+												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $resourceText; ?></span>
 											</td>
 										</tr>
 										<tr>
 											<td style="padding-left: 20px; padding-top: 17px; padding-bottom: 20px;">
-												<a href="<?php echo $monographicLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
+												<a href="<?php echo $resourceLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
 													Llegiu-ne més
 												</a>
 											</td>
@@ -327,8 +377,8 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 									</table>
 								</td>
 								<td style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; border-radius: 10px; padding-left: 10px; vertical-align:top;">
-									<a href="<?php print $monographicLink; ?>">
-										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+									<a href="<?php print $resourceLink; ?>">
+										<img src="<?php print $resourceImage; ?>" width="600" alt="<?php print $resourceImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 									</a>
 								</td>
 							</tr>
@@ -336,7 +386,9 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 					</table>
 				</td>
 			</tr>
+			<?php endif; ?>
 			<!-- SECTION  || Contrastos -->
+			<?php if (!empty($contrast1Node)) : ?>
 			<tr>
 				<td colspan="2" style="padding-left: 15px; padding-right:15px;">
 					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
@@ -355,40 +407,43 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 					<table style="font-size:16px; background-color:#ADF08F; border-radius:15px; min-height: 350px;">
 						<tr style="height:40%;">
 							<td colspan="2" style="padding:10px;">
-								<a href="<?php print $monographicLink; ?>">
-									<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+								<a href="<?php print $contrast1Link; ?>">
+									<img src="<?php print $contrast1Image; ?>" width="600" alt="<?php print $contrast1ImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 								</a>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2" style="padding-left: 10px; padding-right: 10px; vertical-align:top;">
-								<a href="<?php print $monographicLink; ?>" style="text-decoration:none; color:#333333;">			
-									<h3 style="font-size:1.25em; line-height:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;color:#333333;"><?php echo $monographicTitle; ?></h3>
+								<a href="<?php print $contrast1Link; ?>" style="text-decoration:none; color:#333333;">			
+									<h3 style="font-size:1.25em; line-height:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;color:#333333;"><?php echo $contrast1Title; ?></h3>
 								</a>
 							</td>
 						</tr>
 					</table>
 				</td>
+				<?php if (!empty($contrast2Node)) : ?>
 				<td style="width:50%; padding-right:15px; padding-left:8px;padding-bottom:15px;">
 					<table style="font-size:16px; background-color:#FF5561; border-radius:15px; min-height: 350px;">
 						<tr style="height:40%;">
 							<td colspan="2" style="padding:10px;">
-								<a href="<?php print $monographicLink; ?>">
-									<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+								<a href="<?php print $contrast2Link; ?>">
+									<img src="<?php print $contrast2Image; ?>" width="600" alt="<?php print $contrast2ImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 								</a>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2" style="padding-left: 10px; padding-right: 10px; vertical-align:top;">
-								<a href="<?php print $monographicLink; ?>" style="text-decoration:none; color:#333333;">			
-									<h3 style="font-size:1.25em; line-height:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;color:#333333;"><?php echo $monographicTitle; ?></h3>
+								<a href="<?php print $contrast2Link; ?>" style="text-decoration:none; color:#333333;">			
+									<h3 style="font-size:1.25em; line-height:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;color:#333333;"><?php echo $contrast2Title; ?></h3>
 								</a>
 							</td>
 						</tr>
 					</table>
 				</td>
+				<?php endif; ?>
 				
 			</tr>
+			<?php endif; ?>
 			<!-- END CONTENT -->
 			<!-- PEU -->
 			<tr style="background-color:#2f3031; border-top:3px solid #231f20;">
@@ -463,8 +518,3 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 		</table>
 	</div>
 </center>
-
-<?php echo '<pre>';
-echo var_dump($node);
-echo '</pre>';
-?>
