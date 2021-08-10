@@ -134,11 +134,6 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 	<div class="webkit" style="max-width:602px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;">
 		<table class="butlleti" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; border:1px solid #53544F; border-bottom: 0px; width:100%;">
 			<!-- CAPÇALERA -->
-			<!--
-	<tr><td colspan="2">
-	<p style="padding: 2px; font-size: 11px; text-align:right"> Si no visualitzes correctament el butlletí clica aquest <a href="<?php echo $pathroot . '/node/' . $node->nid ?>" style=" color: #B2290C; font-weight: bold;">enllaç</a></p>
-	</td></tr>
-	-->
 			<tr style="background-color:#2f3031;">
 				<td>
 					<a href="http://www.xarxanet.org" style="text-decoration:none">
@@ -160,54 +155,57 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 					<a href="http://www.xarxanet.org/hemeroteca_actualitat" style=" color:#878787">Butlletins anteriors</a>
 				</td>
 			</tr>
-			<tr>
-				<td colspan="2">
-					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; width:100%;">
-						<tbody>
-							<tr>
-								<td>
-									<h2 class="section-title" style="font-family:'Open sans' !important;font-weight:800;font-size:30px !important;Margin:0px;color:#333333;margin-bottom: 15px; "><?php echo $monographicSectTitle; ?></h2>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; width:100%;">
-						<tbody>
-							<tr>
-								<td colspan="2">
-									<a href="<?php print $monographicLink; ?>">
-										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:'Open sans' !important;width:100%;max-width:600px;height:auto;" />
-									</a>
-								</td>
-							</tr>
-							<tr>
+			<?php if (!empty($monographicNode)) : ?>
+				<tr>
+					<td colspan="2" style="padding-left:15px; padding-right:15px;">
+						<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
+							<tbody>
+								<tr>
+									<td>
+										<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:600;font-size:1.875em !important;color:#333333;margin-top:20px; margin-bottom:25px; "><?php echo $monographicSectTitle; ?></h2>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="padding-left: 15px; padding-right: 15px; padding-bottom:20px;">
+						<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%; background-color:#EDEDED; border-radius:15px;">
+							<tbody>
+								<tr>
+									<td colspan="2" style="padding-top: 10px; padding-right: 10px; padding-left: 10px; padding-bottom:10px;">
+										<a href="<?php print $monographicLink; ?>">
+											<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+										</a>
+									</td>
+								</tr>
+								<tr>
 
-								<td>
-									<h2><?php echo $monographicTitle; ?></h2>
-									<p><?php echo $monographicText; ?></p>
-								</td>
-								<td>
-									<a href="<?php echo $monographicLink; ?>">
-										Llegiu-ne més
-									</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
+									<td style="padding-left: 20px; padding-right: 20px; padding-bottom:20px; width: 75%; padding-top: 10px;">
+										<h3 style="margin-top:0; font-weight:600; font-size: 1.56em;"><?php echo $monographicTitle; ?></h3>
+										<span style="font-size: .95em; line-height: 1.35em;"><?php echo $monographicText; ?></span>
+									</td>
+									<td style="padding-top: 17px; padding-bottom: 20px; vertical-align:bottom;">
+										<a href="<?php echo $monographicLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px; float: left; border-radius: 5px; text-decoration:none;">
+											Llegiu-ne més
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+
+			<?php endif; ?>
 			<!-- SECTION  || L'entitat protagonista -->
 			<tr>
-				<td colspan="2">
-					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; width:100%;">
+				<td colspan="2" style="padding-left: 15px; padding-right:15px;">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
 						<tbody>
 							<tr>
 								<td>
-									<h2 class="section-title" style="font-family:'Open sans' !important;font-weight:800;font-size:30px !important;Margin:0px;color:#333333;margin-bottom: 15px; ">L'entitat protagonista</h2>
+									<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:600;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px;">L'entitat protagonista</h2>
 								</td>
 							</tr>
 						</tbody>
@@ -215,30 +213,30 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
-					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; width:100%;">
+				<td colspan="2" style="padding-left: 15px; padding-right: 15px; vertical-align: top; padding-bottom:20px;">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;  background-color:#EDEDED; border-radius:15px;">
 						<tbody>
 							<tr>
-								<td>
+								<td style="width: 55%;">
 									<table colspan="2">
 										<tr>
-											<td>
-												<h2><?php echo $monographicTitle; ?></h2>
-												<p><?php echo $monographicText; ?></p>
+											<td style="padding-left: 20px; padding-right: 15px; padding-top: 20px;">
+												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $monographicTitle; ?></h3>
+												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $monographicText; ?></span>
 											</td>
 										</tr>
 										<tr>
-											<td>
-												<a href="<?php echo $monographicLink; ?>">
+											<td style="padding-left: 20px; padding-top: 17px; padding-bottom: 20px;">
+												<a href="<?php echo $monographicLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
 													Llegiu-ne més
 												</a>
 											</td>
 										</tr>
 									</table>
 								</td>
-								<td>
+								<td style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; border-radius: 10px; padding-left: 10px; vertical-align:top;">
 									<a href="<?php print $monographicLink; ?>">
-										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:'Open sans' !important;width:100%;max-width:600px;height:auto;" />
+										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 									</a>
 								</td>
 							</tr>
@@ -248,12 +246,12 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 			</tr>
 			<!-- SECTION  || Destaquem-->
 			<tr>
-				<td colspan="2">
-					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; width:100%;">
+				<td colspan="2" style="padding-left: 15px; padding-right:15px;">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
 						<tbody>
 							<tr>
 								<td>
-									<h2 class="section-title" style="font-family:'Open sans' !important;font-weight:800;font-size:30px !important;Margin:0px;color:#333333;margin-bottom: 15px; ">Destaquem</h2>
+									<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:600;font-size:1.875em !important;Margin:0px;color:#333333; margin-top:20px; margin-bottom:25px;">Destaquem</h2>
 								</td>
 							</tr>
 						</tbody>
@@ -261,247 +259,209 @@ $monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
-					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; width:100%;">
+				<td colspan="2" style="padding-left: 15px; padding-right: 15px; vertical-align: top; padding-bottom:20px;">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;  background-color:#EDEDED; border-radius:15px;">
 						<tbody>
 							<tr>
-								<td>
+								<td style="padding-top: 20px; padding-left: 20px; padding-bottom: 20px; border-radius: 10px; padding-right: 10px; vertical-align:top;">
 									<a href="<?php print $monographicLink; ?>">
-										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:'Open sans' !important;width:100%;max-width:600px;height:auto;" />
+										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 									</a>
 								</td>
-								<td>
+								<td style="width: 55%;">
 									<table colspan="2">
 										<tr>
-											<td>
-												<h2><?php echo $monographicTitle; ?></h2>
-												<p><?php echo $monographicText; ?></p>
+											<td style="padding-right: 20px; padding-left: 15px; padding-top: 20px;">
+												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $monographicTitle; ?></h3>
+												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $monographicText; ?></span>
 											</td>
 										</tr>
 										<tr>
-											<td>
-												<a href="<?php echo $monographicLink; ?>">
+											<td style="padding-left: 20px; padding-top: 17px; padding-bottom: 20px;">
+												<a href="<?php echo $monographicLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
 													Llegiu-ne més
 												</a>
 											</td>
 										</tr>
 									</table>
 								</td>
-
 							</tr>
 						</tbody>
 					</table>
 				</td>
 			</tr>
-			<tr class="body">
-				<td style="vertical-align: top; padding-left: 0px">
-					<!-- CONTENT -->
-					<?php if (!empty($monographicNode)) : ?>
-						<table class="butlleti" style='background-color: #ededed; width: 100%;'>
-							<tbody>
-								<tr>
-									<td>
-										<table>
-											<tr>
-												<td>
-													<a href="<?php print $monographicLink; ?>">
-														<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:'Open sans' !important;width:100%;max-width:600px;height:auto;" />
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h2><?php echo $monographicTitle; ?></h2>
-													<p><?php echo $monographicText; ?></p>
-												</td>
-												<td>
-													<a href="<?php echo $monographicLink; ?>">
-														Llegiu-ne més
-													</a>
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-
-								<tr>
-									<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-										<table width="100%" bgcolor="#eeeeee" class="background-gray" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;background-color:#eeeeee;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;">
-											<tr>
-												<td class="one-column" summary="one-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-													<table width="100%" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;">
-														<tr>
-															<td class="inner contents" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;width:100%;font-family:'Open sans' !important;text-align:left;">
-																<h2 class="section-title" style="font-family:'Open sans' !important;font-weight:800;font-size:22px !important;Margin:0px;color:#333333;">L'entitat protagonista</h2>
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-										<table width="100%" bgcolor="#eeeeee" class="background-gray" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;background-color:#eeeeee;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;">
-											<tr summary="two-columns" style="font-family:'Open sans' !important;">
-												<td class="inner-left inner-right" style="padding-top:0;padding-bottom:0;font-family:'Open sans' !important;padding-left:20px;padding-right:20px;">
-													<table width="100%" bgcolor="#ffffff" class="background-white bordered" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;background-color:#ffffff;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:1px !important;border-style:solid !important;border-color:#dddddd !important;">
-														<tr>
-															<td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center;font-size:0;font-family:'Open sans' !important;">
-																<!--[if (gte mso 9)|(IE)]>
-													<table width="100%" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;">
-													<tr>
-													<td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-													<![endif]-->
-																<div class="column" summary="column" style="font-family:'Open sans' !important;width:100%;max-width:279px;display:inline-block;vertical-align:top;">
-																	<table width="100%" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;">
-																		<tr>
-																			<td class="lh-0" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;line-height:0px;">
-																				<table class="contents" style="border-spacing:0;color:#333333;width:100%;font-family:'Open sans' !important;font-size:14px;text-align:left;">
-																					<tr>
-																						<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-																							<a href="<?php print $monographicLink; ?>">
-																								<img src="<?php print $monographicImage; ?>" width="279" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:'Open sans' !important;width:100%;max-width:279px;height:auto;" />
-																							</a>
-																						</td>
-																					</tr>
-																				</table>
-																			</td>
-																		</tr>
-																	</table>
-																</div>
-																<!--[if (gte mso 9)|(IE)]>
-													</td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-													<![endif]-->
-																<div class="column" summary="column" style="font-family:'Open sans' !important;width:100%;max-width:279px;display:inline-block;vertical-align:top;">
-																	<table width="100%" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;">
-																		<tr>
-																			<td class="inner" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-family:'Open sans' !important;">
-																				<table class="contents" style="border-spacing:0;color:#333333;width:100%;font-family:'Open sans' !important;font-size:14px;text-align:left;">
-																					<tr>
-																						<td class="text" style="padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;padding-top:10px;">
-																							<a class="post-title text-md" href="<?php print $monographicLink ?>" style="font-family:'Open sans' !important;color:#333333;font-weight:800;text-decoration:none;font-size:16px !important;"><?php print $monographicTitle; ?></a>
-																						</td>
-																					</tr>
-																				</table>
-																			</td>
-																		</tr>
-																		tr>
-																		<td class="inner" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-family:'Open sans' !important;">
-																			<table class="contents" style="border-spacing:0;color:#333333;width:100%;font-family:'Open sans' !important;font-size:14px;text-align:left;">
-																				<tr>
-																					<td class="text" style="padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;padding-top:10px;">
-																						<a class="post-title text-md" href="<?php print $monographicLink ?>" style="font-family:'Open sans' !important;color:#333333;font-weight:800;text-decoration:none;font-size:16px !important;"><?php print $monographicText; ?></a>
-																					</td>
-																				</tr>
-																			</table>
-																		</td>
-														</tr>
-														<tr>
-															<td class="inner" style="padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-family:'Open sans' !important;">
-																<table bgcolor="#671013" class="background-red" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;background-color:#671013;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;width: auto;">
-																	<tr>
-																		<td class="button" style="font-family:'Open sans' !important;padding-top:4px;padding-bottom:4px;padding-right:10px;padding-left:10px;">
-																			<a class="text-sm no-decoration text-white" href="<?php print $monographicLink ?>" style="font-family:'Open sans' !important;font-size:14px !important;color:#ffffff;text-decoration:none;font-weight:200;">Llegiu-ne més</a>
-																		</td>
-																	</tr>
-																</table>
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-										<table width="100%" class="box-shadow" style="border-spacing:0;color:#333333;font-family:'Open sans' !important;background-color:#eeeeee;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;">
-											<tr>
-												<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Open sans' !important;">
-													<img src="<?php print $path_root; ?>/sites/all/themes/xn17/assets/images/butlleti_a_labast/shadow_bottom.jpg?token=<?php print time(); ?>" border="0" alt="" width="558" style="border-width:0;font-family:'Open sans' !important;width:100% !important;max-width:none !important;" />
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+			<!-- SECTION  || El recurs de la setmana -->
+			<tr>
+				<td colspan="2" style="padding-left: 15px; padding-right:15px;">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
+						<tbody>
+							<tr>
+								<td>
+									<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:600;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px;">El recurs de la setmana</h2>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</td>
 			</tr>
-
-		</table>
-	<?php endif; ?>
-	<!-- END CONTENT -->
-	</td>
-	</tr>
-	<!-- PEU -->
-	<tr style="background-color:#2f3031; border-top:3px solid #231f20;">
-		<td colspan="2" style="border-top: 3px solid #53544F; padding: 4px;">
-			<table class="butlleti" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; color:white;">
-				<tr class='body'>
-					<td colspan="2" style="padding-left:10px;">
-						<strong>Xarxanet.org és un projecte de</strong>
-					</td>
-					<td colspan="2" style="padding-left:50px;">
-						<strong>Entitats promotores</strong>
-					</td>
-				</tr>
-				<tr class='body'>
-					<td style="vertical-align:top; padding-left:10px; padding-top:15px">
-						<table class="butlleti">
-							<tr class='body'>
+			<tr>
+				<td colspan="2" style="padding-left: 15px; padding-right: 15px; vertical-align: top; padding-bottom:20px;">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;  background-color:#EDEDED; border-radius:15px;">
+						<tbody>
+							<tr>
+								<td style="width: 55%;">
+									<table colspan="2">
+										<tr>
+											<td style="padding-left: 20px; padding-right: 15px; padding-top: 20px;">
+												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $monographicTitle; ?></h3>
+												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $monographicText; ?></span>
+											</td>
+										</tr>
+										<tr>
+											<td style="padding-left: 20px; padding-top: 17px; padding-bottom: 20px;">
+												<a href="<?php echo $monographicLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
+													Llegiu-ne més
+												</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; border-radius: 10px; padding-left: 10px; vertical-align:top;">
+									<a href="<?php print $monographicLink; ?>">
+										<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<!-- SECTION  || Contrastos -->
+			<tr>
+				<td colspan="2" style="padding-left: 15px; padding-right:15px;">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
+						<tbody>
+							<tr>
 								<td>
-									<a href="http://benestar.gencat.cat" style="text-decoration:none">
-										<img alt="logo generalitat" src="<?php echo $pathroot ?>/sites/default/files/butlletins/financament/logo_generalitat.png">
-									</a>
+									<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:600;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px;">Contrastos</h2>
 								</td>
 							</tr>
-							<tr class='body'>
-								<td style="height: 55px; vertical-align: bottom;">
-									<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca" rel="license">
-										<img style="border:0 none;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/es/80x15.png" alt="Licencia de Creative Commons">
-									</a>
-								</td>
-							</tr>
-						</table>
-					</td>
-					<td style="vertical-align:top; padding-top:15px">
-						<!-- <a href="http://www.voluntariat.org" style="text-decoration:none">
-								<img alt="logo voluntariat" src="<?php echo $pathroot ?>/sites/default/files/butlletins/financament/logo_scv.png">
-							</a> -->
-					</td>
-					<td style="padding-left:50px;">
-						<p>
-							<a href="https://suport.fundesplai.org/" style="color:white;  font-weight:normal">Suport Tercer Sector – Fundesplai</a><br />
-							<a href="http://www.peretarres.org" style="color:white;  font-weight:normal">Fundació Pere Tarrés</a><br />
-							<a href="https://www.lavinianext.com/ca/" style="color:white;  font-weight:normal">LaviniaNext</a><br />
-							<a href="http://colectic.coop/" style="color:white;  font-weight:normal">Colectic</a><br />
-							<a href="http://voluntaris.cat/" style="color:white;  font-weight:normal">Federació Catalana del Voluntariat Social</a><br />
-						</p>
-					</td>
-					<td style="padding-left:15px">
-						<p>
-							<a href="https://www.escoltesiguies.cat/" style="color:white;  font-weight:normal">Minyons Escoltes i Guies de Catalunya</a><br />
-							<a href="http://www.tothomweb.com/" style="color:white;  font-weight:normal">TOTHOMweb</a><br />
-						</p>
-					</td>
-				</tr>
-			</table>
-	<tr class='body'>
-		<td colspan="2" style="background-color:#231f20; color:white; text-align:right; padding:5px 10px;">
-			<a style=" color:white" href="http://www.xarxanet.org/alta_actualitat">Alta</a> |
-			<a style=" color:white;" href="http://www.xarxanet.org/baixa_actualitat">Baixa</a> |
-			<a style=" color:white;" href="mailto:butlleti@xarxanet.org?Subject=Consulta%20butlletí">Contacte</a> |
-			<a style=" color:white;" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/">Avís legal</a>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" style="background-color:black; color:white; text-align:right; padding:5px 10px; font-size: 0.75em;">
-			<p>
-				<a style="text-decoration: underline; color:white;" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/">Avís legal</a>: D’acord amb l’article 17.1 de la Llei 19/2014, la &copy;Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se'n citi la font i la data d'actualització i que no es desnaturalitzi la informació (article 8 de la Llei 37/2007) i també que no es contradigui amb una llicència específica. Si l'adreça de correu que informeu al donar-vos d'alta deixa d'estar activa us donarem de baixa a la base de dades. <br />Aquest butlletí és una iniciativa del Departament de Drets Socials de la Generalitat de Catalunya, coeditat amb la Fundació Pere Tarrés.
-			</p>
-		</td>
-	</tr>
-	</table>
-	<div>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:50%; padding-left:15px; padding-right:8px;padding-bottom:40px;">
+					<table style="font-size:16px; background-color:#ADF08F; border-radius:15px; min-height: 350px;">
+						<tr style="height:40%;">
+							<td colspan="2" style="padding:10px;">
+								<a href="<?php print $monographicLink; ?>">
+									<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="padding-left: 10px; padding-right: 10px; vertical-align:top;">
+								<a href="<?php print $monographicLink; ?>" style="text-decoration:none; color:#333333;">			
+									<h3 style="font-size:1.25em; line-height:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;color:#333333;"><?php echo $monographicTitle; ?></h3>
+								</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td style="width:50%; padding-right:15px; padding-left:8px;padding-bottom:15px;">
+					<table style="font-size:16px; background-color:#FF5561; border-radius:15px; min-height: 350px;">
+						<tr style="height:40%;">
+							<td colspan="2" style="padding:10px;">
+								<a href="<?php print $monographicLink; ?>">
+									<img src="<?php print $monographicImage; ?>" width="600" alt="<?php print $monographicImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="padding-left: 10px; padding-right: 10px; vertical-align:top;">
+								<a href="<?php print $monographicLink; ?>" style="text-decoration:none; color:#333333;">			
+									<h3 style="font-size:1.25em; line-height:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;color:#333333;"><?php echo $monographicTitle; ?></h3>
+								</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+				
+			</tr>
+			<!-- END CONTENT -->
+			<!-- PEU -->
+			<tr style="background-color:#2f3031; border-top:3px solid #231f20;">
+				<td colspan="2" style="border-top: 3px solid #53544F; padding: 4px;">
+					<table class="butlleti" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; color:white;">
+						<tr class='body'>
+							<td colspan="2" style="padding-left:10px;">
+								<strong>Xarxanet.org és un projecte de</strong>
+							</td>
+							<td colspan="2" style="padding-left:50px;">
+								<strong>Entitats promotores</strong>
+							</td>
+						</tr>
+						<tr class='body'>
+							<td style="vertical-align:top; padding-left:10px; padding-top:15px">
+								<table class="butlleti">
+									<tr class='body'>
+										<td>
+											<a href="http://benestar.gencat.cat" style="text-decoration:none">
+												<img alt="logo generalitat" src="<?php echo $pathroot ?>/sites/default/files/butlletins/financament/logo_generalitat.png">
+											</a>
+										</td>
+									</tr>
+									<tr class='body'>
+										<td style="height: 55px; vertical-align: bottom;">
+											<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca" rel="license">
+												<img style="border:0 none;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/es/80x15.png" alt="Licencia de Creative Commons">
+											</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td style="vertical-align:top; padding-top:15px">
+								<!-- <a href="http://www.voluntariat.org" style="text-decoration:none">
+										<img alt="logo voluntariat" src="<?php echo $pathroot ?>/sites/default/files/butlletins/financament/logo_scv.png">
+									</a> -->
+							</td>
+							<td style="padding-left:50px;">
+								<p>
+									<a href="https://suport.fundesplai.org/" style="color:white;  font-weight:normal">Suport Tercer Sector – Fundesplai</a><br />
+									<a href="http://www.peretarres.org" style="color:white;  font-weight:normal">Fundació Pere Tarrés</a><br />
+									<a href="https://www.lavinianext.com/ca/" style="color:white;  font-weight:normal">LaviniaNext</a><br />
+									<a href="http://colectic.coop/" style="color:white;  font-weight:normal">Colectic</a><br />
+									<a href="http://voluntaris.cat/" style="color:white;  font-weight:normal">Federació Catalana del Voluntariat Social</a><br />
+								</p>
+							</td>
+							<td style="padding-left:15px">
+								<p>
+									<a href="https://www.escoltesiguies.cat/" style="color:white;  font-weight:normal">Minyons Escoltes i Guies de Catalunya</a><br />
+									<a href="http://www.tothomweb.com/" style="color:white;  font-weight:normal">TOTHOMweb</a><br />
+								</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr class='body'>
+				<td colspan="2" style="background-color:#231f20; color:white; text-align:right; padding:5px 10px;">
+					<a style=" color:white" href="http://www.xarxanet.org/alta_actualitat">Alta</a> |
+					<a style=" color:white;" href="http://www.xarxanet.org/baixa_actualitat">Baixa</a> |
+					<a style=" color:white;" href="mailto:butlleti@xarxanet.org?Subject=Consulta%20butlletí">Contacte</a> |
+					<a style=" color:white;" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/">Avís legal</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="background-color:black; color:white; text-align:right; padding:5px 10px; font-size: 0.75em;">
+					<p>
+						<a style="text-decoration: underline; color:white;" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/">Avís legal</a>: D’acord amb l’article 17.1 de la Llei 19/2014, la &copy;Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se'n citi la font i la data d'actualització i que no es desnaturalitzi la informació (article 8 de la Llei 37/2007) i també que no es contradigui amb una llicència específica. Si l'adreça de correu que informeu al donar-vos d'alta deixa d'estar activa us donarem de baixa a la base de dades. <br />Aquest butlletí és una iniciativa del Departament de Drets Socials de la Generalitat de Catalunya, coeditat amb la Fundació Pere Tarrés.
+					</p>
+				</td>
+			</tr>
+		</table>
+	</div>
 </center>
 
 <?php echo '<pre>';
