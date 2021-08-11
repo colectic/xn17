@@ -181,7 +181,7 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 		<table class="butlleti" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; border:1px solid #d3d3d2; border-bottom: 0px; width:100%;">
 			<!-- CAPÇALERA -->
 			<tr style="background-color:#2f3031;">
-				<td>
+				<td style="padding: 0 0 0 5px;">
 					<a href="http://www.xarxanet.org" style="text-decoration:none">
 						<img src="/sites/all/themes/xn17/logo.png" alt="logotip xarxanet" style="margin-left:5px; margin-top:20px" />
 					</a>
@@ -447,14 +447,14 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 			<?php endif; ?>
 			<!-- END CONTENT -->
 			<!-- PEU -->
-			<tr style="background-color:#2f3031; border-top:3px solid #231f20;">
-				<td colspan="2" style="border-top: 3px solid #53544F; padding: 4px;">
+			<tr style="background-color:#2f3031;">
+				<td colspan="2" style="padding: 4px;">
 					<table class="butlleti" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; color:white;">
 						<tr class='body'>
-							<td colspan="2" style="padding-left:10px;">
+							<td colspan="2" style="padding: 10px 0 0 10px;">
 								<strong>Xarxanet.org és un projecte de</strong>
 							</td>
-							<td colspan="2" style="padding-left:50px;">
+							<td colspan="2" style="padding: 10px 0 0 10px;">
 								<strong>Entitats promotores</strong>
 							</td>
 						</tr>
