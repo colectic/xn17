@@ -200,19 +200,6 @@ ksort($financ_nodes);
 					<a href="http://www.xarxanet.org/hemeroteca_actualitat" style=" color:#878787">Butlletins anteriors</a>
 				</td>
 			</tr>
-			<tr>
-				<td colspan="2" style="padding: 0 15px;">
-					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
-						<tbody>
-							<tr>
-								<td>
-									<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:600;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px;">L'entitat protagonista</h2>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
 			<?php if (!empty($highlightnew1Node)) : ?>
 				<tr>
 					<td colspan="2" style="padding: 0 15px 20px 15px; vertical-align: top; ">
@@ -291,7 +278,7 @@ ksort($financ_nodes);
 									<tbody>
 										<tr>
 											<td>
-												<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:600;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px;">L'entitat protagonista</h2>
+												<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:800;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px; color:#BE1622;">Últimes convocatòries</h2>
 											</td>
 										</tr>
 									</tbody>
