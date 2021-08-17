@@ -176,9 +176,9 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 </style>
 <!-- @END CSS Styles from TOTHOMweb -->
 <!-- @END CSS Styles from TOTHOMweb -->
-<center id="newsletter" class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+<center id="newsletter" class="wrapper" style="background-color:#f6f6f6; width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
 	<div class="webkit" style="max-width:602px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;">
-		<table class="butlleti" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; border:1px solid #d3d3d2; border-bottom: 0px; width:100%;">
+		<table class="butlleti" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 13px; border:1px solid #d3d3d2; border-bottom: 0px; width:100%; background-color:#ffffff;">
 			<!-- CAPÇALERA -->
 			<tr style="background-color:#2f3031;">
 				<td style="padding: 0 0 0 5px;">
