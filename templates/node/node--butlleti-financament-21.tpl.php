@@ -204,88 +204,82 @@ ksort($financ_nodes);
 				</td>
 			</tr>
 			<?php if (!empty($highlightnew1Node)) : ?>
-				<tr>
-					<td colspan="2" style="padding: 0 15px 20px 15px; vertical-align: top; ">
-						<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;  background-color:#EDEDED; border-radius:15px;">
-							<tbody>
-								<tr>
-									<td style="width: 55%;">
-										<table colspan="2">
-											<tr>
-												<td style="padding:20px 15px 0 20px;">
-													<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $highlightnew1Title; ?></h3>
-													<span style="font-size: .95em; line-height: 1.35em;"><?php echo $highlightnew1Text; ?></span>
-												</td>
-											</tr>
-											<tr>
-												<td style="padding:17px 0 20px 20px;">
-													<a href="<?php echo $highlightnew1Link; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
-														Llegiu-ne més
-													</a>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td style="padding:20px 20px 20px 10px; border-radius: 10px; vertical-align:top;">
-										<a href="<?php print $highlightnew1Link; ?>">
-											<img src="<?php print $highlightnew1Image; ?>" width="600" alt="<?php print $highlightnew1ImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
-										</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
+			<tr>
+				<td colspan="2" style="padding: 30px 15px 30px 15px; vertical-align: top; ">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;  background-color:#EDEDED; border-radius:15px;">
+						<tbody>
+							<tr>
+								<td style="width: 55%;">
+									<table colspan="2">
+										<tr>
+											<td style="padding:20px 15px 0 20px;">
+												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $highlightnew1Title; ?></h3>
+												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $highlightnew1Text; ?></span>
+											</td>
+										</tr>
+										<tr>
+											<td style="padding:17px 0 20px 20px;">
+												<a href="<?php echo $highlightnew1Link; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
+													Llegiu-ne més
+												</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="padding:20px 20px 20px 10px; border-radius: 10px; vertical-align:top;">
+									<a href="<?php print $highlightnew1Link; ?>">
+										<img src="<?php print $highlightnew1Image; ?>" width="600" alt="<?php print $highlightnew1ImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
 			<?php endif; ?>
 			<?php if (!empty($highlightnew2Node)) : ?>
-				<tr>
-					<td colspan="2" style="padding: 0 15px 20px 15px; vertical-align: top; ">
-						<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;  background-color:#EDEDED; border-radius:15px;">
-							<tbody>
-								<tr>
-									<td style="width: 55%;">
-										<table colspan="2">
-											<tr>
-												<td style="padding:20px 15px 0 20px;">
-													<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $highlightnew2Title; ?></h3>
-													<span style="font-size: .95em; line-height: 1.35em;"><?php echo $highlightnew2Text; ?></span>
-												</td>
-											</tr>
-											<tr>
-												<td style="padding:17px 0 20px 20px;">
-													<a href="<?php echo $highlightnew2Link; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
-														Llegiu-ne més
-													</a>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td style="padding:20px 20px 20px 10px; border-radius: 10px; vertical-align:top;">
-										<a href="<?php print $highlightnew2Link; ?>">
-											<img src="<?php print $highlightnew2Image; ?>" width="600" alt="<?php print $highlightnew2ImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
-										</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
+			<tr>
+				<td colspan="2" style="padding: 0 15px 50px 15px; vertical-align: top; ">
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;  background-color:#EDEDED; border-radius:15px;">
+						<tbody>
+							<tr>
+								<td style="width: 55%;">
+									<table colspan="2">
+										<tr>
+											<td style="padding:20px 15px 0 20px;">
+												<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $highlightnew2Title; ?></h3>
+												<span style="font-size: .95em; line-height: 1.35em;"><?php echo $highlightnew2Text; ?></span>
+											</td>
+										</tr>
+										<tr>
+											<td style="padding:17px 0 20px 20px;">
+												<a href="<?php echo $highlightnew2Link; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
+													Llegiu-ne més
+												</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="padding:20px 20px 20px 10px; border-radius: 10px; vertical-align:top;">
+									<a href="<?php print $highlightnew2Link; ?>">
+										<img src="<?php print $highlightnew2Image; ?>" width="600" alt="<?php print $highlightnew2ImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
 			<?php endif; ?>
 			<?php if (!empty($financ_nodes)) : ?>
 			<tr>
 				<td colspan="2" style="vertical-align: top; background-color:#EDEDED; padding:15px;">
-					<table>
+					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
 						<tr>
-							<td colspan="2" style="padding: 0 15px;">
-								<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
-									<tbody>
-										<tr>
-											<td>
-												<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:800;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px; color:#BE1622;">Últimes convocatòries</h2>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+							<td colspan="2">
+								
+								<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:800;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px; color:#BE1622;">Últimes convocatòries</h2>
+										
 							</td>
 						</tr>
 						<?php foreach ($financ_nodes as $financ_node) : ?>
@@ -304,12 +298,12 @@ ksort($financ_nodes);
 														</tr>
 														<tr>
 															<td style="padding:5px 15px 0 20px;">
-																<span style="font-size: .95em; line-height: 1.35em; font-weight:700;">Convocant: <?php echo $financ_node['convocant']; ?></span>
+																<span style="font-size: .95em; line-height: 1.35em; font-weight:800;">Convocant: <?php echo $financ_node['convocant']; ?></span>
 															</td>
 														</tr>
 														<tr>
 															<td style="padding:5px 15px 0 20px;">
-																<span style="font-size: .95em; line-height: 1.35em; font-weight:700;">Termini: <?php echo $financ_node['termini']; ?></span>
+																<span style="font-size: .95em; line-height: 1.35em; font-weight:800;">Termini: <?php echo $financ_node['termini']; ?></span>
 															</td>
 														</tr>
 														<tr>
@@ -427,7 +421,7 @@ ksort($financ_nodes);
 										<img alt="logo voluntariat" src="<?php echo $pathroot ?>/sites/default/files/butlletins/financament/logo_scv.png">
 									</a> -->
 							</td>
-							<td style="padding-left:50px;">
+							<td style="padding:0 0 0 10px">
 								<p>
 									<a href="https://suport.fundesplai.org/" style="color:white;  font-weight:normal">Suport Tercer Sector – Fundesplai</a><br />
 									<a href="http://www.peretarres.org" style="color:white;  font-weight:normal">Fundació Pere Tarrés</a><br />
@@ -436,7 +430,7 @@ ksort($financ_nodes);
 									<a href="http://voluntaris.cat/" style="color:white;  font-weight:normal">Federació Catalana del Voluntariat Social</a><br />
 								</p>
 							</td>
-							<td style="padding-left:15px">
+							<td style="padding:0 0 0 15px"">
 								<p>
 									<a href="https://www.escoltesiguies.cat/" style="color:white;  font-weight:normal">Minyons Escoltes i Guies de Catalunya</a><br />
 									<a href="http://www.tothomweb.com/" style="color:white;  font-weight:normal">TOTHOMweb</a><br />
