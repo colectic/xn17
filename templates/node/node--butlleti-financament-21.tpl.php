@@ -172,6 +172,9 @@ ksort($financ_nodes);
 	table td {
 		border-top: 0px;
 	}
+	table td a:hover{
+		text-decoration:none;
+	}
 </style>
 <!-- @END CSS Styles from TOTHOMweb -->
 <!-- @END CSS Styles from TOTHOMweb -->
