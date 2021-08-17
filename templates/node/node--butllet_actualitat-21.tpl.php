@@ -91,19 +91,18 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 
 //$Monographic Section
 $monographicSectTitle = $node->field_actualitat21_mono_epigraf['und'][0]['value'];
-$monographicID = $node->field_actualitat21_noti_monograf['und'][0]['nid'];
-$monographicNode = node_load($monographicID);
-$monographicTitle = $monographicNode->title;
-$monographicImage = image_style_url('large', $monographicNode->field_imatges['und'][0]['uri']);
-$monographicImageAlt = $monographicNode->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
-$monographicText = $monographicNode->field_resum['und'][0]['value'];
-$monographicLink = url('node/' . $monographicNode->nid, array('absolute' => TRUE));
+$monographicTitle = $node->field_actualitat21_mono_titular['und'][0]['value'];
+$monographicImage = image_style_url('large', $node->field_actualitat21_mono_imatge['und'][0]['uri']);
+$monographicImageAlt = $node->field_actualitat21_mono_imatge['und'][0]['field_file_image_alt_text']['und'][0]['value'];
+$monographicText = $node->field_actualitat21_mono_cos['und'][0]['value'];
+$monographicLink = "https://www.xarxanet.org";
+
 
 //$entity Section
 $entityID = $node->field_actualitat21_entitat['und'][0]['nid'];
 $entityNode = node_load($entityID);
 $entityTitle = $entityNode->title;
-$entityImage = image_style_url('large', $entityNode->field_imatges['und'][0]['uri']);
+$entityImage = image_style_url('butlleti_quadrada', $entityNode->field_imatges['und'][0]['uri']);
 $entityImageAlt = $entityNode->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
 $entityText = $entityNode->field_resum['und'][0]['value'];
 $entityLink = url('node/' . $entityNode->nid, array('absolute' => TRUE));
@@ -112,7 +111,7 @@ $entityLink = url('node/' . $entityNode->nid, array('absolute' => TRUE));
 $highlightID = $node->field_actualitat21_destaquem['und'][0]['nid'];
 $highlightNode = node_load($highlightID);
 $highlightTitle = $highlightNode->title;
-$highlightImage = image_style_url('large', $highlightNode->field_imatges['und'][0]['uri']);
+$highlightImage = image_style_url('butlleti_quadrada', $highlightNode->field_imatges['und'][0]['uri']);
 $highlightImageAlt = $highlightNode->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
 $highlightText = $highlightNode->field_resum['und'][0]['value'];
 $highlightLink = url('node/' . $highlightNode->nid, array('absolute' => TRUE));
@@ -121,7 +120,7 @@ $highlightLink = url('node/' . $highlightNode->nid, array('absolute' => TRUE));
 $resourceID = $node->field_actualitat21_recurs['und'][0]['nid'];
 $resourceNode = node_load($resourceID);
 $resourceTitle = $resourceNode->title;
-$resourceImage = image_style_url('large', $resourceNode->field_imatges['und'][0]['uri']);
+$resourceImage = image_style_url('butlleti_quadrada', $resourceNode->field_imatges['und'][0]['uri']);
 $resourceImageAlt = $resourceNode->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
 $resourceText = $resourceNode->field_resum['und'][0]['value'];
 $resourceLink = url('node/' . $resourceNode->nid, array('absolute' => TRUE));
@@ -130,7 +129,7 @@ $resourceLink = url('node/' . $resourceNode->nid, array('absolute' => TRUE));
 $contrast1ID = $node->field_actualitat21_noticontrast1['und'][0]['nid'];
 $contrast1Node = node_load($contrast1ID);
 $contrast1Title = $contrast1Node->title;
-$contrast1Image = image_style_url('large', $contrast1Node->field_imatges['und'][0]['uri']);
+$contrast1Image = image_style_url('butlleti_quadrada', $contrast1Node->field_imatges['und'][0]['uri']);
 $contrast1ImageAlt = $contrast1Node->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
 $contrast1Text = $contrast1Node->field_resum['und'][0]['value'];
 $contrast1Link = url('node/' . $contrast1Node->nid, array('absolute' => TRUE));
@@ -139,15 +138,10 @@ $contrast1Link = url('node/' . $contrast1Node->nid, array('absolute' => TRUE));
 $contrast2ID = $node->field_actualitat21_noticontrast2['und'][0]['nid'];
 $contrast2Node = node_load($contrast2ID);
 $contrast2Title = $contrast2Node->title;
-$contrast2Image = image_style_url('large', $contrast2Node->field_imatges['und'][0]['uri']);
+$contrast2Image = image_style_url('butlleti_quadrada', $contrast2Node->field_imatges['und'][0]['uri']);
 $contrast2ImageAlt = $contrast2Node->field_imatges['und'][0]['field_file_image_alt_text']['und'][0]['value'];
 $contrast2Text = $contrast2Node->field_resum['und'][0]['value'];
 $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
-
-
-// echo '<pre>';
-// echo var_dump($monographicNode);
-// echo '</pre>';
 
 
 ?>
@@ -201,7 +195,7 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 					<a href="http://www.xarxanet.org/hemeroteca_actualitat" style=" color:#878787">Butlletins anteriors</a>
 				</td>
 			</tr>
-			<?php if (!empty($monographicNode)) : ?>
+			<?php if (!empty($monographicTitle)) : ?>
 				<tr>
 					<td colspan="2" style="padding:0 15px;">
 						<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
@@ -405,10 +399,10 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 			</tr>
 			<tr>
 				<td style="width:50%; padding:0 8px 40px 15px;">
-					<table style="font-size:16px; background-color:#ADF08F; border-radius:15px; min-height: 350px;">
+					<table style="font-size:16px; background-color:#ADF08F; border-radius:15px; min-height: 430px;">
 						<tr style="height:40%;">
 							<td colspan="2" style="padding:10px;">
-								<a href="<?php print $contrast1Link; ?>">
+								<a href="<?php print $contrast1Link; ?>" style="display:block;">
 									<img src="<?php print $contrast1Image; ?>" width="600" alt="<?php print $contrast1ImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 								</a>
 							</td>
@@ -424,10 +418,10 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 				</td>
 				<?php if (!empty($contrast2Node)) : ?>
 				<td style="width:50%; padding:0 15px 15px 8px;">
-					<table style="font-size:16px; background-color:#FF5561; border-radius:15px; min-height: 350px;">
+					<table style="font-size:16px; background-color:#FF5561; border-radius:15px; min-height: 430px;">
 						<tr style="height:40%;">
 							<td colspan="2" style="padding:10px;">
-								<a href="<?php print $contrast2Link; ?>">
+								<a href="<?php print $contrast2Link; ?>" style="display:block;">
 									<img src="<?php print $contrast2Image; ?>" width="600" alt="<?php print $contrast2ImageAlt; ?>" style="border-width:0;font-family:Fira Sans, Helvetica, Arial !important;width:100%;max-width:600px;height:auto; border-radius:15px;" />
 								</a>
 							</td>
@@ -482,7 +476,7 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 										<img alt="logo voluntariat" src="<?php echo $pathroot ?>/sites/default/files/butlletins/financament/logo_scv.png">
 									</a> -->
 							</td>
-							<td style="padding-left:50px;">
+							<td style="padding-left:10px;">
 								<p>
 									<a href="https://suport.fundesplai.org/" style="color:white;  font-weight:normal">Suport Tercer Sector – Fundesplai</a><br />
 									<a href="http://www.peretarres.org" style="color:white;  font-weight:normal">Fundació Pere Tarrés</a><br />
