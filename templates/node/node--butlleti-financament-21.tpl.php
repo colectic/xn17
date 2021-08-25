@@ -289,26 +289,20 @@ ksort($financ_nodes);
 										<tbody>
 											<tr>
 												<td style="width: 100%;">
-													<table colspan="2">
-														<tr>
-															<td style="padding:20px 15px 0 20px;">
+													<table>
+														<tr style="padding:0;">
+															<td style="padding:20px 15px 0 20px;" colspan="2">
 																<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $financ_node['title']; ?></h3>
 																<p style="font-size: .874em; line-height: 1.28em; margin-bottom:0;font-style:italic;"><?php echo $financ_node['teaser']; ?></p>				
 															</td>
 														</tr>
-														<tr>
-															<td style="padding:5px 15px 0 20px;">
+														<tr style="padding:0;">
+															<td style="padding:5px 10px 20px 20px;">
 																<span style="font-size: .95em; line-height: 1.35em; font-weight:800;">Convocant: <?php echo $financ_node['convocant']; ?></span>
-															</td>
-														</tr>
-														<tr>
-															<td style="padding:5px 15px 0 20px;">
 																<span style="font-size: .95em; line-height: 1.35em; font-weight:800;">Termini: <?php echo $financ_node['termini']; ?></span>
 															</td>
-														</tr>
-														<tr>
-															<td style="padding:17px 0 20px 20px;">
-																<a href="<?php echo $financ_node['link']; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: left; border-radius: 5px; text-decoration:none;">
+															<td style="padding:5px 20px 20px 5px; vertical-align:bottom;">
+																<a href="<?php echo $financ_node['link']; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px;float: right; white-space:nowrap; border-radius: 5px; text-decoration:none;">
 																	Llegiu-ne més
 																</a>
 															</td>
