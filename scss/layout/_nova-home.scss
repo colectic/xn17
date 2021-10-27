@@ -1263,27 +1263,25 @@
 
     .panel-col-middle {
         .inside {
-            .panels-ipe-sort-container {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: 0.4fr repeat(3, 1.1fr);
-                grid-column-gap: 0px;
-                grid-row-gap: 0px;
-            }
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 0.4fr repeat(3, 1.1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
         }
 
         @media (max-width: 1200px) and (min-width: 1000px) {
-            #panels-ipe-paneid-597
+            .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-2
                 .view-nou-xn17-noticia-destacats-secundaris
                 .view-content
                 .views-row
                 .view-field-title {
                 font: normal normal bold 17px/20px "Fira Sans SemiBold";
             }
-            #panels-ipe-paneid-598 .views-row .view-field-title {
+            .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-3 .views-row .view-field-title {
                 font: normal normal bold 18px/22px "Fira Sans SemiBold";
             }
-            #panels-ipe-paneid-596 .views-row .views-field-title {
+            .pane-nou-xn17-recursos-destacats-portada-panel-pane-2 .views-row .views-field-title {
                 font: normal normal bold 18px/22px "Fira Sans SemiBold";
             }
         }
@@ -1316,15 +1314,12 @@
         }
 
         /* view-nou-xn17-noticia-destacada-principal */
-        #panels-ipe-paneid-595 {
-            grid-area: 1 / 1 / 2 / 4;
-            height: 342px;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: row;
-
-            .panel-pane {
-                height: 100%;
+        .pane-nou-xn17-noticia-destacada-principal-panel-pane-1-1{
+                grid-area: 1 / 1 / 2 / 4;
+                height: 342px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: row;
                 .pane-content {
                     height: 100%;
                     .view-nou-xn17-noticia-destacada-principal {
@@ -1361,7 +1356,6 @@
                         }
                     }
                 }
-            }
 
             .views-row {
                 border: 1px solid #dedede;
@@ -1384,7 +1378,7 @@
         }
 
         /* Recursos */
-        #panels-ipe-paneid-596 {
+        .pane-nou-xn17-recursos-destacats-portada-panel-pane-2 {
             grid-area: 1 / 4 / 6 / 5;
             width: 257px;
 
@@ -1436,7 +1430,7 @@
         }
 
         /*  view-nou-xn17-noticia-destacats-terciaris  */
-        #panels-ipe-paneid-598 {
+        .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-3 {
             grid-area: 2 / 3 / 6 / 4;
             .views-row {
                 border: 1px solid #dedede;
@@ -1456,7 +1450,7 @@
         }
 
         /* view-nou-xn17-noticia-destacats-secundaris */
-        #panels-ipe-paneid-597 {
+        .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-2 {
             grid-area: 2 / 1 / 6 / 3;
 
             .view-nou-xn17-noticia-destacats-secundaris {
@@ -1496,15 +1490,15 @@
         }
 
         @media (max-width: 1000px) {
-            .panels-ipe-sort-container {
+            .inside {
                 display: flex !important;
                 flex-wrap: wrap !important;
                 flex-direction: column !important;
 
-                #panels-ipe-paneid-595 {
+                .pane-nou-xn17-noticia-destacada-principal-panel-pane-1-1 {
                     order: 1;
                 }
-                #panels-ipe-paneid-596 {
+                .pane-nou-xn17-recursos-destacats-portada-panel-pane-2 {
                     order: 3;
                     width: 100%;
                     .view-content {
@@ -1519,7 +1513,7 @@
                         }
                     }
                 }
-                #panels-ipe-paneid-598 {
+                .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-3 {
                     order: 4;
                     .view-content {
                         display: flex;
@@ -1535,7 +1529,7 @@
                         }
                     }
                 }
-                #panels-ipe-paneid-597 {
+                .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-2 {
                     order: 2;
                     .view-content {
                         display: flex;
