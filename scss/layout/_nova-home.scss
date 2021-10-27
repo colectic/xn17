@@ -1,0 +1,1587 @@
+#main-footer {
+    .region-main-footer {
+        .fes-voluntariat {
+            padding: 10px 0;
+            .block__content {
+                height: 150px;
+                background: url("../images/blocks/fes-voluntariat.png");
+                background-size: auto 165px;
+                background-repeat: no-repeat;
+                background-position: 101%;
+                color: black;
+                padding: 10px 15px;
+                background-color: #231f20;
+                position: relative;
+            }
+        }
+        .ofertes-de-feina {
+            padding: 10px 0;
+            .block__content {
+                height: 150px;
+                background: url("../images/blocks/ofertes-de-feina.png");
+                background-size: auto 165px;
+                background-repeat: no-repeat;
+                background-position: 101%;
+                color: black;
+                padding: 10px 15px;
+                background-color: #231f20;
+                position: relative;
+            }
+        }
+        .butlletins {
+            padding: 10px 0;
+            .block__content {
+                height: 150px;
+                background: url("../images/blocks/butlletins.png");
+                background-size: auto 165px;
+                background-repeat: no-repeat;
+                background-position: 101%;
+                color: black;
+                padding: 10px 15px;
+                background-color: #231f20;
+                position: relative;
+            }
+        }
+        .contacte {
+            padding: 10px 0;
+            .block__content {
+                height: 150px;
+                background: url("../images/blocks/contacte.png");
+                background-size: auto 165px;
+                background-repeat: no-repeat;
+                background-position: 101%;
+                color: black;
+                padding: 10px 15px;
+                background-color: #231f20;
+                position: relative;
+            }
+        }
+        .assessorament-gratuit {
+            padding: 10px 0;
+            .block__content {
+                height: 150px;
+                background: url("../images/blocks/assesorament-gratuit.png");
+                background-size: 56% auto;
+                background-repeat: no-repeat;
+                background-position: 101%;
+                color: black;
+                padding: 10px 40px;
+                background-color: #231f20;
+                position: relative;
+            }
+        }
+        .voluntariat {
+            padding: 10px 0;
+            .block__content {
+                height: 150px;
+                background: url("../images/blocks/tajudem.png");
+                background-size: 56% 101%;
+                background-repeat: no-repeat;
+                background-position: 101%;
+                color: black;
+                padding: 10px 40px;
+                background-color: #231f20;
+                position: relative;
+            }
+        }
+        .bloc-banner h4 {
+            padding: 15px;
+            background-color: white;
+            width: 75%;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: auto;
+            font-weight: 600;
+            a {
+                color: black;
+            }
+        }
+    }
+}
+
+@at-root .page-nou-inici {
+    background-color: white;
+    .panels-ipe-portlet-wrapper {
+        .panels-ipe-portlet-content {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    #main-footer {
+        .region-main-footer {
+            display: inline-block;
+            background-color: #ededed;
+            margin-bottom: -37px;
+            padding-bottom: 50px;
+            margin-top: -36px;
+            padding-top: 36px;
+            position: relative;
+            &::before {
+                content: "";
+                background-color: #ededed;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+            }
+            &::after {
+                content: "";
+                background-color: #ededed;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    #footer {
+        position: relative;
+    }
+
+    @media (max-width: 700px) {
+        .new_home_menu .col-md-6 {
+            margin-right: 0px !important;
+        }
+    }
+
+    .pane-xn17-monografics-portada {
+        border-top: none;
+
+        .modul-monografic-portada .cont_titular_entradeta h3 a {
+            color: black;
+        }
+
+        .view-xn17-monografics-portada {
+            .skin-default {
+                background-color: #fff;
+                border: 1px solid #ededed;
+
+                #views_slideshow_cycle_main_xn17_monografics_portada-default
+                    .modul-monografic-portada
+                    .titular_content {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 200px;
+                    z-index: 1;
+                    height: 100%;
+                    background: #ffffffd3 0% 0% no-repeat padding-box;
+                    color: #000 !important;
+
+                    h2 {
+                        font-size: 14px;
+                        background-position: 0% 90%;
+                        color: #be1622;
+                        padding-left: 0px;
+                        background: none;
+                        margin-top: 42px;
+                    }
+                }
+                .titol-regio {
+                    display: block;
+                    position: absolute;
+                    padding-left: 10px;
+                    padding-right: 33px;
+                    padding-top: 5px;
+                    height: 28px;
+                    text-transform: uppercase;
+                    top: 15px;
+                    margin-left: 16px;
+                    font: normal normal bold 12px/18px "Fira Sans SemiBold";
+                }
+                .titol-regio::after {
+                    right: -10px;
+                    top: -1px;
+                }
+                .views-slideshow-controls-bottom {
+                    background-color: #fff;
+                }
+                .views_slideshow_pager_field_item {
+                    border-bottom: solid 1px #ededed;
+                }
+            }
+
+            @media (max-width: 1200px) {
+                margin-top: 50px;
+
+                .view-content {
+                    .skin-default {
+                        margin: 0px;
+                        .imatge {
+                            width: 100%;
+                            padding: 0px;
+                            margin: auto;
+
+                            #views_slideshow_cycle_teaser_section_xn17_monografics_portada-default {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .title-actualidad {
+        text-align: center;
+        h2 {
+            text-align: center;
+            font: normal normal bold 41px/49px "Fira Sans SemiBold";
+            letter-spacing: 0px;
+            color: #231f20;
+            margin-bottom: 0px;
+        }
+        .subtitle {
+            font: normal normal normal 18px/22px Fira Sans;
+            letter-spacing: 0px;
+            color: #454545;
+            margin-top: 0px;
+        }
+    }
+
+    .home-button {
+        padding: 12px 46px;
+        background-color: #be1622;
+        color: white;
+        font: normal normal bold 15px/20px "Fira Sans SemiBold";
+    }
+
+    .nou-menu-home {
+        h2 {
+            color: white;
+            margin-top: 0px;
+            font: normal normal bold 31px/31px "Fira Sans SemiBold";
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            bottom: 15px;
+            padding: 0px 15px 0px 0px;
+
+            li {
+                a::after {
+                    content: " | ";
+                    color: white;
+                    font-weight: normal;
+                    margin-right: 5px;
+                }
+                a {
+                    padding: 5px 0px;
+                    background: none;
+                    color: white;
+                    text-decoration: none;
+                    font: normal normal normal 15px/15px "Fira Sans SemiBold";
+                }
+                &::last-child {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .nou-banner-recursos {
+        @media (max-width: 768px) {
+            margin-right: 0px !important;
+        }
+    }
+
+    .pane-nou-xn17-opinio {
+        .view-nou-xn17-opinio {
+            .view-footer {
+                text-align: center;
+                margin-bottom: 25px;
+                display: block;
+            }
+            .home-button {
+                background-color: black;
+            }
+            .modul_2x1 {
+                background-color: #ededed;
+                padding-top: 0px;
+                width: 100%;
+                height: 0;
+                padding-bottom: 89%;
+                margin-bottom: 30px;
+            }
+            .cont_titular_entradeta {
+                padding-right: 14.44043%;
+                padding-bottom: 26px;
+                padding-left: 5%;
+                img {
+                    margin: -25% -19px 0px 0px;
+                    width: 36%;
+                }
+                h4 {
+                    padding-top: 2px;
+                }
+            }
+            .pie {
+                background-color: #ededed;
+                padding: 5px 0 5px 10px;
+                margin-top: -60px;
+                margin-bottom: 40px;
+                height: 30px;
+                padding-top: 0;
+                font-size: 13px;
+                a {
+                    color: #be1622;
+                }
+            }
+
+            @media (max-width: 1000px) {
+                .views-field-field-autor-foto-quadrada {
+                    .modul_2x1 {
+                        padding-bottom: 200px;
+                        .cont_titular_entradeta h4 {
+                            font-size: 1.4em;
+                        }
+                        .rightimage {
+                            img {
+                                margin: -25% -31px 0px 0px;
+                            }
+                            &:before {
+                                padding-top: 160px;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 768px) {
+                .views-field-field-autor-foto-quadrada {
+                    .modul_2x1 {
+                        .cont_titular_entradeta {
+                            padding-left: 3%;
+                            h4 {
+                                width: 50%;
+                            }
+                        }
+                        .rightimage {
+                            img {
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nou-menu-home {
+        background-color: red;
+        padding: 35px;
+        height: 280px;
+        position: relative;
+        margin-bottom: 30px;
+        margin-right: 15px;
+
+        @media (max-width: 1200px) {
+            margin-right: 0px;
+        }
+    }
+
+    .nou-banner-noticies {
+        background: linear-gradient(#b00304c4, #b00304cf), url(/sites/default/files/pexels-pixabay-158651.png);
+    }
+    .nou-banner-recursos {
+        background: linear-gradient(#b00304c4, #b00304cf), url(/sites/default/files/pexels-ann-h-3482441.png);
+    }
+
+    .pane-xn17-recull-documents {
+        background-color: #f7f4f4;
+        position: relative;
+        padding-bottom: 45px;
+
+        .bkgd-gris {
+            padding-left: 0px;
+        }
+
+        .document-biblioteca {
+            margin-left: 0px;
+        }
+
+        h2 {
+            padding-left: 0px;
+            color: black;
+            margin-top: 79px;
+            font: normal normal bold 33px/49px "Fira Sans SemiBold";
+            margin-bottom: -10px;
+        }
+        &::before {
+            content: "";
+            background-color: #f7f4f4;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+        &::after {
+            content: "";
+            background-color: #f7f4f4;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bkgd-gris {
+            background-color: #f7f4f4;
+            margin-top: 60px;
+            margin-bottom: 0px;
+            padding-bottom: 40px;
+            border-bottom: solid 4px #be1622;
+        }
+        .btn-biblioteca {
+            float: right;
+            text-align: left;
+            letter-spacing: 0px;
+            color: #be1622;
+            font: normal normal bold 16px/20px "Fira Sans SemiBold";
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+    }
+
+    .pane-xn17-nonprofit-entrades-home {
+        background-color: #2f3031;
+        display: inline-block;
+        padding-bottom: 90px;
+        padding-top: 50px;
+        position: relative;
+        &::before {
+            content: "";
+            background-color: #2f3031;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+        &::after {
+            content: "";
+            background-color: #2f3031;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .view-xn17-nonprofit-entrades-home {
+            .view-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                a {
+                    color: white;
+                    text-transform: uppercase;
+                    margin-right: 20px;
+                    font: normal normal bold 16px/49px "Fira Sans SemiBold";
+                    border-bottom: 2px solid white;
+                    height: 39px;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                h2 {
+                    color: white;
+                    letter-spacing: 0px;
+                    margin-bottom: 25px;
+                    font: normal normal bold 33px/49px "Fira Sans SemiBold";
+                }
+            }
+            .view-content {
+                display: flex;
+
+                .views-row {
+                    flex: 1 1 0px;
+                    margin-right: 20px;
+                    border: 1px solid;
+                    background: #ffffff 0% 0% no-repeat padding-box;
+                    border: 1px solid #dedede;
+
+                    .views-field.views-field-nothing {
+                        padding: 20px;
+                        min-height: 260px;
+                        position: relative;
+
+                        p {
+                            position: absolute;
+                            bottom: 5px;
+                            text-transform: uppercase;
+                            font: normal normal bold 14px/17px "Fira Sans SemiBold";
+                            letter-spacing: 0px;
+                            color: #016580;
+                        }
+
+                        h2 {
+                            margin: 0px;
+                            font: normal normal bold 1.6em/27px "Fira Sans SemiBold";
+                        }
+                    }
+                }
+            }
+            @media (max-width: 968px) {
+                .view-header {
+                    h2 {
+                        font: normal normal bold 33px/49px "Fira Sans SemiBold";
+                        width: 50%;
+                        margin-left: 20px;
+                    }
+                }
+                .view-content {
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    margin-left: 20px;
+                    .views-row {
+                        flex: 45%;
+                        margin-bottom: 20px;
+                        .views-field.views-field-nothing {
+                            min-height: 250px;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 576px) {
+                .view-header {
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    h2 {
+                        width: 100%;
+                        margin-left: 20px;
+                        text-align: center;
+                        margin-right: 20px;
+                    }
+                    a {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .pane-nou-xn17-opinio {
+        position: relative;
+        display: inline-block;
+        background-color: #f4f4f4;
+        padding: 30px 0px;
+
+        &::before {
+            content: "";
+            background-color: #f4f4f4;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+        &::after {
+            content: "";
+            background-color: #f4f4f4;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .view-nou-xn17-opinio {
+        h2 {
+            text-align: center;
+            letter-spacing: 0px;
+            color: #231f20;
+            margin-bottom: 25px;
+            font: normal normal bold 33px/49px "Fira Sans SemiBold";
+        }
+        .views-row {
+            .views-field-field-autor-foto-quadrada {
+                .field-content {
+                    border-top: 1px solid #dedede;
+                    border-left: 1px solid #dedede;
+                    border-right: 1px solid #dedede;
+                    background-color: white;
+                    .modul_2x1 {
+                        background-color: white;
+                    }
+                    .pie {
+                        border-bottom: 1px solid #dedede;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .pane-nou-xn17-agenda-portada {
+        .view-display-id-block_1 {
+            margin: 40px 0px 80px;
+        }
+        .view-nou-xn17-agenda-portada {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+
+            .calendar-calendar {
+                .mini {
+                    border: none;
+                    thead {
+                        th {
+                            background-color: #be1622;
+                            color: white;
+                            border: 1px solid #be1622;
+                            text-align: center;
+                        }
+                    }
+                    tbody {
+                        td {
+                            background-color: #be1622;
+                            border: 1px solid #be1622 !important;
+                            text-align: center;
+
+                            .mini-day-on a {
+                                color: white;
+                                text-decoration: none;
+                            }
+                        }
+                        .today {
+                            background-color: white;
+                            color: black !important;
+                            border: 3px solid black !important;
+                            a {
+                                color: black !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .view-header {
+                width: 100%;
+                text-align: center;
+
+                #heading {
+                    margin-bottom: 40px;
+                    .boto-capcelera {
+                        text-align: center;
+                        letter-spacing: 0px;
+                        color: #231f20;
+                        font: normal normal bold 33px/49px "Fira Sans SemiBold";
+                        margin-bottom: 0px;
+                    }
+                }
+                .calendar-info {
+                    position: absolute;
+                    right: 4%;
+                    top: 126px;
+                    text-align: left;
+
+                    .actes {
+                        color: white;
+                    }
+                    .consulta {
+                        letter-spacing: 0px;
+                        color: white;
+                        margin-bottom: 25px;
+                        font: normal normal bold 33px/49px "Fira Sans SemiBold";
+                    }
+                }
+            }
+            .view-content {
+                flex-basis: 30%;
+                order: 2;
+                background-color: #be1622;
+
+                .calendar-calendar {
+                    width: 100%;
+                    height: 100%;
+                }
+                .month-view {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .view-footer {
+                .view-content {
+                    flex-basis: auto;
+                    order: 1;
+                    background-color: transparent;
+                }
+                flex-basis: 70%;
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: -15px;
+
+                    li {
+                        list-style: none;
+                        flex: 0 0 31.333%;
+                        background: #ffffffd3 0% 0% no-repeat padding-box;
+                        border: 1px solid #dedede;
+                        margin: 0px;
+                        padding: 0;
+                        margin-right: 15px;
+                        margin-bottom: 15px;
+                        min-height: 255px;
+                        position: relative;
+                        margin-top: auto;
+
+                        .views-field-views-conditional {
+                            padding: 20px;
+                            height: 100%;
+                            display: block;
+                            min-height: 100%;
+                            .tipus {
+                                height: 28px;
+                                position: absolute;
+                                top: 0px;
+                                left: 0px;
+                                padding: 3px 7px;
+                                background: #be1622;
+                                color: white;
+                                text-transform: uppercase;
+
+                                &::after {
+                                    content: url("/sites/all/themes/xn17/assets/images/elements/punta.svg");
+                                    position: absolute;
+                                    right: -10px;
+                                    top: 0px;
+                                }
+                            }
+                            .date {
+                                text-align: left;
+                                font: normal normal normal 12px/14px "Fira Sans";
+                                letter-spacing: 0px;
+                                margin-top: 19px;
+                                color: #231f20;
+                            }
+                            .title {
+                                font-family: "Fira Sans SemiBold";
+                                font-size: 1.32em;
+                                font-weight: 500;
+                                line-height: 1.3;
+                                margin-top: 10px;
+                            }
+                            .city {
+                                bottom: 15px;
+                                position: absolute;
+                                text-transform: uppercase;
+                                font-family: "Fira Sans SemiBold";
+                                color: #be1622;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 1300px) {
+                .view-footer {
+                    flex-basis: 100%;
+                    ul {
+                        margin-left: 15px;
+                    }
+                }
+                .view-content {
+                    margin: 40px auto auto auto;
+                    border-radius: 9px;
+                    .calendar-calendar {
+                        padding: 25px;
+                    }
+                }
+            }
+            @media (max-width: 768px) {
+                .view-footer {
+                    ul {
+                        li {
+                            flex: 0 0 47%;
+                            margin-right: 10px;
+                            margin-bottom: 10px;
+                            min-height: 255px;
+                        }
+                    }
+                }
+                .view-content:first-child {
+                    flex-basis: 80%;
+                }
+            }
+            @media (max-width: 575px) {
+                .view-footer {
+                    ul {
+                        margin-right: 15px;
+                        li {
+                            flex: 0 0 100%;
+                            min-height: 195px;
+                            .title {
+                                font-size: 1.1em !important;
+                            }
+                        }
+                    }
+                }
+                .view-content:first-child {
+                    flex-basis: 80%;
+                }
+            }
+        }
+    }
+
+    .pane-nou-noticies-mes-llegides-panel-pane-2 {
+        padding-bottom: 75px;
+        padding-top: 40px;
+        .view-nou-noticies-mes-llegides {
+            h2 {
+                text-align: center;
+                letter-spacing: 0px;
+                color: #231f20;
+                margin-bottom: 45px;
+                font: normal normal bold 33px/49px "Fira Sans SemiBold";
+            }
+            .view-content {
+                display: inline-block;
+                width: 100%;
+                article {
+                    border: 1px solid #dedede;
+                    .last {
+                        min-height: 190px;
+                        background-color: white;
+                        padding: 14px;
+                        .title {
+                            a {
+                                font: normal normal bold 1.25em/23px "Fira Sans SemiBold";
+                            }
+                        }
+                        .type {
+                            position: absolute;
+                            left: 0;
+                            bottom: 8px;
+                            z-index: 1;
+                            font-family: "Fira Sans";
+                            text-transform: uppercase;
+                            display: block;
+                            width: 100%;
+                            padding: 0 14px;
+
+                            a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 968px) {
+                .view-content {
+                    padding-left: 25px;
+                }
+                .view-content article .last .title a {
+                    font: normal normal bold 2.2rem/30px "Fira Sans SemiBold";
+                }
+            }
+            @media (max-width: 550px) {
+                .view-content article .last .title a {
+                    font: normal normal bold 1.9rem/24px "Fira Sans SemiBold";
+                }
+            }
+        }
+    }
+
+    .pane-block-120 {
+        .nou_recursos_generals {
+            width: 100%;
+            background-color: #f4f4f4;
+
+            h4 {
+                strong {
+                    letter-spacing: 0px;
+                    color: #404040;
+                    font: normal normal bold 33px/49px "Fira Sans SemiBold";
+                }
+            }
+            .subtitol-recurs {
+                color: #404040;
+            }
+            .text {
+                color: #707070;
+            }
+            .mes-info {
+                margin-top: 45px;
+                a {
+                    padding: 12px 25px;
+                    background-color: #000;
+                    color: white;
+                    font: normal normal bold 15px/20px "Fira Sans SemiBold";
+                    text-transform: uppercase;
+                }
+            }
+            &::before {
+                content: "";
+                background-color: #f4f4f4;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+            }
+            &::after {
+                content: "";
+                background-color: #f4f4f4;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+            }
+
+            @media (max-width: 960px) {
+                .assessora-image {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .nou_recursos_generals {
+        display: inline-block;
+        height: 377px;
+        position: relative;
+
+        .info {
+            position: relative;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .assessora-image {
+            height: 100%;
+            img {
+                height: 100%;
+                float: right;
+            }
+        }
+    }
+
+    .view-xn17-recull-documents {
+        .bkgd-gris {
+            border-top: none;
+            border-bottom: solid 4px #be1622;
+            margin-top: 10px;
+            .modul_4x3 {
+                .views-field-title {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 968px) {
+            h2 {
+                text-align: center;
+            }
+            .modul_4x3 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+        }
+    }
+
+    .pane-nou-xn17-financament {
+        background: #f7f4f4 0% 0% no-repeat padding-box;
+        padding: 40px 0px;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-color: #f4f4f4;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+        &::after {
+            content: "";
+            background-color: #f4f4f4;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            letter-spacing: 0px;
+            color: #231f20;
+            margin-bottom: 25px;
+            font: normal normal bold 33px/49px "Fira Sans SemiBold";
+        }
+    }
+
+    .view-nou-xn17-financament {
+        .view-footer {
+            text-align: center;
+            margin-bottom: 25px;
+            display: block;
+            margin-top: 30px;
+        }
+        .view-content {
+            display: inline-block;
+        }
+        .views-row {
+            padding: 12px;
+            min-height: 100px;
+            position: relative;
+            border: 1px solid #dedede;
+            margin: 10px 10px 0px 0px;
+            width: 48%;
+            background: white;
+        }
+        .views-field-title {
+            font: normal normal bold 1.2em/22px "Fira Sans SemiBold";
+        }
+        .views-field.views-field-field-date {
+            bottom: 8px;
+            position: absolute;
+        }
+
+        @media (max-width: 968px) {
+            .view-content {
+                margin-left: 12px;
+                .views-row {
+                    min-height: 142px;
+                    .views-field-title {
+                        font: normal normal bold 1em/22px "Fira Sans SemiBold";
+                    }
+                }
+            }
+        }
+        @media (max-width: 550px) {
+            .view-content {
+                margin-left: 0px;
+                .views-row {
+                    width: 100%;
+                    min-height: 135px;
+                }
+            }
+        }
+    }
+
+    .pane-nou-xn17-videos {
+        margin: 70px 0px;
+        .pane-title {
+            text-align: center;
+            font: normal normal bold 41px/49px "Fira Sans SemiBold";
+            letter-spacing: 0px;
+            color: #231f20;
+            margin-bottom: 25px;
+        }
+    }
+    .view-nou-xn17-videos {
+        .view-footer {
+            text-align: center;
+            margin-bottom: 25px;
+            display: block;
+            margin-top: 30px;
+        }
+        .view-content {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+            .views-field-field-ambit-noticia {
+                width: 100%;
+            }
+            .modul_video {
+                display: flex;
+                flex-direction: row-reverse;
+                border: 1px solid #dedede;
+                opacity: 1;
+
+                .lightbox-item {
+                    height: 300px;
+                }
+
+                .content-info {
+                    width: 38%;
+                    padding: 15px;
+                }
+            }
+            .views-row {
+                margin-bottom: 20px;
+                height: 339px;
+
+                .content-info {
+                    .tipo-noticia {
+                        a {
+                            letter-spacing: 0px;
+                            color: #be1622;
+                            font-family: "Fira Sans Bold";
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                .titular {
+                    h4 {
+                        a {
+                            font: normal normal bold 20px/25px "Fira Sans SemiBold";
+                            letter-spacing: 0px;
+                            display: block;
+                        }
+                    }
+                }
+
+                .views-field {
+                    height: 100%;
+                    .field-content {
+                        height: 100%;
+                        .modul_video {
+                            height: 100%;
+                            .content {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .views-row-1 {
+                width: 60%;
+                display: inline-block;
+            }
+            .views-row-2 {
+                width: 38%;
+                float: right;
+                margin-left: auto;
+                margin-right: 0;
+
+                .modul_video {
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-direction: row-reverse;
+                    flex-direction: column;
+                    border: 1px solid #80808047;
+                    .content-info {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        width: 100%;
+                        h4 {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+            }
+            .views-row-3 {
+                width: 30%;
+                .modul_video {
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-direction: row-reverse;
+                    flex-direction: column;
+                    border: 1px solid #80808047;
+                    .content-info {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        width: 100%;
+                        h4 {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+            }
+            .views-row-4 {
+                width: 68%;
+                float: right;
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            @media (max-width: 1000px) {
+                .views-field-field-ambit-noticia {
+                    .modul_video {
+                        flex-direction: column;
+                        .content-info {
+                            width: 100%;
+                        }
+                        .lightbox-item {
+                            a:first-child {
+                                img {
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+                .views-row-1 {
+                    width: 100%;
+                }
+                .views-row-2 {
+                    width: 100%;
+                }
+                .views-row-3 {
+                    width: 100%;
+                }
+                .views-row-4 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .panel-col-middle {
+        .inside {
+            .panels-ipe-sort-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 0.4fr repeat(3, 1.1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+            }
+        }
+
+        @media (max-width: 1200px) and (min-width: 1000px) {
+            #panels-ipe-paneid-597
+                .view-nou-xn17-noticia-destacats-secundaris
+                .view-content
+                .views-row
+                .view-field-title {
+                font: normal normal bold 17px/20px "Fira Sans SemiBold";
+            }
+            #panels-ipe-paneid-598 .views-row .view-field-title {
+                font: normal normal bold 18px/22px "Fira Sans SemiBold";
+            }
+            #panels-ipe-paneid-596 .views-row .views-field-title {
+                font: normal normal bold 18px/22px "Fira Sans SemiBold";
+            }
+        }
+
+        .view-content .views-row {
+            position: relative;
+
+            img {
+                height: 160px;
+            }
+
+            .views-field-title {
+                min-height: 150px;
+                color: #231f20;
+                font: normal normal bold 20px/24px "Fira Sans SemiBold";
+            }
+
+            .views-field-field-ambit-noticia-1 a {
+                letter-spacing: 0px;
+                color: #be1622;
+                font-family: "Fira Sans Bold";
+                text-transform: uppercase;
+            }
+            .views-field-field-ambit-noticia a {
+                letter-spacing: 0px;
+                color: #be1622;
+                font-family: "Fira Sans Bold";
+                text-transform: uppercase;
+            }
+        }
+
+        /* view-nou-xn17-noticia-destacada-principal */
+        #panels-ipe-paneid-595 {
+            grid-area: 1 / 1 / 2 / 4;
+            height: 342px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+
+            .panel-pane {
+                height: 100%;
+                .pane-content {
+                    height: 100%;
+                    .view-nou-xn17-noticia-destacada-principal {
+                        height: 100%;
+                        .view-content {
+                            height: 100%;
+
+                            .views-field-title a {
+                                color: #231f20;
+                                font: normal normal bold 20px/24px "Fira Sans SemiBold";
+                                text-transform: none;
+                            }
+
+                            .views-field-field-ambit-noticia {
+                                width: 40%;
+                                .destacat-text {
+                                    height: 100%;
+                                    position: relative;
+                                    padding: 20px;
+
+                                    .views-field-field-ambit-noticia {
+                                        bottom: 20px;
+                                        position: absolute;
+                                        width: 90%;
+                                    }
+                                }
+                            }
+                            .field-content {
+                                height: 100%;
+                                img {
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .views-row {
+                border: 1px solid #dedede;
+                margin-bottom: 20px;
+                height: 100%;
+                display: flex;
+
+                &:nth-child(2) {
+                    padding: 14px;
+                }
+                &:nth-child(3) {
+                    padding: 14px;
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        /* Recursos */
+        #panels-ipe-paneid-596 {
+            grid-area: 1 / 4 / 6 / 5;
+            width: 257px;
+
+            .views-row {
+                background-color: #231f20;
+                margin-bottom: 20px;
+                margin-left: 20px;
+                color: white;
+
+                .tipo-recurs a {
+                    letter-spacing: 0px;
+                    color: white !important;
+                    font-family: "Fira Sans Bold";
+                    text-transform: uppercase;
+                }
+
+                .views-field-title {
+                    min-height: 125px;
+                    font: normal normal bold 20px/24px "Fira Sans SemiBold";
+                }
+
+                & > div {
+                    padding: 14px;
+                }
+
+                a {
+                    color: white !important;
+                }
+
+                img {
+                    display: none;
+                }
+
+                &:nth-child(1) {
+                    img {
+                        display: block;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &:nth-child(2) {
+                    img {
+                        display: block;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        /*  view-nou-xn17-noticia-destacats-terciaris  */
+        #panels-ipe-paneid-598 {
+            grid-area: 2 / 3 / 6 / 4;
+            .views-row {
+                border: 1px solid #dedede;
+                margin-bottom: 20px;
+                padding: 14px;
+
+                .view-field-title {
+                    min-height: 150px;
+                    font: normal normal bold 20px/24px "Fira Sans SemiBold";
+                    display: block;
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        /* view-nou-xn17-noticia-destacats-secundaris */
+        #panels-ipe-paneid-597 {
+            grid-area: 2 / 1 / 6 / 3;
+
+            .view-nou-xn17-noticia-destacats-secundaris {
+                .view-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .views-row {
+                        flex: 45%;
+                        margin-right: 20px;
+
+                        .view-field-title {
+                            min-height: 150px;
+                            font: normal normal bold 20px/24px "Fira Sans SemiBold";
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .views-row {
+                border: 1px solid #dedede;
+                margin-bottom: 20px;
+
+                & > div {
+                    padding: 14px;
+                }
+
+                .views-field-field-ambit-noticia-1 {
+                    bottom: 0px;
+                    position: absolute;
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .panels-ipe-sort-container {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                flex-direction: column !important;
+
+                #panels-ipe-paneid-595 {
+                    order: 1;
+                }
+                #panels-ipe-paneid-596 {
+                    order: 3;
+                    width: 100%;
+                    .view-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .views-row {
+                            flex: 45%;
+                            margin-left: 0px;
+                        }
+                        .views-row:nth-child(2n-1) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                #panels-ipe-paneid-598 {
+                    order: 4;
+                    .view-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .views-row {
+                            flex: 45%;
+                        }
+                        .views-row:nth-child(2n-1) {
+                            margin-right: 20px;
+                        }
+                        .views-row:last-child {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+                #panels-ipe-paneid-597 {
+                    order: 2;
+                    .view-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .views-row {
+                            flex: 45%;
+                            margin-right: 0px;
+                        }
+                        .views-row:nth-child(2n-1) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pane-xn17-monografics-portada {
+        margin-left: 0;
+        margin-right: 27px;
+
+        .pane-content {
+            .views-slideshow-controls-bottom {
+                padding-left: 15px;
+            }
+            .titol-paginador {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .views-slideshow-controls-bottom {
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        .pane-xn17-monografics-portada {
+            margin-right: 0px !important;
+        }
+    }
+
+    #main-footer {
+        margin-top: -20px;
+    }
+    #content-footer {
+        display: none;
+    }
+}
