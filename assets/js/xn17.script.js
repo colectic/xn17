@@ -244,7 +244,7 @@ var mesNoticiesObert = false;
        * Front page
        */
 
-      if ($body.hasClass('front')) {
+      if ($body.hasClass('old-home')) {
 
         var correction = 664;
         var $menuTop = parseInt($menu.offset().top);
