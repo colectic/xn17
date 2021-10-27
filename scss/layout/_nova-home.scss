@@ -1579,3 +1579,301 @@
         display: none;
     }
 }
+
+
+// ADMIN GRID VIEW
+
+.panels-ipe {
+    .panel-col-middle {
+        .inside {
+            display: block;
+            .panels-ipe-sort-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 0.4fr repeat(3, 1.1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+            }
+        }
+
+        @media (max-width: 1200px) and (min-width: 1000px) {
+            #panels-ipe-paneid-597
+                .view-nou-xn17-noticia-destacats-secundaris
+                .view-content
+                .views-row
+                .view-field-title {
+                font: normal normal bold 17px/20px "Fira Sans SemiBold";
+            }
+            #panels-ipe-paneid-598 .views-row .view-field-title {
+                font: normal normal bold 18px/22px "Fira Sans SemiBold";
+            }
+            #panels-ipe-paneid-596 .views-row .views-field-title {
+                font: normal normal bold 18px/22px "Fira Sans SemiBold";
+            }
+        }
+
+        .view-content .views-row {
+            position: relative;
+
+            img {
+                height: 160px;
+            }
+
+            .views-field-title {
+                min-height: 150px;
+                color: #231f20;
+                font: normal normal bold 20px/24px "Fira Sans SemiBold";
+            }
+
+            .views-field-field-ambit-noticia-1 a {
+                letter-spacing: 0px;
+                color: #be1622;
+                font-family: "Fira Sans Bold";
+                text-transform: uppercase;
+            }
+            .views-field-field-ambit-noticia a {
+                letter-spacing: 0px;
+                color: #be1622;
+                font-family: "Fira Sans Bold";
+                text-transform: uppercase;
+            }
+        }
+
+        /* view-nou-xn17-noticia-destacada-principal */
+        #panels-ipe-paneid-595 {
+            grid-area: 1 / 1 / 2 / 4;
+            height: 342px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+
+            .panel-pane {
+                height: 100%;
+                .pane-content {
+                    height: 100%;
+                    .view-nou-xn17-noticia-destacada-principal {
+                        height: 100%;
+                        .view-content {
+                            height: 100%;
+
+                            .views-field-title a {
+                                color: #231f20;
+                                font: normal normal bold 20px/24px "Fira Sans SemiBold";
+                                text-transform: none;
+                            }
+
+                            .views-field-field-ambit-noticia {
+                                width: 40%;
+                                .destacat-text {
+                                    height: 100%;
+                                    position: relative;
+                                    padding: 20px;
+
+                                    .views-field-field-ambit-noticia {
+                                        bottom: 20px;
+                                        position: absolute;
+                                        width: 90%;
+                                    }
+                                }
+                            }
+                            .field-content {
+                                height: 100%;
+                                img {
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .views-row {
+                border: 1px solid #dedede;
+                margin-bottom: 20px;
+                height: 100%;
+                display: flex;
+
+                &:nth-child(2) {
+                    padding: 14px;
+                }
+                &:nth-child(3) {
+                    padding: 14px;
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        /* Recursos */
+        #panels-ipe-paneid-596 {
+            grid-area: 1 / 4 / 6 / 5;
+            width: 257px;
+
+            .views-row {
+                background-color: #231f20;
+                margin-bottom: 20px;
+                margin-left: 20px;
+                color: white;
+
+                .tipo-recurs a {
+                    letter-spacing: 0px;
+                    color: white !important;
+                    font-family: "Fira Sans Bold";
+                    text-transform: uppercase;
+                }
+
+                .views-field-title {
+                    min-height: 125px;
+                    font: normal normal bold 20px/24px "Fira Sans SemiBold";
+                }
+
+                & > div {
+                    padding: 14px;
+                }
+
+                a {
+                    color: white !important;
+                }
+
+                img {
+                    display: none;
+                }
+
+                &:nth-child(1) {
+                    img {
+                        display: block;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &:nth-child(2) {
+                    img {
+                        display: block;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        /*  view-nou-xn17-noticia-destacats-terciaris  */
+        #panels-ipe-paneid-598 {
+            grid-area: 2 / 3 / 6 / 4;
+            .views-row {
+                border: 1px solid #dedede;
+                margin-bottom: 20px;
+                padding: 14px;
+
+                .view-field-title {
+                    min-height: 150px;
+                    font: normal normal bold 20px/24px "Fira Sans SemiBold";
+                    display: block;
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        /* view-nou-xn17-noticia-destacats-secundaris */
+        #panels-ipe-paneid-597 {
+            grid-area: 2 / 1 / 6 / 3;
+
+            .view-nou-xn17-noticia-destacats-secundaris {
+                .view-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .views-row {
+                        flex: 45%;
+                        margin-right: 20px;
+
+                        .view-field-title {
+                            min-height: 150px;
+                            font: normal normal bold 20px/24px "Fira Sans SemiBold";
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .views-row {
+                border: 1px solid #dedede;
+                margin-bottom: 20px;
+
+                & > div {
+                    padding: 14px;
+                }
+
+                .views-field-field-ambit-noticia-1 {
+                    bottom: 0px;
+                    position: absolute;
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .panels-ipe-sort-container {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                flex-direction: column !important;
+
+                #panels-ipe-paneid-595 {
+                    order: 1;
+                }
+                #panels-ipe-paneid-596 {
+                    order: 3;
+                    width: 100%;
+                    .view-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .views-row {
+                            flex: 45%;
+                            margin-left: 0px;
+                        }
+                        .views-row:nth-child(2n-1) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                #panels-ipe-paneid-598 {
+                    order: 4;
+                    .view-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .views-row {
+                            flex: 45%;
+                        }
+                        .views-row:nth-child(2n-1) {
+                            margin-right: 20px;
+                        }
+                        .views-row:last-child {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+                #panels-ipe-paneid-597 {
+                    order: 2;
+                    .view-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .views-row {
+                            flex: 45%;
+                            margin-right: 0px;
+                        }
+                        .views-row:nth-child(2n-1) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
