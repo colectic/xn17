@@ -69,6 +69,10 @@
                 background-color: #231f20;
                 position: relative;
             }
+
+            @media (max-width: 800px) {
+                padding: 10px 15px;
+            }
         }
         .voluntariat {
             padding: 10px 0;
@@ -82,6 +86,9 @@
                 padding: 10px 40px;
                 background-color: #231f20;
                 position: relative;
+            }
+            @media (max-width: 800px) {
+                padding: 10px 15px;
             }
         }
         .bloc-banner h4 {
@@ -419,6 +426,12 @@
             font: normal normal bold 33px/49px "Fira Sans SemiBold";
             margin-bottom: -10px;
         }
+        @media (max-width: 800px) {
+            h2{
+                text-align: center;
+            }
+        }
+
         &::before {
             content: "";
             background-color: #f7f4f4;
@@ -1238,7 +1251,7 @@
                         .lightbox-item {
                             a:first-child {
                                 img {
-                                    width: 100%;
+                                    width: auto;
                                     object-fit: cover;
                                 }
                             }
@@ -1283,6 +1296,14 @@
             }
             .pane-nou-xn17-recursos-destacats-portada-panel-pane-2 .views-row .views-field-title {
                 font: normal normal bold 18px/22px "Fira Sans SemiBold";
+            }
+        }
+        @media (max-width: 800px) {
+            .pane-nou-xn17-recursos-destacats-portada-panel-pane-2 .views-row .views-field-title {
+                font: normal normal bold 16px/19px "Fira Sans SemiBold";
+            }
+            .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-3 .views-row .view-field-title {
+                font: normal normal bold 16px/19px "Fira Sans SemiBold";
             }
         }
 
@@ -1453,6 +1474,17 @@
         .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-2 {
             grid-area: 2 / 1 / 6 / 3;
 
+            @media (max-width: 800px) {
+                .view-nou-xn17-noticia-destacats-secundaris{
+                    .view-content .views-row {
+                        width: 47%;
+                    }
+                    .view-field-title{
+                        font: normal normal bold 15px/18px "Fira Sans SemiBold";
+                    }
+                }
+            }
+
             .view-nou-xn17-noticia-destacats-secundaris {
                 .view-content {
                     display: flex;
@@ -1497,6 +1529,17 @@
 
                 .pane-nou-xn17-noticia-destacada-principal-panel-pane-1-1 {
                     order: 1;
+                    height: 100%;
+                    .views-row{
+                        flex-direction: column;
+                        margin-bottom: 0px;
+                        .views-field-field-ambit-noticia{
+                            width: 100%;
+                        }
+                        .view-nou-xn17-noticia-destacada-principal .view-content .views-field-title a {
+                            font: normal normal bold 18px/22px "Fira Sans SemiBold";
+                        }
+                    }
                 }
                 .pane-nou-xn17-recursos-destacats-portada-panel-pane-2 {
                     order: 3;
@@ -1520,6 +1563,7 @@
                         flex-wrap: wrap;
                         .views-row {
                             flex: 45%;
+                            width: 47%;
                         }
                         .views-row:nth-child(2n-1) {
                             margin-right: 20px;
@@ -1875,5 +1919,19 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 768px){
+    .page-nou-inici{
+        #content{
+            overflow-x: hidden; 
+        }
+        #main-footer{
+            overflow: hidden;
+        }
+    }
+    #footer{
+        margin: 0px;
     }
 }
