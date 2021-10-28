@@ -1479,7 +1479,17 @@
                         width: 47%;
                     }
                     .view-field-title{
+                        min-height: 160px !important;
                         font: normal normal bold 15px/18px "Fira Sans SemiBold" !important;
+                        a{
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 6;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                    .tipo-noticia{
+                        font-size: 12px;
                     }
                 }
             }
@@ -1569,6 +1579,12 @@
                         }
                         .views-row:last-child {
                             margin-right: 0px;
+                        }
+                        .view-field-title a{
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 6;
+                            -webkit-box-orient: vertical;
                         }
                     }
                 }
