@@ -68,10 +68,9 @@
                 padding: 10px 40px;
                 background-color: #231f20;
                 position: relative;
-            }
-
-            @media (max-width: 800px) {
-                padding: 10px 15px;
+                @media (max-width: 800px) {
+                    padding: 10px 15px;
+                }
             }
         }
         .voluntariat {
@@ -86,9 +85,9 @@
                 padding: 10px 40px;
                 background-color: #231f20;
                 position: relative;
-            }
-            @media (max-width: 800px) {
-                padding: 10px 15px;
+                @media (max-width: 800px) {
+                    padding: 10px 15px;
+                }
             }
         }
         .bloc-banner h4 {
@@ -1300,10 +1299,10 @@
         }
         @media (max-width: 800px) {
             .pane-nou-xn17-recursos-destacats-portada-panel-pane-2 .views-row .views-field-title {
-                font: normal normal bold 16px/19px "Fira Sans SemiBold";
+                font: normal normal bold 16px/19px "Fira Sans SemiBold" !important;
             }
             .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-3 .views-row .view-field-title {
-                font: normal normal bold 16px/19px "Fira Sans SemiBold";
+                font: normal normal bold 16px/19px "Fira Sans SemiBold" !important;
             }
         }
 
@@ -1480,7 +1479,7 @@
                         width: 47%;
                     }
                     .view-field-title{
-                        font: normal normal bold 15px/18px "Fira Sans SemiBold";
+                        font: normal normal bold 15px/18px "Fira Sans SemiBold" !important;
                     }
                 }
             }
@@ -1534,7 +1533,7 @@
                         flex-direction: column;
                         margin-bottom: 0px;
                         .views-field-field-ambit-noticia{
-                            width: 100%;
+                            width: 100% !important;
                         }
                         .view-nou-xn17-noticia-destacada-principal .view-content .views-field-title a {
                             font: normal normal bold 18px/22px "Fira Sans SemiBold";
