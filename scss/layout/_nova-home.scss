@@ -335,10 +335,10 @@
                 }
 
                 @media (max-width: 1000px) {
+                    img {
+                        margin: -25% -31px 0px 0px;
+                    }
                     .rightimage {
-                        img {
-                            margin: -25% -31px 0px 0px;
-                        }
                         &:before {
                             padding-top: 160px;
                         }
