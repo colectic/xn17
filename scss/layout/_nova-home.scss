@@ -334,6 +334,16 @@
                     padding-top: 2px;
                 }
 
+                @media (max-width: 1000px) {
+                    .rightimage {
+                        img {
+                            margin: -25% -31px 0px 0px;
+                        }
+                        &:before {
+                            padding-top: 160px;
+                        }
+                    }
+                }
                 @media (max-width: 768px) {
                     padding-bottom: 25%;
                     img{
@@ -371,14 +381,6 @@
                         padding-bottom: 200px;
                         .cont_titular_entradeta h4 {
                             font-size: 1.4em;
-                        }
-                        .rightimage {
-                            img {
-                                margin: -25% -31px 0px 0px;
-                            }
-                            &:before {
-                                padding-top: 160px;
-                            }
                         }
                     }
                 }
