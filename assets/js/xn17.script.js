@@ -676,6 +676,12 @@ var mesNoticiesObert = false;
 
     subMenuTitleOverrides: function() {
 
+      //Hide monografic block if no content
+      if ( $('.pane-xn17-monografics-portada div').hasClass("view-empty")) {
+        $(".pane-xn17-monografics-portada").hide(); 
+      }
+
+
       // Overrides header's menu title when viewing Monogràfics's related pages
 
       var pattern1 = /^\/monografics/;
