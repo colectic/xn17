@@ -153,7 +153,7 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 <!-- @END CSS Styles from TOTHOMweb -->
 <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
 	<div class="webkit" style="max-width:602px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;">
-		<table class="butlleti" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; border-spacing:0; margin:0 auto; width:100%;max-width:602px; font-size: 13px; border-bottom: 0px; width:100%;">
+		<table class="butlleti" width="602px" style="font-family: Fira Sans,Helvetica,Arial,sans-serif; border-spacing:0; margin:0 auto; width:100%;max-width:602px; font-size: 13px; border-bottom: 0px; width:100%;">
 			<!-- CAPÇALERA -->
 			<tr style="background-color:#2f3031;">
 				<td style="padding: 0 0 0 5px;">
@@ -215,9 +215,13 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 									<span style="font-size: .95em; line-height: 1.35em;"><?php echo $monographicText; ?></span>
 								</td>
 								<td style="padding: 17px 15px 20px 0; vertical-align:bottom;">
-									<a href="<?php echo $monographicLink; ?>" style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px; float: right; border-radius: 5px; text-decoration:none;">
-										Llegiu-ne més
-									</a>
+									<span style="background-color:#BE1622; color:#ffffff; font-size:.93em; padding:14px 16px; float: right; border-radius: 5px; text-decoration:none;">
+
+										<a href="<?php echo $monographicLink; ?>">
+											Llegiu-ne més
+					
+										</a>
+									</span>
 								</td>
 							</tr>
 						</tbody>
