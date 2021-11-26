@@ -15,7 +15,7 @@
   <div class="container">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="sticky-logo hidden-xs">
-	<a href="/"><img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/></a>
+	      <a href="/"><img src="/sites/all/themes/xn17/assets/images/logo/logo-30-white.svg" alt="logo"/></a>
       </div>
       <div class="menu-icon">
         <img src="/sites/all/themes/xn17/assets/images/icon/icon-menu-gray.svg" alt="Mostra o amaga el menú principal" role="button" tabindex="0"/>
@@ -27,10 +27,11 @@
         <a href="/noticies">notícies</a>
       </div>
       <div class="social-icons hidden-xs hidden-sm">
-        <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="Obrir la pàgina de Xarxanet a Facebook en una nova pestanya"/></a>
-        <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="Obrir la pàgina de Xarxanet a Twitter en una nova pestanya"/></a>
-        <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="Obrir la pàgina de Xarxanet a Instagram en una nova pestanya"/></a>
-        <a href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="Anar a la pàgina dels butlletins de Xarxanet"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Facebook en una nova pestanya" href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Twitter en una nova pestanya"href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Instagram en una nova pestanya" href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Youtube en una nova pestanya" href="https://www.youtube.com/user/xarxanetorg/videos" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-yt-circle.svg" alt="youtube icon"/></a>
+        <a aria-label="Anar a la pàgina dels butlletins de Xarxanet" href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="newsletter icon"/></a>
       </div>
     </div>
   </div>
@@ -97,10 +98,11 @@
         <a href="/noticies">notícies</a>
       </div>
       <div class="social-icons hidden-xs hidden-sm">
-        <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="Obrir la pàgina de Xarxanet a Facebook en una nova pestanya"/></a>
-        <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="Obrir la pàgina de Xarxanet a Twitter en una nova pestanya"/></a>
-        <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="Obrir la pàgina de Xarxanet a Instagram en una nova pestanya"/></a>
-        <a href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="Anar a la pàgina dels butlletins de Xarxanet"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Facebook en una nova pestanya" href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Twitter en una nova pestanya" href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Instagram en una nova pestanya" href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Youtube en una nova pestanya" href="https://www.youtube.com/user/xarxanetorg/videos" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-yt-circle.svg" alt="youtube icon"/></a>
+        <a aria-label="Anar a la pàgina dels butlletins de Xarxanet" href="http://xarxanet.org/butlletins"><img src="/sites/all/themes/xn17/assets/images/icon/icon-newsletter-circle.svg" alt="newsletter icon"/></a>
       </div>
     </div>
   </div>
@@ -212,9 +214,10 @@
     </div>
     <div class="footer-region col-lg-2 col-md-7 col-sm-12 col-xs-12 third">
       <div id="social-icons">
-        <a href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
-        <a href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
-        <a href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Facebook en una nova pestanya" href="https://www.facebook.com/xarxanet" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-fb-circle.svg" alt="facebook icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Twitter en una nova pestanya" href="https://twitter.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-tw-circle.svg" alt="twitter icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Instagram en una nova pestanya" href="https://www.instagram.com/xarxanetorg" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-ig-circle.svg" alt="instagram icon"/></a>
+        <a aria-label="Obrir la pàgina de Xarxanet a Youtube en una nova pestanya" href="https://www.youtube.com/user/xarxanetorg/videos" target="_blank"><img src="/sites/all/themes/xn17/assets/images/icon/icon-yt-circle.svg" alt="youtube icon"/></a>
       </div>
     </div>
   </div>
