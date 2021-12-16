@@ -277,9 +277,9 @@ ksort($financ_nodes);
 					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;">
 						<tr>
 							<td colspan="2">
-								
+
 								<h2 class="section-title" style="font-family:Fira Sans, Helvetica, Arial !important;font-weight:800;font-size:1.875em !important;color:#333333; margin-top:20px; margin-bottom:25px; color:#BE1622;">Últimes convocatòries</h2>
-										
+
 							</td>
 						</tr>
 						<?php foreach ($financ_nodes as $financ_node) : ?>
@@ -293,7 +293,7 @@ ksort($financ_nodes);
 														<tr style="padding:0;">
 															<td style="padding:20px 15px 0 20px;" colspan="2">
 																<h3 style="font-size:1.25em; font-weight:600; margin-top: 0; margin-bottom:17px;"><?php echo $financ_node['title']; ?></h3>
-																<p style="font-size: .874em; line-height: 1.28em; margin-bottom:0;font-style:italic;"><?php echo $financ_node['teaser']; ?></p>				
+																<p style="font-size: .874em; line-height: 1.28em; margin-bottom:0;font-style:italic;"><?php echo $financ_node['teaser']; ?></p>
 															</td>
 														</tr>
 														<tr style="padding:0;">
@@ -321,7 +321,7 @@ ksort($financ_nodes);
 			</tr>
 			<?php endif; ?>
 			<tr>
-				<td colspan="2" style="padding:40px 15px;">			
+				<td colspan="2" style="padding:40px 15px;">
 					<table style="background-color:#BE1622; border-radius:14px; width:100%;">
 						<tr>
 							<td style="vertical-align: bottom;">
@@ -337,7 +337,7 @@ ksort($financ_nodes);
 				</td>
 			</tr>
 			<tr>
-				<td style="padding:0 15px 30px 15px">			
+				<td style="padding:0 15px 30px 15px">
 					<table style="background-color:#252627; border-radius:14px; padding-right:7px; width:100%;">
 						<tr>
 							<td>
@@ -346,10 +346,10 @@ ksort($financ_nodes);
 								</a>
 							</td>
 						</tr>
-					</table>		
+					</table>
 				</td>
 				<td style="padding:0 15px 30px 15px">
-					
+
 					<table style="background-color:#252627; border-radius:14px; padding-left:7px; width:100%;">
 						<tr>
 							<td>
@@ -359,7 +359,7 @@ ksort($financ_nodes);
 							</td>
 						</tr>
 					</table>
-					
+
 				</td>
 			</tr>
 			<tr>
@@ -374,12 +374,12 @@ ksort($financ_nodes);
 					</a>
 				</td>
 			</tr>
-			
 
 
 
 
-			
+
+
 			<!-- END CONTENT -->
 			<!-- PEU -->
 			<tr style="background-color:#2f3031;">
@@ -438,8 +438,8 @@ ksort($financ_nodes);
 			</tr>
 			<tr class='body'>
 				<td colspan="2" style="background-color:#231f20; color:white; text-align:right; padding:5px 10px;">
-					<a style=" color:white" href="http://www.xarxanet.org/alta_actualitat">Alta</a> |
-					<a style=" color:white;" href="http://www.xarxanet.org/baixa_actualitat">Baixa</a> |
+					<a style=" color:white" href="http://www.xarxanet.org/alta_financament">Alta</a> |
+					<a style=" color:white;" href="http://www.xarxanet.org/baixa_financament">Baixa</a> |
 					<a style=" color:white;" href="mailto:butlleti@xarxanet.org?Subject=Consulta%20butlletí">Contacte</a> |
 					<a style=" color:white;" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/">Avís legal</a>
 				</td>
