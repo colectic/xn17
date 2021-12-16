@@ -36,7 +36,7 @@
             padding: 0;
         }
     }
-    
+
 }
 @media (max-width: 768px){
     .header-search{
@@ -65,7 +65,7 @@
 // Fixes a les finestres modals "Lightbox"
 
 #lightbox {
-    
+
     #outerImageContainer {
 
         iframe {
@@ -81,15 +81,15 @@
 }
 
 @media (max-width: 768px) {
-    
+
     #lightbox2-overlay {
         width: 100% !important;
     }
-    
+
     #lightbox {
         width: 90% !important;
         left: 5% !important;
-    
+
         #outerImageContainer {
             width: 100% !important;
 
@@ -108,9 +108,9 @@
 // Avis legal
 
 .page-node-203 {
-    
+
     .field-name-body {
-        
+
         .red-text {
             color: $xn17-vermell;
         }
@@ -144,4 +144,10 @@
             color: #2f3031;
         }
     }
+}
+
+// Ocultem les opcions de subscripció a la pàg. d'alta del butlletí d'actualitat
+
+.form-item-submitted-correu-newsletter-content-selection {
+  display: none !important;
 }
