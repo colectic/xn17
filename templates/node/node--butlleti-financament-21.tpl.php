@@ -200,7 +200,7 @@ ksort($financ_nodes);
 					?>
 				</td>
 				<td style="text-align: right; padding: 5px 10px; border-top:3px solid #231f20; border-bottom: 15px solid white;">
-					<a href="http://www.xarxanet.org/hemeroteca_actualitat" style=" color:#878787">Butlletins anteriors</a>
+					<a href="http://www.xarxanet.org/hemeroteca_financament" style=" color:#878787">Butlletins anteriors</a>
 				</td>
 			</tr>
 			<?php if (!empty($highlightnew1Node)) : ?>
@@ -368,9 +368,15 @@ ksort($financ_nodes);
 						<img width="270px" src="<?php echo $pathroot; ?>/sites/default/files/banner-twitter-financ.png" alt="Segueix al dia a Twitter @ajuts_entitats">
 					</a>
 				</td>
+				<?php 
+				//Comprobar any del butlletí
+				$anyButlleti = date('Y', $now);
+				$imgPath = $pathroot . '/sites/default/files/banner-cal-financ'.$anyButlleti .'.png';
+				$imgAlt = 'Calendari ' . $anyButlleti . ' - ' . 'Calendari de convocatòries de finançament anuals ' . $anyButlleti;
+				?>
 				<td style="padding:0 7px 30px 15px">
 					<a href="https://xarxanet.org/projectes/noticies/calendari-de-convocatories-de-financament-anuals">
-						<img width="270px" src="<?php echo $pathroot; ?>/sites/default/files/banner-cal-financ_2.png" alt="Calendari 2021 - Calendari de convocatòries de finançament anuals 2021">
+						<img width="270px" src="<?php echo $imgPath; ?>" alt="<?php echo $imgAlt; ?>">
 					</a>
 				</td>
 			</tr>
