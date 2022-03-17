@@ -193,6 +193,11 @@ $contrast2Link = url('node/' . $contrast2Node->nid, array('absolute' => TRUE));
 					<a href="http://www.xarxanet.org/hemeroteca_actualitat" style=" color:#878787">Butlletins anteriors</a>
 				</td>
 			</tr>
+			<tr>
+				<td colspan="2" style="padding:0 10px;vertical-align: top; text-align:right">
+					<p style="margin:0;font-size:14px;color:#2f3031;;">ISSN 2696-9750</p>
+				</td>
+			</tr>
 			<?php if (!empty($monographicSectTitle)) : ?>
 				<tr>
 					<td colspan="2" style="padding:0 15px;">
