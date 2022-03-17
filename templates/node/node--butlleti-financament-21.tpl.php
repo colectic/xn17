@@ -203,9 +203,14 @@ ksort($financ_nodes);
 					<a href="http://www.xarxanet.org/hemeroteca_financament" style=" color:#878787">Butlletins anteriors</a>
 				</td>
 			</tr>
+			<tr>
+				<td colspan="2" style="padding:0 10px;vertical-align: top; text-align:right">
+					<p style="margin:0;font-size:14px;color:#2f3031;;">ISSN 2696-9742</p>
+				</td>
+			</tr>
 			<?php if (!empty($highlightnew1Node)) : ?>
 			<tr>
-				<td colspan="2" style="padding: 30px 15px 30px 15px; vertical-align: top; ">
+				<td colspan="2" style="padding: 10px 15px 30px 15px; vertical-align: top; ">
 					<table style="font-family: Fira Sans,Helvetica,Arial,sans-serif; font-size: 16px; width:100%;  background-color:#EDEDED; border-radius:15px;">
 						<tbody>
 							<tr>
