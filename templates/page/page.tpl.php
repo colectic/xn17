@@ -190,7 +190,11 @@
     </div>
   </div> <!-- /#main -->
 </div> <!-- /#main-wrapper -->
-
+<div id="confetti">
+  <div class="first"></div>
+  <div class="middle"></div>
+  <div class="last"></div>
+</div>
 <footer id="footer" class="footer" role="footer">
   <div class="container">
     <div class="footer-region col-lg-6 col-md-12 col-sm-12 col-xs-12 first">
