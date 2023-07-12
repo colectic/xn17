@@ -1172,6 +1172,7 @@
                 }
 
                 .content-info {
+                    background-color: #ffffff;
                     width: 38%;
                     padding: 15px;
                 }
@@ -1231,6 +1232,7 @@
                     flex-direction: column;
                     border: 1px solid rgba(128, 128, 128, 0.28);
                     .content-info {
+                        background-color: #ffffff;
                         display: flex;
                         flex-direction: column-reverse;
                         width: 100%;
@@ -1249,6 +1251,7 @@
                     flex-direction: column;
                     border: 1px solid rgba(128, 128, 128, 0.28);
                     .content-info {
+                        background-color: #ffffff;
                         display: flex;
                         flex-direction: column-reverse;
                         width: 100%;
@@ -1381,6 +1384,7 @@
                             .views-field-field-ambit-noticia {
                                 width: 40%;
                                 .destacat-text {
+                                    background-color: #ffffff;
                                     height: 100%;
                                     position: relative;
                                     padding: 20px;
@@ -1478,6 +1482,7 @@
         .pane-nou-xn17-noticia-destacats-secundaris-panel-pane-3 {
             grid-area: 2 / 3 / 6 / 4;
             .views-row {
+              background-color: #ffffff;
                 border: 1px solid #dedede;
                 margin-bottom: 20px;
                 padding: 14px;
@@ -1540,6 +1545,7 @@
                 margin-bottom: 20px;
 
                 & > div {
+                  background-color: #ffffff;
                     padding: 14px;
                 }
 
@@ -1749,6 +1755,7 @@
                             .views-field-field-ambit-noticia {
                                 width: 40%;
                                 .destacat-text {
+                                    background-color: #ffffff;
                                     height: 100%;
                                     position: relative;
                                     padding: 20px;
@@ -1847,6 +1854,7 @@
         #panels-ipe-paneid-598 {
             grid-area: 2 / 3 / 6 / 4;
             .views-row {
+                background-color: #ffffff;
                 border: 1px solid #dedede;
                 margin-bottom: 20px;
                 padding: 14px;
@@ -1872,6 +1880,7 @@
                     display: flex;
                     flex-wrap: wrap;
                     .views-row {
+                      background-color: #ffffff;
                         flex: 45%;
                         margin-right: 20px;
 
@@ -1965,7 +1974,7 @@
 @media (max-width: 768px){
     .page-nou-inici{
         #content{
-            overflow-x: hidden; 
+            overflow-x: hidden;
         }
         #main-footer{
             overflow: hidden;
