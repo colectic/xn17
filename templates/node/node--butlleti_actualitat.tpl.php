@@ -551,7 +551,8 @@ $dies = array('Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte
 			</td><td style="padding-left:15px">
 				<p>
 					<a href="https://www.escoltesiguies.cat/" style="color:white;  font-weight:normal">Minyons Escoltes i Guies de Catalunya</a><br />
-					<a href="http://www.tothomweb.com/" style="color:white;  font-weight:normal">TOTHOMweb</a><br />
+					<a href="https://www.tothomweb.com/" style="color:white;  font-weight:normal">TOTHOMweb</a><br />
+					<a href="https://www.kiwop.com/" style="color:white;  font-weight:normal">Kiwop</a><br />
 				</p>
 			</td></tr>
 		</table>
